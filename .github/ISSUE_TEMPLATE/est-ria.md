@@ -1,6 +1,6 @@
 ---
 name: Estória
-about: Describe this issue template's purpose here.
+about: Proposta de uma nova funcionalidade.
 title: ''
 labels: estória
 assignees: ''
