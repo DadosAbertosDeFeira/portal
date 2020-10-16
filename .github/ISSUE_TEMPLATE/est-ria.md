@@ -11,6 +11,16 @@ assignees: ''
 **Eu quero/gostaria** [aqui resumo da funcionalidade],
 **Assim eu** [resumo do problema que ela resolve].
 
-Critérios de aceitação:
+### Critérios de aceitação
+
 - [ ] <item mensurável que deve ser feito para reconhecer essa história como feita>
 - [ ] <item mensurável que deve ser feito para reconhecer essa história como feita>
+
+### Perguntas em aberto
+
+1. ...
+2. ...
+
+### Notas
+
+...
