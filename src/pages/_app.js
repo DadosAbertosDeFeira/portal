@@ -1,3 +1,4 @@
+import '../styles/variables.scss';
 import '../styles/globals.scss';
 
 // eslint-disable-next-line react/prop-types
