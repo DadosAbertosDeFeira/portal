@@ -1,0 +1,80 @@
+<!-- Styleguide.stories.mdx-->
+
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import './Styleguide.scss';
+
+<Meta title="Styleguide" />
+
+# Colors
+
+<Story name="Colors">
+  <div
+    style={{
+      display: 'grid',
+      gridGap: '8px',
+      gridTemplateColumns: 'repeat(4, 1fr)',
+    }}
+  >
+    {[
+      'primary',
+      'primary--dark',
+      'primary--light',
+      'alert',
+      'secondary',
+      'secondary--dark',
+      'secondary--light',
+      'black',
+      'gray-1',
+      'gray-2',
+      'gray-3',
+      'gray-4',
+      'white',
+    ].map((colorName) => (
+      <div key={colorName}>
+        <div
+          style={{
+            background: `var(--${colorName})`,
+            height: '48px',
+            width: '48px',
+          }}
+        />
+        <code>{`$color-${colorName}`}</code>
+      </div>
+    ))}
+  </div>
+</Story>
+
+# Shadows
+
+<Story name="Shadows">
+  <div
+    style={{
+      display: 'grid',
+      gridGap: '8px',
+      gridTemplateColumns: 'repeat(4, 1fr)',
+    }}
+  >
+    <div>
+      <div
+        style={{
+          background: 'var(--white)',
+          boxShadow: 'var(--shadow-1)',
+          height: '48px',
+          width: '48px',
+        }}
+      />
+      <code>$shadow-1</code>
+    </div>
+    <div>
+      <div
+        style={{
+          background: 'var(--white)',
+          boxShadow: 'var(--shadow-2)',
+          height: '48px',
+          width: '48px',
+        }}
+      />
+      <code>$shadow-2</code>
+    </div>
+  </div>
+</Story>
