@@ -1,0 +1,40 @@
+@import "../../styles/variables";
+
+.buttonDefault {
+  border-radius: 1px;
+  padding: 8px 16px;
+  background-color: $color-primary;
+  color: $color-white;
+  border: none;
+  font-size: 14px;
+  line-height: 1.2em;
+  outline: none;
+}
+
+.buttonDefault:active {
+  background-color: $color-primary--dark;
+}
+
+.secondary {
+  background-color: $color-secondary;
+  color: $color-primary--dark;
+}
+
+.secondary:active {
+  background-color: $color-secondary--dark;
+}
+
+.rounded {
+  border-radius: 56px;
+}
+
+/* Sizes */
+.small {
+  font-size: 12px;
+  padding: 8px 16px;
+}
+
+.large {
+  font-size: 18px;
+  padding: 16px 32px;
+}
