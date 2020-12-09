@@ -47,4 +47,4 @@ Inicia um servidor na porta `6006`, navegue até `http://localhost:6006` para vi
 
 ### Design das páginas
 
-Os designs das páginas dos projetos podem ser encontrados [aqui](https://www.figma.com/file/XNfcVKFQLMcw4WzYB9srDs/DadosFeira?node-id=155%3A537)
+Os designs das páginas do projeto podem ser encontrados [aqui](https://www.figma.com/file/XNfcVKFQLMcw4WzYB9srDs/DadosFeira?node-id=155%3A537).
