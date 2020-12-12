@@ -1,13 +1,14 @@
 @import "../../styles/variables";
 
 .buttonDefault {
+  cursor: pointer;
   border-radius: 1px;
   padding: 8px 16px;
   background-color: $color-primary;
   color: $color-white;
   border: none;
   font-size: 14px;
-  line-height: 1.2em;
+  line-height: 1.75rem;
   outline: none;
 }
 
@@ -31,10 +32,29 @@
 /* Sizes */
 .small {
   font-size: 12px;
-  padding: 8px 16px;
+  padding: 4px 8px;
 }
 
 .large {
-  font-size: 18px;
-  padding: 16px 32px;
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+.typeText {
+  background: none;
+  color: $color-primary;
+}
+
+.typeText:active {
+  background: none;
+  color: $color-primary--dark;
+}
+
+.typeText .secondary {
+  color: $color-secondary;
+}
+
+.typeText .secondary:active {
+  background: none;
+  color: $color-secondary--dark;
 }

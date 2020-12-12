@@ -16,6 +16,7 @@ const Button = ({
   large,
   children,
   icon,
+  typeText,
 }) => (
   <button
     type="button"
@@ -26,7 +27,8 @@ const Button = ({
       rounded && styles.rounded,
       small && styles.small,
       medium && styles.medium,
-      large && styles.large
+      large && styles.large,
+      typeText && styles.typeText
     )}
     onClick={onClick}
   >
@@ -45,6 +47,7 @@ Button.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   icon: PropTypes.node,
   secondary: PropTypes.bool,
+  typeText: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -57,6 +60,7 @@ Button.defaultProps = {
   children: '',
   icon: null,
   secondary: false,
+  typeText: false,
 };
 
 export default Button;
