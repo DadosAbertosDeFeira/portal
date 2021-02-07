@@ -26,10 +26,6 @@ const Headline = ({ className, size, children, testId }) => {
       );
     }
 
-    case 'medium': {
-      return defaultHeadline;
-    }
-
     case 'small': {
       return (
         <h3
