@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Headline /> renders correctly by default 1`] = `
+<DocumentFragment>
+  <h2
+    class="headline medium"
+    data-testid="headline"
+  >
+    Testing
+  </h2>
+</DocumentFragment>
+`;
+
+exports[`<Headline /> renders correctly large size 1`] = `
+<DocumentFragment>
+  <h1
+    class="headline large"
+    data-testid="headline"
+  >
+    Testing
+  </h1>
+</DocumentFragment>
+`;
+
+exports[`<Headline /> renders correctly medium size 1`] = `
+<DocumentFragment>
+  <h2
+    class="headline medium"
+    data-testid="headline"
+  >
+    Testing
+  </h2>
+</DocumentFragment>
+`;
+
+exports[`<Headline /> renders correctly small size 1`] = `
+<DocumentFragment>
+  <h3
+    class="headline small"
+    data-testid="headline"
+  >
+    Testing
+  </h3>
+</DocumentFragment>
+`;
