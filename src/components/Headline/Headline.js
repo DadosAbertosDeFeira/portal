@@ -4,9 +4,12 @@ import classnames from 'classnames';
 
 import styles from './Headline.module.scss';
 
-const Headline = ({ className, size, children }) => {
+const Headline = ({ className, size, children, testId }) => {
   const defaultHeadline = (
-    <h2 className={classnames(styles.headline, styles.medium, className)}>
+    <h2
+      data-testid={testId}
+      className={classnames(styles.headline, styles.medium, className)}
+    >
       {children}
     </h2>
   );
@@ -14,7 +17,10 @@ const Headline = ({ className, size, children }) => {
   switch (size) {
     case 'large': {
       return (
-        <h1 className={classnames(styles.headline, styles.large, className)}>
+        <h1
+          data-testid={testId}
+          className={classnames(styles.headline, styles.large, className)}
+        >
           {children}
         </h1>
       );
@@ -26,7 +32,10 @@ const Headline = ({ className, size, children }) => {
 
     case 'small': {
       return (
-        <h3 className={classnames(styles.headline, styles.small, className)}>
+        <h3
+          data-testid={testId}
+          className={classnames(styles.headline, styles.small, className)}
+        >
           {children}
         </h3>
       );
