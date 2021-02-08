@@ -43,3 +43,15 @@ exports[`<Headline /> renders correctly small size 1`] = `
   </h3>
 </DocumentFragment>
 `;
+
+exports[`<Headline /> renders correctly with html alternative attributes 1`] = `
+<DocumentFragment>
+  <h2
+    class="headline medium"
+    data-testid="headline"
+    tabindex="0"
+  >
+    Testing
+  </h2>
+</DocumentFragment>
+`;

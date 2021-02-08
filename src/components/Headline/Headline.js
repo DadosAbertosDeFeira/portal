@@ -1,16 +1,18 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import styles from './Headline.module.scss';
 
-const Headline = ({ className, size, children, testId }) => {
+const Headline = ({ className, size, children, testId, ...props }) => {
   switch (size) {
     case 'large': {
       return (
         <h1
           data-testid={testId}
           className={classnames(styles.headline, styles.large, className)}
+          {...props}
         >
           {children}
         </h1>
@@ -22,6 +24,7 @@ const Headline = ({ className, size, children, testId }) => {
         <h3
           data-testid={testId}
           className={classnames(styles.headline, styles.small, className)}
+          {...props}
         >
           {children}
         </h3>
@@ -33,6 +36,7 @@ const Headline = ({ className, size, children, testId }) => {
         <h2
           data-testid={testId}
           className={classnames(styles.headline, styles.medium, className)}
+          {...props}
         >
           {children}
         </h2>

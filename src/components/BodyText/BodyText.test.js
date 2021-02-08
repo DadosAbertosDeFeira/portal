@@ -50,4 +50,14 @@ describe('<BodyText />', () => {
 
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('renders correctly with html alternative attributes', () => {
+    const { asFragment } = render(
+      <BodyText {...sharedProps} tabIndex={0}>
+        Testing
+      </BodyText>
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
 });

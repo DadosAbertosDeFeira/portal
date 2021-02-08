@@ -43,3 +43,15 @@ exports[`<BodyText /> renders correctly small and bold 1`] = `
   </p>
 </DocumentFragment>
 `;
+
+exports[`<BodyText /> renders correctly with html alternative attributes 1`] = `
+<DocumentFragment>
+  <p
+    class="bodyText medium"
+    data-testid="paragraph"
+    tabindex="0"
+  >
+    Testing
+  </p>
+</DocumentFragment>
+`;

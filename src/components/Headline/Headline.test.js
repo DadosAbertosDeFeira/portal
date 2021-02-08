@@ -50,4 +50,14 @@ describe('<Headline />', () => {
 
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('renders correctly with html alternative attributes', () => {
+    const { asFragment } = render(
+      <Headline {...sharedProps} tabIndex={0}>
+        Testing
+      </Headline>
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
 });

@@ -1,10 +1,11 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import styles from './BodyText.module.scss';
 
-const BodyText = ({ className, children, size, bold, testId }) => (
+const BodyText = ({ className, children, size, bold, testId, ...props }) => (
   <p
     data-testid={testId}
     className={classnames(
@@ -14,6 +15,7 @@ const BodyText = ({ className, children, size, bold, testId }) => (
       { [styles.bold]: bold },
       className
     )}
+    {...props}
   >
     {children}
   </p>
