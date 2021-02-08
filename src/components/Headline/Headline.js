@@ -5,15 +5,6 @@ import classnames from 'classnames';
 import styles from './Headline.module.scss';
 
 const Headline = ({ className, size, children, testId }) => {
-  const defaultHeadline = (
-    <h2
-      data-testid={testId}
-      className={classnames(styles.headline, styles.medium, className)}
-    >
-      {children}
-    </h2>
-  );
-
   switch (size) {
     case 'large': {
       return (
@@ -38,7 +29,14 @@ const Headline = ({ className, size, children, testId }) => {
     }
 
     default: {
-      return defaultHeadline;
+      return (
+        <h2
+          data-testid={testId}
+          className={classnames(styles.headline, styles.medium, className)}
+        >
+          {children}
+        </h2>
+      );
     }
   }
 };
