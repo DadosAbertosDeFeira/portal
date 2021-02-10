@@ -1,0 +1,81 @@
+@import '../variables.scss';
+
+#imageBox {
+  overflow: hidden;
+  max-width: 300px;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 27px;
+  transition: all 0.5s;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: $shadow-1;
+
+
+  button {
+    border: 0;
+    padding: 0;
+    background: none;
+
+    svg {
+      fill: $color-primary--dark;
+    }
+  }
+}
+
+@keyframes decreaseSizeFrame {
+  from {
+    height: 45px;
+    width: 90px;
+    background-color: #FFF;
+  }
+  to {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+@keyframes increaseSizeFrame {
+  from {
+    height: 24px;
+    width: 24px;
+  }
+  to {
+    height: 45px;
+    width: 120px;
+    background-color: #FFF;
+  }
+}
+
+.decreasedSize {
+  height: 44px;
+
+  img {
+    height: 100%;
+  }
+
+  #imageBox {
+    animation: decreaseSizeFrame .5s linear forwards;
+  }
+}
+
+.defaultSize {
+  height: 68px;
+
+  img {
+    height: 100%;
+  }
+
+  #imageBox {
+    animation: increaseSizeFrame .5s linear forwards;
+  }
+}
