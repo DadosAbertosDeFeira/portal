@@ -9,18 +9,6 @@ export default function components() {
   useEffect(() => {
     let isScrollingDown = false;
 
-    const changeImageFrame = (small) => {
-      // imgRef.current.classList.add(styles.transitionImageUp);
-      setTimeout(() => {
-        // imgRef.current.src = small
-        //   ? 'assets/logo_pequena.svg'
-        //   : 'assets/logo.svg';
-      }, 300);
-      setTimeout(() => {
-        // imgRef.current.classList.remove(styles.transitionImageUp);
-      }, 700);
-    };
-
     const onScroll = (e) => {
       const scrollTop = window.pageYOffset || navRef.scrollTop;
       if (scrollTop > 68) {
@@ -30,7 +18,6 @@ export default function components() {
         isScrollingDown = true;
         navRef.current.classList.add(styles.decreasedSize);
         navRef.current.classList.remove(styles.defaultSize);
-        changeImageFrame(true);
       } else {
         if (!isScrollingDown) {
           return;
@@ -38,7 +25,6 @@ export default function components() {
         isScrollingDown = false;
         navRef.current.classList.add(styles.defaultSize);
         navRef.current.classList.remove(styles.decreasedSize);
-        changeImageFrame(false);
       }
     };
     window.addEventListener('scroll', onScroll);
@@ -46,6 +32,7 @@ export default function components() {
       window.removeEventListener('scroll', onScroll);
     };
   }, [navRef]);
+  
   return (
     <nav id={styles.navbar} className={styles.defaultSize} ref={navRef}>
       <button type="button">
