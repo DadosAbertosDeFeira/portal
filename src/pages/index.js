@@ -1,6 +1,14 @@
+import SEO from '../components/SEO';
+
 export default function Home() {
   return (
     <>
+      <SEO
+        title="Dados abertos de Feira"
+        image="assets/dadosabertosdefeira.png"
+        shouldExcludeTitleSuffix
+      />
+
       <h1>Página Principal</h1>
       <a href="/busca">
         <h2>Ir para busca</h2>
