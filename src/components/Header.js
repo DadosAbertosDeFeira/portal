@@ -8,13 +8,21 @@ import styles from '../styles/components/header.module.scss';
 export default function components() {
   const navRef = useRef(null);
   const imgRef = useRef(null);
-  const [opened, setOpened] = useState(false);
+  const [menuOpened, setMenuOpened] = useState(false);
+  const [searchOpened, setSearchOpened] = useState(false);
 
   const toggleMenu = () => {
-    setOpened((state) => !state);
+    setMenuOpened((state) => !state);
   };
 
-  const transitions = useTransition(opened, null, {
+  const openSearch = () => {
+    setSearchOpened(true);
+  };
+  const closeSearch = () => {
+    setSearchOpened(false);
+  };
+
+  const transitions = useTransition(menuOpened, null, {
     from: {
       left: '-500px',
     },
@@ -38,6 +46,7 @@ export default function components() {
         isScrollingDown = true;
         navRef.current.classList.add(styles.decreasedSize);
         navRef.current.classList.remove(styles.defaultSize);
+        closeSearch();
       } else {
         if (!isScrollingDown) {
           return;
@@ -45,6 +54,7 @@ export default function components() {
         isScrollingDown = false;
         navRef.current.classList.add(styles.defaultSize);
         navRef.current.classList.remove(styles.decreasedSize);
+        closeSearch();
       }
     };
     window.addEventListener('scroll', onScroll);
@@ -57,19 +67,40 @@ export default function components() {
     <>
       <nav id={styles.navbar} className={styles.defaultSize} ref={navRef}>
         <header>
-          <button type="button" onClick={toggleMenu}>
-            <BiMenu size={24} />
-          </button>
-          <div id={styles.imageBox}>
-            <img
-              src="assets/logo.svg"
-              alt="Logo grande Dados Abertos de Feira"
-              ref={imgRef}
-            />
-          </div>
-          <button type="button">
-            <BiSearchAlt2 size={24} />
-          </button>
+          {searchOpened ? (
+            <>
+              <div>
+                <img
+                  className={styles.decreasedSize}
+                  src="assets/logo_pequena.svg"
+                  alt="Logo pequena Dados Abertos de Feira"
+                />
+              </div>
+              <form>
+                <BiSearchAlt2 size={24} />
+                <input type="text" placeholder="Digite aqui a sua busca" />
+                <button type="button" onClick={closeSearch}>
+                  <MdClose size={24} />
+                </button>
+              </form>
+            </>
+          ) : (
+            <>
+              <button type="button" onClick={toggleMenu}>
+                <BiMenu size={24} />
+              </button>
+              <div id={styles.imageBox}>
+                <img
+                  src="assets/logo.svg"
+                  alt="Logo Dados Abertos de Feira"
+                  ref={imgRef}
+                />
+              </div>
+              <button type="button" onClick={openSearch}>
+                <BiSearchAlt2 size={24} />
+              </button>
+            </>
+          )}
         </header>
       </nav>
       {transitions.map(

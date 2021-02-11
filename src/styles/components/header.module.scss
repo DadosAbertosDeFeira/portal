@@ -3,7 +3,7 @@
 #navbar {
   padding-top: 68px;
 
-  header{
+  header {
     position: fixed;
     top: 0;
     left: 0;
@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
+    background-color: $color-gray-4;
     box-shadow: $shadow-1;
 
     button {
@@ -30,13 +30,46 @@
         fill: $color-primary--dark;
       }
     }
+
+    form {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      align-items: center;
+      min-width: 270px;
+
+      > svg {
+        position: relative;
+        right: -34px;
+        z-index: 5;
+        fill: $color-primary--dark;
+      }
+
+      button {
+        position: relative;
+        left: -34px;
+        z-index: 5;
+      }
+
+      input {
+        height: 32px;
+        width: 100%;
+        max-width: 270px;
+        padding: 7px 0 7px 42px;
+        border: 0;
+
+        ::placeholder{
+          color: $color-gray-2;
+        }
+
+      }
+    }
   }
 }
 @keyframes decreaseSizeFrame {
   from {
     height: 45px;
     width: 90px;
-    background-color: #FFF;
   }
   to {
     height: 24px;
@@ -52,7 +85,6 @@
   to {
     height: 45px;
     width: 120px;
-    background-color: #FFF;
   }
 }
 
@@ -87,20 +119,19 @@
 
 
 #menu {
-  position: absolute;
+  position: fixed;
   top: 0;
+  z-index: 20;
 
   display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  color: $color-primary--dark;
-  filter: drop-shadow($shadow-1);
-
   max-width: 312px;
   width: 100%;
   height: 100%;
 
-  z-index: 20;
+  flex-direction: column;
+  background-color: #fff;
+  color: $color-primary--dark;
+  filter: drop-shadow($shadow-1);
 
   @media (max-width: 450px) {
     max-width: 100%;
