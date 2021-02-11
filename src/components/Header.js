@@ -8,8 +8,11 @@ import styles from '../styles/components/header.module.scss';
 export default function components() {
   const navRef = useRef(null);
   const imgRef = useRef(null);
+
   const [menuOpened, setMenuOpened] = useState(false);
   const [searchOpened, setSearchOpened] = useState(false);
+
+  const [searchText, setSearchText] = useState('');
 
   const toggleMenu = () => {
     setMenuOpened((state) => !state);
@@ -76,9 +79,14 @@ export default function components() {
                   alt="Logo pequena Dados Abertos de Feira"
                 />
               </div>
-              <form>
+              <form action="busca">
                 <BiSearchAlt2 size={24} />
-                <input type="text" placeholder="Digite aqui a sua busca" />
+                <input
+                  name="search"
+                  placeholder="Digite aqui a sua busca"
+                  onChange={(e) => setSearchText(e.target.value)}
+                  value={searchText}
+                />
                 <button type="button" onClick={closeSearch}>
                   <MdClose size={24} />
                 </button>
