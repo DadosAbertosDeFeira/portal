@@ -1,7 +1,13 @@
-html body {
+html, body, #__next {
+  height: 100%;;
+}
+
+html, body, * {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  outline: 0;
+  box-sizing: border-box;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
