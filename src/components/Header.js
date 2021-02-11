@@ -25,7 +25,7 @@ export default function Header() {
     setSearchOpened(false);
   };
 
-  const transitions = useTransition(menuOpened, null, {
+  const menuTransition = useTransition(menuOpened, null, {
     from: {
       left: '-500px',
     },
@@ -34,6 +34,20 @@ export default function Header() {
     },
     leave: {
       left: '-500px',
+    },
+  });
+
+  const searchTransition = useTransition(!searchOpened, null, {
+    from: {
+      transform: 'translateX(120%)',
+    },
+    enter: {
+      position: 'static',
+      transform: 'translateX(0)',
+    },
+    leave: {
+      position: 'absolute',
+      transform: 'translateX(-150%)',
     },
   });
 
@@ -70,54 +84,62 @@ export default function Header() {
     <>
       <nav id={styles.navbar} className={styles.defaultSize} ref={navRef}>
         <header>
-          {searchOpened ? (
-            <>
-              <div>
-                <img
-                  className={styles.decreasedSize}
-                  src="assets/logo_pequena.svg"
-                  alt="Logo pequena Dados Abertos de Feira"
-                />
-              </div>
-              <form action="busca">
-                <BiSearchAlt2 size={24} />
-                <input
-                  name="search"
-                  placeholder="Digite aqui a sua busca"
-                  onChange={(e) => setSearchText(e.target.value)}
-                  value={searchText}
-                />
-                <button type="button" onClick={closeSearch}>
-                  <MdClose size={24} />
-                </button>
-              </form>
-            </>
-          ) : (
-            <>
-              <button type="button" onClick={toggleMenu}>
-                <BiMenu size={24} />
-              </button>
-              <div id={styles.imageBox}>
-                <img
-                  src="assets/logo.svg"
-                  alt="Logo Dados Abertos de Feira"
-                  ref={imgRef}
-                />
-              </div>
-              <button type="button" onClick={openSearch}>
-                <BiSearchAlt2 size={24} />
-              </button>
-            </>
+          {searchTransition.map(
+            ({ item, key, props }) =>
+              !item && (
+                <animated.div key={key} style={props}>
+                  <div>
+                    <img
+                      className={styles.decreasedSize}
+                      src="assets/logo_pequena.svg"
+                      alt="Logo pequena Dados Abertos de Feira"
+                    />
+                  </div>
+                  <form action="busca">
+                    <BiSearchAlt2 size={24} />
+                    <input
+                      ref={(input) => input && input.focus()}
+                      name="search"
+                      placeholder="Digite aqui a sua busca"
+                      onChange={(e) => setSearchText(e.target.value)}
+                      value={searchText}
+                    />
+                    <button type="button" onClick={closeSearch}>
+                      <MdClose size={24} />
+                    </button>
+                  </form>
+                </animated.div>
+              )
+          )}
+          {searchTransition.map(
+            ({ item, key, props }) =>
+              item && (
+                <animated.div key={key} style={props}>
+                  <button type="button" onClick={toggleMenu}>
+                    <BiMenu size={24} />
+                  </button>
+                  <div id={styles.reducedImageWithScroll}>
+                    <img
+                      src="assets/logo.svg"
+                      alt="Logo Dados Abertos de Feira"
+                      ref={imgRef}
+                    />
+                  </div>
+                  <button type="button" onClick={openSearch}>
+                    <BiSearchAlt2 size={24} />
+                  </button>
+                </animated.div>
+              )
           )}
         </header>
       </nav>
-      {transitions.map(
+      {menuTransition.map(
         ({ item, key, props }) =>
           item && (
             <animated.div id={styles.menu} key={key} style={props}>
               <div id={styles.menuClose}>
                 <button type="button" onClick={toggleMenu}>
-                  <MdClose size={16} />
+                  <MdClose size={24} />
                 </button>
               </div>
               <ul className={styles.list}>

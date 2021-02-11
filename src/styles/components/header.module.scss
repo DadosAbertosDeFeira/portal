@@ -3,20 +3,60 @@
 #navbar {
   padding-top: 68px;
 
+  svg {
+    fill: $color-primary--dark;
+  }
+
+  &.decreasedSize {
+    header img {
+        height: 100%;
+    }
+    #reducedImageWithScroll {
+      animation: decreaseSizeFrame .5s linear forwards;
+    }
+  }
+
+  &.defaultSize {
+    header {
+      height: 68px;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    #reducedImageWithScroll {
+      animation: increaseSizeFrame .5s linear forwards;
+    }
+  }
+
   header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    padding: 12px 27px;
-    transition: all 0.5s;
-    z-index: 10;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 12px 27px;
+    min-height: 48px;
+    max-height: 68px;
+
     background-color: $color-gray-4;
     box-shadow: $shadow-1;
+    transition: all 0.5s;
+    z-index: 10;
+
+    > div {
+      margin: 0 auto;
+      max-width: 1200px;
+      z-index: 11;
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      align-items: center;
+    }
 
     button {
       display:flex;
@@ -25,24 +65,22 @@
       border: 0;
       padding: 0;
       background: none;
-
-      svg {
-        fill: $color-primary--dark;
-      }
     }
 
     form {
       display: flex;
-      flex: 1;
       flex-direction: row;
       align-items: center;
+      justify-content: center;
+
       min-width: 270px;
+      max-width: 400px;
+      width: 100%;
 
       > svg {
         position: relative;
         right: -34px;
         z-index: 5;
-        fill: $color-primary--dark;
       }
 
       button {
@@ -52,20 +90,22 @@
       }
 
       input {
-        height: 32px;
-        width: 100%;
-        max-width: 270px;
-        padding: 7px 0 7px 42px;
+        display: flex;
+        flex: 1;
         border: 0;
+
+        height: 100%;
+        width: 100%;
+        padding: 7px 0 7px 42px;
 
         ::placeholder{
           color: $color-gray-2;
         }
-
       }
     }
   }
 }
+
 @keyframes decreaseSizeFrame {
   from {
     height: 45px;
@@ -88,35 +128,10 @@
   }
 }
 
-#imageBox {
+#reducedImageWithScroll {
   overflow: hidden;
   max-width: 300px;
 }
-
-.decreasedSize {
-  height: 44px;
-
-  img {
-    height: 100%;
-  }
-
-  #imageBox {
-    animation: decreaseSizeFrame .5s linear forwards;
-  }
-}
-
-.defaultSize {
-  height: 68px;
-
-  img {
-    height: 100%;
-  }
-
-  #imageBox {
-    animation: increaseSizeFrame .5s linear forwards;
-  }
-}
-
 
 #menu {
   position: fixed;
@@ -152,13 +167,13 @@
       border: 0;
       background: none;
 
-      svg {
-        color: $color-primary--dark;
-      }
-
       &:hover {
         cursor: pointer;
       }
+    }
+
+    svg {
+      fill: $color-primary--dark;
     }
   }
 
@@ -191,7 +206,6 @@
       }
     }
   }
-
 
   .listItem {
     > li {
