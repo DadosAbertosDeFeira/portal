@@ -5,7 +5,7 @@ import { animated, useTransition } from 'react-spring';
 
 import styles from '../styles/components/header.module.scss';
 
-export default function components() {
+export default function Header() {
   const navRef = useRef(null);
   const imgRef = useRef(null);
 
@@ -160,52 +160,6 @@ export default function components() {
             </animated.div>
           )
       )}
-      {/* {opened && (
-        <animated.div id={styles.menu}>
-          <div id={styles.menuClose}>
-            <button type="button">
-              <MdClose size={16} />
-            </button>
-          </div>
-          <ul className={styles.list}>
-            <li>
-              <div>
-                <MdBusiness size={16} />
-                <span>Prefeitura</span>
-              </div>
-              <ul className={styles.listItem}>
-                <li>
-                  <span>Diário Oficial</span>
-                </li>
-                <li>
-                  <span>Licitações</span>
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <div>
-                <MdBusiness size={16} />
-                <span>Câmara de Vereadores</span>
-              </div>
-              <ul className={styles.listItem}>
-                <li>
-                  <span>Diário Oficial</span>
-                </li>
-                <li>
-                  <span>Atas das Sessões</span>
-                </li>
-                <li>
-                  <span>Lista de Presença</span>
-                </li>
-                <li>
-                  <span>Agenda das Sessões</span>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </animated.div>
-      )} */}
     </>
   );
 }
