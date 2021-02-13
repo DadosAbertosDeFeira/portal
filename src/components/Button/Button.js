@@ -15,7 +15,7 @@ const Button = ({
   medium,
   large,
   children,
-  icon,
+  icon: Icon,
   typeText,
 }) => (
   <button
@@ -32,7 +32,7 @@ const Button = ({
     )}
     onClick={onClick}
   >
-    {icon && <icon />}
+    {Icon && <Icon />}
     {children}
   </button>
 );
