@@ -44,3 +44,7 @@ yarn storybook
 ```
 
 Inicia um servidor na porta `6006`, navegue até `http://localhost:6006` para visualizar os componentes da interface.
+
+### Design das páginas
+
+Os designs das páginas do projeto podem ser encontrados [aqui](https://www.figma.com/file/XNfcVKFQLMcw4WzYB9srDs/DadosFeira?node-id=155%3A537).

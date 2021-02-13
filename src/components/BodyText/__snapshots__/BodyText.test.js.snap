@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BodyText /> renders correctly 1`] = `
+<DocumentFragment>
+  <p
+    class="bodyText medium"
+    data-testid="paragraph"
+  >
+    Testing
+  </p>
+</DocumentFragment>
+`;
+
+exports[`<BodyText /> renders correctly default size and bold 1`] = `
+<DocumentFragment>
+  <p
+    class="bodyText medium bold"
+    data-testid="paragraph"
+  >
+    Testing
+  </p>
+</DocumentFragment>
+`;
+
+exports[`<BodyText /> renders correctly small 1`] = `
+<DocumentFragment>
+  <p
+    class="bodyText small"
+    data-testid="paragraph"
+  >
+    Testing
+  </p>
+</DocumentFragment>
+`;
+
+exports[`<BodyText /> renders correctly small and bold 1`] = `
+<DocumentFragment>
+  <p
+    class="bodyText small bold"
+    data-testid="paragraph"
+  >
+    Testing
+  </p>
+</DocumentFragment>
+`;
+
+exports[`<BodyText /> renders correctly with html alternative attributes 1`] = `
+<DocumentFragment>
+  <p
+    class="bodyText medium"
+    data-testid="paragraph"
+    tabindex="0"
+  >
+    Testing
+  </p>
+</DocumentFragment>
+`;
