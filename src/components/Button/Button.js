@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
@@ -17,23 +18,27 @@ const Button = ({
   children,
   icon: Icon,
   typeText,
+  ...props
 }) => (
   <button
     type="button"
     className={classnames(
       styles.buttonDefault,
-      className && className,
       secondary && styles.secondary,
       rounded && styles.rounded,
       small && styles.small,
       medium && styles.medium,
       large && styles.large,
-      typeText && styles.typeText
+      typeText && styles.typeText,
+      className
     )}
     onClick={onClick}
+    {...props}
   >
-    {Icon && <Icon />}
-    {children}
+    {Icon && <Icon className={styles.buttonIcon} />}
+    <span className={classnames(Icon && styles.buttonWithIcon)}>
+      {children}
+    </span>
   </button>
 );
 
@@ -55,7 +60,7 @@ Button.defaultProps = {
   className: '',
   rounded: false,
   small: false,
-  medium: false,
+  medium: true,
   large: false,
   children: '',
   icon: null,
