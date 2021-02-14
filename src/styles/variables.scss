@@ -16,3 +16,9 @@ $color-white: #ffffff;
 // EFFECTS
 $shadow-1: 0px 4px 30px rgba(0, 0, 0, 0.2);
 $shadow-2: 0px -4px 30px rgba(0, 0, 0, 0.2);
+
+// SIZES
+$space1x: 4px;
+$space2x: 2*$space1x;
+$space3x: 3*$space1x;
+$space4x: 4*$space1x;

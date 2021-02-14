@@ -2,14 +2,15 @@
 
 .buttonDefault {
   cursor: pointer;
-  border-radius: 1px;
-  padding: 8px 16px;
+  padding: $space2x $space3x;
   background-color: $color-primary;
   color: $color-white;
   border: none;
   font-size: 14px;
   line-height: 1.75rem;
   outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .buttonDefault:active {
@@ -32,12 +33,12 @@
 /* Sizes */
 .small {
   font-size: 12px;
-  padding: 4px 8px;
+  padding: $space1x $space2x;
 }
 
 .large {
   font-size: 16px;
-  padding: 12px 24px;
+  padding: $space3x $space4x;
 }
 
 .typeText {
@@ -50,11 +51,20 @@
   color: $color-primary--dark;
 }
 
-.typeText .secondary {
+.typeText.secondary {
   color: $color-secondary;
 }
 
-.typeText .secondary:active {
+.typeText.secondary:active {
   background: none;
   color: $color-secondary--dark;
+}
+
+.buttonIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.buttonWithIcon {
+  margin-left: 8px;
 }
