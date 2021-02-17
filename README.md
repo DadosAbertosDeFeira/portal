@@ -41,6 +41,17 @@ yarn start
 yarn lint
 ```
 
+### Rodando os testes
+
+```bash
+yarn test
+```
+
+Se deseja rodar com coverage:
+```bash
+yarn test:coverage
+```
+
 ### Storybook
 
 O [Storybook](https://storybook.js.org/) é uma ferramenta que permite documentar interfaces, por enquanto, todo nosso styleguide e tarefas de front em geral poderão ser visualizadas com a ferramenta.
