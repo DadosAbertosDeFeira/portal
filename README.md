@@ -35,6 +35,12 @@ yarn build
 yarn start
 ```
 
+### Rodando lint
+
+```bash
+yarn lint
+```
+
 ### Storybook
 
 O [Storybook](https://storybook.js.org/) é uma ferramenta que permite documentar interfaces, por enquanto, todo nosso styleguide e tarefas de front em geral poderão ser visualizadas com a ferramenta.
