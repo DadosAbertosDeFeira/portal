@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SEO /> renders correctly with description 1`] = `<DocumentFragment />`;
+
+exports[`<SEO /> renders correctly with image 1`] = `<DocumentFragment />`;
+
+exports[`<SEO /> renders correctly with title 1`] = `<DocumentFragment />`;
+
+exports[`<SEO /> renders correctly without indexing the page 1`] = `<DocumentFragment />`;
+
+exports[`<SEO /> renders correctly without suffix 1`] = `<DocumentFragment />`;

@@ -10,6 +10,7 @@
     "build-storybook": "build-storybook",
     "test": "jest",
     "lint": "eslint src"
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "classnames": "^2.2.6",
