@@ -21,6 +21,7 @@ const Button = ({
   ...props
 }) => (
   <button
+    data-testid="button"
     type="button"
     className={classnames(
       styles.buttonDefault,

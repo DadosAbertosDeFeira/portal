@@ -4,6 +4,7 @@ exports[`<Button /> renders correclty just with an icon 1`] = `
 <DocumentFragment>
   <button
     class="buttonDefault medium"
+    data-testid="button"
     type="button"
   >
     <svg
@@ -33,6 +34,7 @@ exports[`<Button /> renders correctly as secondary 1`] = `
 <DocumentFragment>
   <button
     class="buttonDefault secondary medium"
+    data-testid="button"
     type="button"
   >
     <span
@@ -48,6 +50,7 @@ exports[`<Button /> renders correctly by default 1`] = `
 <DocumentFragment>
   <button
     class="buttonDefault medium"
+    data-testid="button"
     type="button"
   >
     <span
@@ -63,6 +66,7 @@ exports[`<Button /> renders correctly large size 1`] = `
 <DocumentFragment>
   <button
     class="buttonDefault medium large"
+    data-testid="button"
     type="button"
   >
     <span
@@ -78,6 +82,7 @@ exports[`<Button /> renders correctly medium size 1`] = `
 <DocumentFragment>
   <button
     class="buttonDefault medium"
+    data-testid="button"
     type="button"
   >
     <span
@@ -93,6 +98,7 @@ exports[`<Button /> renders correctly rounded 1`] = `
 <DocumentFragment>
   <button
     class="buttonDefault rounded medium"
+    data-testid="button"
     type="button"
   >
     <span
@@ -108,6 +114,7 @@ exports[`<Button /> renders correctly small size 1`] = `
 <DocumentFragment>
   <button
     class="buttonDefault small medium"
+    data-testid="button"
     type="button"
   >
     <span
@@ -123,6 +130,7 @@ exports[`<Button /> renders correctly using html attributes 1`] = `
 <DocumentFragment>
   <button
     class="buttonDefault medium"
+    data-testid="button"
     name="dados-button"
     type="button"
   >
@@ -139,6 +147,7 @@ exports[`<Button /> renders correctly with an icon and text 1`] = `
 <DocumentFragment>
   <button
     class="buttonDefault medium"
+    data-testid="button"
     type="button"
   >
     <svg
@@ -170,6 +179,7 @@ exports[`<Button /> renders correctly with text type 1`] = `
 <DocumentFragment>
   <button
     class="buttonDefault medium typeText"
+    data-testid="button"
     type="button"
   >
     <span
