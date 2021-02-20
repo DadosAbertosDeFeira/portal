@@ -9,6 +9,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
+    "lint": "eslint src"
     "test:coverage": "jest --coverage"
   },
   "dependencies": {

@@ -35,7 +35,14 @@ yarn build
 yarn start
 ```
 
+### Rodando lint
+
+```bash
+yarn lint
+```
+
 ### Rodando os testes
+
 ```bash
 yarn test
 ```
