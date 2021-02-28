@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+
+.bodyText {
+  color: $color-black;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+
+  &.bold {
+    font-weight: 700;
+  }
+}
+
+.medium {
+  font-size: 0.87rem;
+  line-height: 1.31rem;
+}
+
+.small {
+  font-size: 0.69rem;
+  line-height: 1.03rem;
+}
