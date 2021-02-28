@@ -8,6 +8,28 @@ import Link from '../Link';
 import styles from './styles.module.scss';
 import SearchDropdown from '../SearchDropdown';
 
+/**
+ * Componente do Dropdown de Pesquisa
+ *
+ * @param props {}
+ *
+ * @example
+ * ```
+ * import Header from "../components/Header";
+ *
+ * export default function Page() {
+ *
+ *   return (
+ *     <>
+ *       ...
+ *       <Header />
+ *       ...
+ *     </>
+ *   )
+ * }
+ * ```
+ */
+
 export default function Header() {
   const navRef = useRef(null);
   const imgRef = useRef(null);

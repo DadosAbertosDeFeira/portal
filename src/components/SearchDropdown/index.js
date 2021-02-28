@@ -4,6 +4,33 @@ import PropTypes from 'prop-types';
 
 import styles from './styles.module.scss';
 
+/**
+ * Componente do Dropdown de Pesquisa
+ *
+ * @param props {{ toggleMenu: function }}
+ * @param {function} toggleMenu: Título da página
+ *
+ * @example
+ * ```
+ * import SearchDropdown from "../components/SEO";
+ *
+ * export default function Page() {
+ *   const [searchDropdownOpened, setSearchDropdownOpened] = useState(false);
+ *
+ *   const toggleSearchDropdownMenu = () => {
+ *     setSearchDropdownOpened((state) => !state);
+ *   };
+ *
+ *   return (
+ *     <>
+ *       ...
+ *       <SearchDropdown toggleMenu={toggleSearchDropdownMenu}/>
+ *       ...
+ *     </>
+ *   )
+ * }
+ * ```
+ */
 export default function SearchDropdown({ toggleMenu }) {
   return (
     <div id={styles.menu}>
