@@ -78,6 +78,7 @@ export default function Header() {
       }
     };
     window.addEventListener('scroll', onScroll);
+
     return () => {
       window.removeEventListener('scroll', onScroll);
     };
@@ -140,7 +141,7 @@ export default function Header() {
                 <animated.div key={key} style={props}>
                   <div>
                     <img
-                      className={styles.decreasedSize}
+                      className={styles.searchImageSize}
                       src="assets/logo_pequena.svg"
                       alt="Logo pequena Dados Abertos de Feira"
                     />

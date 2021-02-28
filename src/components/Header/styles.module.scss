@@ -1,5 +1,27 @@
 @import '../../styles/variables.scss';
 
+@keyframes decreaseSizeFrame {
+  from {
+    height: 45px;
+    width: 90px;
+  }
+  to {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+@keyframes increaseSizeFrame {
+  from {
+    height: 24px;
+    width: 24px;
+  }
+  to {
+    height: 45px;
+    width: 120px;
+  }
+}
+
 #header {
   padding-top: 68px;
 
@@ -15,9 +37,11 @@
     nav img {
         height: 100%;
     }
+
     #reducedImageWithScroll {
       animation: decreaseSizeFrame .5s linear forwards;
     }
+
   }
 
   &.defaultSize {
@@ -94,7 +118,7 @@
       padding: 24px 72px;
       height: 150px;
 
-      > div, > ul, > form {
+      div, ul, form {
         display: flex;
         flex-direction: row;
         size: 14px;
@@ -104,16 +128,17 @@
         height: 104px;
       }
 
-      > ul {
-        > li {
+      ul {
+        li {
           padding: 0 16px;
           color: $color-primary--dark;
           font-weight: bold;
         }
       }
 
-      > form {
+      form {
         height: 48px;
+
         input {
           border: 1px solid $color-primary--dark;
         }
@@ -139,6 +164,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        > div {
+          display: flex;
+          justify-content: center;
+        }
       }
 
       button {
@@ -148,6 +178,11 @@
         border: 0;
         padding: 0;
         background: none;
+      }
+
+      img.searchImageSize {
+        height: 24px;
+        width: auto;
       }
     }
 
@@ -159,28 +194,6 @@
         display: none;
       }
     }
-  }
-}
-
-@keyframes decreaseSizeFrame {
-  from {
-    height: 45px;
-    width: 90px;
-  }
-  to {
-    height: 24px;
-    width: 24px;
-  }
-}
-
-@keyframes increaseSizeFrame {
-  from {
-    height: 24px;
-    width: 24px;
-  }
-  to {
-    height: 45px;
-    width: 120px;
   }
 }
 
