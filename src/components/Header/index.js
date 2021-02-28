@@ -1,9 +1,12 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { BiMenu, BiSearchAlt2 } from 'react-icons/bi';
-import { MdBusiness, MdClose } from 'react-icons/md';
+import { MdClose } from 'react-icons/md';
+import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { animated, useTransition } from 'react-spring';
+import Link from '../Link';
 
-import styles from '../styles/components/header.module.scss';
+import styles from './styles.module.scss';
+import SearchDropdown from '../SearchDropdown';
 
 export default function Header() {
   const navRef = useRef(null);
@@ -82,8 +85,55 @@ export default function Header() {
 
   return (
     <>
-      <nav id={styles.navbar} className={styles.defaultSize} ref={navRef}>
-        <header>
+      <header id={styles.header} className={styles.defaultSize} ref={navRef}>
+        <nav id={styles.desktop}>
+          <div>
+            <img
+              className={styles.logo}
+              src="assets/logo.svg"
+              alt="Logo Dados Abertos de Feira"
+            />
+          </div>
+          <ul>
+            <li>
+              <Link href="/sobre">SOBRE</Link>
+            </li>
+            <li>
+              <Link href="/blog">BLOG</Link>
+            </li>
+            <li>
+              <Link href="/colabore">COLABORE</Link>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Link href={process.env.NEXT_PUBLIC_INSTAGRAM_URL}>
+                <FaInstagram size={32} />
+              </Link>
+            </li>
+            <li>
+              <Link href={process.env.NEXT_PUBLIC_FACEBOOK_URL}>
+                <FaFacebook size={32} />
+              </Link>
+            </li>
+            <li>
+              <Link href={process.env.NEXT_PUBLIC_TWITTER_URL}>
+                <FaTwitter size={32} />
+              </Link>
+            </li>
+          </ul>
+          <form action="busca">
+            <BiSearchAlt2 size={24} />
+            <input
+              ref={(input) => input && input.focus()}
+              name="search"
+              placeholder="Digite aqui a sua busca"
+              onChange={(e) => setSearchText(e.target.value)}
+              value={searchText}
+            />
+          </form>
+        </nav>
+        <nav id={styles.mobile}>
           {searchTransition.map(
             ({ item, key, props }) =>
               !item && (
@@ -131,54 +181,13 @@ export default function Header() {
                 </animated.div>
               )
           )}
-        </header>
-      </nav>
+        </nav>
+      </header>
       {menuTransition.map(
         ({ item, key, props }) =>
           item && (
             <animated.div id={styles.menu} key={key} style={props}>
-              <div id={styles.menuClose}>
-                <button type="button" onClick={toggleMenu}>
-                  <MdClose size={24} />
-                </button>
-              </div>
-              <ul className={styles.list}>
-                <li>
-                  <div>
-                    <MdBusiness size={16} />
-                    <span>Prefeitura</span>
-                  </div>
-                  <ul className={styles.listItem}>
-                    <li>
-                      <span>Diário Oficial</span>
-                    </li>
-                    <li>
-                      <span>Licitações</span>
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <div>
-                    <MdBusiness size={16} />
-                    <span>Câmara de Vereadores</span>
-                  </div>
-                  <ul className={styles.listItem}>
-                    <li>
-                      <span>Diário Oficial</span>
-                    </li>
-                    <li>
-                      <span>Atas das Sessões</span>
-                    </li>
-                    <li>
-                      <span>Lista de Presença</span>
-                    </li>
-                    <li>
-                      <span>Agenda das Sessões</span>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+              <SearchDropdown toggleMenu={toggleMenu} />
             </animated.div>
           )
       )}
