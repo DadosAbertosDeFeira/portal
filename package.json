@@ -13,6 +13,7 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
+    "@storybook/addon-viewport": "^6.1.20",
     "classnames": "^2.2.6",
     "next": "10.0.1",
     "node-sass": "4.14.1",

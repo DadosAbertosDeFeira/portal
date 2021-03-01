@@ -64,7 +64,7 @@ export default function Header() {
 
   const searchTransition = useTransition(!searchOpened, null, {
     from: {
-      transform: 'translateX(120%)',
+      transform: 'translateX(150%)',
     },
     enter: {
       position: 'static',
@@ -146,11 +146,11 @@ export default function Header() {
             </li>
           </ul>
           <form action="busca">
-            <BiSearchAlt2 size={24} />
+            <BiSearchAlt2 size={32} />
             <input
               ref={(input) => input && input.focus()}
               name="search"
-              placeholder="Digite aqui a sua busca"
+              placeholder="Pesquisar no Dados Abertos de Feira"
               onChange={(e) => setSearchText(e.target.value)}
               value={searchText}
             />
