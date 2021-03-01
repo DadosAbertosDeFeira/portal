@@ -8,6 +8,9 @@ import Link from '../Link';
 import styles from './styles.module.scss';
 import SearchDropdown from '../SearchDropdown';
 
+import logo from '../../assets/logo.svg';
+import smallLogo from '../../assets/smallLogo.svg';
+
 /**
  * Componente do Dropdown de Pesquisa
  *
@@ -113,7 +116,7 @@ export default function Header() {
           <div>
             <img
               className={styles.logo}
-              src="assets/logo.svg"
+              src={logo}
               alt="Logo Dados Abertos de Feira"
             />
           </div>
@@ -164,7 +167,7 @@ export default function Header() {
                   <div>
                     <img
                       className={styles.searchImageSize}
-                      src="assets/logo_pequena.svg"
+                      src={smallLogo}
                       alt="Logo pequena Dados Abertos de Feira"
                     />
                   </div>
@@ -193,7 +196,7 @@ export default function Header() {
                   </button>
                   <div id={styles.reducedImageWithScroll}>
                     <img
-                      src="assets/logo.svg"
+                      src={logo}
                       alt="Logo Dados Abertos de Feira"
                       ref={imgRef}
                     />
