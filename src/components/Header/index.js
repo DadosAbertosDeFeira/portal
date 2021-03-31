@@ -131,7 +131,7 @@ export default function Header() {
               <Link href="/colabore">COLABORE</Link>
             </li>
           </ul>
-          <ul>
+          <ul className={styles.social}>
             <li>
               <Link href={process.env.NEXT_PUBLIC_INSTAGRAM_URL}>
                 <FaInstagram size={32} />

@@ -25,6 +25,9 @@
 #header {
   height: 68px;
 
+  background-color: $color-gray-4;
+  box-shadow: $shadow-1;
+
   @media (min-width: 1280px) {
     height: 150px;
   }
@@ -63,6 +66,7 @@
     top: 0;
     left: 0;
     right: 0;
+    margin: 0 auto;
 
     transition: all 0.5s;
     z-index: 10;
@@ -71,9 +75,6 @@
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-
-    background-color: $color-gray-4;
-    box-shadow: $shadow-1;
 
     form {
       display: flex;
@@ -115,6 +116,7 @@
 
     &#desktop {
       display: none;
+      max-width: 1600px;
 
       padding: 24px 72px;
       height: 150px;
@@ -130,12 +132,20 @@
       }
 
       ul {
+
         li {
           padding: 0 16px;
           color: $color-primary--dark;
           font-weight: bold;
+
           a svg {
             fill: $color-primary;
+          }
+        }
+
+        &.social {
+          li {
+            padding: 0 8px;
           }
         }
       }
@@ -200,9 +210,11 @@
     @media (min-width: 1280px) {
       &#desktop {
         display: flex;
+        visibility: visible;
       }
       &#mobile {
         display: none;
+        visibility: hidden;
       }
     }
   }
