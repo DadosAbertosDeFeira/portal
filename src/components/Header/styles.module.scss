@@ -38,13 +38,12 @@
 
   &.decreasedSize {
     nav img {
-        height: 100%;
+      height: 100%;
     }
 
     #reducedImageWithScroll {
-      animation: decreaseSizeFrame .5s linear forwards;
+      animation: decreaseSizeFrame 0.5s linear forwards;
     }
-
   }
 
   &.defaultSize {
@@ -57,7 +56,7 @@
     }
 
     #reducedImageWithScroll {
-      animation: increaseSizeFrame .5s linear forwards;
+      animation: increaseSizeFrame 0.5s linear forwards;
     }
   }
 
@@ -107,7 +106,7 @@
         width: 100%;
         padding: 7px 0 7px 42px;
 
-        ::placeholder{
+        ::placeholder {
           color: $color-gray-2;
           font-weight: 500;
         }
@@ -121,7 +120,9 @@
       padding: 24px 72px;
       height: 150px;
 
-      div, ul, form {
+      div,
+      ul,
+      form {
         display: flex;
         flex-direction: row;
         size: 14px;
@@ -132,7 +133,6 @@
       }
 
       ul {
-
         li {
           padding: 0 16px;
           color: $color-primary--dark;
@@ -232,4 +232,11 @@
   height: 100%;
 
   max-width: 312px;
+
+  transition: left 0.5s;
+  left: -400px;
+}
+
+.open {
+  left: 0 !important;
 }

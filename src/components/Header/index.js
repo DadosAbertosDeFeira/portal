@@ -53,18 +53,6 @@ export default function Header() {
     setSearchOpened(false);
   };
 
-  const menuTransition = useTransition(menuOpened, null, {
-    from: {
-      left: '-500px',
-    },
-    enter: {
-      left: '0',
-    },
-    leave: {
-      left: '-500px',
-    },
-  });
-
   const searchTransition = useTransition(!searchOpened, null, {
     from: {
       transform: 'translateX(150%)',
@@ -209,14 +197,9 @@ export default function Header() {
           )}
         </nav>
       </header>
-      {menuTransition.map(
-        ({ item, key, props }) =>
-          item && (
-            <animated.div id={styles.menu} key={key} style={props}>
-              <SearchDropdown toggleMenu={toggleMenu} />
-            </animated.div>
-          )
-      )}
+      <div id={styles.menu} className={menuOpened ? styles.open : ''}>
+        <SearchDropdown toggleMenu={toggleMenu} />
+      </div>
     </>
   );
 }
