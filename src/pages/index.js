@@ -1,4 +1,5 @@
 import SEO from '../components/SEO';
+import Header from '../components/Header';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
         image="assets/dadosabertosdefeira.png"
         shouldExcludeTitleSuffix
       />
+      <Header />
 
       <h1>Página Principal</h1>
       <a href="/busca">
