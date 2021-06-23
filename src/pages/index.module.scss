@@ -322,6 +322,13 @@
           aside {
             margin-top: 1rem;
             margin-left: 0;
+
+            div {
+              align-items: center;
+            }
+            .social {
+              justify-content: center;
+            }
           }
         }
       }
