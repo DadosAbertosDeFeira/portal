@@ -32,6 +32,12 @@ export default [
     github: 'olarclara',
     linkedin: 'mariaclarasantana',
   },
+  {
+    name: 'Rafael Gomes',
+    role: 'Desenvolvedor',
+    picture: 'https://avatars.githubusercontent.com/gomex',
+    github: 'gomex',
+  },
 ].sort((person1, person2) => {
   return person1.name.localeCompare(person2.name); // Automatically alphabetize
 });

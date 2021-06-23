@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
-export default function Button({ outline, onClick, children }) {
+export default function Button({ outline, onClick, children, ...rest }) {
   return (
     <button
       type="button"
       className={styles.button}
       onClick={onClick}
       id={outline ? styles.outline : styles.full}
+      {...rest}
     >
       {children}
     </button>
@@ -16,6 +17,7 @@ export default function Button({ outline, onClick, children }) {
 
 Button.defaultProps = {
   outline: false,
+  onClick: () => {},
 };
 
 Button.propTypes = {
@@ -24,5 +26,5 @@ Button.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
 };
