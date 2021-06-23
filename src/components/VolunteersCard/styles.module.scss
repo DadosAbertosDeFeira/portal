@@ -1,0 +1,54 @@
+@import '../../styles/variables.scss';
+
+.volunteers {
+  display: flex;
+  flex-direction: row;
+
+  padding: 1rem;
+  max-width: 390px;
+  min-width: 288px;
+  width: 100%;
+  border-radius: 4px;
+  border-top: 3px solid $color-primary--dark;
+  background: $color-gray-4;
+  box-shadow: $shadow-1;
+
+  .volunteersPicture {
+    height: 70px;
+    width: 70px;
+    background: $color-white;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+  .volunteersInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    strong {
+      color: $color-primary--dark;
+    }
+    span {
+      margin-top: 0.1rem;
+      color: $color-primary;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .volunteersIconContainer {
+      flex-direction: row;
+      a {
+        margin-right: 1rem;
+        img {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+  }
+}
