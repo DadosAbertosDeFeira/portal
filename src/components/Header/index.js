@@ -106,11 +106,13 @@ export default function Header() {
       <header id={styles.header} className={styles.defaultSize} ref={navRef}>
         <nav id={styles.desktop}>
           <div>
-            <img
-              className={styles.logo}
-              src={logo}
-              alt="Logo Dados Abertos de Feira"
-            />
+            <Link href="/">
+              <img
+                className={styles.logo}
+                src={logo}
+                alt="Logo Dados Abertos de Feira"
+              />
+            </Link>
           </div>
           <ul>
             <li>
@@ -162,11 +164,13 @@ export default function Header() {
               !item && (
                 <animated.div key={key} style={props}>
                   <div>
-                    <img
-                      className={styles.searchImageSize}
-                      src={smallLogo}
-                      alt="Logo pequena Dados Abertos de Feira"
-                    />
+                    <Link href="/">
+                      <img
+                        className={styles.searchImageSize}
+                        src={smallLogo}
+                        alt="Logo pequena Dados Abertos de Feira"
+                      />
+                    </Link>
                   </div>
                   <form action="busca">
                     {/* <BiSearchAlt2 size={24} />
@@ -193,11 +197,13 @@ export default function Header() {
                   </button> */}
                   <div />
                   <div id={styles.reducedImageWithScroll}>
-                    <img
-                      src={logo}
-                      alt="Logo Dados Abertos de Feira"
-                      ref={imgRef}
-                    />
+                    <Link href="/">
+                      <img
+                        src={logo}
+                        alt="Logo Dados Abertos de Feira"
+                        ref={imgRef}
+                      />
+                    </Link>
                   </div>
                   <button type="button" onClick={toggleMenu}>
                     <BiMenu size={24} />
