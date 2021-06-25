@@ -128,7 +128,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.contribute}>
+      <section id="colabore" className={styles.contribute}>
         <img src="/assets/people-contribute.svg" alt="Como contribuir" />
         <div>
           <h5>Como contribuir</h5>
