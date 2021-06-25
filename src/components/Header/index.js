@@ -113,10 +113,15 @@ export default function Header() {
               <Link href="/sobre">SOBRE</Link>
             </li>
             <li>
-              <Link href="/blog">BLOG</Link>
+              <Link
+                target="_blank"
+                href="https://dadosabertosdefeira.medium.com"
+              >
+                BLOG
+              </Link>
             </li>
             <li>
-              <Link href="#colabore">COLABORE</Link>
+              <Link href="/#colabore">COLABORE</Link>
             </li>
           </ul>
           <ul className={styles.social}>
