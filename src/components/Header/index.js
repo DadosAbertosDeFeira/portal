@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { BiMenu, BiSearchAlt2 } from 'react-icons/bi';
-import { MdClose } from 'react-icons/md';
+import { BiMenu /* , BiSearchAlt2 */ } from 'react-icons/bi';
+// import { MdClose } from 'react-icons/md';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { animated, useTransition } from 'react-spring';
 import Link from '../Link';
@@ -40,15 +40,15 @@ export default function Header() {
   const [menuOpened, setMenuOpened] = useState(false);
   const [searchOpened, setSearchOpened] = useState(false);
 
-  const [searchText, setSearchText] = useState('');
+  // const [searchText, setSearchText] = useState('');
 
   const toggleMenu = () => {
     setMenuOpened((state) => !state);
   };
 
-  const openSearch = () => {
-    setSearchOpened(true);
-  };
+  // const openSearch = () => {
+  //   setSearchOpened(true);
+  // };
 
   const closeSearch = () => {
     setSearchOpened(false);
@@ -72,6 +72,9 @@ export default function Header() {
     let isScrollingDown = false;
 
     const onScroll = () => {
+      if (!navRef.current) {
+        return;
+      }
       const scrollTop = window.pageYOffset || navRef.scrollTop;
       if (scrollTop > 68) {
         if (isScrollingDown) {
