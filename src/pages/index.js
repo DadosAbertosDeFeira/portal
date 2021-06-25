@@ -35,7 +35,11 @@ export default function Home() {
             </strong>
           </p>
           <div>
-            <Button onClick={() => router.push('/busca')}>
+            <Button
+              onClick={() =>
+                router.push('https://www.dadosabertosdefeira.com.br/painel/')
+              }
+            >
               Consultar a base de dados
             </Button>
             <Button outline onClick={() => router.push('/busca')}>
