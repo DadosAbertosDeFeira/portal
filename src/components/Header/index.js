@@ -142,14 +142,14 @@ export default function Header() {
             </li>
           </ul>
           <form action="busca">
-            <BiSearchAlt2 size={32} />
+            {/* <BiSearchAlt2 size={32} />
             <input
               ref={(input) => input && input.focus()}
               name="search"
               placeholder="Pesquisar no Dados Abertos de Feira"
               onChange={(e) => setSearchText(e.target.value)}
               value={searchText}
-            />
+            /> */}
           </form>
         </nav>
         <nav id={styles.mobile}>
@@ -165,7 +165,7 @@ export default function Header() {
                     />
                   </div>
                   <form action="busca">
-                    <BiSearchAlt2 size={24} />
+                    {/* <BiSearchAlt2 size={24} />
                     <input
                       ref={(input) => input && input.focus()}
                       name="search"
@@ -175,7 +175,7 @@ export default function Header() {
                     />
                     <button type="button" onClick={closeSearch}>
                       <MdClose size={24} />
-                    </button>
+                    </button> */}
                   </form>
                 </animated.div>
               )
@@ -184,9 +184,10 @@ export default function Header() {
             ({ item, key, props }) =>
               item && (
                 <animated.div key={key} style={props}>
-                  <button type="button" onClick={toggleMenu}>
-                    <BiMenu size={24} />
-                  </button>
+                  {/* <button type="button" onClick={openSearch}>
+                    <BiSearchAlt2 size={24} />
+                  </button> */}
+                  <div />
                   <div id={styles.reducedImageWithScroll}>
                     <img
                       src={logo}
@@ -194,8 +195,8 @@ export default function Header() {
                       ref={imgRef}
                     />
                   </div>
-                  <button type="button" onClick={openSearch}>
-                    <BiSearchAlt2 size={24} />
+                  <button type="button" onClick={toggleMenu}>
+                    <BiMenu size={24} />
                   </button>
                 </animated.div>
               )
