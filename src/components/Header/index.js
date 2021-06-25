@@ -49,6 +49,7 @@ export default function Header() {
   const openSearch = () => {
     setSearchOpened(true);
   };
+
   const closeSearch = () => {
     setSearchOpened(false);
   };
@@ -110,7 +111,7 @@ export default function Header() {
           </div>
           <ul>
             <li>
-              <Link href="/sobre">SOBRE</Link>
+              <Link href="/#sobre">SOBRE</Link>
             </li>
             <li>
               <Link

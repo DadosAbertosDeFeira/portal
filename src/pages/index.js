@@ -49,7 +49,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.history}>
+      <section id="sobre" className={styles.history}>
         <div className={styles.icon}>
           <img src="/assets/icons/book.svg" alt="Livro" />
           <h5>Nossa Historia</h5>
