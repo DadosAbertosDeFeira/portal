@@ -1,6 +1,8 @@
-# Dados Abertos de Feira
+# Portal do Dados Abertos de Feira
 
-Portal dos dados abertos de Feira de Santana (frontend).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7ba794b1-3a2d-49ff-bcc5-533510d7710d/deploy-status)](https://app.netlify.com/sites/dadosabertosdefeira/deploys)
+
+Frontend do Portal do Dados Abertos de Feira.
 Coleta e APIs no [Maria Quitéria](https://github.com/DadosAbertosDeFeira/maria-quiteria/).
 
 ## Contribuindo para o projeto
