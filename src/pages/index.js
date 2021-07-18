@@ -52,7 +52,7 @@ export default function Home() {
       <section id="sobre" className={styles.history}>
         <div className={styles.icon}>
           <img src="/assets/icons/book.svg" alt="Livro" />
-          <h5>Nossa Historia</h5>
+          <h5>Nossa História</h5>
         </div>
         <div className={styles.historyTexts}>
           <p>
