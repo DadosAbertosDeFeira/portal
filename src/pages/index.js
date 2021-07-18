@@ -87,11 +87,11 @@ export default function Home() {
             Câmara, também sem respostas. Após meses de espera foi necessário
             acionar o Ministério Público para intermediar o processo e a partir
             daí o projeto ganhou projeção nas mídias locais, como no{' '}
-            <Link href="xxx">BATV da TV Subaé</Link>,{' '}
-            <Link href="xxx">Acorda Cidade</Link>,{' '}
-            <Link href="xxx">Blog do Velame</Link>, além de diversas
+            <Link href="http://g1.globo.com/bahia/batv/videos/t/tv-subae/v/batv-tv-subae-03022020-bloco-2/8292651/">BATV da TV Subaé</Link>,{' '}
+            <Link href="https://www.acordacidade.com.br/noticias/222557/programadora-encontra-dificuldades-para-obter-informacoes-sobre-a-atuacao-dos-vereadores-de-feira.html">Acorda Cidade</Link>,{' '}
+            <Link href="https://www.blogdovelame.com/presidente-reconhece-falta-de-transparencia-e-promete-divulgar-dados/">Blog do Velame</Link>, além de diversas
             participações nos programas da{' '}
-            <Link href="xxx">Rádio Globo Feira e Jovem Pan</Link>. Com a
+            <Link href="https://www.facebook.com/blogdovelame/videos/750921745431854/">Rádio Globo Feira e Jovem Pan</Link>. Com a
             repercussão, o presidente da Câmara Municipal, José Carneiro, nos
             convidou para uma visita, marcando o início de uma colaboração com a
             Casa da Cidadania. A partir dessa data, a Câmara passou a divulgar a
