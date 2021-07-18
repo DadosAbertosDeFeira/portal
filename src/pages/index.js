@@ -137,7 +137,7 @@ export default function Home() {
             pessoa interessada pode fazer parte!
           </p>
           <Button onClick={() => router.push('/colabore')}>
-            Preencher formulário
+            Veja como contribuir
           </Button>
         </div>
       </section>
