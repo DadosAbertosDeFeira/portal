@@ -322,7 +322,8 @@
     max-width: 400px;
     width: 100%;
 
-    input {
+    input,
+    textarea {
       height: 40px;
       width: 100%;
       border: 1px solid $color-gray-2;
@@ -332,6 +333,13 @@
       & + input {
         margin-top: 1rem;
       }
+
+      & + textarea {
+        margin-top: 1rem;
+      }
+    }
+    textarea {
+      padding-top: calc(20px - 0.5rem);
     }
 
     button {

@@ -203,7 +203,7 @@ export default function Home() {
             <form name="contact" method="POST" data-netlify="true">
               <input type="text" name="name" placeholder="Nome" />
               <input type="email" name="email" placeholder="Email" />
-              <input type="textarea" name="message" placeholder="Mensagem" />
+              <textarea name="message" placeholder="Mensagem" />
               <Button type="submit" outline>
                 Enviar
               </Button>
