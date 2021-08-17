@@ -201,9 +201,9 @@ export default function Home() {
           <div className={styles.talkus}>
             <strong className={styles.title}>Fale conosco</strong>
             <form name="contact" method="POST" data-netlify="true">
-              <input type="text" placeholder="Nome" />
-              <input type="email" placeholder="Email" />
-              <input type="text" placeholder="Mensagem" />
+              <input type="text" name="name" placeholder="Nome" />
+              <input type="email" name="email" placeholder="Email" />
+              <input type="textarea" name="message" placeholder="Mensagem" />
               <Button type="submit" outline>
                 Enviar
               </Button>
