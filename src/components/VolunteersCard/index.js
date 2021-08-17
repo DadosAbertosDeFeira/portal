@@ -14,11 +14,11 @@ export default function VolunteersCard({
 }) {
   return (
     <div className={styles.volunteers}>
-      <img src={picture} alt="" className={styles.volunteersPicture} />
+      <img src={picture} alt={name} className={styles.volunteersPicture} />
       <div className={styles.volunteersInfo}>
         <div>
-          <strong>{name}</strong>
-          <span>{role}</span>
+          <strong className={styles.volunteersInfoName}>{name}</strong>
+          <span className={styles.volunteersInfoRole}>{role}</span>
         </div>
         <div className={styles.volunteersIconContainer}>
           {linkedin && (

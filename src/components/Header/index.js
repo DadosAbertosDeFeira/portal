@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { BiMenu /* , BiSearchAlt2 */ } from 'react-icons/bi';
-// import { MdClose } from 'react-icons/md';
+import { BiMenu } from 'react-icons/bi';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { animated, useTransition } from 'react-spring';
 import Link from '../Link';

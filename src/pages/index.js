@@ -36,6 +36,7 @@ export default function Home() {
           </p>
           <div>
             <Button
+              className={styles.mainButtons}
               onClick={() =>
                 router.push('https://www.dadosabertosdefeira.com.br/painel/')
               }

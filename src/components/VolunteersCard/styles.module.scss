@@ -25,10 +25,11 @@
     flex-direction: column;
     justify-content: space-between;
 
-    strong {
+    .volunteersInfoName strong {
       color: $color-primary--dark;
     }
-    span {
+
+    .volunteersInfoRole {
       margin-top: 0.1rem;
       color: $color-primary;
       font-size: 0.8rem;
