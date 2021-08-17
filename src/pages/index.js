@@ -7,6 +7,8 @@ import VolunteersCard from '../components/VolunteersCard';
 
 import volunteersList from '../utils/volunteers';
 import styles from './index.module.scss';
+import Headline from '../components/Headline/Headline';
+import BodyText from '../components/BodyText';
 
 export default function Home() {
   const router = useRouter();
@@ -25,18 +27,20 @@ export default function Home() {
 
       <section className={styles.main}>
         <div className={styles.mainTexts}>
-          <h1>Transparência nas informações de Feira de Santana</h1>
-          <p>
+          <Headline size="large">
+            Transparência nas informações de Feira de Santana
+          </Headline>
+          <BodyText>
             Nós como cidadões, temos o direito a informação de forma clara e
             transparente. Precisamos saber o que acontece em nossa cidade.
             <br />
             <strong>
               Se junte aos amigos de Feira e faça a diferença como cidadão!
             </strong>
-          </p>
+          </BodyText>
           <div>
             <Button
-              className={styles.mainButtons}
+              className={styles.mainButton}
               onClick={() =>
                 router.push('https://www.dadosabertosdefeira.com.br/painel/')
               }
@@ -50,10 +54,10 @@ export default function Home() {
       <section id="sobre" className={styles.history}>
         <div className={styles.icon}>
           <img src="/assets/icons/book.svg" alt="Livro" />
-          <h5>Nossa História</h5>
+          <Headline>Nossa História</Headline>
         </div>
         <div className={styles.historyTexts}>
-          <p>
+          <BodyText>
             A ideia de criar um espaço onde as pessoas possam buscar informações
             de maneira fácil sobre o município nasceu em 2019, quando a analista
             de sistemas Ana Paula Gomes tentou encontrar informações sobre
@@ -69,8 +73,8 @@ export default function Home() {
             </Link>
             . Fez alguns pedidos de informação à Prefeitura, mas não foi
             respondida.
-          </p>
-          <p>
+          </BodyText>
+          <BodyText>
             Após a tentativa frustrada de conseguir informações da Prefeitura,
             Ana Paula foi até o site da Câmara Municipal de Feira de Santana e
             descobriu que a situação também não era boa. Informações simples,
@@ -78,9 +82,9 @@ export default function Home() {
             consegue se imaginar pagando um salário alto a um funcionário e não
             sabendo se ele compareceu ao trabalho ou se executou sua função como
             deveria?
-          </p>
+          </BodyText>
 
-          <p>
+          <BodyText>
             Diante da situação foram feitos novos pedidos de informação à
             Câmara, também sem respostas. Após meses de espera foi necessário
             acionar o Ministério Público para intermediar o processo e a partir
@@ -105,22 +109,22 @@ export default function Home() {
             colaboração com a Casa da Cidadania. A partir dessa data, a Câmara
             passou a divulgar a assiduidade dos vereadores e as atas das sessões
             da casa.
-          </p>
-          <p>
+          </BodyText>
+          <BodyText>
             Ainda estamos lutando para conseguir dados históricos de assiduidade
             dos vereadores e fazer com que os pedidos de informação sejam
             propriamente respondidos pela Prefeitura. Entendemos que a
             transparência tem grande impacto em coibir atos de corrupção e
             tornar o uso do dinheiro público mais eficiente. Lutar pela
             transparência é um trabalho de todos.
-          </p>
+          </BodyText>
         </div>
       </section>
 
       <section className={styles.volunteers}>
         <div className={styles.icon}>
           <img src="/assets/icons/hand-with-hearth.svg" alt="Livro" />
-          <h5>Voluntários</h5>
+          <Headline>Voluntários</Headline>
         </div>
         <div className={styles.volunteersList}>
           {volunteersList.map((volunteer) => (
@@ -140,11 +144,11 @@ export default function Home() {
       <section id="colabore" className={styles.contribute}>
         <img src="/assets/people-contribute.svg" alt="Como contribuir" />
         <div>
-          <h5>Como contribuir</h5>
-          <p>
+          <Headline>Como contribuir</Headline>
+          <BodyText>
             Essa é uma iniciativa voluntária, feita a muitas mãos, e qualquer
             pessoa interessada pode fazer parte!
-          </p>
+          </BodyText>
           <Button onClick={() => router.push('/colabore')}>
             Veja como contribuir
           </Button>

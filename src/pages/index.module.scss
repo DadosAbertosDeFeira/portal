@@ -78,7 +78,7 @@
       display: flex;
       margin-top: 2rem;
 
-      .mainButtons {
+      .mainButton {
         & + button {
           margin-left: 1rem;
         }
@@ -88,7 +88,7 @@
         flex-direction: column;
         align-items: center;
 
-        button {
+        .mainButton {
           & + button {
             margin: 1rem 0 0 0;
           }
@@ -127,7 +127,7 @@
     width: 100px;
   }
 
-  h5 {
+  h2 {
     margin-top: 2rem;
   }
 }

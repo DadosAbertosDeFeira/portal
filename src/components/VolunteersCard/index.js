@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import BodyText from '../BodyText';
 
 import Link from '../Link';
 
@@ -17,8 +18,10 @@ export default function VolunteersCard({
       <img src={picture} alt={name} className={styles.volunteersPicture} />
       <div className={styles.volunteersInfo}>
         <div>
-          <strong className={styles.volunteersInfoName}>{name}</strong>
-          <span className={styles.volunteersInfoRole}>{role}</span>
+          <BodyText className={styles.volunteersInfoName}>{name}</BodyText>
+          <BodyText size="medium" className={styles.volunteersInfoRole}>
+            {role}
+          </BodyText>
         </div>
         <div className={styles.volunteersIconContainer}>
           {linkedin && (
