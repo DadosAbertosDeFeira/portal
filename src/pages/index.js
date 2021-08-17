@@ -158,7 +158,9 @@ export default function Home() {
               <aside>
                 <div>
                   <strong>Feira de Santana</strong>
-                  <span>contato@dadosabertosfsa.com</span>
+                  <a href="mailto:dadosabertosdefeira+site@gmail.com">
+                    contato@dadosabertosdefeira.com.br
+                  </a>
                   <div className={styles.numbers}>
                     <strong>(75) 99999-9999</strong>
                     <strong>(75) 99999-9999</strong>
@@ -189,10 +191,10 @@ export default function Home() {
           </div>
           <div className={styles.talkus}>
             <strong className={styles.title}>Fale conosco</strong>
-            <form action="">
+            <form name="contact" method="POST" data-netlify="true">
               <input type="text" placeholder="Nome" />
               <input type="email" placeholder="Email" />
-              <input type="text" placeholder="Menssagem" />
+              <input type="text" placeholder="Mensagem" />
               <Button type="submit" outline>
                 Enviar
               </Button>
