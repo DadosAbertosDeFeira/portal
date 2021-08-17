@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import styles from './styles.module.scss';
 
 export default function Button({ outline, onClick, children, ...rest }) {
   return (
     <button
       type="button"
-      className={styles.button}
+      className={classnames(
+        styles.button,
+        outline ? styles.outline : styles.full
+      )}
       onClick={onClick}
-      id={outline ? styles.outline : styles.full}
       {...rest}
     >
       {children}
