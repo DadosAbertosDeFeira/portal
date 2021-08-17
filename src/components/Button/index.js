@@ -11,7 +11,7 @@ export default function Button({ outline, onClick, children, ...rest }) {
         outline ? styles.outline : styles.full
       )}
       onClick={onClick}
-      {...rest}
+      {...rest} // eslint-disable-line react/jsx-props-no-spreading
     >
       {children}
     </button>

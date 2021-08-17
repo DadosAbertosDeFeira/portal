@@ -27,7 +27,5 @@ module.exports = {
     'prettier/prettier': 'error',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.js'] }],
-    'jsx-a11y/aria-role': [2, { ignoreNonDOM: true }],
-    'react/jsx-props-no-spreading': 'off',
   },
 };
