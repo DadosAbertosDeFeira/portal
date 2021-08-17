@@ -247,25 +247,6 @@
             strong {
               color: $color-gray-1;
             }
-
-            .numbers {
-              display: flex;
-              flex-direction: column;
-
-              strong {
-                margin-top: 1rem;
-                font-size: 1.25rem;
-              }
-
-              strong + strong {
-                margin-top: 0.5rem;
-              }
-
-              span,
-              strong {
-                color: $color-black;
-              }
-            }
           }
 
           .social {

@@ -161,10 +161,6 @@ export default function Home() {
                   <a href="mailto:dadosabertosdefeira+site@gmail.com">
                     contato@dadosabertosdefeira.com.br
                   </a>
-                  <div className={styles.numbers}>
-                    <strong>(75) 99999-9999</strong>
-                    <strong>(75) 99999-9999</strong>
-                  </div>
                 </div>
                 <div className={styles.social}>
                   <button
