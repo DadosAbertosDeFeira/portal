@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { BiMenu, BiSearchAlt2 } from 'react-icons/bi';
-import { MdClose } from 'react-icons/md';
+import { BiMenu } from 'react-icons/bi';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { animated, useTransition } from 'react-spring';
 import Link from '../Link';
@@ -40,15 +39,16 @@ export default function Header() {
   const [menuOpened, setMenuOpened] = useState(false);
   const [searchOpened, setSearchOpened] = useState(false);
 
-  const [searchText, setSearchText] = useState('');
+  // const [searchText, setSearchText] = useState('');
 
   const toggleMenu = () => {
     setMenuOpened((state) => !state);
   };
 
-  const openSearch = () => {
-    setSearchOpened(true);
-  };
+  // const openSearch = () => {
+  //   setSearchOpened(true);
+  // };
+
   const closeSearch = () => {
     setSearchOpened(false);
   };
@@ -71,6 +71,9 @@ export default function Header() {
     let isScrollingDown = false;
 
     const onScroll = () => {
+      if (!navRef.current) {
+        return;
+      }
       const scrollTop = window.pageYOffset || navRef.scrollTop;
       if (scrollTop > 68) {
         if (isScrollingDown) {
@@ -102,21 +105,28 @@ export default function Header() {
       <header id={styles.header} className={styles.defaultSize} ref={navRef}>
         <nav id={styles.desktop}>
           <div>
-            <img
-              className={styles.logo}
-              src={logo}
-              alt="Logo Dados Abertos de Feira"
-            />
+            <Link href="/">
+              <img
+                className={styles.logo}
+                src={logo}
+                alt="Logo Dados Abertos de Feira"
+              />
+            </Link>
           </div>
           <ul>
             <li>
-              <Link href="/sobre">SOBRE</Link>
+              <Link href="/#sobre">SOBRE</Link>
             </li>
             <li>
-              <Link href="/blog">BLOG</Link>
+              <Link
+                target="_blank"
+                href="https://dadosabertosdefeira.medium.com"
+              >
+                BLOG
+              </Link>
             </li>
             <li>
-              <Link href="/colabore">COLABORE</Link>
+              <Link href="/#colabore">COLABORE</Link>
             </li>
           </ul>
           <ul className={styles.social}>
@@ -137,14 +147,14 @@ export default function Header() {
             </li>
           </ul>
           <form action="busca">
-            <BiSearchAlt2 size={32} />
+            {/* <BiSearchAlt2 size={32} />
             <input
               ref={(input) => input && input.focus()}
               name="search"
               placeholder="Pesquisar no Dados Abertos de Feira"
               onChange={(e) => setSearchText(e.target.value)}
               value={searchText}
-            />
+            /> */}
           </form>
         </nav>
         <nav id={styles.mobile}>
@@ -153,14 +163,16 @@ export default function Header() {
               !item && (
                 <animated.div key={key} style={props}>
                   <div>
-                    <img
-                      className={styles.searchImageSize}
-                      src={smallLogo}
-                      alt="Logo pequena Dados Abertos de Feira"
-                    />
+                    <Link href="/">
+                      <img
+                        className={styles.searchImageSize}
+                        src={smallLogo}
+                        alt="Logo pequena Dados Abertos de Feira"
+                      />
+                    </Link>
                   </div>
                   <form action="busca">
-                    <BiSearchAlt2 size={24} />
+                    {/* <BiSearchAlt2 size={24} />
                     <input
                       ref={(input) => input && input.focus()}
                       name="search"
@@ -170,7 +182,7 @@ export default function Header() {
                     />
                     <button type="button" onClick={closeSearch}>
                       <MdClose size={24} />
-                    </button>
+                    </button> */}
                   </form>
                 </animated.div>
               )
@@ -179,18 +191,21 @@ export default function Header() {
             ({ item, key, props }) =>
               item && (
                 <animated.div key={key} style={props}>
+                  {/* <button type="button" onClick={openSearch}>
+                    <BiSearchAlt2 size={24} />
+                  </button> */}
+                  <div />
+                  <div id={styles.reducedImageWithScroll}>
+                    <Link href="/">
+                      <img
+                        src={logo}
+                        alt="Logo Dados Abertos de Feira"
+                        ref={imgRef}
+                      />
+                    </Link>
+                  </div>
                   <button type="button" onClick={toggleMenu}>
                     <BiMenu size={24} />
-                  </button>
-                  <div id={styles.reducedImageWithScroll}>
-                    <img
-                      src={logo}
-                      alt="Logo Dados Abertos de Feira"
-                      ref={imgRef}
-                    />
-                  </div>
-                  <button type="button" onClick={openSearch}>
-                    <BiSearchAlt2 size={24} />
                   </button>
                 </animated.div>
               )
