@@ -6,7 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "postbuild": "next-on-netlify",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
@@ -14,12 +13,12 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^3.8.0",
     "@storybook/addon-viewport": "^6.1.20",
     "classnames": "^2.2.6",
     "next": "11.1.0",
     "next-compose-plugins": "^2.2.1",
     "next-images": "^1.7.0",
-    "next-on-netlify": "^3.0.1",
     "node-sass": "4.14.1",
     "prop-types": "^15.7.2",
     "react": "17.0.1",
