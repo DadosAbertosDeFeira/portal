@@ -42,11 +42,11 @@ module.exports = {
         lg: '24px',
         xl: '32px',
         xxl: '40px',
-       }
+      },
     },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};

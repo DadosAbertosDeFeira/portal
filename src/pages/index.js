@@ -172,26 +172,28 @@ export default function Home() {
                     contato@dadosabertosdefeira.com.br
                   </a>
                 </div>
-                <div className={styles.social}>
+                <section className="flex flex-row space-x-md">
                   <button
+                    className="bg-blue-100 h-xl w-auto px-sm rounded flex items-center space-x-sm pa-md"
                     type="button"
                     onClick={() =>
                       router.push(process.env.NEXT_PUBLIC_TWITTER_URL)
                     }
                   >
                     <img src="/assets/icons/twitter.svg" alt="Twitter" />
-                    <span>Twitter</span>
+                    <span className="text-primary-dark text-sm">Twitter</span>
                   </button>
                   <button
+                    className="bg-blue-100 h-xl w-auto px-sm rounded flex items-center space-x-sm pa-md "
                     type="button"
                     onClick={() =>
                       router.push(process.env.NEXT_PUBLIC_FACEBOOK_URL)
                     }
                   >
                     <img src="/assets/icons/facebook.svg" alt="Facebook" />
-                    <span>Facebook</span>
+                    <span className="text-primary-dark text-sm">Facebook</span>
                   </button>
-                </div>
+                </section>
               </aside>
             </div>
           </div>

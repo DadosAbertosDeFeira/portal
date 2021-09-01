@@ -239,28 +239,6 @@
               color: $color-gray-1;
             }
           }
-
-          .social {
-            flex-direction: row;
-            justify-content: flex-start;
-
-            button {
-              background-color: $color-blue;
-              width: 94px;
-              height: 32px;
-              border-radius: 8px;
-              border: 0;
-              margin-right: 1rem;
-              margin-top: 1rem;
-
-              img {
-                margin-right: 0.25rem;
-              }
-              span {
-                color: $color-blue-6;
-              }
-            }
-          }
         }
 
         @media (max-width: 900px) {
