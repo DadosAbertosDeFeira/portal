@@ -5,40 +5,59 @@ import './Styleguide.scss';
 
 <Meta title="Styleguide" />
 
+# Typography
+
+<Story name="Typography">
+  <div className="space-y-lg">
+    <div className="flex items-center space-x-sm">
+        <code>{`<h1>`}</code>
+        <h1>
+          Dados Abertos de Feira
+        </h1>
+    </div>
+    <div className="flex items-center space-x-sm">
+        <code>{`<h2>`}</code>
+        <h2>
+          Dados Abertos de Feira
+        </h2>
+    </div>
+    <div className="flex items-center space-x-sm">
+        <code>{`<h3>`}</code>
+        <h3>
+          Dados Abertos de Feira
+        </h3>
+    </div>
+  </div>
+</Story>
+
 # Colors
 
 <Story name="Colors">
-  <div
-    style={{
-      display: 'grid',
-      gridGap: '8px',
-      gridTemplateColumns: 'repeat(4, 1fr)',
-    }}
-  >
+  <div className="grid grid-cols-4">
     {[
       'primary',
-      'primary--dark',
-      'primary--light',
-      'alert',
+      'primary-dark',
+      'primary-light',
       'secondary',
-      'secondary--dark',
-      'secondary--light',
-      'black',
-      'gray-1',
-      'gray-2',
-      'gray-3',
-      'gray-4',
+      'secondary-dark',
+      'secondary-light',
+      'alert',
+      'gray-darkest',
+      'gray-dark',
+      'gray',
+      'gray-light',
+      'gray-lightest',
       'white',
     ].map((colorName) => (
       <div key={colorName}>
         <div
+        className={`bg-${colorName}`}
           style={{
-            background: `var(--${colorName})`,
             height: '48px',
             width: '48px',
           }}
         />
-        <code>{`$color-${colorName}`}</code>
+        <code>{`.bg-${colorName}`}</code>
       </div>
     ))}
   </div>

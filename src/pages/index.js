@@ -7,7 +7,6 @@ import VolunteersCard from '../components/VolunteersCard';
 
 import volunteersList from '../utils/volunteers';
 import styles from './index.module.scss';
-import Headline from '../components/Headline/Headline';
 import BodyText from '../components/BodyText';
 
 export default function Home() {
@@ -27,9 +26,7 @@ export default function Home() {
 
       <section className={styles.main}>
         <div className={styles.mainTexts}>
-          <Headline size="large">
-            Transparência nas informações de Feira de Santana
-          </Headline>
+          <h1>Mais transparência em Feira de Santana</h1>
           <BodyText>
             Nós como cidadões, temos o direito a informação de forma clara e
             transparente. Precisamos saber o que acontece em nossa cidade.
@@ -54,7 +51,7 @@ export default function Home() {
       <section id="sobre" className={styles.history}>
         <div className={styles.icon}>
           <img src="/assets/icons/book.svg" alt="Livro" />
-          <Headline>Nossa História</Headline>
+          <h2>Nossa História</h2>
         </div>
         <div className={styles.historyTexts}>
           <BodyText>
@@ -124,7 +121,7 @@ export default function Home() {
       <section className={styles.volunteers}>
         <div className={styles.icon}>
           <img src="/assets/icons/hand-with-hearth.svg" alt="Livro" />
-          <Headline>Voluntários</Headline>
+          <h2>Voluntários</h2>
         </div>
         <div className={styles.volunteersList}>
           {volunteersList.map((volunteer) => (
@@ -144,7 +141,7 @@ export default function Home() {
       <section id="colabore" className={styles.contribute}>
         <img src="/assets/people-contribute.svg" alt="Como contribuir" />
         <div>
-          <Headline>Como contribuir</Headline>
+          <h2>Como contribuir</h2>
           <BodyText>
             Essa é uma iniciativa voluntária, feita a muitas mãos, e qualquer
             pessoa interessada pode fazer parte!
@@ -175,26 +172,28 @@ export default function Home() {
                     contato@dadosabertosdefeira.com.br
                   </a>
                 </div>
-                <div className={styles.social}>
+                <section className="flex flex-row space-x-md">
                   <button
+                    className="bg-blue-100 h-xl w-auto px-sm rounded flex items-center space-x-sm pa-md"
                     type="button"
                     onClick={() =>
                       router.push(process.env.NEXT_PUBLIC_TWITTER_URL)
                     }
                   >
                     <img src="/assets/icons/twitter.svg" alt="Twitter" />
-                    <span>Twitter</span>
+                    <span className="text-primary-dark text-sm">Twitter</span>
                   </button>
                   <button
+                    className="bg-blue-100 h-xl w-auto px-sm rounded flex items-center space-x-sm pa-md "
                     type="button"
                     onClick={() =>
                       router.push(process.env.NEXT_PUBLIC_FACEBOOK_URL)
                     }
                   >
                     <img src="/assets/icons/facebook.svg" alt="Facebook" />
-                    <span>Facebook</span>
+                    <span className="text-primary-dark text-sm">Facebook</span>
                   </button>
-                </div>
+                </section>
               </aside>
             </div>
           </div>
