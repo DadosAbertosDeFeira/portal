@@ -18,12 +18,14 @@ export default [
     role: 'Desenvolvedor',
     picture: 'https://avatars.githubusercontent.com/matheusrocha89',
     github: 'matheusrocha89',
+    linkedin: 'matheus-cruz-rocha-38021525',
   },
   {
     name: 'Emerson Oliveira',
     role: 'Desenvolvedor',
     picture: 'https://avatars.githubusercontent.com/emersonsdo',
     github: 'emersonsdo',
+    linkedin: 'emerson-oliveira-89ab859',
   },
   {
     name: 'Maria Clara',
@@ -37,6 +39,7 @@ export default [
     role: 'Desenvolvedor',
     picture: 'https://avatars.githubusercontent.com/gomex',
     github: 'gomex',
+    linkedin: 'rbgomes',
   },
 ].sort((person1, person2) => {
   return person1.name.localeCompare(person2.name); // Automatically alphabetize
