@@ -22,6 +22,12 @@ Você precisará do [Yarn](https://yarnpkg.com/) para rodar o projeto.
 yarn
 ```
 
+Após a instalação das dependências crie os arquivos com as variáveis de ambiente de acordo com os arquivos de exemplo do projeto:
+
+```bash
+.env.development # para rodar em ambiente local
+```
+
 ### Acessando o site
 
 Rode o servidor com:
