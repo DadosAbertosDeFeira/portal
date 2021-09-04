@@ -13,7 +13,7 @@ if (process.env.NODE_ENV !== 'development') {
       'https://3fa68af02e79475a9f0dfff5bd7ab796@o336709.ingest.sentry.io/5944137',
     // Adjust this value in production, or use tracesSampler for greater control
     tracesSampleRate: 1.0,
-    environment: process.env.NODE_ENV,
+    environment: process.env.SENTRY_RELEASE || process.env.NODE_ENV,
     // ...
     // Note: if you want to override the automatic release value, do not set a
     // `release` value here - use the environment variable `SENTRY_RELEASE`, so

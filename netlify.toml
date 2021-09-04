@@ -2,6 +2,8 @@
   command = "npm run build"
   publish = "out"
 
+[context.deploy-preview.environment]
+  SENTRY_RELEASE = "deploy-preview"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
