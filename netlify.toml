@@ -4,6 +4,7 @@
 
 [context.deploy-preview.environment]
   SENTRY_ENVIRONMENT = "deploy-preview"
+  NEXT_PUBLIC_SENTRY_ENVIRONMENT = "deploy-preview"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
