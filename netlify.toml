@@ -2,6 +2,13 @@
   command = "yarn build:ci"
   publish = "out"
 
+[context.production.environment]
+  SENTRY_ENVIRONMENT = "production"
+  NEXT_PUBLIC_SENTRY_ENVIRONMENT = "production"
+
+[context.deploy-preview.environment]
+  SENTRY_ENVIRONMENT = "deploy-preview"
+  NEXT_PUBLIC_SENTRY_ENVIRONMENT = "deploy-preview"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^3.8.0",
+    "@sentry/nextjs": "^6.12.0",
     "@storybook/addon-viewport": "^6.1.20",
     "classnames": "^2.2.6",
     "next": "11.1.1",
