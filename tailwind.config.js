@@ -3,8 +3,11 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
+      fontFamily: {
+        default: ['Montserrat', 'Roboto', 'sans-serif']
+      },
       fontSize: {
-        xs: ['11px', '16px'],
+        xs: ['12px', '16px'],
         sm: ['14px', '20px'],
         base: ['16px', '24px'],
         lg: ['24px', '29px'],
@@ -20,6 +23,10 @@ module.exports = {
           light: '#FFEA97',
           DEFAULT: '#FFCC00',
           dark: '#FF9A02',
+        },
+        blueFont: {
+          DEFAULT: '#232b4e',
+          light: '#163e7a',
         },
         gray: {
           darkest: '#212429',

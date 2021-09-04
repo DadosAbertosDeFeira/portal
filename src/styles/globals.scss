@@ -5,41 +5,16 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body,
-* {
-  padding: 0;
-  margin: 0;
-  outline: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', 'Roboto', -apple-system, BlinkMacSystemFont,
-    Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
-
-  color: $color-text--dark;
-  scroll-behavior: smooth;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (max-width: 1080px) {
-  html {
-    font-size: 93.75%;
-  }
-}
-
-@media (max-width: 720px) {
-  html {
-    font-size: 87.5%;
-  }
-}
-
 @layer base {
+  html,
+  body,
+  * {
+    @apply text-blueFont font-default;
+    scroll-behavior: smooth;
+  }
+
   h1 {
-    @apply text-xl font-bold;
+    @apply text-lg sm:text-xl font-bold;
   }
   h2 {
     @apply text-lg font-bold;
