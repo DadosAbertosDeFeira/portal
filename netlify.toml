@@ -3,7 +3,7 @@
   publish = "out"
 
 [context.deploy-preview.environment]
-  SENTRY_RELEASE = "deploy-preview"
+  SENTRY_ENVIRONMENT = "deploy-preview"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
