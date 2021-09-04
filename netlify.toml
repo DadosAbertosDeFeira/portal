@@ -2,6 +2,10 @@
   command = "npm run build"
   publish = "out"
 
+[context.production.environment]
+  SENTRY_ENVIRONMENT = "production"
+  NEXT_PUBLIC_SENTRY_ENVIRONMENT = "production"
+
 [context.deploy-preview.environment]
   SENTRY_ENVIRONMENT = "deploy-preview"
   NEXT_PUBLIC_SENTRY_ENVIRONMENT = "deploy-preview"
