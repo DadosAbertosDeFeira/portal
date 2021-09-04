@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "build:ci": "yarn test --ci && next build",
     "build": "next build",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
