@@ -19,6 +19,14 @@ export default function Home() {
         shouldExcludeTitleSuffix
       />
       <Header />
+      <button
+        type="button"
+        onClick={() => {
+          throw new Error('A new error, a wrong error');
+        }}
+      >
+        Throw an error{' '}
+      </button>
 
       <div className={styles.rightImage}>
         <img src="/assets/peoples-right.svg" alt="Pessoas a Direita" />
