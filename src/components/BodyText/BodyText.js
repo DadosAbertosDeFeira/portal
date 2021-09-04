@@ -1,20 +1,21 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 
-import styles from './BodyText.module.scss';
+const classNames = (size, bold) => {
+  const classes = [];
+
+  if (size === 'small') classes.push('text-xs sm:text-base');
+  else if (size === 'medium') classes.push('text-sm sm:text-base');
+  if (bold) classes.push('font-bold');
+
+  return classes.join(' ');
+};
 
 const BodyText = ({ className, children, size, bold, testId, ...props }) => (
   <p
     data-testid={testId}
-    className={classnames(
-      styles.bodyText,
-      { [styles.medium]: size === 'medium' },
-      { [styles.small]: size === 'small' },
-      { [styles.bold]: bold },
-      className
-    )}
+    className={`text-black ${classNames(size, bold)} ${className}`}
     {...props}
   >
     {children}

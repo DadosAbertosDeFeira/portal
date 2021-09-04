@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        default: ['Montserrat', 'Roboto', 'sans-serif']
+        default: ['Montserrat', 'Roboto', 'sans-serif'],
       },
       fontSize: {
         xs: ['12px', '16px'],
@@ -34,6 +34,9 @@ module.exports = {
           DEFAULT: '#ACB5BD',
           light: '#DDE2E5',
           lightest: '#F8F9FA',
+        },
+        black: {
+          DEFAULT: '#0b1b32',
         },
         alert: {
           DEFAULT: '#FF0000',

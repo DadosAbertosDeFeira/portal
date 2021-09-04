@@ -3,7 +3,7 @@
 exports[`<BodyText /> renders correctly 1`] = `
 <DocumentFragment>
   <p
-    class="bodyText medium"
+    class="text-black text-sm sm:text-base "
     data-testid="paragraph"
   >
     Testing
@@ -14,7 +14,7 @@ exports[`<BodyText /> renders correctly 1`] = `
 exports[`<BodyText /> renders correctly default size and bold 1`] = `
 <DocumentFragment>
   <p
-    class="bodyText medium bold"
+    class="text-black text-sm sm:text-base font-bold "
     data-testid="paragraph"
   >
     Testing
@@ -25,7 +25,7 @@ exports[`<BodyText /> renders correctly default size and bold 1`] = `
 exports[`<BodyText /> renders correctly small 1`] = `
 <DocumentFragment>
   <p
-    class="bodyText small"
+    class="text-black text-xs sm:text-base "
     data-testid="paragraph"
   >
     Testing
@@ -36,7 +36,7 @@ exports[`<BodyText /> renders correctly small 1`] = `
 exports[`<BodyText /> renders correctly small and bold 1`] = `
 <DocumentFragment>
   <p
-    class="bodyText small bold"
+    class="text-black text-xs sm:text-base font-bold "
     data-testid="paragraph"
   >
     Testing
@@ -47,7 +47,7 @@ exports[`<BodyText /> renders correctly small and bold 1`] = `
 exports[`<BodyText /> renders correctly with html alternative attributes 1`] = `
 <DocumentFragment>
   <p
-    class="bodyText medium"
+    class="text-black text-sm sm:text-base "
     data-testid="paragraph"
     tabindex="0"
   >
