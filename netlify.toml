@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "yarn build:ci"
   publish = "out"
 
 [context.production.environment]

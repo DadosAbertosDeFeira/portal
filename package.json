@@ -4,13 +4,27 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "build:ci": "yarn test --ci && next build",
     "build": "next build",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
     "lint": "eslint src",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx pretty-quick --staged && lint-staged",
+      "pre-push": "yarn test"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --cache --fix",
+      "jest --bail --findRelatedTests"
+    ]
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^3.8.0",
@@ -49,9 +63,11 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": ">=6",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
     "jest-dom": "^4.0.0",
+    "lint-staged": ">=10",
     "postcss": "^7",
     "prettier": "^2.1.2",
     "sass-loader": "^10.1.0",

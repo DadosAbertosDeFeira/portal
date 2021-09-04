@@ -35,3 +35,6 @@ yarn-error.log*
 
 .vscode
 sentry.properties
+
+#eslint cache
+.eslintcache
