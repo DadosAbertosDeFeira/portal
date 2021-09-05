@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="Dados abertos de Feira"
+        title="Dados Abertos de Feira"
         image="assets/dadosabertosdefeira.png"
         shouldExcludeTitleSuffix
       />
@@ -31,9 +31,7 @@ export default function Home() {
             Nós, cidadãos, temos o direito a informação de forma clara e
             transparente. Precisamos saber o que acontece em nossa cidade.
             <br />
-            <strong>
-              Junte-se a nós e faça a diferença!
-            </strong>
+            <strong>Junte-se a nós e faça a diferença!</strong>
           </BodyText>
           <div>
             <Button
@@ -56,11 +54,11 @@ export default function Home() {
         <div className={styles.historyTexts}>
           <BodyText>
             A ideia de criar um espaço onde as pessoas possam buscar informações
-            de maneira fácil sobre o município nasceu em 2019, quando a programadora 
-            Ana Paula Gomes tentou encontrar informações sobre
-            quanto o município gastava com a merenda escolar. O interesse surgiu após ouvir uma
-            denúncia feita por Rafael Velame no rádio sobre a falta de merenda
-            em algumas escolas da cidade. Ao acessar o{' '}
+            de maneira fácil sobre o município nasceu em 2019, quando a
+            programadora Ana Paula Gomes tentou encontrar informações sobre
+            quanto o município gastava com a merenda escolar. O interesse surgiu
+            após ouvir uma denúncia feita por Rafael Velame no rádio sobre a
+            falta de merenda em algumas escolas da cidade. Ao acessar o{' '}
             <Link href="http://www.transparencia.feiradesantana.ba.gov.br/">
               portal da transparência de Feira de Santana
             </Link>{' '}
@@ -82,10 +80,11 @@ export default function Home() {
           </BodyText>
 
           <BodyText>
-            Diante da situação foram feitos novos pedidos de informação à
-            Câmara - também sem respostas. Após meses de espera foi necessário
-            acionar o Ministério Público da Bahia para intermediar o processo e, a partir
-            daí, o projeto ganhou projeção nas mídias locais, como BATV da TV Subaé, {' '}
+            Diante da situação foram feitos novos pedidos de informação à Câmara
+            - também sem respostas. Após meses de espera foi necessário acionar
+            o Ministério Público da Bahia para intermediar o processo e, a
+            partir daí, o projeto ganhou projeção nas mídias locais, como BATV
+            da TV Subaé,{' '}
             <Link href="https://www.acordacidade.com.br/noticias/222557/programadora-encontra-dificuldades-para-obter-informacoes-sobre-a-atuacao-dos-vereadores-de-feira.html">
               Acorda Cidade
             </Link>
@@ -104,12 +103,11 @@ export default function Home() {
             da casa.
           </BodyText>
           <BodyText>
-            Ainda estamos lutando para conseguir vários dados diferentes e 
-            fazer com que os pedidos de informação sejam
-            propriamente respondidos pela Prefeitura. Entendemos que a
-            transparência tem grande impacto em coibir atos de corrupção e
-            tornar o uso do dinheiro público mais eficiente. Lutar pela
-            transparência é um trabalho de todos.
+            Ainda estamos lutando para conseguir vários dados diferentes e fazer
+            com que os pedidos de informação sejam propriamente respondidos pela
+            Prefeitura. Entendemos que a transparência tem grande impacto em
+            coibir atos de corrupção e tornar o uso do dinheiro público mais
+            eficiente. Lutar pela transparência é um trabalho de todos.
           </BodyText>
         </div>
       </section>
