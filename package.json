@@ -12,7 +12,9 @@
     "test": "jest",
     "lint": "eslint src",
     "test:coverage": "jest --coverage",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "format-code": "prettier --write ./src",
+    "pre-commit": "npx pretty-quick --staged && npx lint-staged"
   },
   "husky": {
     "hooks": {

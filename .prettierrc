@@ -1,4 +1,4 @@
 {
   "singleQuote": true,
-  "trailingComa": "es2021"
+  "trailingComma": "es5"
 }
