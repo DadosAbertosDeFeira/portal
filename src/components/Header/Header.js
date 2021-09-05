@@ -1,14 +1,10 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { BiMenu } from 'react-icons/bi';
-import { FaFacebook, FaInstagram, FaTwitter, FaGithub } from 'react-icons/fa';
-import { animated, useTransition } from 'react-spring';
 import Link from '../Link';
 
-import styles from './styles.module.scss';
 import SearchDropdown from '../SearchDropdown';
 
 import logo from '../../assets/logo.svg';
-import smallLogo from '../../assets/smallLogo.svg';
 
 /**
  * Componente do Dropdown de Pesquisa
@@ -37,189 +33,66 @@ export default function Header() {
   const imgRef = useRef(null);
 
   const [menuOpened, setMenuOpened] = useState(false);
-  const [searchOpened, setSearchOpened] = useState(false);
-
-  // const [searchText, setSearchText] = useState('');
 
   const toggleMenu = () => {
     setMenuOpened((state) => !state);
   };
 
-  // const openSearch = () => {
-  //   setSearchOpened(true);
-  // };
-
-  const closeSearch = () => {
-    setSearchOpened(false);
-  };
-
-  const searchTransition = useTransition(!searchOpened, null, {
-    from: {
-      transform: 'translateX(150%)',
-    },
-    enter: {
-      position: 'static',
-      transform: 'translateX(0)',
-    },
-    leave: {
-      position: 'absolute',
-      transform: 'translateX(-150%)',
-    },
-  });
-
-  useEffect(() => {
-    let isScrollingDown = false;
-
-    const onScroll = () => {
-      if (!navRef.current) {
-        return;
-      }
-      const scrollTop = window.pageYOffset || navRef.scrollTop;
-      if (scrollTop > 68) {
-        if (isScrollingDown) {
-          return;
-        }
-        isScrollingDown = true;
-        navRef.current.classList.add(styles.decreasedSize);
-        navRef.current.classList.remove(styles.defaultSize);
-        closeSearch();
-      } else {
-        if (!isScrollingDown) {
-          return;
-        }
-        isScrollingDown = false;
-        navRef.current.classList.add(styles.defaultSize);
-        navRef.current.classList.remove(styles.decreasedSize);
-        closeSearch();
-      }
-    };
-    window.addEventListener('scroll', onScroll);
-
-    return () => {
-      window.removeEventListener('scroll', onScroll);
-    };
-  }, [navRef]);
-
   return (
     <>
-      <header id={styles.header} className={styles.defaultSize} ref={navRef}>
-        <nav id={styles.desktop}>
-          <div>
+      <header ref={navRef}>
+        <nav className="bg-white absolute top-0 h-desktop-header z-20 lg:z-0 w-screen lg:w-desktop-header flex flex-row shadow md:space-x-lg pl-md md:pl-xl lg:pl-2xl xl:pl-4xl pr-2xl invisible sm:visible">
+          <div className="my-auto mr-lg">
             <Link href="/">
               <img
-                className={styles.logo}
+                className="h-14 w-auto"
                 src={logo}
                 alt="Logo Dados Abertos de Feira"
               />
             </Link>
           </div>
-          <ul>
-            <li>
-              <Link href="/#sobre">SOBRE</Link>
+          <ul className="flex flex-row justify-start space-x-xl my-auto font-bold text-sm z-20">
+            <li className="my-auto">
+              <Link href="/#sobre">Sobre</Link>
             </li>
-            <li>
-              <Link href="/#colabore">COLABORE</Link>
+            <li className="my-auto">
+              <Link href="/#voluntarios">Voluntários</Link>
             </li>
-            <li>
+            <li className="my-auto">
+              <Link href="/#colabore">Colabore</Link>
+            </li>
+            <li className="my-auto">
               <Link
                 target="_blank"
                 href="https://dadosabertosdefeira.medium.com"
               >
-                BLOG
+                Blog
               </Link>
+            </li>
+            <li className="my-auto">
+              <Link href="/#contato">Contato</Link>
             </li>
           </ul>
-          <ul className={styles.social}>
-            <li>
-              <Link href={process.env.NEXT_PUBLIC_INSTAGRAM_URL}>
-                <FaInstagram size={32} />
-              </Link>
-            </li>
-            <li>
-              <Link href={process.env.NEXT_PUBLIC_FACEBOOK_URL}>
-                <FaFacebook size={32} />
-              </Link>
-            </li>
-            <li>
-              <Link href={process.env.NEXT_PUBLIC_TWITTER_URL}>
-                <FaTwitter size={32} />
-              </Link>
-            </li>
-            <li>
-              <Link href={process.env.NEXT_PUBLIC_GITHUB_URL}>
-                <FaGithub size={32} />
-              </Link>
-            </li>
-          </ul>
-          <form action="busca">
-            {/* <BiSearchAlt2 size={32} />
-            <input
-              ref={(input) => input && input.focus()}
-              name="search"
-              placeholder="Pesquisar no Dados Abertos de Feira"
-              onChange={(e) => setSearchText(e.target.value)}
-              value={searchText}
-            /> */}
-          </form>
         </nav>
-        <nav id={styles.mobile}>
-          {searchTransition.map(
-            ({ item, key, props }) =>
-              !item && (
-                <animated.div key={key} style={props}>
-                  <div>
-                    <Link href="/">
-                      <img
-                        className={styles.searchImageSize}
-                        src={smallLogo}
-                        alt="Logo pequena Dados Abertos de Feira"
-                      />
-                    </Link>
-                  </div>
-                  <form action="busca">
-                    {/* <BiSearchAlt2 size={24} />
-                    <input
-                      ref={(input) => input && input.focus()}
-                      name="search"
-                      placeholder="Digite aqui a sua busca"
-                      onChange={(e) => setSearchText(e.target.value)}
-                      value={searchText}
-                    />
-                    <button type="button" onClick={closeSearch}>
-                      <MdClose size={24} />
-                    </button> */}
-                  </form>
-                </animated.div>
-              )
-          )}
-          {searchTransition.map(
-            ({ item, key, props }) =>
-              item && (
-                <animated.div key={key} style={props}>
-                  {/* <button type="button" onClick={openSearch}>
-                    <BiSearchAlt2 size={24} />
-                  </button> */}
-                  <div />
-                  <div id={styles.reducedImageWithScroll}>
-                    <Link href="/">
-                      <img
-                        src={logo}
-                        alt="Logo Dados Abertos de Feira"
-                        ref={imgRef}
-                      />
-                    </Link>
-                  </div>
-                  <button type="button" onClick={toggleMenu}>
-                    <BiMenu size={24} />
-                  </button>
-                </animated.div>
-              )
-          )}
+        <nav className="bg-white fixed top-0 h-mobile-header w-mobile-header z-10 flex flex-row px-lg shadow visible sm:invisible">
+          <div className="flex-grow flex place-content-center">
+            <Link href="/" className="m-auto">
+              <img src={logo} alt="Logo Dados Abertos de Feira" ref={imgRef} />
+            </Link>
+          </div>
+          <button type="button" onClick={toggleMenu}>
+            <BiMenu size={24} />
+          </button>
         </nav>
       </header>
-      <div id={styles.menu} className={menuOpened ? styles.open : ''}>
+      <aside
+        className={`absolute top-0 z-20 h-screen transform ease-in-out transition-all duration-300
+          ${
+            menuOpened ? 'visible translate-x-0' : 'invisible -translate-x-full'
+          }`}
+      >
         <SearchDropdown toggleMenu={toggleMenu} />
-      </div>
+      </aside>
     </>
   );
 }

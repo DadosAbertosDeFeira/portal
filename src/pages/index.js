@@ -113,7 +113,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.volunteers}>
+      <section id="voluntarios" className={styles.volunteers}>
         <div className={styles.icon}>
           <img src="/assets/icons/hand-with-hearth.svg" alt="Livro" />
           <h2>Voluntários</h2>
@@ -147,7 +147,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.bottom}>
+      <section id="contato" className={styles.bottom}>
         <div>
           <div className={styles.contact}>
             <strong className={styles.title}>Contato</strong>

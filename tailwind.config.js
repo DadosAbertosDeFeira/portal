@@ -51,7 +51,21 @@ module.exports = {
         md: '16px',
         lg: '24px',
         xl: '32px',
-        xxl: '40px',
+        '2xl': '56px',
+        '3xl': '80px',
+        '4xl': '128px',
+      },
+      boxShadow: {
+        DEFAULT: '0px 4px 30px rgba(0, 0, 0, 0.2)',
+        md: '0px -4px 30px rgba(0, 0, 0, 0.2)',
+      },
+      height: {
+        'mobile-header': '68px',
+        'desktop-header': '77px',
+      },
+      width: {
+        'mobile-header': '100vw',
+        'desktop-header': 'calc(100vw - min(600px, 45vw) + 100px)',
       },
     },
   },
