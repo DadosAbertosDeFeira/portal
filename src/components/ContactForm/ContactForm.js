@@ -55,7 +55,7 @@ const ContactForm = () => {
           onChange={handleOnChange}
           className={styles.contactFormInput}
           type="text"
-          name="email"
+          name="emailAddress"
           placeholder="Email"
         />
         <textarea
