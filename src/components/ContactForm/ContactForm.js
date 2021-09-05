@@ -1,4 +1,6 @@
 import React from 'react';
+import { toast } from 'react-toastify';
+
 import Button from '../Button';
 import { encodeForm } from '../../utils/form';
 
@@ -16,17 +18,22 @@ const ContactForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(formData);
-    console.log(encodeForm(formData));
     try {
-      await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encodeForm({
-          'form-name': event.target.getAttribute('name'),
-          ...formData,
+      await toast.promise(
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: encodeForm({
+            'form-name': event.target.getAttribute('name'),
+            ...formData,
+          }),
         }),
-      });
+        {
+          pending: 'Enviando mensagem',
+          error: 'Ocorreu um erro ao enviar sua mensagem',
+          success: 'Sua mensagem foi enviada com sucess',
+        }
+      );
     } catch (error) {
       console.log(error);
     }
