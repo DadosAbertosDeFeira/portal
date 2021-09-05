@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Button from '../components/Button';
 import Link from '../components/Link';
 import VolunteersCard from '../components/VolunteersCard';
+import SocialContactButtons from '../components/SocialContactButtons';
 
 import volunteersList from '../utils/volunteers';
 import styles from './index.module.scss';
@@ -167,26 +168,7 @@ export default function Home() {
                   </a>
                 </div>
                 <section className="flex flex-row space-x-md">
-                  <button
-                    className="bg-blue-100 h-xl w-auto px-sm rounded flex items-center space-x-sm pa-md"
-                    type="button"
-                    onClick={() =>
-                      router.push(process.env.NEXT_PUBLIC_TWITTER_URL)
-                    }
-                  >
-                    <img src="/assets/icons/twitter.svg" alt="Twitter" />
-                    <span className="text-primary-dark text-sm">Twitter</span>
-                  </button>
-                  <button
-                    className="bg-blue-100 h-xl w-auto px-sm rounded flex items-center space-x-sm pa-md "
-                    type="button"
-                    onClick={() =>
-                      router.push(process.env.NEXT_PUBLIC_FACEBOOK_URL)
-                    }
-                  >
-                    <img src="/assets/icons/facebook.svg" alt="Facebook" />
-                    <span className="text-primary-dark text-sm">Facebook</span>
-                  </button>
+                  <SocialContactButtons />
                 </section>
               </aside>
             </div>

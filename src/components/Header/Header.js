@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { BiMenu } from 'react-icons/bi';
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTwitter, FaGithub } from 'react-icons/fa';
 import { animated, useTransition } from 'react-spring';
 import Link from '../Link';
 
@@ -143,6 +143,11 @@ export default function Header() {
             <li>
               <Link href={process.env.NEXT_PUBLIC_TWITTER_URL}>
                 <FaTwitter size={32} />
+              </Link>
+            </li>
+            <li>
+              <Link href={process.env.NEXT_PUBLIC_GITHUB_URL}>
+                <FaGithub size={32} />
               </Link>
             </li>
           </ul>
