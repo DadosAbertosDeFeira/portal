@@ -18,25 +18,21 @@ const ContactForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    try {
-      await toast.promise(
-        fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: encodeForm({
-            'form-name': event.target.getAttribute('name'),
-            ...formData,
-          }),
+    await toast.promise(
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encodeForm({
+          'form-name': event.target.getAttribute('name'),
+          ...formData,
         }),
-        {
-          pending: 'Enviando mensagem',
-          error: 'Ocorreu um erro ao enviar sua mensagem',
-          success: 'Sua mensagem foi enviada com sucess',
-        }
-      );
-    } catch (error) {
-      console.log(error);
-    }
+      }),
+      {
+        pending: 'Enviando mensagem',
+        error: 'Ocorreu um erro ao enviar sua mensagem',
+        success: 'Sua mensagem foi enviada com sucess',
+      }
+    );
   };
 
   return (
@@ -54,6 +50,13 @@ const ContactForm = () => {
           type="text"
           name="name"
           placeholder="Nome"
+        />
+        <input
+          onChange={handleOnChange}
+          className={styles.contactFormInput}
+          type="text"
+          name="emailAddress"
+          placeholder="Email"
         />
         <input
           onChange={handleOnChange}
