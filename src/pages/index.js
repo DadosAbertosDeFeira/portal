@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="Dados abertos de Feira"
+        title="Dados Abertos de Feira"
         image="assets/dadosabertosdefeira.png"
         shouldExcludeTitleSuffix
       />
@@ -28,12 +28,10 @@ export default function Home() {
         <div className={styles.mainTexts}>
           <h1>Mais transparência em Feira de Santana</h1>
           <BodyText>
-            Nós como cidadões, temos o direito a informação de forma clara e
+            Nós, cidadãos, temos o direito a informação de forma clara e
             transparente. Precisamos saber o que acontece em nossa cidade.
             <br />
-            <strong>
-              Se junte aos amigos de Feira e faça a diferença como cidadão!
-            </strong>
+            <strong>Junte-se a nós e faça a diferença!</strong>
           </BodyText>
           <div>
             <Button
@@ -56,11 +54,11 @@ export default function Home() {
         <div className={styles.historyTexts}>
           <BodyText>
             A ideia de criar um espaço onde as pessoas possam buscar informações
-            de maneira fácil sobre o município nasceu em 2019, quando a analista
-            de sistemas Ana Paula Gomes tentou encontrar informações sobre
-            quanto o município gastava com a merenda escolar, após ouvir uma
-            denúncia feita por Rafael Velame no rádio sobre a falta de merenda
-            em algumas escolas da cidade. Ao acessar o{' '}
+            de maneira fácil sobre o município nasceu em 2019, quando a
+            programadora Ana Paula Gomes tentou encontrar informações sobre
+            quanto o município gastava com a merenda escolar. O interesse surgiu
+            após ouvir uma denúncia feita por Rafael Velame no rádio sobre a
+            falta de merenda em algumas escolas da cidade. Ao acessar o{' '}
             <Link href="http://www.transparencia.feiradesantana.ba.gov.br/">
               portal da transparência de Feira de Santana
             </Link>{' '}
@@ -68,7 +66,7 @@ export default function Home() {
             <Link href="http://www.transparencia.feiradesantana.ba.gov.br/index.php?view=licitacoes">
               página de licitações
             </Link>
-            . Fez alguns pedidos de informação à Prefeitura, mas não foi
+            . Fez alguns pedidos de informação à Prefeitura mas não foi
             respondida.
           </BodyText>
           <BodyText>
@@ -82,14 +80,11 @@ export default function Home() {
           </BodyText>
 
           <BodyText>
-            Diante da situação foram feitos novos pedidos de informação à
-            Câmara, também sem respostas. Após meses de espera foi necessário
-            acionar o Ministério Público para intermediar o processo e a partir
-            daí o projeto ganhou projeção nas mídias locais, como no{' '}
-            <Link href="http://g1.globo.com/bahia/batv/videos/t/tv-subae/v/batv-tv-subae-03022020-bloco-2/8292651/">
-              BATV da TV Subaé
-            </Link>
-            ,{' '}
+            Diante da situação foram feitos novos pedidos de informação à Câmara
+            - também sem respostas. Após meses de espera foi necessário acionar
+            o Ministério Público da Bahia para intermediar o processo e, a
+            partir daí, o projeto ganhou projeção nas mídias locais, como BATV
+            da TV Subaé,{' '}
             <Link href="https://www.acordacidade.com.br/noticias/222557/programadora-encontra-dificuldades-para-obter-informacoes-sobre-a-atuacao-dos-vereadores-de-feira.html">
               Acorda Cidade
             </Link>
@@ -108,12 +103,11 @@ export default function Home() {
             da casa.
           </BodyText>
           <BodyText>
-            Ainda estamos lutando para conseguir dados históricos de assiduidade
-            dos vereadores e fazer com que os pedidos de informação sejam
-            propriamente respondidos pela Prefeitura. Entendemos que a
-            transparência tem grande impacto em coibir atos de corrupção e
-            tornar o uso do dinheiro público mais eficiente. Lutar pela
-            transparência é um trabalho de todos.
+            Ainda estamos lutando para conseguir vários dados diferentes e fazer
+            com que os pedidos de informação sejam propriamente respondidos pela
+            Prefeitura. Entendemos que a transparência tem grande impacto em
+            coibir atos de corrupção e tornar o uso do dinheiro público mais
+            eficiente. Lutar pela transparência é um trabalho de todos.
           </BodyText>
         </div>
       </section>
@@ -158,7 +152,7 @@ export default function Home() {
             <strong className={styles.title}>Contato</strong>
             <div>
               <iframe
-                title="FSA"
+                title="Feira de Santana"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124770.06894749572!2d-39.00227599729459!3d-12.243901565793168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71439dbd0766da9%3A0xed4d58d8df9d5ffe!2sFeira%20de%20Santana%20-%20Maria%20Quit%C3%A9ria%2C%20Feira%20de%20Santana%20-%20BA!5e0!3m2!1spt-BR!2sbr!4v1624460355068!5m2!1spt-BR!2sbr"
                 width="600"
                 height="450"
