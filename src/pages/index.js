@@ -114,6 +114,10 @@ export default function Home() {
         </div>
       </section>
 
+      <div className={styles.contributeWrapper}>
+        <HowContribute />
+      </div>
+
       <section className={styles.volunteers}>
         <div className={styles.icon}>
           <img src="/assets/icons/hand-with-hearth.svg" alt="Livro" />
@@ -133,10 +137,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      <div className={styles.contributeWrapper}>
-        <HowContribute />
-      </div>
 
       <section className={styles.bottom}>
         <div>
