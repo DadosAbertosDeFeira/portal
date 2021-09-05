@@ -54,6 +54,7 @@ module.exports = {
         '2xl': '56px',
         '3xl': '80px',
         '4xl': '128px',
+        '5xl': '256px',
       },
       boxShadow: {
         DEFAULT: '0px 4px 30px rgba(0, 0, 0, 0.2)',
@@ -66,6 +67,26 @@ module.exports = {
       width: {
         'mobile-header': '100vw',
         'desktop-header': 'calc(100vw - min(600px, 45vw) + 100px)',
+      },
+      minWidth: {
+        xs: '4px',
+        sm: '8px',
+        md: '16px',
+        lg: '24px',
+        xl: '32px',
+        '2xl': '56px',
+        '3xl': '80px',
+        '4xl': '128px',
+        '5xl': '184px',
+      },
+      backgroundImage: () => ({
+        'city-pattern': "url('/assets/home-background.svg')",
+      }),
+      screens: {
+        tablet: '640px',
+        laptop: '1024px',
+        desktop: '1280px',
+        'large-desktop': '1536px',
       },
     },
   },

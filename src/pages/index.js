@@ -21,20 +21,23 @@ export default function Home() {
       />
       <Header />
 
-      <div className={styles.rightImage}>
-        <img src="/assets/peoples-right.svg" alt="Pessoas a Direita" />
-      </div>
-
-      <section className={styles.main}>
-        <div className={styles.mainTexts}>
+      <section className="bg-no-repeat bg-bottom bg-cover bg-city-pattern flex flex-col tablet:flex-row">
+        <div className="flex-grow flex justify-end tablet:items-start tablet:order-last">
+          <img
+            className="w-1/2 min-w-5xl tablet:w-auto"
+            src="/assets/peoples-right.svg"
+            alt="Pessoas a Direita"
+          />
+        </div>
+        <div className="text-center page-margin-align desktop:w-1/2 tablet:pr-5 tablet:py-48 desktop:pt-64 desktop:text-left">
           <h1>Mais transparência em Feira de Santana</h1>
-          <BodyText>
+          <BodyText className="py-5">
             Nós, cidadãos, temos o direito a informação de forma clara e
             transparente. Precisamos saber o que acontece em nossa cidade.
             <br />
             <strong>Junte-se a nós e faça a diferença!</strong>
           </BodyText>
-          <div>
+          <div className="flex place-content-center large-desktop:place-content-start py-5">
             <Button
               className={styles.mainButton}
               onClick={() =>

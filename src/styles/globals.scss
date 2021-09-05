@@ -14,12 +14,18 @@
   }
 
   h1 {
-    @apply text-lg sm:text-xl font-bold;
+    @apply text-lg tablet:text-xl font-bold;
   }
   h2 {
     @apply text-lg font-bold;
   }
   h3 {
     @apply text-base font-bold;
+  }
+}
+
+@layer components {
+  .page-margin-align {
+    @apply pl-md tablet:pl-xl desktop:pl-4xl large-desktop:pl-5xl
   }
 }
