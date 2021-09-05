@@ -142,7 +142,6 @@ export default function Home() {
         </div>
       </section>
 
-
       <section id="contato" className={styles.bottom}>
         <div>
           <div className={styles.contact}>
