@@ -41,7 +41,7 @@ export default function Header() {
   return (
     <>
       <header ref={navRef}>
-        <nav className="bg-white absolute top-0 h-desktop-header z-20 xl:z-0 w-full flex flex-row shadow md:space-x-lg page-margin-align pr-2xl invisible tablet:visible">
+        <nav className="bg-white absolute top-0 h-desktop-header z-20 xl:z-0 w-full flex-row shadow md:space-x-lg page-margin-align pr-2xl hidden tablet:flex">
           <div className="my-auto mr-lg">
             <Link href="/">
               <img
@@ -74,7 +74,7 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <nav className="bg-white fixed top-0 h-mobile-header w-full z-10 flex flex-row px-lg shadow visible tablet:invisible">
+        <nav className="bg-white fixed top-0 h-mobile-header w-full z-10 flex-row px-lg shadow flex tablet:hidden">
           <div className="flex-grow flex place-content-center">
             <Link href="/" className="m-auto">
               <img src={logo} alt="Logo Dados Abertos de Feira" ref={imgRef} />
