@@ -11,12 +11,16 @@
     "build-storybook": "build-storybook",
     "test": "jest",
     "lint": "eslint src",
+    "lint:staged": "lint-staged",
     "test:coverage": "jest --coverage",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "format-code:all": "prettier --write ./src",
+    "format-code:staged": "pretty-quick --staged",
+    "pre-commit": "yarn format-code:staged && yarn lint:staged"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npx pretty-quick --staged && lint-staged",
+      "pre-commit": "yarn pre-commit",
       "pre-push": "yarn test"
     }
   },
@@ -70,6 +74,7 @@
     "lint-staged": ">=10",
     "postcss": "^7",
     "prettier": "^2.1.2",
+    "pretty-quick": "^3.1.1",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
