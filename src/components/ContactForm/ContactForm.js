@@ -55,13 +55,6 @@ const ContactForm = () => {
           onChange={handleOnChange}
           className={styles.contactFormInput}
           type="text"
-          name="emailAddress"
-          placeholder="Email"
-        />
-        <input
-          onChange={handleOnChange}
-          className={styles.contactFormInput}
-          type="email"
           name="email"
           placeholder="Email"
         />
