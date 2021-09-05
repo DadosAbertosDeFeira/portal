@@ -86,7 +86,7 @@ export default function Header() {
         </nav>
       </header>
       <aside
-        className={`absolute top-0 z-20 h-screen transform ease-in-out transition-all duration-300
+        className={`fixed top-0 z-20 h-full transform ease-in-out transition-all duration-300
           ${
             menuOpened ? 'visible translate-x-0' : 'invisible -translate-x-full'
           }`}
