@@ -1,9 +1,11 @@
 import { useRouter } from 'next/router';
+
 import SEO from '../components/SEO';
 import Header from '../components/Header';
 import Button from '../components/Button';
 import Link from '../components/Link';
 import VolunteersCard from '../components/VolunteersCard';
+import HowContribute from '../components/HowContribute';
 
 import volunteersList from '../utils/volunteers';
 import styles from './index.module.scss';
@@ -132,19 +134,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="colabore" className={styles.contribute}>
-        <img src="/assets/people-contribute.svg" alt="Como contribuir" />
-        <div>
-          <h2>Como contribuir</h2>
-          <BodyText>
-            Essa é uma iniciativa voluntária, feita a muitas mãos, e qualquer
-            pessoa interessada pode fazer parte!
-          </BodyText>
-          <Button onClick={() => router.push('/colabore')}>
-            Veja como contribuir
-          </Button>
-        </div>
-      </section>
+      <div className={styles.contributeWrapper}>
+        <HowContribute />
+      </div>
 
       <section className={styles.bottom}>
         <div>
