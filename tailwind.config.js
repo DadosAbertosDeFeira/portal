@@ -78,6 +78,7 @@ module.exports = {
         '3xl': '80px',
         '4xl': '128px',
         '5xl': '184px',
+        '6xl': '256px',
       },
       backgroundImage: () => ({
         'city-pattern': "url('/assets/home-background.svg')",

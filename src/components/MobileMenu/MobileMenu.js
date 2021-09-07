@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import { MdClose } from 'react-icons/md';
+import { MdClose, MdOpenInNew } from 'react-icons/md';
+
 import PropTypes from 'prop-types';
 
 import Link from '../Link';
@@ -41,15 +42,17 @@ export default function MobileMenu({ handleClose }) {
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchend', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchend', handleClickOutside);
     };
   }, [wrapperRef, handleClose]);
 
   return (
     <div
       ref={wrapperRef}
-      className="flex flex-col w-5xl bg-white h-full shadow"
+      className="flex flex-col w-6xl bg-white h-full shadow"
     >
       <div className="flex justify-end w-auto px-md py-md bg-no-repeat bg-bottom bg-cover bg-waved-banner">
         <button type="button" onClick={handleClose}>
@@ -73,17 +76,30 @@ export default function MobileMenu({ handleClose }) {
           </Link>
         </li>
         <li>
+          <Link href="/#contato" onClick={handleClose}>
+            Contato
+          </Link>
+        </li>
+        <li>
           <Link
             target="_blank"
+            className="flex items-center"
+            href="https://anchor.fm/cidadesabertas/"
+            onClick={handleClose}
+          >
+            Podcast Cidades Abertas
+            <MdOpenInNew className="ml-sm inline" size="16" />
+          </Link>
+        </li>
+        <li>
+          <Link
+            target="_blank"
+            className="flex items-center"
             href="https://dadosabertosdefeira.medium.com"
             onClick={handleClose}
           >
             Blog
-          </Link>
-        </li>
-        <li>
-          <Link href="/#contato" onClick={handleClose}>
-            Contato
+            <MdOpenInNew className="ml-sm inline" size="16" />
           </Link>
         </li>
       </ul>

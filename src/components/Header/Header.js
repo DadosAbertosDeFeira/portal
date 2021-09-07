@@ -7,7 +7,7 @@ import logoWithText from '../../assets/logo.svg';
 
 const DesktopHeader = () => {
   return (
-    <nav className="bg-white absolute top-0 h-desktop-header z-20 xl:z-0 w-full flex-row shadow md:space-x-lg page-margin-align pr-2xl hidden tablet:flex">
+    <nav className="bg-white absolute top-0 h-desktop-header z-20 xl:z-0 w-full flex-row shadow md:space-x-lg page-margin-align pr-xl hidden tablet:flex">
       <div className="my-auto mr-lg">
         <Link href="/">
           <img
@@ -18,22 +18,27 @@ const DesktopHeader = () => {
         </Link>
       </div>
       <ul className="flex flex-row justify-start space-x-xl my-auto font-bold text-sm z-20">
-        <li className="my-auto">
+        <li>
           <Link href="/#sobre">Sobre</Link>
         </li>
-        <li className="my-auto">
+        <li>
           <Link href="/#voluntarios">Voluntários</Link>
         </li>
-        <li className="my-auto">
+        <li>
           <Link href="/#colabore">Colabore</Link>
         </li>
-        <li className="my-auto">
+        <li>
+          <Link href="/#contato">Contato</Link>
+        </li>
+        <li>
+          <Link target="_blank" href="https://anchor.fm/cidadesabertas/">
+            Podcast
+          </Link>
+        </li>
+        <li>
           <Link target="_blank" href="https://dadosabertosdefeira.medium.com">
             Blog
           </Link>
-        </li>
-        <li className="my-auto">
-          <Link href="/#contato">Contato</Link>
         </li>
       </ul>
     </nav>
