@@ -47,7 +47,7 @@ const ContactForm = () => {
       {
         pending: 'Enviando mensagem',
         error: 'Ocorreu um erro ao enviar sua mensagem',
-        success: 'Sua mensagem foi enviada com sucess',
+        success: 'Sua mensagem foi enviada com sucesso',
       }
     );
   };
