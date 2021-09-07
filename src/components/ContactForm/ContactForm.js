@@ -3,6 +3,7 @@ import React from 'react';
 import { toast } from 'react-toastify';
 import { useForm } from 'react-hook-form';
 import { ErrorMessage } from '@hookform/error-message';
+import classnames from 'classnames';
 
 import Button from '../Button';
 import { encodeForm } from '../../utils/form';
@@ -61,7 +62,12 @@ const ContactForm = () => {
           type="text"
           placeholder="Nome"
         />
-        <ErrorMessage errors={errors} name="name" />
+        <ErrorMessage
+          as="span"
+          className={classnames(styles.errorMessage, 'text-sm m-sm')}
+          errors={errors}
+          name="name"
+        />
 
         <input
           className={styles.contactFormInput}
@@ -69,7 +75,12 @@ const ContactForm = () => {
           type="email"
           placeholder="Email"
         />
-        <ErrorMessage errors={errors} name="email" />
+        <ErrorMessage
+          as="span"
+          className={classnames(styles.errorMessage, 'text-sm m-sm')}
+          errors={errors}
+          name="email"
+        />
 
         <textarea
           className={styles.contactFormTextarea}
@@ -77,7 +88,12 @@ const ContactForm = () => {
           placeholder="Mensagem"
           rows={3}
         />
-        <ErrorMessage errors={errors} name="message" />
+        <ErrorMessage
+          as="span"
+          className={classnames(styles.errorMessage, 'text-sm m-sm')}
+          errors={errors}
+          name="message"
+        />
 
         <Button
           className={styles.contactFormSubmitButton}
