@@ -1,30 +1,46 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { toast } from 'react-toastify';
+import { useForm } from 'react-hook-form';
+import { ErrorMessage } from '@hookform/error-message';
 
 import Button from '../Button';
 import { encodeForm } from '../../utils/form';
 
 import styles from './ContactForm.module.scss';
 
-const ContactForm = () => {
-  const [formData, setFormData] = React.useState({});
-  const handleOnChange = (event) => {
-    const { name, value } = event.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+const EMAIL_REGEX = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+const formValidation = {
+  name: {
+    required: 'Esse campo é obrigatório',
+  },
+  email: {
+    required: 'Esse campo é obrigatório',
+    pattern: {
+      value: EMAIL_REGEX,
+      message: 'Informe um email válido',
+    },
+  },
+  message: {
+    required: 'Esse campo é obrigatório',
+  },
+};
+
+const ContactForm = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = async (data) => {
     await toast.promise(
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encodeForm({
-          'form-name': event.target.getAttribute('name'),
-          ...formData,
+          'form-name': 'contact',
+          ...data,
         }),
       }),
       {
@@ -39,32 +55,35 @@ const ContactForm = () => {
     <>
       <strong className={styles.title}>Fale conosco</strong>
       <form
-        onSubmit={handleSubmit}
+        onSubmit={handleSubmit(onSubmit)}
         className={styles.contactForm}
         name="contact"
         data-netlify="true"
       >
         <input
-          onChange={handleOnChange}
           className={styles.contactFormInput}
+          {...register('name', formValidation.name)}
           type="text"
-          name="name"
           placeholder="Nome"
         />
+        <ErrorMessage errors={errors} name="name" />
+
         <input
-          onChange={handleOnChange}
           className={styles.contactFormInput}
-          type="text"
-          name="emailAddress"
+          {...register('email', formValidation.email)}
+          type="email"
           placeholder="Email"
         />
+        <ErrorMessage errors={errors} name="email" />
+
         <textarea
-          onChange={handleOnChange}
           className={styles.contactFormTextarea}
-          name="message"
+          {...register('message', formValidation.message)}
           placeholder="Mensagem"
           rows={3}
         />
+        <ErrorMessage errors={errors} name="message" />
+
         <Button
           className={styles.contactFormSubmitButton}
           type="submit"
