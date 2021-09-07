@@ -54,7 +54,8 @@ module.exports = {
         '2xl': '56px',
         '3xl': '80px',
         '4xl': '128px',
-        '5xl': '256px',
+        '5xl': '184px',
+        '6xl': '256px',
       },
       boxShadow: {
         DEFAULT: '0px 4px 30px rgba(0, 0, 0, 0.2)',

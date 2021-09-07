@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import classnames from 'classnames';
 
 import SEO from '../components/SEO';
 import Header from '../components/Header';
@@ -142,33 +143,35 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contato" className={styles.bottom}>
-        <div>
-          <div className={styles.contact}>
-            <strong className={styles.title}>Contato</strong>
-            <div>
+      <section
+        id="contato"
+        className={classnames(
+          styles.bottom,
+          'border-2 pt-2xl tablet:space-x-md'
+        )}
+      >
+        <div className="flex flex-col justify-center tablet:flex-row">
+          <div className="text-center tablet:max-w-1/2 tablet:m-md tablet:text-left">
+            <h2>Contato</h2>
+            <div className="flex flex-col desktop:flex-row my-lg w-full space-y-md">
               <iframe
                 title="Feira de Santana"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124770.06894749572!2d-39.00227599729459!3d-12.243901565793168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71439dbd0766da9%3A0xed4d58d8df9d5ffe!2sFeira%20de%20Santana%20-%20Maria%20Quit%C3%A9ria%2C%20Feira%20de%20Santana%20-%20BA!5e0!3m2!1spt-BR!2sbr!4v1624460355068!5m2!1spt-BR!2sbr"
-                width="600"
-                height="450"
+                width="100%"
+                height="212px"
                 allowFullScreen=""
                 loading="lazy"
               />
-              <aside>
-                <div>
-                  <strong>Feira de Santana</strong>
-                  <a href="mailto:dadosabertosdefeira+site@gmail.com">
-                    contato@dadosabertosdefeira.com.br
-                  </a>
-                </div>
-                <section className="flex flex-row space-x-md">
-                  <SocialContactButtons />
-                </section>
-              </aside>
+              <div className="flex flex-col mx-xl">
+                <h3>Feira de Santana</h3>
+                <a href="mailto:dadosabertosdefeira+site@gmail.com">
+                  contato@dadosabertosdefeira.com.br
+                </a>
+                <SocialContactButtons />
+              </div>
             </div>
           </div>
-          <div className={styles.talkus}>
+          <div className={classnames(styles.talkus, 'tablet:m-md')}>
             <strong className={styles.title}>Fale conosco</strong>
             <form name="contact" method="POST" data-netlify="true">
               <input type="text" name="name" placeholder="Nome" />
@@ -180,7 +183,7 @@ export default function Home() {
             </form>
           </div>
         </div>
-        <div className={styles.copyright}>
+        <div className="text-center">
           <span>© 2021 Todos os Direitos Reservados</span>
         </div>
       </section>
