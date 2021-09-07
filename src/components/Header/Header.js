@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { BiMenu } from 'react-icons/bi';
 import Link from '../Link';
-
-import SearchDropdown from '../SearchDropdown';
+import MobileMenu from '../MobileMenu';
 
 import logoWithText from '../../assets/logo.svg';
 
@@ -48,6 +47,10 @@ const MobileHeader = () => {
     setMenuOpened((state) => !state);
   };
 
+  const closeMenuIfOpened = () => {
+    setMenuOpened((isOpen) => (isOpen ? false : isOpen));
+  };
+
   return (
     <nav className="bg-white fixed top-0 h-mobile-header w-full z-10 flex-row px-lg shadow flex tablet:hidden">
       <div className="flex-grow flex place-content-center">
@@ -68,14 +71,14 @@ const MobileHeader = () => {
             menuOpened ? 'visible translate-x-0' : 'invisible -translate-x-full'
           }`}
       >
-        <SearchDropdown toggleMenu={toggleMenu} />
+        <MobileMenu handleClose={closeMenuIfOpened} />
       </aside>
     </nav>
   );
 };
 
 /**
- * Componente do Dropdown de Pesquisa
+ * Componente do Header
  *
  * @param props {}
  *
