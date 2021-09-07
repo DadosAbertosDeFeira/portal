@@ -54,12 +54,7 @@ const ContactForm = () => {
   return (
     <>
       <strong className={styles.title}>Fale conosco</strong>
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className={styles.contactForm}
-        name="contact"
-        data-netlify="true"
-      >
+      <form onSubmit={handleSubmit(onSubmit)} className={styles.contactForm}>
         <input
           className={styles.contactFormInput}
           {...register('name', formValidation.name)}
