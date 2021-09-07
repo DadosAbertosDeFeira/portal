@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import Button from '../components/Button';
 import Link from '../components/Link';
 import VolunteersCard from '../components/VolunteersCard';
+import ContactForm from '../components/ContactForm';
 import HowContribute from '../components/HowContribute';
 import SocialContactButtons from '../components/SocialContactButtons';
 
@@ -166,15 +167,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.talkus}>
-            <strong className={styles.title}>Fale conosco</strong>
-            <form name="contact" method="POST" data-netlify="true">
-              <input type="text" name="name" placeholder="Nome" />
-              <input type="email" name="email" placeholder="Email" />
-              <textarea name="message" placeholder="Mensagem" />
-              <Button type="submit" outline>
-                Enviar
-              </Button>
-            </form>
+            <ContactForm />
           </div>
         </div>
         <div className={styles.copyright}>
