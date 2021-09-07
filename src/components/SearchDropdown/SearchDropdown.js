@@ -1,8 +1,8 @@
 import React from 'react';
-import { MdBusiness, MdClose } from 'react-icons/md';
+import { MdClose } from 'react-icons/md';
 import PropTypes from 'prop-types';
 
-import styles from './styles.module.scss';
+import Link from '../Link';
 
 /**
  * Componente do Dropdown de Pesquisa
@@ -33,47 +33,41 @@ import styles from './styles.module.scss';
  */
 export default function SearchDropdown({ toggleMenu }) {
   return (
-    <div id={styles.menu}>
-      <div id={styles.menuClose}>
+    <div className="flex flex-col w-5xl bg-white h-full shadow">
+      <div className="flex justify-end w-auto px-md py-md bg-gray">
         <button type="button" onClick={toggleMenu}>
           <MdClose size={24} />
         </button>
       </div>
-      <ul className={styles.list}>
+      <ul className="flex flex-col space-y-sm font-bold mx-md">
         <li>
-          <div>
-            <MdBusiness size={16} />
-            <span>Prefeitura</span>
-          </div>
-          <ul className={styles.listItem}>
-            <li>
-              <span>Diário Oficial</span>
-            </li>
-            <li>
-              <span>Licitações</span>
-            </li>
-          </ul>
+          <Link href="/#sobre" onClick={toggleMenu}>
+            Nossa História
+          </Link>
         </li>
-
         <li>
-          <div>
-            <MdBusiness size={16} />
-            <span>Câmara de Vereadores</span>
-          </div>
-          <ul className={styles.listItem}>
-            <li>
-              <span>Diário Oficial</span>
-            </li>
-            <li>
-              <span>Atas das Sessões</span>
-            </li>
-            <li>
-              <span>Lista de Presença</span>
-            </li>
-            <li>
-              <span>Agenda das Sessões</span>
-            </li>
-          </ul>
+          <Link href="/#voluntarios" onClick={toggleMenu}>
+            Voluntários
+          </Link>
+        </li>
+        <li>
+          <Link href="/#colabore" onClick={toggleMenu}>
+            Como contribuir
+          </Link>
+        </li>
+        <li>
+          <Link
+            target="_blank"
+            href="https://dadosabertosdefeira.medium.com"
+            onClick={toggleMenu}
+          >
+            Blog
+          </Link>
+        </li>
+        <li>
+          <Link href="/#contato" onClick={toggleMenu}>
+            Contato
+          </Link>
         </li>
       </ul>
     </div>
