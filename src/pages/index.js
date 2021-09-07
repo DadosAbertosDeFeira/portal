@@ -172,7 +172,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className={styles.talkus}>
+          <div className={classnames(styles.talkus, 'tablet:m-md')}>
             <ContactForm />
           </div>
         </div>
