@@ -50,16 +50,13 @@ export default function MobileMenu({ handleClose }) {
   }, [wrapperRef, handleClose]);
 
   return (
-    <div
-      ref={wrapperRef}
-      className="flex flex-col w-6xl bg-white h-full shadow"
-    >
+    <div ref={wrapperRef} className="flex flex-col bg-white h-full shadow-md">
       <div className="flex justify-end w-auto px-md py-md bg-no-repeat bg-bottom bg-cover bg-waved-banner">
         <button type="button" onClick={handleClose}>
           <MdClose size={24} />
         </button>
       </div>
-      <ul className="flex flex-col space-y-sm font-bold mx-md">
+      <ul className="flex flex-col space-y-sm font-bold m-md">
         <li>
           <Link href="/#sobre" onClick={handleClose}>
             Nossa História
