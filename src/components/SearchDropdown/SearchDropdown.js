@@ -34,7 +34,7 @@ import Link from '../Link';
 export default function SearchDropdown({ toggleMenu }) {
   return (
     <div className="flex flex-col w-5xl bg-white h-full shadow">
-      <div className="flex justify-end w-auto px-md py-md bg-gray">
+      <div className="flex justify-end w-auto px-md py-md bg-no-repeat bg-bottom bg-cover bg-waved-banner">
         <button type="button" onClick={toggleMenu}>
           <MdClose size={24} />
         </button>
