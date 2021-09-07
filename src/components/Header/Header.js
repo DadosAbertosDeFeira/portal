@@ -4,7 +4,7 @@ import Link from '../Link';
 
 import SearchDropdown from '../SearchDropdown';
 
-import logo from '../../assets/logo.svg';
+import logoWithText from '../../assets/logo.svg';
 
 const DesktopHeader = () => {
   return (
@@ -13,7 +13,7 @@ const DesktopHeader = () => {
         <Link href="/">
           <img
             className="h-14 w-auto"
-            src={logo}
+            src={logoWithText}
             alt="Logo Dados Abertos de Feira"
           />
         </Link>
@@ -52,7 +52,11 @@ const MobileHeader = () => {
     <nav className="bg-white fixed top-0 h-mobile-header w-full z-10 flex-row px-lg shadow flex tablet:hidden">
       <div className="flex-grow flex place-content-center">
         <Link href="/" className="m-auto">
-          <img src={logo} alt="Logo Dados Abertos de Feira" />
+          <img
+            src={logoWithText}
+            className="h-14 w-auto"
+            alt="Logo Dados Abertos de Feira"
+          />
         </Link>
       </div>
       <button type="button" onClick={toggleMenu}>
