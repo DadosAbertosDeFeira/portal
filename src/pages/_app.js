@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import * as gtag from '../lib/gtag';
 import '../styles/globals.scss';
@@ -17,8 +19,13 @@ function MyApp({ Component, pageProps }) {
       events.off('routeChangeComplete', handleRouteChange);
     };
   }, [events]);
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  return <Component {...pageProps} />;
+  return (
+    <>
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+      <Component {...pageProps} />
+      <ToastContainer />
+    </>
+  );
 }
 
 export default MyApp;

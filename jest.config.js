@@ -1,6 +1,9 @@
 module.exports = {
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
-  setupFilesAfterEnv: ['<rootDir>/setupTests.js'],
+  setupFilesAfterEnv: [
+    '<rootDir>/setupTests.js',
+    '<rootDir>/setupEnvTestVars.js',
+  ],
   moduleNameMapper: {
     '\\.(css|less|scss)$': 'identity-obj-proxy',
   },
