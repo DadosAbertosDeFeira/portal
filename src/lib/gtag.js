@@ -4,7 +4,7 @@ export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
 /**
  * Função para desparo do evento do pageview
  *
- * @param url URL da página atual.
+ * @param url path da URL da página atual.
  *
  * @example
  * ```
@@ -13,7 +13,7 @@ export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
  * export default function Page () {
  *
  *  useEffect(() => {
- *    pageview(window.location.href); // ATENÇÃO: Window pode não existir se tiver sendo rodado do lado do servidor.
+ *    pageview(window.location.pathname); // ATENÇÃO: Window pode não existir se tiver sendo rodado do lado do servidor.
  *  }, [])
  *  ...
  * }
