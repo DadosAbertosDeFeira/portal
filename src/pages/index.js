@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router';
-import classnames from 'classnames';
 
 import SEO from '../components/SEO';
 import Header from '../components/Header';
@@ -144,17 +143,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        id="contato"
-        className={classnames(
-          styles.bottom,
-          'border-2 pt-2xl tablet:space-x-md'
-        )}
-      >
+      <section id="contato" className="border-t-2 pt-2xl tablet:space-x-md">
         <div className="flex flex-col justify-center tablet:flex-row">
           <div className="text-center tablet:max-w-1/2 tablet:m-md tablet:text-left">
             <h2>Contato</h2>
-            <div className="flex flex-col desktop:flex-row my-lg w-full space-y-md">
+            <div className="flex flex-col desktop:flex-row my-lg w-full space-y-md desktop:space-y-0">
               <iframe
                 title="Feira de Santana"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124770.06894749572!2d-39.00227599729459!3d-12.243901565793168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71439dbd0766da9%3A0xed4d58d8df9d5ffe!2sFeira%20de%20Santana%20-%20Maria%20Quit%C3%A9ria%2C%20Feira%20de%20Santana%20-%20BA!5e0!3m2!1spt-BR!2sbr!4v1624460355068!5m2!1spt-BR!2sbr"
@@ -172,11 +165,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className={classnames(styles.talkus, 'tablet:m-md')}>
+          <div className="flex flex-col items-center tablet:m-md tablet:w-80 tablet:items-start">
             <ContactForm />
           </div>
         </div>
-        <div className="text-center">
+        <div className="text-center m-xl">
           <span>© 2021 Todos os Direitos Reservados</span>
         </div>
       </section>
