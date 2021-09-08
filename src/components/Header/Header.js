@@ -121,34 +121,51 @@ export default function Header() {
               <Link href="/#colabore">COLABORE</Link>
             </li>
             <li>
-              <Link
+              <a
+                rel="noreferrer"
                 target="_blank"
                 href="https://dadosabertosdefeira.medium.com"
               >
                 BLOG
-              </Link>
+              </a>
             </li>
           </ul>
           <ul className={styles.social}>
             <li>
-              <Link href={process.env.NEXT_PUBLIC_INSTAGRAM_URL}>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={process.env.NEXT_PUBLIC_INSTAGRAM_URL}
+              >
                 <FaInstagram size={32} />
-              </Link>
+              </a>
             </li>
             <li>
-              <Link href={process.env.NEXT_PUBLIC_FACEBOOK_URL}>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={process.env.NEXT_PUBLIC_FACEBOOK_URL}
+              >
                 <FaFacebook size={32} />
-              </Link>
+              </a>
             </li>
             <li>
-              <Link href={process.env.NEXT_PUBLIC_TWITTER_URL}>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={process.env.NEXT_PUBLIC_TWITTER_URL}
+              >
                 <FaTwitter size={32} />
-              </Link>
+              </a>
             </li>
             <li>
-              <Link href={process.env.NEXT_PUBLIC_GITHUB_URL}>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={process.env.NEXT_PUBLIC_GITHUB_URL}
+              >
                 <FaGithub size={32} />
-              </Link>
+              </a>
             </li>
           </ul>
           <form action="busca">

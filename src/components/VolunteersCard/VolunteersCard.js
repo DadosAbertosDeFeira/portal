@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import BodyText from '../BodyText';
 
-import Link from '../Link';
-
 import styles from './styles.module.scss';
 
 export default function VolunteersCard({
@@ -25,19 +23,31 @@ export default function VolunteersCard({
         </div>
         <div className={styles.volunteersIconContainer}>
           {linkedin && (
-            <Link href={`https://www.linkedin.com/in/${linkedin}`}>
+            <a
+              href={`https://www.linkedin.com/in/${linkedin}`}
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/assets/icons/linkedin.svg" alt="Linkedin icon" />
-            </Link>
+            </a>
           )}
           {instagram && (
-            <Link href={`https://www.instagram.com/${instagram}`}>
+            <a
+              href={`https://www.instagram.com/${instagram}`}
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/assets/icons/instagram.svg" alt="Instagram icon" />
-            </Link>
+            </a>
           )}
           {github && (
-            <Link href={`https://github.com/${github}`}>
+            <a
+              href={`https://github.com/${github}`}
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/assets/icons/github.svg" alt="Github icon" />
-            </Link>
+            </a>
           )}
         </div>
       </div>
