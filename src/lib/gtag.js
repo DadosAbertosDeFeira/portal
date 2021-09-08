@@ -40,7 +40,7 @@ export const pageview = (url) => {
  * export default function Page () {
  *
  *  const handleClickAboutUsButton = () => {
- *    event('Click', 'AboutUs', element: 'Button')
+ *    event('Click', 'AboutUs', {element: 'Button'})
  *  };
  *
  *  return (
