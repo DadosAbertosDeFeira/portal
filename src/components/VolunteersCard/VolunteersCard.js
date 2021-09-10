@@ -31,31 +31,31 @@ export default function VolunteersCard({
             </Link>
           )}
           {linkedin && (
-            <a
+            <Link
               href={`https://www.linkedin.com/in/${linkedin}`}
               target="_blank"
               rel="noreferrer"
             >
               <img src="/assets/icons/linkedin.svg" alt="Linkedin icon" />
-            </a>
+            </Link>
           )}
           {instagram && (
-            <a
+            <Link
               href={`https://www.instagram.com/${instagram}`}
               target="_blank"
               rel="noreferrer"
             >
               <img src="/assets/icons/instagram.svg" alt="Instagram icon" />
-            </a>
+            </Link>
           )}
           {github && (
-            <a
+            <Link
               href={`https://github.com/${github}`}
               target="_blank"
               rel="noreferrer"
             >
               <img src="/assets/icons/github.svg" alt="Github icon" />
-            </a>
+            </Link>
           )}
         </div>
       </div>

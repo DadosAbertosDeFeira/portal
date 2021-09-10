@@ -66,11 +66,19 @@ export default function Home() {
             quanto o município gastava com a merenda escolar. O interesse surgiu
             após ouvir uma denúncia feita por Rafael Velame no rádio sobre a
             falta de merenda em algumas escolas da cidade. Ao acessar o{' '}
-            <Link href="http://www.transparencia.feiradesantana.ba.gov.br/">
+            <Link
+              href="http://www.transparencia.feiradesantana.ba.gov.br/"
+              target="_blank"
+              rel="noreferrer"
+            >
               portal da transparência de Feira de Santana
             </Link>{' '}
             deparou-se com a dificuldade de fazer buscas na{' '}
-            <Link href="http://www.transparencia.feiradesantana.ba.gov.br/index.php?view=licitacoes">
+            <Link
+              href="http://www.transparencia.feiradesantana.ba.gov.br/index.php?view=licitacoes"
+              target="_blank"
+              rel="noreferrer"
+            >
               página de licitações
             </Link>
             . Fez alguns pedidos de informação à Prefeitura mas não foi
@@ -92,15 +100,27 @@ export default function Home() {
             o Ministério Público da Bahia para intermediar o processo e, a
             partir daí, o projeto ganhou projeção nas mídias locais, como BATV
             da TV Subaé,{' '}
-            <Link href="https://www.acordacidade.com.br/noticias/222557/programadora-encontra-dificuldades-para-obter-informacoes-sobre-a-atuacao-dos-vereadores-de-feira.html">
+            <Link
+              href="https://www.acordacidade.com.br/noticias/222557/programadora-encontra-dificuldades-para-obter-informacoes-sobre-a-atuacao-dos-vereadores-de-feira.html"
+              target="_blank"
+              rel="noreferrer"
+            >
               Acorda Cidade
             </Link>
             ,{' '}
-            <Link href="https://www.blogdovelame.com/presidente-reconhece-falta-de-transparencia-e-promete-divulgar-dados/">
+            <Link
+              href="https://www.blogdovelame.com/presidente-reconhece-falta-de-transparencia-e-promete-divulgar-dados/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Blog do Velame
             </Link>
             , além de diversas participações nos programas da{' '}
-            <Link href="https://www.facebook.com/blogdovelame/videos/750921745431854/">
+            <Link
+              href="https://www.facebook.com/blogdovelame/videos/750921745431854/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Rádio Globo Feira e Jovem Pan
             </Link>
             . Com a repercussão, o presidente da Câmara Municipal, José
