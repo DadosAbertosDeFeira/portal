@@ -138,6 +138,7 @@ export default function Home() {
               linkedin={volunteer.linkedin}
               instagram={volunteer.instagram}
               github={volunteer.github}
+              twitter={volunteer.twitter}
             />
           ))}
         </div>

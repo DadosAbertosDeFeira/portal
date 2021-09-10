@@ -5,6 +5,7 @@ export default [
     picture: 'https://avatars.githubusercontent.com/anapaulagomes',
     github: 'anapaulagomes',
     linkedin: 'anapaulagomess',
+    twitter: 'anapaulagomess',
   },
   {
     name: 'Filipe Maia',
@@ -19,6 +20,7 @@ export default [
     picture: 'https://avatars.githubusercontent.com/matheusrocha89',
     github: 'matheusrocha89',
     linkedin: 'matheus-cruz-rocha-38021525',
+    twitter: 'matheusrocha',
   },
   {
     name: 'Emerson Oliveira',
@@ -40,6 +42,7 @@ export default [
     picture: 'https://avatars.githubusercontent.com/gomex',
     github: 'gomex',
     linkedin: 'rbgomes',
+    twitter: 'gomex',
   },
 ].sort((person1, person2) => {
   return person1.name.localeCompare(person2.name); // Automatically alphabetize
@@ -53,5 +56,6 @@ export default [
   github: 'filipebsmaia',
   linkedin: 'filipebsmaia',
   instagram: 'filipebsmaia',
+  twitter: 'filipebsmaia',
 }
 */

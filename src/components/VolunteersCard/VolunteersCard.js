@@ -12,6 +12,7 @@ export default function VolunteersCard({
   linkedin,
   github,
   instagram,
+  twitter,
 }) {
   return (
     <div className={styles.volunteers}>
@@ -24,6 +25,11 @@ export default function VolunteersCard({
           </BodyText>
         </div>
         <div className={styles.volunteersIconContainer}>
+          {twitter && (
+            <Link href={`https://www.twitter.com/${twitter}`}>
+              <img src="/assets/icons/twitter.svg" alt="Twitter icon" />
+            </Link>
+          )}
           {linkedin && (
             <Link href={`https://www.linkedin.com/in/${linkedin}`}>
               <img src="/assets/icons/linkedin.svg" alt="Linkedin icon" />
@@ -49,6 +55,7 @@ VolunteersCard.defaultProps = {
   linkedin: null,
   github: null,
   instagram: null,
+  twitter: null,
 };
 
 VolunteersCard.propTypes = {
@@ -58,4 +65,5 @@ VolunteersCard.propTypes = {
   linkedin: PropTypes.string,
   github: PropTypes.string,
   instagram: PropTypes.string,
+  twitter: PropTypes.string,
 };
