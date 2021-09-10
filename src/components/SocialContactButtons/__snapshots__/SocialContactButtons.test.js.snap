@@ -8,6 +8,7 @@ exports[`<SocialContactButtons /> renders correctly all the buttons 1`] = `
     <button
       class="bg-blue-100 h-xl px-sm  rounded flex items-center w-4xl justify-center space-x-sm pa-md"
       data-testid="twitter-button"
+      data-url="https://twitter.com/DadosDeFeira"
       type="button"
     >
       <img
@@ -23,6 +24,7 @@ exports[`<SocialContactButtons /> renders correctly all the buttons 1`] = `
     <button
       class="bg-blue-100 h-xl px-sm rounded flex items-center w-4xl justify-center space-x-sm pa-md "
       data-testid="facebook-button"
+      data-url="https://www.facebook.com/dadosabertosdefeira"
       type="button"
     >
       <img
@@ -38,6 +40,7 @@ exports[`<SocialContactButtons /> renders correctly all the buttons 1`] = `
     <button
       class="bg-blue-100 h-xl px-sm rounded flex items-center w-4xl justify-center space-x-sm pa-md "
       data-testid="instagram-button"
+      data-url="https://www.instagram.com/dadosabertosdefeira/"
       type="button"
     >
       <img
@@ -53,6 +56,7 @@ exports[`<SocialContactButtons /> renders correctly all the buttons 1`] = `
     <button
       class="bg-blue-100 h-xl px-sm rounded flex items-center w-4xl justify-center space-x-sm pa-md "
       data-testid="github-button"
+      data-url="https://github.com/DadosAbertosDeFeira"
       type="button"
     >
       <img

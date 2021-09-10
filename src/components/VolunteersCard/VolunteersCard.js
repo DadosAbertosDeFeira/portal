@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import BodyText from '../BodyText';
 
+import BodyText from '../BodyText';
 import Link from '../Link';
 
 import styles from './styles.module.scss';
@@ -31,17 +31,29 @@ export default function VolunteersCard({
             </Link>
           )}
           {linkedin && (
-            <Link href={`https://www.linkedin.com/in/${linkedin}`}>
+            <Link
+              href={`https://www.linkedin.com/in/${linkedin}`}
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/assets/icons/linkedin.svg" alt="Linkedin icon" />
             </Link>
           )}
           {instagram && (
-            <Link href={`https://www.instagram.com/${instagram}`}>
+            <Link
+              href={`https://www.instagram.com/${instagram}`}
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/assets/icons/instagram.svg" alt="Instagram icon" />
             </Link>
           )}
           {github && (
-            <Link href={`https://github.com/${github}`}>
+            <Link
+              href={`https://github.com/${github}`}
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/assets/icons/github.svg" alt="Github icon" />
             </Link>
           )}

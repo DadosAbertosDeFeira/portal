@@ -1,10 +1,7 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 import { render, fireEvent } from '@testing-library/react';
 
 import SocialContactButtons from './SocialContactButtons';
-
-jest.mock('next/router');
 
 describe('<SocialContactButtons />', () => {
   it('renders correctly all the buttons', () => {
@@ -26,49 +23,61 @@ describe('<SocialContactButtons />', () => {
   });
 
   describe('behavior', () => {
-    let routerMock;
+    let focusMock;
 
     beforeEach(() => {
-      jest.resetModules();
-      jest.resetAllMocks();
-      routerMock = { push: jest.fn() };
-      useRouter.mockReturnValue(routerMock);
+      focusMock = jest.fn();
+      jest
+        .spyOn(window, 'open')
+        .mockImplementation(() => ({ focus: focusMock }));
+    });
+
+    afterEach(() => {
+      jest.restoreAllMocks();
     });
 
     it('redirects to Twitter when user clicks on the button', () => {
       const { getByTestId } = render(<SocialContactButtons />);
       fireEvent.click(getByTestId('twitter-button'));
 
-      expect(routerMock.push).toHaveBeenCalledWith(
-        'https://twitter.com/DadosDeFeira'
+      expect(window.open).toHaveBeenCalledWith(
+        'https://twitter.com/DadosDeFeira',
+        '_blank'
       );
+      expect(focusMock).toHaveBeenCalledTimes(1);
     });
 
     it('redirects to Facebook when user clicks on the button', () => {
       const { getByTestId } = render(<SocialContactButtons />);
       fireEvent.click(getByTestId('facebook-button'));
 
-      expect(routerMock.push).toHaveBeenCalledWith(
-        'https://www.facebook.com/dadosabertosdefeira'
+      expect(window.open).toHaveBeenCalledWith(
+        'https://www.facebook.com/dadosabertosdefeira',
+        '_blank'
       );
+      expect(focusMock).toHaveBeenCalledTimes(1);
     });
 
     it('redirects to Instagram when user clicks on the button', () => {
       const { getByTestId } = render(<SocialContactButtons />);
       fireEvent.click(getByTestId('instagram-button'));
 
-      expect(routerMock.push).toHaveBeenCalledWith(
-        'https://www.instagram.com/dadosabertosdefeira/'
+      expect(window.open).toHaveBeenCalledWith(
+        'https://www.instagram.com/dadosabertosdefeira/',
+        '_blank'
       );
+      expect(focusMock).toHaveBeenCalledTimes(1);
     });
 
     it('redirects to Github when user clicks on the button', () => {
       const { getByTestId } = render(<SocialContactButtons />);
       fireEvent.click(getByTestId('github-button'));
 
-      expect(routerMock.push).toHaveBeenCalledWith(
-        'https://github.com/DadosAbertosDeFeira'
+      expect(window.open).toHaveBeenCalledWith(
+        'https://github.com/DadosAbertosDeFeira',
+        '_blank'
       );
+      expect(focusMock).toHaveBeenCalledTimes(1);
     });
   });
 });

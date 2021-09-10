@@ -3,8 +3,18 @@ import React from 'react';
 import NextLink from 'next/link';
 import PropTypes from 'prop-types';
 
+const isExternal = (url) => {
+  const isExternalRegex = new RegExp(/^(http|https):\/\//, 'i');
+  return isExternalRegex.test(url);
+};
+
 export default function Link({ children, target, href, ...rest }) {
-  return (
+  const isExternalLink = isExternal(href);
+  return isExternalLink ? (
+    <a href={href} target={target} {...rest}>
+      {children}
+    </a>
+  ) : (
     <NextLink href={href}>
       <a {...rest} target={target}>
         {children}
