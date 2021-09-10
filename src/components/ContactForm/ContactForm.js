@@ -54,7 +54,9 @@ const ContactForm = () => {
 
   return (
     <>
-      <strong className={styles.title}>Fale conosco</strong>
+      <strong className={classnames(styles.title, 'mb-md')}>
+        Fale conosco
+      </strong>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.contactForm}>
         <input
           className={styles.contactFormInput}

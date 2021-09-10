@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
+
 import BodyText from '../BodyText';
+import Link from '../Link';
 
 import styles from './styles.module.scss';
 
@@ -10,6 +12,7 @@ export default function VolunteersCard({
   linkedin,
   github,
   instagram,
+  twitter,
 }) {
   return (
     <div className={styles.volunteers}>
@@ -22,6 +25,11 @@ export default function VolunteersCard({
           </BodyText>
         </div>
         <div className={styles.volunteersIconContainer}>
+          {twitter && (
+            <Link href={`https://www.twitter.com/${twitter}`}>
+              <img src="/assets/icons/twitter.svg" alt="Twitter icon" />
+            </Link>
+          )}
           {linkedin && (
             <a
               href={`https://www.linkedin.com/in/${linkedin}`}
@@ -59,6 +67,7 @@ VolunteersCard.defaultProps = {
   linkedin: null,
   github: null,
   instagram: null,
+  twitter: null,
 };
 
 VolunteersCard.propTypes = {
@@ -68,4 +77,5 @@ VolunteersCard.propTypes = {
   linkedin: PropTypes.string,
   github: PropTypes.string,
   instagram: PropTypes.string,
+  twitter: PropTypes.string,
 };

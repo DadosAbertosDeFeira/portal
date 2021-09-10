@@ -7,10 +7,10 @@ const SocialContactButtons = () => {
   };
 
   return (
-    <>
+    <div className="grid grid-flow-col grid-cols-2 grid-rows-2 auto-cols-auto mt-md gap-md self-center tablet:self-start">
       <button
         data-testid="twitter-button"
-        className="bg-blue-100 h-xl w-auto px-sm rounded flex items-center space-x-sm pa-md"
+        className="bg-blue-100 h-xl px-sm  rounded flex items-center w-4xl justify-center space-x-sm pa-md"
         type="button"
         data-url={process.env.NEXT_PUBLIC_TWITTER_URL}
         onClick={handleClick}
@@ -21,7 +21,7 @@ const SocialContactButtons = () => {
 
       <button
         data-testid="facebook-button"
-        className="bg-blue-100 h-xl w-auto px-sm rounded flex items-center space-x-sm pa-md "
+        className="bg-blue-100 h-xl px-sm rounded flex items-center w-4xl justify-center space-x-sm pa-md "
         type="button"
         data-url={process.env.NEXT_PUBLIC_FACEBOOK_URL}
         onClick={handleClick}
@@ -32,7 +32,7 @@ const SocialContactButtons = () => {
 
       <button
         data-testid="instagram-button"
-        className="bg-blue-100 h-xl w-auto px-sm rounded flex items-center space-x-sm pa-md "
+        className="bg-blue-100 h-xl px-sm rounded flex items-center w-4xl justify-center space-x-sm pa-md "
         type="button"
         data-url={process.env.NEXT_PUBLIC_INSTAGRAM_URL}
         onClick={handleClick}
@@ -43,7 +43,7 @@ const SocialContactButtons = () => {
 
       <button
         data-testid="github-button"
-        className="bg-blue-100 h-xl w-auto px-sm rounded flex items-center space-x-sm pa-md "
+        className="bg-blue-100 h-xl px-sm rounded flex items-center w-4xl justify-center space-x-sm pa-md "
         type="button"
         data-url={process.env.NEXT_PUBLIC_GITHUB_URL}
         onClick={handleClick}
@@ -51,7 +51,7 @@ const SocialContactButtons = () => {
         <img src="/assets/icons/github.svg" alt="Github" />
         <span className="text-primary-dark text-sm">Github</span>
       </button>
-    </>
+    </div>
   );
 };
 

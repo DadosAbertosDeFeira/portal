@@ -4,11 +4,11 @@ import {
   MINIMAL_VIEWPORTS,
 } from '@storybook/addon-viewport';
 
-import SearchDropdown from '.';
+import MobileMenu from '.';
 
 export default {
-  title: 'Components/SearchDropdown',
-  component: SearchDropdown,
+  title: 'Components/MobileMenu',
+  component: MobileMenu,
   parameters: {
     viewport: {
       viewports: {
@@ -27,8 +27,9 @@ export const Default = () => {
     setMenuOpened((state) => !state);
   };
 
-  return <SearchDropdown toggleMenu={toggleMenu} />;
+  return <MobileMenu handleClose={toggleMenu} />;
 };
+
 Default.args = {
   toggleMenu: () => {},
 };
