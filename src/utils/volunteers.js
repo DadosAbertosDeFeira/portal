@@ -50,7 +50,7 @@ export default [
     role: 'Jornalista',
     picture:
       'https://media-exp1.licdn.com/dms/image/C4D03AQG8ytEVvsZ44g/profile-displayphoto-shrink_400_400/0/1519088249816?e=1636588800&v=beta&t=lneQV2nQp5ZcTNQbEfy7yYN1FuEKcZUb_Q4iwE8IvSw',
-    // twitter: 'rafaelvelame',
+    twitter: 'rafaelvelame',
     linkedin: 'rafael-velame-242b98104',
   },
   {
@@ -58,7 +58,7 @@ export default [
     role: 'Conselheiro Jurídico',
     picture: 'https://avatars.githubusercontent.com/jedibruno',
     github: 'jedibruno',
-    // twitter: '',
+    twitter: '555112299jedi',
     linkedin: 'bruno-schimitt-morassutti-7a0b5b180',
   },
   {
@@ -66,7 +66,7 @@ export default [
     role: 'Design',
     picture: 'https://avatars.githubusercontent.com/natalycosta',
     github: 'natalycosta',
-    // twitter: '',
+    twitter: 'nataly_design',
     linkedin: 'natalycosta',
   },
 ].sort((person1, person2) => {
