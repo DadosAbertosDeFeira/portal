@@ -63,11 +63,29 @@ export default [
   },
   {
     name: 'Nataly Costa',
-    role: 'Design',
+    role: 'UI/UX design manager',
     picture: 'https://avatars.githubusercontent.com/natalycosta',
-    github: 'natalycosta',
-    twitter: 'nataly_design',
     linkedin: 'natalycosta',
+  },
+  {
+    name: 'Eduardo Cuducos',
+    role: 'Desenvolvedor',
+    picture: 'https://avatars.githubusercontent.com/cuducos',
+    github: 'cuducos',
+    twitter: 'cuducos',
+  },
+  {
+    name: 'Daniel Fireman',
+    role: 'Conselheiro',
+    picture: 'https://avatars.githubusercontent.com/danielfireman',
+    github: 'danielfireman',
+    twitter: 'daniellfireman',
+  },
+  {
+    name: 'Everton Alves',
+    role: 'Social Media',
+    picture: 'https://avatars.githubusercontent.com/ellalves',
+    instagram: 'ellalves.mktd',
   },
 ].sort((person1, person2) => {
   return person1.name.localeCompare(person2.name); // Automatically alphabetize
