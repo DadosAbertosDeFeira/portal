@@ -26,8 +26,11 @@ Link.defaultProps = {
   target: '_self',
 };
 Link.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
-    .isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+    PropTypes.node,
+  ]).isRequired,
   href: PropTypes.string.isRequired,
   target: PropTypes.string,
 };
