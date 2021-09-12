@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> renders correctly outline button 1`] = `
+<DocumentFragment>
+  <button
+    class="button outline new-class"
+    type="button"
+  >
+    Click Me!
+  </button>
+</DocumentFragment>
+`;
+
+exports[`<Button /> renders correctly with default properties 1`] = `
+<DocumentFragment>
+  <button
+    class="button full"
+    type="button"
+  >
+    Click Me!
+  </button>
+</DocumentFragment>
+`;
