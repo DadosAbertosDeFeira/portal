@@ -10,4 +10,12 @@ module.exports = {
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest',
   },
+  coverageThreshold: {
+    './src/': {
+      lines: 90,
+      branches: 90,
+      functions: 90,
+      statements: 90,
+    },
+  },
 };
