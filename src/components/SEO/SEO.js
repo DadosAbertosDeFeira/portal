@@ -31,8 +31,8 @@ export default function SEO({
   title,
   description,
   image,
-  shouldExcludeTitleSuffix = false,
-  shouldIndexPage = true,
+  shouldExcludeTitleSuffix,
+  shouldIndexPage,
 }) {
   const pageTitle = `${title} ${
     !shouldExcludeTitleSuffix ? '| Dados abertos de Feira' : ''
