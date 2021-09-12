@@ -6,7 +6,7 @@ const classNames = (size, bold) => {
   const classes = [];
 
   if (size === 'small') classes.push('text-xs tablet:text-base');
-  else if (size === 'medium') classes.push('text-sm tablet:text-base');
+  else classes.push('text-sm tablet:text-base');
   if (bold) classes.push('font-bold');
 
   return classes.join(' ');
