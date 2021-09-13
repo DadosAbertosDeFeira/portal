@@ -89,7 +89,7 @@ export default [
   },
   {
     name: 'Guilherme Wanderley',
-    role: 'Oficeboy e Analista de Dados',
+    role: 'Office-boy e Analista de Dados',
     picture: 'https://avatars.githubusercontent.com/guilhermelowa',
     github: 'guilhermelowa',
     linkedin: 'guilherme-wanderley'
