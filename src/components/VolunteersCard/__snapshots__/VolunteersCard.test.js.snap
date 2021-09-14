@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VolunteersCard /> renders correctly with social network links 1`] = `
+<DocumentFragment>
+  <div
+    class="volunteers"
+  >
+    <img
+      alt="Scooby Doo"
+      class="volunteersPicture"
+      src="https://scoobydoo.com/profile.jpeg"
+    />
+    <div
+      class="volunteersInfo"
+    >
+      <div>
+        <p
+          class="text-black text-sm tablet:text-base volunteersInfoName"
+          data-testid=""
+        >
+          Scooby Doo
+        </p>
+        <p
+          class="text-black text-sm tablet:text-base volunteersInfoRole"
+          data-testid=""
+        >
+          Detective
+        </p>
+      </div>
+      <div
+        class="volunteersIconContainer"
+      >
+        <a
+          href="https://www.twitter.com/scoobydoo"
+          target="_self"
+        >
+          <img
+            alt="Twitter icon"
+            src="/assets/icons/twitter.svg"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/scoobydoo_engineer"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Linkedin icon"
+            src="/assets/icons/linkedin.svg"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/scoobydoo_detective"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Instagram icon"
+            src="/assets/icons/instagram.svg"
+          />
+        </a>
+        <a
+          href="https://github.com/scoobydoo"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Github icon"
+            src="/assets/icons/github.svg"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<VolunteersCard /> renders correctly without social network links 1`] = `
+<DocumentFragment>
+  <div
+    class="volunteers"
+  >
+    <img
+      alt="Scooby Doo"
+      class="volunteersPicture"
+      src="https://scoobydoo.com/profile.jpeg"
+    />
+    <div
+      class="volunteersInfo"
+    >
+      <div>
+        <p
+          class="text-black text-sm tablet:text-base volunteersInfoName"
+          data-testid=""
+        >
+          Scooby Doo
+        </p>
+        <p
+          class="text-black text-sm tablet:text-base volunteersInfoRole"
+          data-testid=""
+        >
+          Detective
+        </p>
+      </div>
+      <div
+        class="volunteersIconContainer"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build:ci": "yarn test --ci && next build",
+    "build:ci": "yarn test --ci --collectCoverage && next build",
     "build": "next build",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
@@ -12,7 +12,7 @@
     "test": "jest",
     "lint": "eslint src",
     "lint:staged": "lint-staged",
-    "test:coverage": "jest --coverage",
+    "test:coverage": "jest --collectCoverage",
     "prepare": "husky install",
     "format-code:all": "prettier --write ./src",
     "format-code:staged": "pretty-quick --staged",
