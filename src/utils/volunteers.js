@@ -87,6 +87,13 @@ export default [
     picture: 'https://avatars.githubusercontent.com/ellalves',
     instagram: 'ellalves.mktd',
   },
+  {
+    name: 'Guilherme Wanderley',
+    role: 'Office-boy e Analista de Dados',
+    picture: 'https://avatars.githubusercontent.com/guilhermelowa',
+    github: 'guilhermelowa',
+    linkedin: 'guilherme-wanderley'
+  },
 ].sort((person1, person2) => {
   return person1.name.localeCompare(person2.name); // Automatically alphabetize
 });
