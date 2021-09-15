@@ -13,10 +13,6 @@
     scroll-behavior: smooth;
   }
 
-  #__next {
-    height: 100vh;
-  }
-
   h1 {
     @apply text-lg tablet:text-xl font-bold;
   }
