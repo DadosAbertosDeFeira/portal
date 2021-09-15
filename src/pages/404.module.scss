@@ -1,0 +1,49 @@
+@import '../styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  background-image: url('/assets/404-background.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .content {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+
+    img {
+      height: 50vh;
+
+      @media (max-width: 700px) {
+        height: 450px;
+        opacity: 0.5;
+
+        transform: rotate(-30deg);
+        position: absolute;
+        right: -120px;
+        top: 50px;
+      }
+    }
+    .texts {
+      h1,
+      p {
+        margin-top: 1rem;
+        text-align: center;
+        margin: 1rem;
+      }
+
+      a {
+        border-bottom: 1px solid;
+      }
+    }
+  }
+}
