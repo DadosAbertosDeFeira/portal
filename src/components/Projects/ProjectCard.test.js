@@ -9,7 +9,7 @@ describe('<ProjectCard />', () => {
     type: ['raspagem de dados', 'busca de dados'],
     description:
       'Tem a missão de libertar dados do município de Feira de Santana. Responsável pela raspagem e o armazenamento.',
-    github: '',
+    link: '',
     logo: {
       path: '/assets/icons/maria-quiteria.svg',
       description: 'Logo do Projeto Maria Quitéria',
@@ -26,6 +26,6 @@ describe('<ProjectCard />', () => {
     expect(getByText(project.description)).toBeInTheDocument();
     expect(getByText('raspagem de dados')).toBeInTheDocument();
     expect(getByText('busca de dados')).toBeInTheDocument();
-    expect(getByText('github')).toBeInTheDocument();
+    expect(getByText('Link')).toBeInTheDocument();
   });
 });

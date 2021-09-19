@@ -4,7 +4,7 @@ export default [
     type: ['raspagem de dados', 'busca de dados'],
     description:
       'Tem a missão de libertar dados do município de Feira de Santana. Responsável pela raspagem e o armazenamento.',
-    github: 'https://github.com/DadosAbertosDeFeira/maria-quiteria',
+    link: 'https://github.com/DadosAbertosDeFeira/maria-quiteria',
     logo: {
       path: '/assets/icons/maria-quiteria.svg',
       description: 'Logo do Projeto Maria Quitéria',
@@ -15,7 +15,7 @@ export default [
     type: ['bot', 'twitter'],
     description:
       'Tem a missão de libertar dados do município de Feira de Santana. Responsável pela raspagem e o armazenamento.',
-    github: '',
+    link: 'https://twitter.com/DiarioDeFeira',
     logo: {
       path: '/assets/icons/bot-dou.svg',
       description: 'Logo do projeto Bot do DOU',
@@ -26,7 +26,7 @@ export default [
     type: ['publicação de dados'],
     description:
       'Tem a missão de libertar dados do município de Feira de Santana. Responsável pela raspagem e o armazenamento.',
-    github: 'https://github.com/DadosAbertosDeFeira/empacotador',
+    link: 'https://github.com/DadosAbertosDeFeira/empacotador',
     logo: {
       path: '/assets/icons/maria-quiteria.svg',
       description: 'Logo do Projeto Empacotador',
@@ -37,7 +37,7 @@ export default [
     type: ['podcast'],
     description:
       'Tem a missão de libertar dados do município de Feira de Santana. Responsável pela raspagem e o armazenamento.',
-    github: '',
+    link: 'https://anchor.fm/cidadesabertas/',
     logo: {
       path: '/assets/icons/maria-quiteria.svg',
       description: 'Logo do Podcast Cidades Abertas',
@@ -48,7 +48,7 @@ export default [
   //   type: ['publicação de dados'],
   //   description:
   //     'Tem a missão de libertar dados do município de Feira de Santana. Responsável pela raspagem e o armazenamento.',
-  //   github: '',
+  //   link: '',
   //   logo: {
   //     path: '/assets/icons/maria-quiteria.svg',
   //     description: 'Logo do Projeto Empacotador',

@@ -35,11 +35,11 @@ const ProjectCard = ({ project }) => {
 
           <Link
             className={`${styles.projectLink} flex items-center`}
-            href={project.github}
+            href={project.link}
             target="_blank"
             rel="noreferrer"
           >
-            github
+            Link
             <FiArrowUpRight className={`ml-xs ${styles.projectLinkIcon}`} />
           </Link>
         </div>
@@ -53,7 +53,7 @@ ProjectCard.propTypes = {
     name: PropTypes.string,
     type: PropTypes.string,
     description: PropTypes.string,
-    github: PropTypes.string,
+    link: PropTypes.string,
     logo: PropTypes.shape({
       path: PropTypes.string,
       description: PropTypes.string,
