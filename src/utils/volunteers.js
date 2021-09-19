@@ -92,7 +92,7 @@ export default [
     role: 'Office-boy e Analista de Dados',
     picture: 'https://avatars.githubusercontent.com/guilhermelowa',
     github: 'guilhermelowa',
-    linkedin: 'guilherme-wanderley'
+    linkedin: 'guilherme-wanderley',
   },
 ].sort((person1, person2) => {
   return person1.name.localeCompare(person2.name); // Automatically alphabetize
