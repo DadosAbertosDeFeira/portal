@@ -51,7 +51,7 @@ const ProjectCard = ({ project }) => {
 ProjectCard.propTypes = {
   project: PropTypes.shape({
     name: PropTypes.string,
-    type: PropTypes.string,
+    type: PropTypes.arrayOf(PropTypes.string),
     description: PropTypes.string,
     link: PropTypes.string,
     logo: PropTypes.shape({
