@@ -4,7 +4,7 @@ export default [
     type: ['raspagem de dados', 'busca de dados'],
     description:
       'Tem a missão de libertar dados do município de Feira de Santana. Responsável pela raspagem e o armazenamento.',
-    github: '',
+    github: 'https://github.com/DadosAbertosDeFeira/maria-quiteria',
     logo: {
       path: '/assets/icons/maria-quiteria.svg',
       description: 'Logo do Projeto Maria Quitéria',
@@ -26,7 +26,7 @@ export default [
     type: ['publicação de dados'],
     description:
       'Tem a missão de libertar dados do município de Feira de Santana. Responsável pela raspagem e o armazenamento.',
-    github: '',
+    github: 'https://github.com/DadosAbertosDeFeira/empacotador',
     logo: {
       path: '/assets/icons/maria-quiteria.svg',
       description: 'Logo do Projeto Empacotador',
