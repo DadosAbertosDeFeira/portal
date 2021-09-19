@@ -27,7 +27,9 @@ const ProjectCard = ({ project }) => {
         <div className={`flex flex-row ${styles.footer}`}>
           <div>
             {project.type.map((tag) => (
-              <Tag className="mr-xs">{tag}</Tag>
+              <Tag key={tag} className="mr-xs">
+                {tag}
+              </Tag>
             ))}
           </div>
 
