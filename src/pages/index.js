@@ -8,6 +8,7 @@ import VolunteersCard from '../components/VolunteersCard';
 import ContactForm from '../components/ContactForm';
 import HowContribute from '../components/HowContribute';
 import SocialContactButtons from '../components/SocialContactButtons';
+import Projects from '../components/Projects';
 
 import volunteersList from '../utils/volunteers';
 import styles from './index.module.scss';
@@ -161,6 +162,13 @@ export default function Home() {
             />
           ))}
         </div>
+      </section>
+
+      <section
+        id="projetos"
+        className="tablet:space-x-md pt-2xl tablet:p-2xl flex justify-center"
+      >
+        <Projects />
       </section>
 
       <div className={styles.contributeWrapper}>

@@ -68,6 +68,11 @@ export default function MobileMenu({ handleClose }) {
           </Link>
         </li>
         <li>
+          <Link href="/#projetos" onClick={handleClose}>
+            Projetos
+          </Link>
+        </li>
+        <li>
           <Link href="/#colabore" onClick={handleClose}>
             Como contribuir
           </Link>

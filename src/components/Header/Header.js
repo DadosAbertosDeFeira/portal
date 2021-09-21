@@ -25,6 +25,9 @@ const DesktopHeader = () => {
           <Link href="/#voluntarios">Voluntários</Link>
         </li>
         <li>
+          <Link href="/#projetos">Projetos</Link>
+        </li>
+        <li>
           <Link href="/#colabore">Colabore</Link>
         </li>
         <li>

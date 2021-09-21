@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tag /> renders correctly with className 1`] = `
+<DocumentFragment>
+  <div
+    class="tag py-xs px-sm inline-block social"
+  >
+    <p
+      class="text text-xs"
+    >
+      Twitter
+    </p>
+  </div>
+</DocumentFragment>
+`;
