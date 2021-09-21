@@ -12,6 +12,7 @@ import SocialContactButtons from '../components/SocialContactButtons';
 import volunteersList from '../utils/volunteers';
 import styles from './index.module.scss';
 import BodyText from '../components/BodyText';
+import Supporters from '../components/Supporters';
 
 export default function Home() {
   const router = useRouter();
@@ -137,6 +138,8 @@ export default function Home() {
             eficiente. Lutar pela transparência é um trabalho de todos.
           </BodyText>
         </div>
+
+        <Supporters />
       </section>
 
       <section id="voluntarios" className={styles.volunteers}>
