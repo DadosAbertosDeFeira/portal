@@ -10,8 +10,8 @@ const Supporters = () => {
   return (
     <div>
       <div className="flex flex-col justify-center items-center">
-        <h2 className="m-xl">Financiamento e Prêmios</h2>
-        <div className="flex items-center justify-center">
+        <h2 className="m-lg tablet:m-xl">Financiamento e Prêmios</h2>
+        <div className="flex flex-col tablet:flex-row items-center justify-center">
           {financial.map((item) => (
             <Link
               key={item.name}
@@ -20,7 +20,7 @@ const Supporters = () => {
               rel="noreferrer"
             >
               <img
-                className={`${styles.logo} m-md ${
+                className={`${styles.logo} m-lg tablet:m-md ${
                   item.id === 'shuttleworth' ? styles.shuttleworthLogo : ''
                 }`}
                 src={item.logo}
@@ -32,8 +32,8 @@ const Supporters = () => {
       </div>
 
       <div className="flex flex-col justify-center items-center">
-        <h2 className="m-xl">Apoio Institucional</h2>
-        <div className="flex items-center justify-center">
+        <h2 className="m-lg tablet:m-xl">Apoio Institucional</h2>
+        <div className="flex flex-col tablet:flex-row items-center justify-center">
           {institutional.map((item) => (
             <Link
               key={item.name}
@@ -42,7 +42,7 @@ const Supporters = () => {
               rel="noreferrer"
             >
               <img
-                className={`${styles.logo} m-md`}
+                className={`${styles.logo} m-lg tablet:m-md`}
                 src={item.logo}
                 alt={item.name}
               />
@@ -52,8 +52,8 @@ const Supporters = () => {
       </div>
 
       <div className="flex flex-col justify-center items-center">
-        <h2 className="m-xl">Apoio</h2>
-        <div className="flex items-center justify-center">
+        <h2 className="m-lg tablet:m-xl">Apoio</h2>
+        <div className="flex flex-col tablet:flex-row items-center justify-center">
           {regular.map((item) => (
             <Link
               key={item.name}
@@ -62,7 +62,7 @@ const Supporters = () => {
               rel="noreferrer"
             >
               <img
-                className={`${styles.logo} m-md ${
+                className={`${styles.logo} m-lg tablet:m-md ${
                   item.id === 'absam' ? styles.absamLogo : ''
                 }`}
                 src={item.logo}
