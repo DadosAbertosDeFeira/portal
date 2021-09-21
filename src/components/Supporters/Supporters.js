@@ -20,9 +20,7 @@ const Supporters = () => {
               rel="noreferrer"
             >
               <img
-                className={`${styles.logo} m-lg tablet:m-md ${
-                  item.id === 'shuttleworth' ? styles.shuttleworthLogo : ''
-                }`}
+                className={`${styles.logo} m-lg tablet:m-md`}
                 src={item.logo}
                 alt={item.name}
               />
@@ -62,9 +60,7 @@ const Supporters = () => {
               rel="noreferrer"
             >
               <img
-                className={`${styles.logo} m-lg tablet:m-md ${
-                  item.id === 'absam' ? styles.absamLogo : ''
-                }`}
+                className={`${styles.logo} m-lg tablet:m-md`}
                 src={item.logo}
                 alt={item.name}
               />
