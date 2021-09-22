@@ -26,6 +26,6 @@
 
 @layer components {
   .page-margin-align {
-    @apply pl-md tablet:pl-xl desktop:pl-4xl large-desktop:pl-5xl
+    @apply pl-md tablet:pl-xl desktop:pl-4xl large-desktop:pl-5xl;
   }
 }
