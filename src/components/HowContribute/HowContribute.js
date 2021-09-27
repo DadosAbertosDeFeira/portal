@@ -6,7 +6,7 @@ import styles from './HowContribute.module.scss';
 
 const HowContribute = () => {
   return (
-    <section id="colabore" className={styles.contribute}>
+    <div id="colabore" className={styles.contribute}>
       <img
         className={styles.contributeImage}
         src="/assets/people-contribute.svg"
@@ -61,7 +61,7 @@ const HowContribute = () => {
           . Temos desde análise de dados e APIs a frontend e NLP.
         </BodyText>
       </div>
-    </section>
+    </div>
   );
 };
 
