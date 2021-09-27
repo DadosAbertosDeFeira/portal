@@ -14,8 +14,6 @@ describe('<HowContribute />', () => {
     expect(getByText('Doe para o Projeto')).toBeInTheDocument();
     expect(getByText('pelo nosso formulário')).toBeInTheDocument();
     expect(getByText('Contribua com código')).toBeInTheDocument();
-    expect(
-      getByText('https://github.com/DadosAbertosFeira')
-    ).toBeInTheDocument();
+    expect(getByText('Github')).toBeInTheDocument();
   });
 });
