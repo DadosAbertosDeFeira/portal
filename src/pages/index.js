@@ -163,9 +163,9 @@ export default function Home() {
         </div>
       </section>
 
-      <div className={styles.contributeWrapper}>
+      <section className="py-2xl px-lg tablet:px-2xl">
         <HowContribute />
-      </div>
+      </section>
 
       <section id="contato" className="border-t-2 pt-2xl tablet:space-x-md">
         <div className="flex flex-col justify-center tablet:flex-row">
