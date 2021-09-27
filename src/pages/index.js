@@ -45,7 +45,7 @@ export default function Home() {
             <Button
               className={styles.mainButton}
               onClick={() =>
-                router.push('https://www.dadosabertosdefeira.com.br/painel/')
+                router.push('https://mq.dadosabertosdefeira.com.br/painel/')
               }
             >
               Consultar a base de dados
