@@ -49,14 +49,15 @@ const HowContribute = () => {
         <h2 className={styles.text}>Contribua com código</h2>
         <BodyText className={styles.text}>
           Você é uma pessoa programadora ou analista de dados e quer ajudar a
-          construir essa iniciativa? Então dá uma olhada em nossos repositórios:{' '}
+          construir essa iniciativa? Então dá uma olhada em nossos repositórios
+          no{' '}
           <Link
             className={styles.link}
             href="https://github.com/DadosAbertosDeFeira"
             target="_blank"
             rel="noreferrer"
           >
-            https://github.com/DadosAbertosFeira
+            Github
           </Link>
           . Temos desde análise de dados e APIs a frontend e NLP.
         </BodyText>
