@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .contribute {
   display: flex;
   justify-content: center;
@@ -30,4 +32,8 @@
 .text,
 .button {
   margin-top: 4rem;
+}
+
+.link {
+  color: $color-primary;
 }
