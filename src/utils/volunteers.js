@@ -79,6 +79,7 @@ export default [
     role: 'Conselheiro',
     picture: 'https://avatars.githubusercontent.com/danielfireman',
     github: 'danielfireman',
+    linkedin: 'danielfireman',
     twitter: 'daniellfireman',
   },
   {
