@@ -95,6 +95,14 @@ export default [
     github: 'guilhermelowa',
     linkedin: 'guilherme-wanderley'
   },
+  {
+    name: 'Geraldo Castro',
+    role: 'Desenvolvedor',
+    picture: 'https://pbs.twimg.com/profile_images/1402724348507701252/3-SBqUzV_400x400.jpg',
+    github: 'exageraldo',
+    linkedin: 'exageraldo',
+    twitter: 'exageraldo_',
+  },
 ].sort((person1, person2) => {
   return person1.name.localeCompare(person2.name); // Automatically alphabetize
 });
