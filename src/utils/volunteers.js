@@ -95,6 +95,13 @@ export default [
     github: 'guilhermelowa',
     linkedin: 'guilherme-wanderley'
   },
+  {
+  name: 'Luanda Dantas',
+  role: 'Desenvolvedora',
+  picture: 'https://avatars.githubusercontent.com/luandadantas',
+  github: 'luandadantas',
+  linkedin: 'luandadantas'
+},
 ].sort((person1, person2) => {
   return person1.name.localeCompare(person2.name); // Automatically alphabetize
 });
