@@ -163,7 +163,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-2xl px-lg tablet:px-2xl">
+      <section id="colabore" className="py-2xl px-lg tablet:px-2xl">
         <HowContribute />
       </section>
 

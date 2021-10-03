@@ -6,7 +6,7 @@ import styles from './HowContribute.module.scss';
 
 const HowContribute = () => {
   return (
-    <div id="colabore" className={styles.contribute}>
+    <div className={styles.contribute}>
       <img
         className={styles.contributeImage}
         src="/assets/people-contribute.svg"
