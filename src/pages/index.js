@@ -4,12 +4,11 @@ import SEO from '../components/SEO';
 import Header from '../components/Header';
 import Button from '../components/Button';
 import Link from '../components/Link';
-import VolunteersCard from '../components/VolunteersCard';
 import ContactForm from '../components/ContactForm';
 import HowContribute from '../components/HowContribute';
 import SocialContactButtons from '../components/SocialContactButtons';
+import Volunteers from '../components/Volunteers';
 
-import volunteersList from '../utils/volunteers';
 import styles from './index.module.scss';
 import BodyText from '../components/BodyText';
 import Supporters from '../components/Supporters';
@@ -143,24 +142,7 @@ export default function Home() {
       </section>
 
       <section id="voluntarios" className={styles.volunteers}>
-        <div className={styles.icon}>
-          <img src="/assets/icons/hand-with-hearth.svg" alt="Livro" />
-          <h2>Voluntários</h2>
-        </div>
-        <div className={styles.volunteersList}>
-          {volunteersList.map((volunteer) => (
-            <VolunteersCard
-              key={`${volunteer.name}-${volunteer.role}`}
-              name={volunteer.name}
-              role={volunteer.role}
-              picture={volunteer.picture}
-              linkedin={volunteer.linkedin}
-              instagram={volunteer.instagram}
-              github={volunteer.github}
-              twitter={volunteer.twitter}
-            />
-          ))}
-        </div>
+        <Volunteers />
       </section>
 
       <section className="py-2xl px-lg tablet:px-2xl">
