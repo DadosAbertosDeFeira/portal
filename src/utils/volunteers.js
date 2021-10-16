@@ -93,23 +93,24 @@ export default [
     role: 'Office-boy e Analista de Dados',
     picture: 'https://avatars.githubusercontent.com/guilhermelowa',
     github: 'guilhermelowa',
-    linkedin: 'guilherme-wanderley'
+    linkedin: 'guilherme-wanderley',
   },
   {
     name: 'Luanda Dantas',
     role: 'Desenvolvedora',
     picture: 'https://avatars.githubusercontent.com/luandadantas',
     github: 'luandadantas',
-    linkedin: 'luandadantas'
+    linkedin: 'luandadantas',
   },
   {
     name: 'Geraldo Castro',
     role: 'Desenvolvedor',
-    picture: 'https://pbs.twimg.com/profile_images/1402724348507701252/3-SBqUzV_400x400.jpg',
+    picture:
+      'https://pbs.twimg.com/profile_images/1402724348507701252/3-SBqUzV_400x400.jpg',
     github: 'exageraldo',
     linkedin: 'exageraldo',
     twitter: 'exageraldo_',
-  }
+  },
 ].sort((person1, person2) => {
   return person1.name.localeCompare(person2.name); // Automatically alphabetize
 });

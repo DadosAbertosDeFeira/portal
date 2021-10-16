@@ -7,6 +7,7 @@ import Link from '../components/Link';
 import ContactForm from '../components/ContactForm';
 import HowContribute from '../components/HowContribute';
 import SocialContactButtons from '../components/SocialContactButtons';
+import Projects from '../components/Projects';
 import Volunteers from '../components/Volunteers';
 
 import styles from './index.module.scss';
@@ -143,6 +144,13 @@ export default function Home() {
 
       <section id="voluntarios" className={styles.volunteers}>
         <Volunteers />
+      </section>
+
+      <section
+        id="projetos"
+        className="tablet:space-x-md pt-2xl tablet:p-2xl flex justify-center"
+      >
+        <Projects />
       </section>
 
       <section id="colabore" className="py-2xl px-lg tablet:px-2xl">
