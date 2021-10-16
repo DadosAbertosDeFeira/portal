@@ -39,7 +39,7 @@ export default [
       'A discussão sobre dados abertos e transparência dentro das cidades ainda está muito tímida. Nós queremos mudar isso.',
     link: 'https://anchor.fm/cidadesabertas/',
     logo: {
-      path: '/assets/podcast.jpeg',
+      path: '/assets/logo-cidades-abertas-podcast.png',
       description: 'Logo do Podcast Cidades Abertas',
     },
   },
@@ -70,7 +70,7 @@ export default [
     type: ['raspagem de dados'],
     description:
       'Aqui você encontrará raspadores para o site do Tribunal de Contas dos Municípios da Bahia.',
-    link: 'https://github.com/DadosAbertosDeFeira/prometido',
+    link: 'https://github.com/DadosAbertosDeFeira/tcm-ba',
     logo: {
       path: '/assets/default-project.jpeg',
       description: 'Logo do projeto tcm-ba',
@@ -81,7 +81,7 @@ export default [
     type: ['processamento de linguagem natural', 'ciência de dados'],
     description:
       'Identifique endereços, bairros e outras localizações brasileiras automaticamente em um texto.',
-    link: 'https://github.com/DadosAbertosDeFeira/prometido',
+    link: 'https://github.com/DadosAbertosDeFeira/tomba',
     logo: {
       path: '/assets/default-project.jpeg',
       description: 'Logo do projeto tomba',
