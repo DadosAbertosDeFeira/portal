@@ -1,0 +1,13 @@
+.image {
+  width: 100px;
+  height: 100px;
+}
+
+.volunteersList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin-top: 3em;
+  gap: 1em;
+}

@@ -4,15 +4,15 @@ import SEO from '../components/SEO';
 import Header from '../components/Header';
 import Button from '../components/Button';
 import Link from '../components/Link';
-import VolunteersCard from '../components/VolunteersCard';
 import ContactForm from '../components/ContactForm';
 import HowContribute from '../components/HowContribute';
 import SocialContactButtons from '../components/SocialContactButtons';
 import Projects from '../components/Projects';
+import Volunteers from '../components/Volunteers';
 
-import volunteersList from '../utils/volunteers';
 import styles from './index.module.scss';
 import BodyText from '../components/BodyText';
+import Supporters from '../components/Supporters';
 
 export default function Home() {
   const router = useRouter();
@@ -45,7 +45,7 @@ export default function Home() {
             <Button
               className={styles.mainButton}
               onClick={() =>
-                router.push('https://www.dadosabertosdefeira.com.br/painel/')
+                router.push('https://mq.dadosabertosdefeira.com.br/painel/')
               }
             >
               Consultar a base de dados
@@ -138,27 +138,12 @@ export default function Home() {
             eficiente. Lutar pela transparência é um trabalho de todos.
           </BodyText>
         </div>
+
+        <Supporters />
       </section>
 
       <section id="voluntarios" className={styles.volunteers}>
-        <div className={styles.icon}>
-          <img src="/assets/icons/hand-with-hearth.svg" alt="Livro" />
-          <h2>Voluntários</h2>
-        </div>
-        <div className={styles.volunteersList}>
-          {volunteersList.map((volunteer) => (
-            <VolunteersCard
-              key={`${volunteer.name}-${volunteer.role}`}
-              name={volunteer.name}
-              role={volunteer.role}
-              picture={volunteer.picture}
-              linkedin={volunteer.linkedin}
-              instagram={volunteer.instagram}
-              github={volunteer.github}
-              twitter={volunteer.twitter}
-            />
-          ))}
-        </div>
+        <Volunteers />
       </section>
 
       <section
@@ -168,9 +153,9 @@ export default function Home() {
         <Projects />
       </section>
 
-      <div className={styles.contributeWrapper}>
+      <section id="colabore" className="py-2xl px-lg tablet:px-2xl">
         <HowContribute />
-      </div>
+      </section>
 
       <section id="contato" className="border-t-2 pt-2xl tablet:space-x-md">
         <div className="flex flex-col justify-center tablet:flex-row">

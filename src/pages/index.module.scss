@@ -38,20 +38,7 @@
   background: $color-background-secondary;
   padding: 8rem;
 
-  .volunteersList {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    margin-top: 3rem;
-    gap: 1rem;
-  }
-
   @media (max-width: 1280px) {
     padding: 4rem 1rem 4rem 1rem;
   }
-}
-
-.contributeWrapper {
-  padding: 4rem;
 }
