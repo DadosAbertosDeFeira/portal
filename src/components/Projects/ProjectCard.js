@@ -9,7 +9,9 @@ import styles from './ProjectCard.module.scss';
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className={`${styles.card} flex m-md tablet:m-xl rounded`}>
+    <div
+      className={`${styles.card} flex align-center tablet:flex m-md tablet:m-xl rounded`}
+    >
       {/* Logo Wrapper */}
       <div>
         <img
@@ -20,12 +22,12 @@ const ProjectCard = ({ project }) => {
       </div>
 
       {/* Content */}
-      <div className="flex flex-col pr-xs pb-xs tablet:pr-sm tablet:pt-sm tablet:pb-xs">
+      <div className="flex flex-col pr-sm pl-sm pb-xs tablet:pr-sm tablet:pt-sm tablet:pb-xs tablet:pl-sm">
         <h3 className="mb-sm tablet:mb-md">{project.name}</h3>
         <p className="text-black text-xs flex-1">{project.description}</p>
 
         <div className={`flex flex-row ${styles.footer}`}>
-          <div>
+          <div className="hidden sm:flex">
             {project.type.map((tag) => (
               <Tag key={tag} className="mr-xs">
                 {tag}
