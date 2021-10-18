@@ -47,5 +47,11 @@ export default {
       logo: '/assets/jetbrains.svg',
       link: 'https://www.jetbrains.com/?from=DadosAbertosDeFeira',
     },
+    {
+      id: 'mLabs',
+      name: 'mLabs',
+      logo: '/assets/mLabs.png',
+      link: 'https://www.mlabs.com.br/',
+    },
   ],
 };
