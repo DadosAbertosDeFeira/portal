@@ -111,6 +111,15 @@ export default [
     linkedin: 'exageraldo',
     twitter: 'exageraldo_',
   },
+  {
+    name: 'Gabriela Turquetti', 
+    role: 'Desenvolvedora', 
+    picture: 'https://avatars.githubusercontent.com/turquetti', 
+    github: 'turquetti', 
+    linkedin: 'gabriela-turquetti', 
+    instagram: 'gabrielaturquetti', 
+    twitter: 'gabturquetti',
+  },
 ].sort((person1, person2) => {
   return person1.name.localeCompare(person2.name); // Automatically alphabetize
 });
