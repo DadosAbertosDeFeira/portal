@@ -111,14 +111,7 @@ export default [
     linkedin: 'exageraldo',
     twitter: 'exageraldo_',
   },
-  {
-    name: 'Nathanael Souza',
-    role: 'Desenvolvedor/o-que-precisar',
-    picture:
-      'https://avatars.githubusercontent.com/u/91571451?s=400&u=df8fba5c5ee9f61fca7027db2d22011429152be2&v=4',
-    github: 'Nathanaelss',
-    linkedin: 'nathanael-souza',
-  },
+  
 ].sort((person1, person2) => {
   return person1.name.localeCompare(person2.name); // Automatically alphabetize
 });
