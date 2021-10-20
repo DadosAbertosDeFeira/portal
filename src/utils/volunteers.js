@@ -111,7 +111,6 @@ export default [
     linkedin: 'exageraldo',
     twitter: 'exageraldo_',
   },
-  
 ].sort((person1, person2) => {
   return person1.name.localeCompare(person2.name); // Automatically alphabetize
 });
