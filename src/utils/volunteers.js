@@ -111,6 +111,13 @@ export default [
     linkedin: 'exageraldo',
     twitter: 'exageraldo_',
   },
+  {
+    name: 'Felipe Barros',
+    role: 'Analista de Dados',
+    picture: 'https://avatars.githubusercontent.com/felipelfb',
+    github: 'felipelfb',
+    linkedin: 'felipe-barros-609a52141',
+  },
 ].sort((person1, person2) => {
   return person1.name.localeCompare(person2.name); // Automatically alphabetize
 });
