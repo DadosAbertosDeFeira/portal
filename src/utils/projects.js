@@ -44,11 +44,11 @@ export default [
     },
   },
   {
-    name: 'Laiá',
+    name: 'Laiá (pedidos de informação)',
     type: ['pedidos de informação'],
     description:
       'Gerencie e compartilhe publicamente o status dos seus pedidos de informação',
-    link: 'http://pedidos.dadosabertosdefeira.com.br/',
+    link: 'https://pedidos.dadosabertosdefeira.com.br/',
     logo: {
       path: '/assets/default-project.jpeg',
       description: 'Logo do projeto Pedidos',
