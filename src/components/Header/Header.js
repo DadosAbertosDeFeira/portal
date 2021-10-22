@@ -7,7 +7,7 @@ import logoWithText from '../../assets/logo.svg';
 
 const DesktopHeader = () => {
   return (
-    <nav className="bg-white absolute top-0 h-desktop-header z-20 xl:z-0 w-full flex-row shadow md:space-x-lg page-margin-align pr-xl hidden tablet:flex">
+    <nav className="bg-white fixed h-desktop-header top-0 z-20 xl:z-0 w-full flex-row shadow md:space-x-lg page-margin-align pr-xl hidden tablet:flex">
       <div className="my-auto mr-lg">
         <Link href="/">
           <img
