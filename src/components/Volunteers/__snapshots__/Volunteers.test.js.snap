@@ -396,6 +396,76 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       class="volunteers"
     >
       <img
+        alt="Gabriela Turquetti"
+        class="volunteersPicture"
+        src="https://avatars.githubusercontent.com/turquetti"
+      />
+      <div
+        class="volunteersInfo"
+      >
+        <div>
+          <p
+            class="text-black text-sm tablet:text-base volunteersInfoName"
+            data-testid=""
+          >
+            Gabriela Turquetti
+          </p>
+          <p
+            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            data-testid=""
+          >
+            Desenvolvedora
+          </p>
+        </div>
+        <div
+          class="volunteersIconContainer"
+        >
+          <a
+            href="https://www.twitter.com/gabturquetti"
+            target="_self"
+          >
+            <img
+              alt="Twitter icon"
+              src="/assets/icons/twitter.svg"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/gabriela-turquetti"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Linkedin icon"
+              src="/assets/icons/linkedin.svg"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/gabrielaturquetti"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Instagram icon"
+              src="/assets/icons/instagram.svg"
+            />
+          </a>
+          <a
+            href="https://github.com/turquetti"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Github icon"
+              src="/assets/icons/github.svg"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="volunteers"
+    >
+      <img
         alt="Geraldo Castro"
         class="volunteersPicture"
         src="https://pbs.twimg.com/profile_images/1402724348507701252/3-SBqUzV_400x400.jpg"
