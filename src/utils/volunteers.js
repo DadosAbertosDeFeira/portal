@@ -118,6 +118,12 @@ export default [
     github: 'felipelfb',
     linkedin: 'felipe-barros-609a52141',
   },
+  {
+    name: 'Eduardo Daltro',
+    role: 'Staff',
+    picture: 'https://avatars.githubusercontent.com/u/12780445?v=4',
+    linkedin: 'daltroedu',
+  },
 ].sort((person1, person2) => {
   return person1.name.localeCompare(person2.name); // Automatically alphabetize
 });
