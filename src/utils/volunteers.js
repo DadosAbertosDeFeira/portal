@@ -112,6 +112,13 @@ export default [
     twitter: 'exageraldo_',
   },
   {
+    name: 'Felipe Barros',
+    role: 'Analista de Dados',
+    picture: 'https://avatars.githubusercontent.com/felipelfb',
+    github: 'felipelfb',
+    linkedin: 'felipe-barros-609a52141',
+  },
+  {
     name: 'Gabriela Turquetti', 
     role: 'Desenvolvedora', 
     picture: 'https://avatars.githubusercontent.com/turquetti', 

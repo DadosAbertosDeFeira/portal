@@ -345,6 +345,57 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       class="volunteers"
     >
       <img
+        alt="Felipe Barros"
+        class="volunteersPicture"
+        src="https://avatars.githubusercontent.com/felipelfb"
+      />
+      <div
+        class="volunteersInfo"
+      >
+        <div>
+          <p
+            class="text-black text-sm tablet:text-base volunteersInfoName"
+            data-testid=""
+          >
+            Felipe Barros
+          </p>
+          <p
+            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            data-testid=""
+          >
+            Analista de Dados
+          </p>
+        </div>
+        <div
+          class="volunteersIconContainer"
+        >
+          <a
+            href="https://www.linkedin.com/in/felipe-barros-609a52141"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Linkedin icon"
+              src="/assets/icons/linkedin.svg"
+            />
+          </a>
+          <a
+            href="https://github.com/felipelfb"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Github icon"
+              src="/assets/icons/github.svg"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="volunteers"
+    >
+      <img
         alt="Filipe Maia"
         class="volunteersPicture"
         src="https://avatars.githubusercontent.com/filipebsmaia"
