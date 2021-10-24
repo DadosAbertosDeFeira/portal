@@ -780,6 +780,57 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       class="volunteers"
     >
       <img
+        alt="Nathanael Souza"
+        class="volunteersPicture"
+        src="https://avatars.githubusercontent.com/u/91571451?s=400&u=df8fba5c5ee9f61fca7027db2d22011429152be2&v=4"
+      />
+      <div
+        class="volunteersInfo"
+      >
+        <div>
+          <p
+            class="text-black text-sm tablet:text-base volunteersInfoName"
+            data-testid=""
+          >
+            Nathanael Souza
+          </p>
+          <p
+            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            data-testid=""
+          >
+            Desenvolvedor
+          </p>
+        </div>
+        <div
+          class="volunteersIconContainer"
+        >
+          <a
+            href="https://www.linkedin.com/in/nathanael-souza"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Linkedin icon"
+              src="/assets/icons/linkedin.svg"
+            />
+          </a>
+          <a
+            href="https://github.com/Nathanaelss"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Github icon"
+              src="/assets/icons/github.svg"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="volunteers"
+    >
+      <img
         alt="Rafael Gomes"
         class="volunteersPicture"
         src="https://avatars.githubusercontent.com/gomex"
