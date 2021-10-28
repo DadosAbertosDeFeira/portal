@@ -135,6 +135,12 @@ export default [
     github: 'Nathanaelss',
     linkedin: 'nathanael-souza',
   },
+  {
+    name: 'Allythy',
+    role: 'Desenvolvedor',
+    picture: 'https://avatars.githubusercontent.com/allythy',
+    github: 'allythy',
+  },
 ].sort((person1, person2) => {
   return person1.name.localeCompare(person2.name); // Automatically alphabetize
 });
