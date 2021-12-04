@@ -136,6 +136,12 @@ export default [
     linkedin: 'nathanael-souza',
   },
   {
+    name: 'Allythy',
+    role: 'Desenvolvedor',
+    picture: 'https://avatars.githubusercontent.com/allythy',
+    github: 'allythy',
+  },
+  {
     name: 'Eduardo Daltro',
     role: 'Staff',
     picture: 'https://avatars.githubusercontent.com/u/12780445?v=4',

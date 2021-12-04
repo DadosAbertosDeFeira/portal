@@ -23,6 +23,47 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       class="volunteers"
     >
       <img
+        alt="Allythy"
+        class="volunteersPicture"
+        src="https://avatars.githubusercontent.com/allythy"
+      />
+      <div
+        class="volunteersInfo"
+      >
+        <div>
+          <p
+            class="text-black text-sm tablet:text-base volunteersInfoName"
+            data-testid=""
+          >
+            Allythy
+          </p>
+          <p
+            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            data-testid=""
+          >
+            Desenvolvedor
+          </p>
+        </div>
+        <div
+          class="volunteersIconContainer"
+        >
+          <a
+            href="https://github.com/allythy"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Github icon"
+              src="/assets/icons/github.svg"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="volunteers"
+    >
+      <img
         alt="Ana Paula Gomes"
         class="volunteersPicture"
         src="https://avatars.githubusercontent.com/anapaulagomes"
