@@ -294,6 +294,47 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       class="volunteers"
     >
       <img
+        alt="Eduardo Daltro"
+        class="volunteersPicture"
+        src="https://avatars.githubusercontent.com/u/12780445?v=4"
+      />
+      <div
+        class="volunteersInfo"
+      >
+        <div>
+          <p
+            class="text-black text-sm tablet:text-base volunteersInfoName"
+            data-testid=""
+          >
+            Eduardo Daltro
+          </p>
+          <p
+            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            data-testid=""
+          >
+            Staff
+          </p>
+        </div>
+        <div
+          class="volunteersIconContainer"
+        >
+          <a
+            href="https://www.linkedin.com/in/daltroedu"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Linkedin icon"
+              src="/assets/icons/linkedin.svg"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="volunteers"
+    >
+      <img
         alt="Emerson Oliveira"
         class="volunteersPicture"
         src="https://avatars.githubusercontent.com/emersonsdo"
