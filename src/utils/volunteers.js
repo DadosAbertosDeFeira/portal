@@ -146,6 +146,13 @@ export default [
     picture: 'https://avatars.githubusercontent.com/u/12780445?v=4',
     linkedin: 'daltroedu',
   },
+  {
+    name: 'André Costa',
+    role: 'Designer',
+    picture:
+      'https://media.licdn.com/dms/image/C4D03AQFDIUn_R4yx2Q/profile-displayphoto-shrink_400_400/0/1668127163554?e=1681344000&v=beta&t=SM5dXuDYUW-HKvk37wmbRuXbTmSKFVJ6Yo3q_-9pkhs',
+    linkedin: 'andrecostaux',
+  },
 ].sort((person1, person2) => {
   return person1.name.localeCompare(person2.name); // Automatically alphabetize
 });

@@ -124,6 +124,47 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       class="volunteers"
     >
       <img
+        alt="André Costa"
+        class="volunteersPicture"
+        src="https://media.licdn.com/dms/image/C4D03AQFDIUn_R4yx2Q/profile-displayphoto-shrink_400_400/0/1668127163554?e=1681344000&v=beta&t=SM5dXuDYUW-HKvk37wmbRuXbTmSKFVJ6Yo3q_-9pkhs"
+      />
+      <div
+        class="volunteersInfo"
+      >
+        <div>
+          <p
+            class="text-black text-sm tablet:text-base volunteersInfoName"
+            data-testid=""
+          >
+            André Costa
+          </p>
+          <p
+            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            data-testid=""
+          >
+            Designer
+          </p>
+        </div>
+        <div
+          class="volunteersIconContainer"
+        >
+          <a
+            href="https://www.linkedin.com/in/andrecostaux"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Linkedin icon"
+              src="/assets/icons/linkedin.svg"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="volunteers"
+    >
+      <img
         alt="Bruno Morassuti"
         class="volunteersPicture"
         src="https://avatars.githubusercontent.com/jedibruno"
