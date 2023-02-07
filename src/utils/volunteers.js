@@ -32,8 +32,7 @@ export default [
   {
     name: 'Vivian Macedo',
     role: 'Analista de Dados',
-    picture:
-      'https://media-exp1.licdn.com/dms/image/C4D03AQE9q7zoT86HQw/profile-displayphoto-shrink_400_400/0/1524262173908?e=1636588800&v=beta&t=MWsa3TgcxKNBe09bMa3Mh_a90YRMG--QxY_0zKb7Xw8',
+    picture: 'https://avatars.githubusercontent.com/u/7208924?v=4',
     github: 'vihvs',
     linkedin: 'vivianmacedo',
   },
@@ -49,7 +48,7 @@ export default [
     name: 'Rafael Velame',
     role: 'Jornalista',
     picture:
-      'https://media-exp1.licdn.com/dms/image/C4D03AQG8ytEVvsZ44g/profile-displayphoto-shrink_400_400/0/1519088249816?e=1636588800&v=beta&t=lneQV2nQp5ZcTNQbEfy7yYN1FuEKcZUb_Q4iwE8IvSw',
+      'https://media.licdn.com/dms/image/C4D03AQG8ytEVvsZ44g/profile-displayphoto-shrink_100_100/0/1519088249816?e=1681344000&v=beta&t=mzqZkJbugdXi6Su20QsyLj8O0FscPrhFvS-lOknUjYg',
     twitter: 'rafaelvelame',
     linkedin: 'rafael-velame-242b98104',
   },
