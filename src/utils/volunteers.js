@@ -62,7 +62,7 @@ export default [
   },
   {
     name: 'Nataly Costa',
-    role: 'UI/UX design manager',
+    role: 'Designer',
     picture: 'https://avatars.githubusercontent.com/natalycosta',
     linkedin: 'natalycosta',
   },

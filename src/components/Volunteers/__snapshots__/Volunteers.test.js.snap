@@ -880,7 +880,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             class="text-black text-sm tablet:text-base volunteersInfoRole"
             data-testid=""
           >
-            UI/UX design manager
+            Designer
           </p>
         </div>
         <div
