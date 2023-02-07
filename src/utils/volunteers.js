@@ -104,8 +104,7 @@ export default [
   {
     name: 'Geraldo Castro',
     role: 'Desenvolvedor',
-    picture:
-      'https://pbs.twimg.com/profile_images/1402724348507701252/3-SBqUzV_400x400.jpg',
+    picture: 'https://pbs.twimg.com/profile_images/1554824450222088192/hz9at1ji_400x400.jpg',
     github: 'exageraldo',
     linkedin: 'exageraldo',
     twitter: 'exageraldo_',

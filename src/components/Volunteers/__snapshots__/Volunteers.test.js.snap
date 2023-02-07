@@ -642,7 +642,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Geraldo Castro"
         class="volunteersPicture"
-        src="https://pbs.twimg.com/profile_images/1402724348507701252/3-SBqUzV_400x400.jpg"
+        src="https://pbs.twimg.com/profile_images/1554824450222088192/hz9at1ji_400x400.jpg"
       />
       <div
         class="volunteersInfo"
