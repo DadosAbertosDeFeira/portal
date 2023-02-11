@@ -43,6 +43,15 @@ yarn build
 yarn start
 ```
 
+#### Netlify
+
+A versão de produção do node.js pode ser configurada através da variável de ambiente no `netlify.toml`:
+
+```toml
+[build.environment]
+  NODE_VERSION = "16.19.0"
+```
+
 ### Rodando lint
 
 ```bash
@@ -56,6 +65,7 @@ yarn test
 ```
 
 Se deseja rodar com coverage:
+
 ```bash
 yarn test:coverage
 ```
