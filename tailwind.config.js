@@ -82,8 +82,8 @@ module.exports = {
         '6xl': '256px',
       },
       backgroundImage: () => ({
-        'city-pattern': "url('/assets/home-background.svg')",
-        'waved-banner': "url('/assets/menu-banner.svg')",
+        'city-pattern': "url('../assets/home-background.svg')",
+        'waved-banner': "url('../assets/menu-banner.svg')",
       }),
       screens: {
         tablet: '640px',
