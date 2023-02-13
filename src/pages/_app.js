@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import * as gtag from '../lib/gtag';
 import '../styles/globals.scss';
+import Layout from '../layouts/Layout';
 
 const handleRouteChange = (url) => {
   gtag.pageview(url);
@@ -20,11 +21,13 @@ function MyApp({ Component, pageProps }) {
     };
   }, [events]);
   return (
-    <>
-      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-      <Component {...pageProps} />
-      <ToastContainer />
-    </>
+    <Layout>
+      <>
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+        <Component {...pageProps} />
+        <ToastContainer />
+      </>
+    </Layout>
   );
 }
 
