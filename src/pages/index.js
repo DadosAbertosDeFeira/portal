@@ -5,7 +5,6 @@ import SocialContactButtons from '../components/SocialContactButtons';
 import Projects from '../components/Projects';
 import Volunteers from '../components/Volunteers';
 
-import styles from './index.module.scss';
 import BodyText from '../components/BodyText';
 import Supporters from '../components/Supporters';
 
@@ -45,12 +44,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="sobre" className={styles.history}>
-        <div className={styles.icon}>
-          <img src="/assets/icons/book.svg" alt="Livro" />
-          <h2>Nossa História</h2>
+      <section id="sobre" className="p-16">
+        <div className="flex flex-col items-center">
+          <img className="w-28 h-28" src="/assets/icons/book.svg" alt="Livro" />
+          <h2 className="mt-8">Nossa História</h2>
         </div>
-        <div className={styles.historyTexts}>
+        <div className="flex flex-col gap-y-4 my-6 text-center font-semibold text-primary-dark xl:py-8 xl:px-6">
           <BodyText>
             A ideia de criar um espaço onde as pessoas possam buscar informações
             de maneira fácil sobre o município nasceu em 2019, quando a
@@ -59,14 +58,16 @@ export default function Home() {
             após ouvir uma denúncia feita por Rafael Velame no rádio sobre a
             falta de merenda em algumas escolas da cidade. Ao acessar o{' '}
             <Link
+              className="underline"
               href="http://www.transparencia.feiradesantana.ba.gov.br/"
               target="_blank"
               rel="noreferrer"
             >
               portal da transparência de Feira de Santana
             </Link>{' '}
-            deparou-se com a dificuldade de fazer buscas na{' '}
+            deparou-se com a dificuldade de fazer buscas na
             <Link
+              className="underline"
               href="http://www.transparencia.feiradesantana.ba.gov.br/index.php?view=licitacoes"
               target="_blank"
               rel="noreferrer"
@@ -85,7 +86,6 @@ export default function Home() {
             sabendo se ele compareceu ao trabalho ou se executou sua função como
             deveria?
           </BodyText>
-
           <BodyText>
             Diante da situação foram feitos novos pedidos de informação à Câmara
             - também sem respostas. Após meses de espera foi necessário acionar
@@ -93,6 +93,7 @@ export default function Home() {
             partir daí, o projeto ganhou projeção nas mídias locais, como BATV
             da TV Subaé,{' '}
             <Link
+              className="underline"
               href="https://www.acordacidade.com.br/noticias/222557/programadora-encontra-dificuldades-para-obter-informacoes-sobre-a-atuacao-dos-vereadores-de-feira.html"
               target="_blank"
               rel="noreferrer"
@@ -101,6 +102,7 @@ export default function Home() {
             </Link>
             ,{' '}
             <Link
+              className="underline"
               href="https://www.blogdovelame.com/presidente-reconhece-falta-de-transparencia-e-promete-divulgar-dados/"
               target="_blank"
               rel="noreferrer"
@@ -109,6 +111,7 @@ export default function Home() {
             </Link>
             , além de diversas participações nos programas da{' '}
             <Link
+              className="underline"
               href="https://www.facebook.com/blogdovelame/videos/750921745431854/"
               target="_blank"
               rel="noreferrer"
@@ -133,7 +136,7 @@ export default function Home() {
         <Supporters />
       </section>
 
-      <section id="voluntarios" className={styles.volunteers}>
+      <section id="voluntarios" className="bg-white p-32 xl:py-16 xl:px-4">
         <Volunteers />
       </section>
 
