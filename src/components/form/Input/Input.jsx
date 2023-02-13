@@ -1,30 +1,48 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useController } from 'react-hook-form';
 
-function Input({ name, label, type, required }) {
+function Input({ name, label, control, rules }) {
+  const { field: input, fieldState: state } = useController({
+    name,
+    control,
+    rules,
+    defaultValue: '',
+  });
+
   return (
-    <input
-      aria-label={label}
-      className="input-field"
-      name={name}
-      id={name}
-      type={type}
-      placeholder={label}
-      required={required}
-    />
+    <label htmlFor={name}>
+      <input
+        aria-label={label}
+        className="input-field"
+        placeholder={label}
+        aria-errormessage={state.error}
+        aria-invalid={state.invalid}
+        {...input}
+      />
+
+      {state.error && (
+        <span
+          key={state.error}
+          className="text-alert text-sm anima-input-error-message"
+        >
+          {state.error.message}
+        </span>
+      )}
+    </label>
   );
 }
 
 Input.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  type: PropTypes.string,
-  required: PropTypes.bool,
+  control: PropTypes.objectOf(PropTypes.any).isRequired,
+  rules: PropTypes.objectOf(PropTypes.any),
 };
 
 Input.defaultProps = {
-  type: 'text',
-  required: false,
+  rules: {},
 };
 
 export default Input;

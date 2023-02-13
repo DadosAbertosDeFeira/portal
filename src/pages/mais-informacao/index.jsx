@@ -1,8 +1,31 @@
+import classNames from 'classnames';
 import React from 'react';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 import Input from '../../components/form/Input/Input';
 import Textarea from '../../components/form/Textarea/Textarea';
+import validations from '../../utils/validations/validations';
 
 function MaisInformacao() {
+  const form = useForm({ mode: 'onBlur', shouldUseNativeValidation: true });
+
+  async function handleSubmit(values, e) {
+    const response = fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        'form-name': e.target.getAttribute('name'),
+        ...values,
+      }).toString(),
+    });
+
+    await toast.promise(response, {
+      pending: 'Enviando mensagem',
+      error: 'Ocorreu um erro ao enviar sua mensagem',
+      success: 'Sua mensagem foi enviada com sucesso',
+    });
+  }
+
   const hrefs = [
     {
       label: 'Portal da Prefeitura.',
@@ -51,12 +74,31 @@ function MaisInformacao() {
           <form
             name="mais-informacao"
             className="mt-5 flex flex-col gap-y-4"
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={form.handleSubmit(handleSubmit)}
             data-netlify="true"
           >
-            <Input type="email" name="email" label="Email" required />
-            <Textarea name="content" label="O que você procura?" />
-            <button className="button-outline" type="submit">
+            <Input
+              control={form.control}
+              rules={{
+                required: 'Campo obrigatório.',
+                validate: validations.get('email'),
+              }}
+              name="email"
+              label="Email"
+            />
+            <Textarea
+              control={form.control}
+              rules={{ required: 'Campo obrigatório.' }}
+              name="content"
+              label="O que você procura?"
+            />
+            <button
+              disabled={!form.formState.isValid}
+              className={classNames('button-outline', {
+                'filter grayscale': !form.formState.isValid,
+              })}
+              type="submit"
+            >
               Enviar
             </button>
           </form>

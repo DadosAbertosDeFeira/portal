@@ -1,27 +1,48 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useController } from 'react-hook-form';
 
-function Textarea({ name, label, required }) {
+function Textarea({ name, label, control, rules }) {
+  const { field: input, fieldState: state } = useController({
+    name,
+    control,
+    rules,
+    defaultValue: '',
+  });
+
   return (
-    <textarea
-      className="input-field h-20"
-      aria-label={label}
-      placeholder={label}
-      name={name}
-      id={name}
-      required={required}
-    />
+    <label htmlFor={name}>
+      <textarea
+        aria-label={label}
+        className="input-field"
+        placeholder={label}
+        aria-errormessage={state.error}
+        aria-invalid={state.invalid}
+        {...input}
+      />
+
+      {state.error && (
+        <span
+          key={state.error}
+          className="text-alert text-sm anima-input-error-message"
+        >
+          {state.error.message}
+        </span>
+      )}
+    </label>
   );
 }
 
 Textarea.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  required: PropTypes.bool,
+  control: PropTypes.objectOf(PropTypes.any).isRequired,
+  rules: PropTypes.objectOf(PropTypes.any),
 };
 
 Textarea.defaultProps = {
-  required: false,
+  rules: {},
 };
 
 export default Textarea;
