@@ -49,8 +49,10 @@ function MaisInformacao() {
             Juntos, garantimos informações precisas para a fiscalização.
           </p>
           <form
+            name="mais-informacao"
             className="mt-5 flex flex-col gap-y-4"
             onSubmit={(e) => e.preventDefault()}
+            data-netlify="true"
           >
             <Input type="email" name="email" label="Email" required />
             <Textarea name="content" label="O que você procura?" />
