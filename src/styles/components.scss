@@ -1,0 +1,27 @@
+@use "./variables.scss" as *;
+
+@mixin button {
+  @apply font-semibold p-3 border rounded transition ease-in-out;
+}
+
+@layer components {
+  .button-condensed {
+    @include button;
+    @apply bg-primary-dark  text-white;
+  }
+
+  .button-outline {
+    @include button;
+    border-color: $color-primary--dark;
+    color: $color-primary--dark;
+  }
+
+  .input-field {
+    @apply w-full p-2 pl-4 bg-white rounded border text-gray-dark font-medium;
+    border-color: $color-gray-2;
+  }
+
+  .page-margin-align {
+    @apply pl-md tablet:pl-xl desktop:pl-4xl large-desktop:pl-5xl;
+  }
+}
