@@ -51,7 +51,7 @@ export default function Home() {
         className="flex flex-col place-items-center p-16 gap-7"
       >
         <img
-          className="m-auto w-[100px] h-[100px]"
+          className="m-auto w-24 h-24"
           src="/assets/icons/book.svg"
           alt="Livro"
         />
