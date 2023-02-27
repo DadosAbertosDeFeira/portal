@@ -14,11 +14,11 @@ function Textarea({ name, label, control, rules }) {
   return (
     <label htmlFor={name}>
       <textarea
-        aria-label={label}
         className="input-field"
         placeholder={label}
-        aria-errormessage={state.error}
+        aria-errormessage={state.error?.message}
         aria-invalid={state.invalid}
+        aria-label={label}
         {...input}
       />
 
