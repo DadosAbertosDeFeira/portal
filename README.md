@@ -14,7 +14,7 @@ ao nosso [Código de Conduta](CODE_OF_CONDUCT.md).
 
 ### Configurando seu ambiente
 
-Você precisará do [Yarn](https://yarnpkg.com/) para rodar o projeto.
+Você precisará do [Yarn Classic](https://classic.yarnpkg.com/lang/en/) para rodar o projeto.
 
 #### Instale as dependências e prepare os serviços
 
