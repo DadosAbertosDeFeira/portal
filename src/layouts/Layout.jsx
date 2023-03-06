@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 
 export default function Layout({ children }) {
   return (
-    <div>
+    <>
       <Header />
       <SEO
         title="Dados Abertos de Feira"
@@ -13,7 +13,7 @@ export default function Layout({ children }) {
         shouldExcludeTitleSuffix
       />
       {children}
-    </div>
+    </>
   );
 }
 

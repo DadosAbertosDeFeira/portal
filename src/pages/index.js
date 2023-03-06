@@ -15,7 +15,7 @@ import Supporters from '../components/Supporters';
 export default function Home() {
   const router = useRouter();
   return (
-    <div>
+    <>
       <section className="bg-no-repeat bg-bottom bg-cover bg-city-pattern flex flex-col tablet:flex-row">
         <div className="flex-grow flex justify-end tablet:items-start tablet:order-last">
           <img
@@ -178,6 +178,6 @@ export default function Home() {
           <span>© 2021 Todos os Direitos Reservados</span>
         </div>
       </section>
-    </div>
+    </>
   );
 }
