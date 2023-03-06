@@ -38,3 +38,6 @@ sentry.properties
 
 #eslint cache
 .eslintcache
+
+# Local Netlify folder
+.netlify

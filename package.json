@@ -81,5 +81,9 @@
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  },
+  "engines": {
+    "node": "16.19.0",
+    "yarn": "^1.22.10"
   }
 }
