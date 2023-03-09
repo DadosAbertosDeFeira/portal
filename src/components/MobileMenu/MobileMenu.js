@@ -89,8 +89,10 @@ export default function MobileMenu({ handleClose }) {
             href="https://anchor.fm/cidadesabertas/"
             onClick={handleClose}
           >
-            Podcast Cidades Abertas
-            <MdOpenInNew className="ml-sm inline" size="16" />
+            <div>
+              Podcast Cidades Abertas
+              <MdOpenInNew className="ml-sm inline" size="16" />
+            </div>
           </Link>
         </li>
         <li>
@@ -100,8 +102,10 @@ export default function MobileMenu({ handleClose }) {
             href="https://dadosabertosdefeira.medium.com"
             onClick={handleClose}
           >
-            Blog
-            <MdOpenInNew className="ml-sm inline" size="16" />
+            <div>
+              Blog
+              <MdOpenInNew className="ml-sm inline" size="16" />
+            </div>
           </Link>
         </li>
       </ul>

@@ -41,8 +41,10 @@ const ProjectCard = ({ project }) => {
             target="_blank"
             rel="noreferrer"
           >
-            Link
-            <FiArrowUpRight className={`ml-xs ${styles.projectLinkIcon}`} />
+            <div>
+              Link
+              <FiArrowUpRight className={`ml-xs ${styles.projectLinkIcon}`} />
+            </div>
           </Link>
         </div>
       </div>
