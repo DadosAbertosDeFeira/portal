@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BiMenu } from 'react-icons/bi';
-import Link from '../Link';
+import Link from 'next/link';
 import MobileMenu from '../MobileMenu';
 
 import logoWithText from '../../assets/logo.svg';

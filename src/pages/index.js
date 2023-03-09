@@ -1,9 +1,9 @@
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import SEO from '../components/SEO';
 import Header from '../components/Header';
 import Button from '../components/Button';
-import Link from '../components/Link';
 import ContactForm from '../components/ContactForm';
 import HowContribute from '../components/HowContribute';
 import SocialContactButtons from '../components/SocialContactButtons';

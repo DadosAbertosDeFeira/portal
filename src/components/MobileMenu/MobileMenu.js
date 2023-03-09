@@ -3,7 +3,7 @@ import { MdClose, MdOpenInNew } from 'react-icons/md';
 
 import PropTypes from 'prop-types';
 
-import Link from '../Link';
+import Link from 'next/link';
 
 /**
  * Componente do Menu Mobile
