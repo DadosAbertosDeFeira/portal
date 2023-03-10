@@ -5,10 +5,11 @@ const { withSentryConfig } = require('@sentry/nextjs');
 const nextConfig = {
   swcMinify: true,
   basePath: '',
+  distDir: 'out',
 };
 
 module.exports = () => {
-  const plugins = [withImages, withSentryConfig];
+  const plugins = [withImages];
 
   return plugins.reduce(
     (acc, next) => {
