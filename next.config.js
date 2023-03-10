@@ -9,7 +9,7 @@ const nextConfig = {
 };
 
 module.exports = () => {
-  const plugins = [withImages];
+  const plugins = [withImages, withSentryConfig];
 
   return plugins.reduce(
     (acc, next) => {
