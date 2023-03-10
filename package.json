@@ -32,7 +32,8 @@
   },
   "dependencies": {
     "@hookform/error-message": "^2.0.0",
-    "@netlify/plugin-nextjs": "^3.8.0",
+    "@netlify/next": "^1.4.4",
+    "@netlify/plugin-nextjs": "^4.31.0",
     "@sentry/nextjs": "^6.12.0",
     "@storybook/addon-viewport": "^6.1.20",
     "@testing-library/user-event": "^14.4.3",
