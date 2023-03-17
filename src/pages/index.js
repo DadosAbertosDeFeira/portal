@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import SEO from '../components/SEO';
-import Header from '../components/Header';
 import Button from '../components/Button';
 import ContactForm from '../components/ContactForm';
 import HowContribute from '../components/HowContribute';
@@ -18,13 +16,6 @@ export default function Home() {
   const router = useRouter();
   return (
     <>
-      <SEO
-        title="Dados Abertos de Feira"
-        image="assets/dadosabertosdefeira.png"
-        shouldExcludeTitleSuffix
-      />
-      <Header />
-
       <section className="bg-no-repeat bg-bottom bg-cover bg-city-pattern flex flex-col tablet:flex-row">
         <div className="flex-grow flex justify-end tablet:items-start tablet:order-last">
           <img
