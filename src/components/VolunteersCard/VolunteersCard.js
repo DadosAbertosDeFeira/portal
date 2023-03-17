@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
+import Link from 'next/link';
 import BodyText from '../BodyText';
-import Link from '../Link';
 
 import styles from './styles.module.scss';
 
@@ -26,7 +26,7 @@ export default function VolunteersCard({
         </div>
         <div className={styles.volunteersIconContainer}>
           {twitter && (
-            <Link href={`https://www.twitter.com/${twitter}`}>
+            <Link href={`https://www.twitter.com/${twitter}`} target="_self">
               <img src="/assets/icons/twitter.svg" alt="Twitter icon" />
             </Link>
           )}

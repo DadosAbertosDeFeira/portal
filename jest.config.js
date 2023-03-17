@@ -8,7 +8,7 @@ module.exports = {
     '\\.(css|less|scss)$': 'identity-obj-proxy',
   },
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest',
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
   coverageThreshold: {
     './src/': {
