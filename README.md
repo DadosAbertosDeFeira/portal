@@ -14,7 +14,7 @@ ao nosso [Código de Conduta](CODE_OF_CONDUCT.md).
 
 ### Configurando seu ambiente
 
-Você precisará do [Yarn](https://yarnpkg.com/) para rodar o projeto.
+Você precisará do [Yarn Classic](https://classic.yarnpkg.com/lang/en/) para rodar o projeto.
 
 #### Instale as dependências e prepare os serviços
 
@@ -43,6 +43,15 @@ yarn build
 yarn start
 ```
 
+#### Netlify
+
+A versão de produção do node.js pode ser configurada através da variável de ambiente no `netlify.toml`:
+
+```toml
+[build.environment]
+  NODE_VERSION = "16.19.0"
+```
+
 ### Rodando lint
 
 ```bash
@@ -56,6 +65,7 @@ yarn test
 ```
 
 Se deseja rodar com coverage:
+
 ```bash
 yarn test:coverage
 ```

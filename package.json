@@ -32,16 +32,18 @@
   },
   "dependencies": {
     "@hookform/error-message": "^2.0.0",
-    "@netlify/plugin-nextjs": "^3.8.0",
+    "@netlify/next": "^1.4.4",
+    "@netlify/plugin-nextjs": "^4.31.0",
     "@sentry/nextjs": "^6.12.0",
     "@storybook/addon-viewport": "^6.1.20",
+    "@testing-library/user-event": "^14.4.3",
     "classnames": "^2.2.6",
-    "next": "12.1.0",
-    "next-compose-plugins": "^2.2.1",
+    "eslint-config-next": "^13.2.3",
+    "next": "^13.2.3",
     "next-images": "^1.7.0",
     "prop-types": "^15.7.2",
-    "react": "17.0.1",
-    "react-dom": "^17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-hook-form": "^7.15.0",
     "react-icons": "^4.2.0",
     "react-spring": "^8.0.27",
@@ -54,8 +56,8 @@
     "@storybook/addon-links": "^6.1.17",
     "@storybook/react": "^6.1.17",
     "@testing-library/dom": "^7.29.4",
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
     "autoprefixer": "^9",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
@@ -81,5 +83,9 @@
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  },
+  "engines": {
+    "node": "16.19.0",
+    "yarn": "^1.22.10"
   }
 }

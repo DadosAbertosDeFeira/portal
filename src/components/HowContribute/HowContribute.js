@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Link from '../Link';
+import Link from 'next/link';
 import BodyText from '../BodyText';
 import styles from './HowContribute.module.scss';
 
