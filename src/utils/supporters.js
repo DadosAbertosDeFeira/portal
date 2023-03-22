@@ -15,6 +15,12 @@ export default {
   ],
   institutional: [
     {
+      id: 'okbr',
+      name: 'Open Knowledge Brasil',
+      logo: '/assets/okbr-logo.png',
+      link: 'https://ok.org.br/',
+    },
+    {
       id: 'pgcc',
       name: 'Programa de Pós-Graduação em Ciência de computação da UEFS',
       logo: '/assets/pgcc-uefs.jpeg',

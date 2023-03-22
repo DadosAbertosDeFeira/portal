@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FiArrowUpRight } from 'react-icons/fi';
 
+import Link from 'next/link';
 import Tag from '../Tag';
-import Link from '../Link';
 
 import styles from './ProjectCard.module.scss';
 
@@ -41,8 +41,10 @@ const ProjectCard = ({ project }) => {
             target="_blank"
             rel="noreferrer"
           >
-            Link
-            <FiArrowUpRight className={`ml-xs ${styles.projectLinkIcon}`} />
+            <div>
+              Link
+              <FiArrowUpRight className={`ml-xs ${styles.projectLinkIcon}`} />
+            </div>
           </Link>
         </div>
       </div>
