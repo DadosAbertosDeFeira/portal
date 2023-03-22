@@ -2,6 +2,9 @@
   command = "yarn build:ci"
   publish = "out"
 
+[build.environment]
+  NODE_VERSION = "16.19.0"
+
 [context.production.environment]
   SENTRY_ENVIRONMENT = "production"
   NEXT_PUBLIC_SENTRY_ENVIRONMENT = "production"
