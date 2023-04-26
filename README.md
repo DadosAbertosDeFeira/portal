@@ -45,8 +45,7 @@ yarn start
 
 ### Node
 
-Para rodar o projeto na sua maquina, o projeto requer que você tenha a mesma versão do node.js que roda
-no ambiente de produção:
+Para rodar o projeto na sua maquina, o projeto requer que você tenha a mesma versão do node.js que roda no ambiente de produção:
 
 Se você precisa rodar o projeto em versões diferentes do Node.js você pode alterar para a versão requerida no package.json:
 
