@@ -1,0 +1,18 @@
+@layer base {
+  html,
+  body,
+  * {
+    @apply text-blueFont font-default;
+    scroll-behavior: smooth;
+  }
+
+  h1 {
+    @apply text-lg tablet:text-xl font-bold;
+  }
+  h2 {
+    @apply text-lg font-bold;
+  }
+  h3 {
+    @apply text-base font-bold;
+  }
+}
