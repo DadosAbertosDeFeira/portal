@@ -1,22 +1,35 @@
 import { fireEvent, render, waitFor } from '@testing-library/react';
 import { useForm } from 'react-hook-form';
-import Textarea from './Textarea';
+import { Textarea } from './Textarea';
 
 describe('textarea', () => {
-  it('should renders Textarea component with required props', () => {
+  const makeSut = ({
+    useFormProps,
+    rules,
+    name = 'textarea',
+    label = 'textarea',
+  }) => {
     const App = () => {
-      const form = useForm();
+      const form = useForm(useFormProps);
       return (
         <Textarea
-          name="username"
-          label="Username"
+          name={name}
+          label={label}
           control={form.control}
-          rules={{ required: true }}
+          rules={rules}
         />
       );
     };
 
-    const { getByPlaceholderText, container } = render(<App />);
+    return render(<App />);
+  };
+
+  it('should renders Textarea component with required props', () => {
+    const { getByPlaceholderText, container } = makeSut({
+      rules: { required: true },
+      name: 'username',
+      label: 'Username',
+    });
 
     const input = getByPlaceholderText('Username');
 
@@ -26,19 +39,11 @@ describe('textarea', () => {
   });
 
   it('should update value of Textarea component', () => {
-    const App = () => {
-      const form = useForm();
-      return (
-        <Textarea
-          name="password"
-          label="Password"
-          control={form.control}
-          rules={{ required: true }}
-        />
-      );
-    };
-
-    const { getByLabelText } = render(<App />);
+    const { getByLabelText } = makeSut({
+      rules: { required: true },
+      label: 'Password',
+      name: 'password',
+    });
 
     const input = getByLabelText('Password');
 
@@ -48,22 +53,12 @@ describe('textarea', () => {
   });
 
   it('should display error message of Textarea component', async () => {
-    const App = () => {
-      const form = useForm({ mode: 'onBlur' });
-
-      return (
-        <form>
-          <Textarea
-            name="email"
-            label="Email"
-            control={form.control}
-            rules={{ required: 'email is required' }}
-          />
-        </form>
-      );
-    };
-
-    const { getByLabelText, getByText } = render(<App />);
+    const { getByLabelText, getByText } = makeSut({
+      useFormProps: { mode: 'onBlur' },
+      rules: { required: 'email is required' },
+      name: 'email',
+      label: 'Email',
+    });
 
     const input = getByLabelText('Email');
 
@@ -75,24 +70,16 @@ describe('textarea', () => {
   });
 
   it('should does not display error message when textarea is valid', async () => {
-    const App = () => {
-      const form = useForm({ mode: 'onBlur' });
-
-      return (
-        <Textarea
-          name="age"
-          label="Age"
-          control={form.control}
-          rules={{
-            validate: {
-              min: (v) => parseInt(v, 10) >= 18 || 'age must be at least 18',
-            },
-          }}
-        />
-      );
-    };
-
-    const { getByPlaceholderText, queryByText } = render(<App />);
+    const { getByPlaceholderText, queryByText } = makeSut({
+      useFormProps: { mode: 'onBlur' },
+      rules: {
+        validate: {
+          min: (v) => parseInt(v, 10) >= 18 || 'age must be at least 18',
+        },
+      },
+      name: 'age',
+      label: 'Age',
+    });
 
     const input = getByPlaceholderText('Age');
 
@@ -107,20 +94,12 @@ describe('textarea', () => {
   });
 
   it('should meet accessibility requirements of Textarea component', async () => {
-    const App = () => {
-      const form = useForm({ mode: 'onBlur' });
-
-      return (
-        <Textarea
-          name="zipcode"
-          label="Zipcode"
-          control={form.control}
-          rules={{ required: 'zipcode is required' }}
-        />
-      );
-    };
-
-    const { getByPlaceholderText } = render(<App />);
+    const { getByPlaceholderText } = makeSut({
+      useFormProps: { mode: 'onBlur' },
+      rules: { required: 'zipcode is required' },
+      name: 'zipcode',
+      label: 'Zipcode',
+    });
 
     const input = getByPlaceholderText('Zipcode');
 

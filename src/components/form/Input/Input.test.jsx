@@ -1,22 +1,29 @@
 import { fireEvent, render, waitFor } from '@testing-library/react';
 import { useForm } from 'react-hook-form';
-import Input from './Input';
+import { Input } from './Input';
 
 describe('input', () => {
-  it('should renders Input component with required props', () => {
+  const makeSut = ({
+    useFormProps,
+    rules,
+    name = 'input',
+    label = 'input',
+  }) => {
     const App = () => {
-      const form = useForm();
+      const form = useForm(useFormProps);
       return (
-        <Input
-          name="username"
-          label="Username"
-          control={form.control}
-          rules={{ required: true }}
-        />
+        <Input name={name} label={label} control={form.control} rules={rules} />
       );
     };
 
-    const { getByPlaceholderText, container } = render(<App />);
+    return render(<App />);
+  };
+
+  it('should renders Input component with required props', () => {
+    const { getByPlaceholderText, container } = makeSut({
+      name: 'username',
+      label: 'Username',
+    });
 
     const input = getByPlaceholderText('Username');
 
@@ -26,19 +33,11 @@ describe('input', () => {
   });
 
   it('should update value of Input component', () => {
-    const App = () => {
-      const form = useForm();
-      return (
-        <Input
-          name="password"
-          label="Password"
-          control={form.control}
-          rules={{ required: true }}
-        />
-      );
-    };
-
-    const { getByLabelText } = render(<App />);
+    const { getByLabelText } = makeSut({
+      name: 'password',
+      label: 'Password',
+      rules: { required: true },
+    });
 
     const input = getByLabelText('Password');
 
@@ -48,22 +47,12 @@ describe('input', () => {
   });
 
   it('should display error message of Input component', async () => {
-    const App = () => {
-      const form = useForm({ mode: 'onBlur' });
-
-      return (
-        <form>
-          <Input
-            name="email"
-            label="Email"
-            control={form.control}
-            rules={{ required: 'email is required' }}
-          />
-        </form>
-      );
-    };
-
-    const { getByLabelText, getByText } = render(<App />);
+    const { getByLabelText, getByText } = makeSut({
+      name: 'email',
+      label: 'Email',
+      rules: { required: 'email is required' },
+      useFormProps: { mode: 'onBlur' },
+    });
 
     const input = getByLabelText('Email');
 
@@ -75,24 +64,15 @@ describe('input', () => {
   });
 
   it('should does not display error message when input is valid', async () => {
-    const App = () => {
-      const form = useForm({ mode: 'onBlur' });
-
-      return (
-        <Input
-          name="age"
-          label="Age"
-          control={form.control}
-          rules={{
-            validate: {
-              min: (v) => parseInt(v, 10) >= 18 || 'age must be at least 18',
-            },
-          }}
-        />
-      );
-    };
-
-    const { getByPlaceholderText, queryByText } = render(<App />);
+    const { getByPlaceholderText, queryByText } = makeSut({
+      name: 'age',
+      label: 'Age',
+      rules: {
+        validate: {
+          min: (v) => parseInt(v, 10) >= 18 || 'age must be at least 18',
+        },
+      },
+    });
 
     const input = getByPlaceholderText('Age');
 
@@ -107,20 +87,12 @@ describe('input', () => {
   });
 
   it('should meet accessibility requirements of Input component', async () => {
-    const App = () => {
-      const form = useForm({ mode: 'onBlur' });
-
-      return (
-        <Input
-          name="zipcode"
-          label="Zipcode"
-          control={form.control}
-          rules={{ required: 'zipcode is required' }}
-        />
-      );
-    };
-
-    const { getByPlaceholderText } = render(<App />);
+    const { getByPlaceholderText } = makeSut({
+      name: 'zipcode',
+      label: 'Zipcode',
+      rules: { required: 'zipcode is required' },
+      useFormProps: { mode: 'onBlur' },
+    });
 
     const input = getByPlaceholderText('Zipcode');
 

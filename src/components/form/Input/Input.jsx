@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useController } from 'react-hook-form';
@@ -45,4 +45,4 @@ Input.defaultProps = {
   rules: {},
 };
 
-export default Input;
+export { Input };
