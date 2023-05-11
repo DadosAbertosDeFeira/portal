@@ -43,7 +43,17 @@ yarn build
 yarn start
 ```
 
-#### Netlify
+### Node
+
+Para rodar o projeto na sua maquina, o projeto requer que você tenha a mesma versão do node.js que roda no ambiente de produção:
+
+Se você precisa rodar o projeto em versões diferentes do Node.js você pode alterar para a versão requerida no package.json:
+
+```json
+  "engines": {
+    "node": "16.19.0", // versão do node requerida para rodar o projeto.
+  }
+```
 
 A versão de produção do node.js pode ser configurada através da variável de ambiente no `netlify.toml`:
 
@@ -51,6 +61,8 @@ A versão de produção do node.js pode ser configurada através da variável de
 [build.environment]
   NODE_VERSION = "16.19.0"
 ```
+
+:warning: **É recomendado que o ambiente de desenvolvimento contenha a mesma versão do node.js que roda em produção. Isso pode ajudar a evitar bugs que surgem devido a diferenças nas versões.**
 
 ### Rodando lint
 

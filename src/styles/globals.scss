@@ -1,31 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@400;700&display=swap');
-@import './variables.scss';
+@use './variables.scss';
+@use "./base.scss";
+@use "./components.scss";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  html,
-  body,
-  * {
-    @apply text-blueFont font-default;
-    scroll-behavior: smooth;
-  }
-
-  h1 {
-    @apply text-lg tablet:text-xl font-bold;
-  }
-  h2 {
-    @apply text-lg font-bold;
-  }
-  h3 {
-    @apply text-base font-bold;
-  }
-}
-
-@layer components {
-  .page-margin-align {
-    @apply pl-md tablet:pl-xl desktop:pl-4xl large-desktop:pl-5xl
-  }
-}
