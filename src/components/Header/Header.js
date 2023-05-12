@@ -74,7 +74,7 @@ const MobileHeader = () => {
         <BiMenu size={24} />
       </button>
       <aside
-        className={`fixed top-0 left-0 z-20 h-full transform ease-in-out transition-all duration-300
+        className={`fixed top-0 left-0 z-20 h-full ease-in-out transition-all duration-300
           ${
             menuOpened ? 'visible translate-x-0' : 'invisible -translate-x-full'
           }`}
