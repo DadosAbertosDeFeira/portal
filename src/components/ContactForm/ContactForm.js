@@ -2,110 +2,70 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 import { useForm } from 'react-hook-form';
-import { ErrorMessage } from '@hookform/error-message';
-import classnames from 'classnames';
-
-import Button from '../Button';
-import { encodeForm } from '../../utils/form';
-
-import styles from './ContactForm.module.scss';
-
-const EMAIL_REGEX = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-const formValidation = {
-  name: {
-    required: 'Esse campo é obrigatório',
-  },
-  email: {
-    required: 'Esse campo é obrigatório',
-    pattern: {
-      value: EMAIL_REGEX,
-      message: 'Informe um email válido',
-    },
-  },
-  message: {
-    required: 'Esse campo é obrigatório',
-  },
-};
+import { Input } from '../form/Input/Input';
+import { Textarea } from '../form/Textarea/Textarea';
+import validations from '../../utils/validations/validations';
 
 const ContactForm = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const form = useForm({
+    mode: 'onSubmit',
+    shouldUseNativeValidation: true,
+    defaultValues: {
+      name: '',
+      email: '',
+      message: '',
+    },
+  });
+
   const onSubmit = async (data) => {
-    await toast.promise(
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encodeForm({
-          'form-name': 'contact',
-          ...data,
-        }),
-      }),
-      {
-        pending: 'Enviando mensagem',
-        error: 'Ocorreu um erro ao enviar sua mensagem',
-        success: 'Sua mensagem foi enviada com sucesso',
-      }
-    );
+    const response = fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        'form-name': 'contact',
+        ...data,
+      }).toString(),
+    }).then((r) => {
+      form.reset();
+      return r;
+    });
+
+    await toast.promise(response, {
+      pending: 'Enviando mensagem',
+      error: 'Ocorreu um erro ao enviar sua mensagem',
+      success: 'Sua mensagem foi enviada com sucesso',
+    });
   };
 
   return (
-    <>
-      <strong className={classnames(styles.title, 'mb-md')}>
-        Fale conosco
-      </strong>
-      <form onSubmit={handleSubmit(onSubmit)} className={styles.contactForm}>
-        <input
-          className={styles.contactFormInput}
-          {...register('name', formValidation.name)}
-          type="text"
-          placeholder="Nome"
-        />
-        <ErrorMessage
-          as="span"
-          className={classnames(styles.errorMessage, 'text-sm m-sm')}
-          errors={errors}
-          name="name"
-        />
-
-        <input
-          className={styles.contactFormInput}
-          {...register('email', formValidation.email)}
-          type="email"
-          placeholder="Email"
-        />
-        <ErrorMessage
-          as="span"
-          className={classnames(styles.errorMessage, 'text-sm m-sm')}
-          errors={errors}
-          name="email"
-        />
-
-        <textarea
-          className={styles.contactFormTextarea}
-          {...register('message', formValidation.message)}
-          placeholder="Mensagem"
-          rows={3}
-        />
-        <ErrorMessage
-          as="span"
-          className={classnames(styles.errorMessage, 'text-sm m-sm')}
-          errors={errors}
-          name="message"
-        />
-
-        <Button
-          className={styles.contactFormSubmitButton}
-          type="submit"
-          outline
-        >
-          Enviar
-        </Button>
-      </form>
-    </>
+    <form
+      className="flex flex-col w-full gap-y-4"
+      onSubmit={form.handleSubmit(onSubmit)}
+    >
+      <h1 className="text-2xl">Fale conosco</h1>
+      <Input
+        name="name"
+        label="Nome"
+        control={form.control}
+        rules={{ required: 'Esse campo é obrigatório.' }}
+      />
+      <Input
+        name="email"
+        label="Email"
+        control={form.control}
+        rules={{ validate: validations.get('email') }}
+      />
+      <Textarea
+        name="message"
+        label="Mensagem"
+        control={form.control}
+        rows={3}
+        rules={{ required: 'Esse campo é obrigatório.' }}
+      />
+      <button type="submit" className="button-outline">
+        Enviar
+      </button>
+    </form>
   );
 };
 

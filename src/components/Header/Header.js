@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { BiMenu } from 'react-icons/bi';
-import Link from '../Link';
+import Link from 'next/link';
 import MobileMenu from '../MobileMenu';
 
 import logoWithText from '../../assets/logo.svg';
 
 const DesktopHeader = () => {
   return (
-    <nav className="bg-white absolute top-0 h-desktop-header z-20 xl:z-0 w-full flex-row shadow md:space-x-lg page-margin-align pr-xl hidden tablet:flex">
+    <nav className="bg-white fixed h-desktop-header top-0 z-20 xl:z-0 w-full flex-row shadow md:space-x-lg page-margin-align pr-xl hidden tablet:flex">
       <div className="my-auto mr-lg">
         <Link href="/">
           <img
@@ -23,6 +23,9 @@ const DesktopHeader = () => {
         </li>
         <li>
           <Link href="/#voluntarios">Voluntários</Link>
+        </li>
+        <li>
+          <Link href="/#projetos">Projetos</Link>
         </li>
         <li>
           <Link href="/#colabore">Colabore</Link>
@@ -71,7 +74,7 @@ const MobileHeader = () => {
         <BiMenu size={24} />
       </button>
       <aside
-        className={`fixed top-0 left-0 z-20 h-full transform ease-in-out transition-all duration-300
+        className={`fixed top-0 left-0 z-20 h-full ease-in-out transition-all duration-300
           ${
             menuOpened ? 'visible translate-x-0' : 'invisible -translate-x-full'
           }`}

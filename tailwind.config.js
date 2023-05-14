@@ -1,6 +1,6 @@
 module.exports = {
-  purge: ['./src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false,
+  mode: 'jit',
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       fontFamily: {
@@ -92,9 +92,6 @@ module.exports = {
         'large-desktop': '1536px',
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 };

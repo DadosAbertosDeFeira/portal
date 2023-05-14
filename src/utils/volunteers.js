@@ -32,8 +32,7 @@ export default [
   {
     name: 'Vivian Macedo',
     role: 'Analista de Dados',
-    picture:
-      'https://media-exp1.licdn.com/dms/image/C4D03AQE9q7zoT86HQw/profile-displayphoto-shrink_400_400/0/1524262173908?e=1636588800&v=beta&t=MWsa3TgcxKNBe09bMa3Mh_a90YRMG--QxY_0zKb7Xw8',
+    picture: 'https://avatars.githubusercontent.com/u/7208924?v=4',
     github: 'vihvs',
     linkedin: 'vivianmacedo',
   },
@@ -49,7 +48,7 @@ export default [
     name: 'Rafael Velame',
     role: 'Jornalista',
     picture:
-      'https://media-exp1.licdn.com/dms/image/C4D03AQG8ytEVvsZ44g/profile-displayphoto-shrink_400_400/0/1519088249816?e=1636588800&v=beta&t=lneQV2nQp5ZcTNQbEfy7yYN1FuEKcZUb_Q4iwE8IvSw',
+      'https://media.licdn.com/dms/image/C4D03AQG8ytEVvsZ44g/profile-displayphoto-shrink_100_100/0/1519088249816?e=1681344000&v=beta&t=mzqZkJbugdXi6Su20QsyLj8O0FscPrhFvS-lOknUjYg',
     twitter: 'rafaelvelame',
     linkedin: 'rafael-velame-242b98104',
   },
@@ -63,7 +62,7 @@ export default [
   },
   {
     name: 'Nataly Costa',
-    role: 'UI/UX design manager',
+    role: 'Designer',
     picture: 'https://avatars.githubusercontent.com/natalycosta',
     linkedin: 'natalycosta',
   },
@@ -79,6 +78,7 @@ export default [
     role: 'Conselheiro',
     picture: 'https://avatars.githubusercontent.com/danielfireman',
     github: 'danielfireman',
+    linkedin: 'danielfireman',
     twitter: 'daniellfireman',
   },
   {
@@ -92,7 +92,66 @@ export default [
     role: 'Office-boy e Analista de Dados',
     picture: 'https://avatars.githubusercontent.com/guilhermelowa',
     github: 'guilhermelowa',
-    linkedin: 'guilherme-wanderley'
+    linkedin: 'guilherme-wanderley',
+  },
+  {
+    name: 'Luanda Dantas',
+    role: 'Desenvolvedora',
+    picture: 'https://avatars.githubusercontent.com/luandadantas',
+    github: 'luandadantas',
+    linkedin: 'luandadantas',
+  },
+  {
+    name: 'Geraldo Castro',
+    role: 'Desenvolvedor',
+    picture:
+      'https://pbs.twimg.com/profile_images/1554824450222088192/hz9at1ji_400x400.jpg',
+    github: 'exageraldo',
+    linkedin: 'exageraldo',
+    twitter: 'exageraldo_',
+  },
+  {
+    name: 'Felipe Barros',
+    role: 'Analista de Dados',
+    picture: 'https://avatars.githubusercontent.com/felipelfb',
+    github: 'felipelfb',
+    linkedin: 'felipe-barros-609a52141',
+  },
+  {
+    name: 'Gabriela Turquetti',
+    role: 'Desenvolvedora',
+    picture: 'https://avatars.githubusercontent.com/turquetti',
+    github: 'turquetti',
+    linkedin: 'gabriela-turquetti',
+    instagram: 'gabrielaturquetti',
+    twitter: 'gabturquetti',
+  },
+  {
+    name: 'Nathanael Souza',
+    role: 'Desenvolvedor',
+    picture:
+      'https://avatars.githubusercontent.com/u/91571451?s=400&u=df8fba5c5ee9f61fca7027db2d22011429152be2&v=4',
+    github: 'Nathanaelss',
+    linkedin: 'nathanael-souza',
+  },
+  {
+    name: 'Allythy',
+    role: 'Desenvolvedor',
+    picture: 'https://avatars.githubusercontent.com/allythy',
+    github: 'allythy',
+  },
+  {
+    name: 'Eduardo Daltro',
+    role: 'Staff',
+    picture: 'https://avatars.githubusercontent.com/u/12780445?v=4',
+    linkedin: 'daltroedu',
+  },
+  {
+    name: 'André Costa',
+    role: 'Designer',
+    picture:
+      'https://media.licdn.com/dms/image/C4D03AQFDIUn_R4yx2Q/profile-displayphoto-shrink_400_400/0/1668127163554?e=1681344000&v=beta&t=SM5dXuDYUW-HKvk37wmbRuXbTmSKFVJ6Yo3q_-9pkhs',
+    linkedin: 'andrecostaux',
   },
 ].sort((person1, person2) => {
   return person1.name.localeCompare(person2.name); // Automatically alphabetize

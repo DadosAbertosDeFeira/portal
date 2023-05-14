@@ -10,6 +10,7 @@ module.exports = {
     'prettier',
     'prettier/react',
     'plugin:react-hooks/recommended',
+    'plugin:storybook/recommended',
   ],
   globals: {
     React: 'writable',
@@ -25,7 +26,15 @@ module.exports = {
   plugins: ['react', 'prettier'],
   rules: {
     'prettier/prettier': 'error',
+    'react/jsx-props-no-spreading': 'off',
+    'react/destructuring-assignment': 'off',
+    'import/prefer-default-export': 'off',
     'react/react-in-jsx-scope': 'off',
-    'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.js'] }],
+    'react/jsx-filename-extension': [
+      'warn',
+      {
+        extensions: ['.jsx', '.js'],
+      },
+    ],
   },
 };

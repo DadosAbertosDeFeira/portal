@@ -1,29 +1,15 @@
-import { useRouter } from 'next/router';
-
-import SEO from '../components/SEO';
-import Header from '../components/Header';
-import Button from '../components/Button';
-import Link from '../components/Link';
-import VolunteersCard from '../components/VolunteersCard';
 import ContactForm from '../components/ContactForm';
 import HowContribute from '../components/HowContribute';
 import SocialContactButtons from '../components/SocialContactButtons';
+import Projects from '../components/Projects';
+import Volunteers from '../components/Volunteers';
 
-import volunteersList from '../utils/volunteers';
-import styles from './index.module.scss';
 import BodyText from '../components/BodyText';
+import Supporters from '../components/Supporters';
 
 export default function Home() {
-  const router = useRouter();
   return (
     <>
-      <SEO
-        title="Dados Abertos de Feira"
-        image="assets/dadosabertosdefeira.png"
-        shouldExcludeTitleSuffix
-      />
-      <Header />
-
       <section className="bg-no-repeat bg-bottom bg-cover bg-city-pattern flex flex-col tablet:flex-row">
         <div className="flex-grow flex justify-end tablet:items-start tablet:order-last">
           <img
@@ -41,24 +27,27 @@ export default function Home() {
             <strong>Junte-se a nós e faça a diferença!</strong>
           </BodyText>
           <div className="flex place-content-center large-desktop:place-content-start py-5">
-            <Button
-              className={styles.mainButton}
-              onClick={() =>
-                router.push('https://www.dadosabertosdefeira.com.br/painel/')
-              }
+            <a
+              className="bg-primary-dark text-white rounded p-3 px-9 font-semibold "
+              href="https://mq.dadosabertosdefeira.com.br/painel/"
             >
               Consultar a base de dados
-            </Button>
+            </a>
           </div>
         </div>
       </section>
 
-      <section id="sobre" className={styles.history}>
-        <div className={styles.icon}>
-          <img src="/assets/icons/book.svg" alt="Livro" />
-          <h2>Nossa História</h2>
-        </div>
-        <div className={styles.historyTexts}>
+      <section
+        id="sobre"
+        className="flex flex-col place-items-center p-16 gap-7"
+      >
+        <img
+          className="m-auto w-24 h-24"
+          src="/assets/icons/book.svg"
+          alt="Livro"
+        />
+        <h2>Nossa História</h2>
+        <div className="flex flex-col gap-y-6 text-center font-medium">
           <BodyText>
             A ideia de criar um espaço onde as pessoas possam buscar informações
             de maneira fácil sobre o município nasceu em 2019, quando a
@@ -66,21 +55,23 @@ export default function Home() {
             quanto o município gastava com a merenda escolar. O interesse surgiu
             após ouvir uma denúncia feita por Rafael Velame no rádio sobre a
             falta de merenda em algumas escolas da cidade. Ao acessar o{' '}
-            <Link
+            <a
+              className="underline"
               href="http://www.transparencia.feiradesantana.ba.gov.br/"
               target="_blank"
               rel="noreferrer"
             >
               portal da transparência de Feira de Santana
-            </Link>{' '}
+            </a>{' '}
             deparou-se com a dificuldade de fazer buscas na{' '}
-            <Link
+            <a
+              className="underline"
               href="http://www.transparencia.feiradesantana.ba.gov.br/index.php?view=licitacoes"
               target="_blank"
               rel="noreferrer"
             >
               página de licitações
-            </Link>
+            </a>
             . Fez alguns pedidos de informação à Prefeitura mas não foi
             respondida.
           </BodyText>
@@ -100,29 +91,32 @@ export default function Home() {
             o Ministério Público da Bahia para intermediar o processo e, a
             partir daí, o projeto ganhou projeção nas mídias locais, como BATV
             da TV Subaé,{' '}
-            <Link
+            <a
+              className="underline"
               href="https://www.acordacidade.com.br/noticias/222557/programadora-encontra-dificuldades-para-obter-informacoes-sobre-a-atuacao-dos-vereadores-de-feira.html"
               target="_blank"
               rel="noreferrer"
             >
               Acorda Cidade
-            </Link>
+            </a>
             ,{' '}
-            <Link
+            <a
+              className="underline"
               href="https://www.blogdovelame.com/presidente-reconhece-falta-de-transparencia-e-promete-divulgar-dados/"
               target="_blank"
               rel="noreferrer"
             >
               Blog do Velame
-            </Link>
+            </a>
             , além de diversas participações nos programas da{' '}
-            <Link
+            <a
+              className="underline"
               href="https://www.facebook.com/blogdovelame/videos/750921745431854/"
               target="_blank"
               rel="noreferrer"
             >
               Rádio Globo Feira e Jovem Pan
-            </Link>
+            </a>
             . Com a repercussão, o presidente da Câmara Municipal, José
             Carneiro, nos convidou para uma visita, marcando o início de uma
             colaboração com a Casa da Cidadania. A partir dessa data, a Câmara
@@ -137,32 +131,24 @@ export default function Home() {
             eficiente. Lutar pela transparência é um trabalho de todos.
           </BodyText>
         </div>
+
+        <Supporters />
       </section>
 
-      <section id="voluntarios" className={styles.volunteers}>
-        <div className={styles.icon}>
-          <img src="/assets/icons/hand-with-hearth.svg" alt="Livro" />
-          <h2>Voluntários</h2>
-        </div>
-        <div className={styles.volunteersList}>
-          {volunteersList.map((volunteer) => (
-            <VolunteersCard
-              key={`${volunteer.name}-${volunteer.role}`}
-              name={volunteer.name}
-              role={volunteer.role}
-              picture={volunteer.picture}
-              linkedin={volunteer.linkedin}
-              instagram={volunteer.instagram}
-              github={volunteer.github}
-              twitter={volunteer.twitter}
-            />
-          ))}
-        </div>
+      <section id="voluntarios" className="bg-white p-32 xl:py-16 xl:px-4">
+        <Volunteers />
       </section>
 
-      <div className={styles.contributeWrapper}>
+      <section
+        id="projetos"
+        className="tablet:space-x-md pt-2xl tablet:p-2xl flex justify-center"
+      >
+        <Projects />
+      </section>
+
+      <section id="colabore" className="py-2xl px-lg tablet:px-2xl">
         <HowContribute />
-      </div>
+      </section>
 
       <section id="contato" className="border-t-2 pt-2xl tablet:space-x-md">
         <div className="flex flex-col justify-center tablet:flex-row">
@@ -177,7 +163,7 @@ export default function Home() {
                 allowFullScreen=""
                 loading="lazy"
               />
-              <div className="flex flex-col mx-xl">
+              <div className="flex flex-col mx-xl text-xs sm:text-base">
                 <h3>Feira de Santana</h3>
                 <a href="mailto:dadosabertosdefeira+site@gmail.com">
                   contato@dadosabertosdefeira.com.br
@@ -186,7 +172,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center tablet:m-md tablet:w-80 tablet:items-start">
+          <div className="flex flex-col items-center tablet:m-md tablet:w-80 tablet:items-start mx-4">
             <ContactForm />
           </div>
         </div>

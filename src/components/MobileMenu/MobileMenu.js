@@ -3,7 +3,7 @@ import { MdClose, MdOpenInNew } from 'react-icons/md';
 
 import PropTypes from 'prop-types';
 
-import Link from '../Link';
+import Link from 'next/link';
 
 /**
  * Componente do Menu Mobile
@@ -68,6 +68,11 @@ export default function MobileMenu({ handleClose }) {
           </Link>
         </li>
         <li>
+          <Link href="/#projetos" onClick={handleClose}>
+            Projetos
+          </Link>
+        </li>
+        <li>
           <Link href="/#colabore" onClick={handleClose}>
             Como contribuir
           </Link>
@@ -84,8 +89,10 @@ export default function MobileMenu({ handleClose }) {
             href="https://anchor.fm/cidadesabertas/"
             onClick={handleClose}
           >
-            Podcast Cidades Abertas
-            <MdOpenInNew className="ml-sm inline" size="16" />
+            <div>
+              Podcast Cidades Abertas
+              <MdOpenInNew className="ml-sm inline" size="16" />
+            </div>
           </Link>
         </li>
         <li>
@@ -95,8 +102,10 @@ export default function MobileMenu({ handleClose }) {
             href="https://dadosabertosdefeira.medium.com"
             onClick={handleClose}
           >
-            Blog
-            <MdOpenInNew className="ml-sm inline" size="16" />
+            <div>
+              Blog
+              <MdOpenInNew className="ml-sm inline" size="16" />
+            </div>
           </Link>
         </li>
       </ul>
