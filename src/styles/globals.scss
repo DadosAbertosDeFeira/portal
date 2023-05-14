@@ -1,7 +1,7 @@
-@use "./animations.scss" as *;
+@use './animations.scss' as *;
 @use './variables.scss';
-@use "./base.scss";
-@use "./components.scss";
+@use './base.scss';
+@use './components.scss';
 
 @tailwind base;
 @tailwind components;

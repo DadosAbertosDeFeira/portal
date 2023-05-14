@@ -81,10 +81,11 @@ module.exports = {
         '5xl': '184px',
         '6xl': '256px',
       },
-      backgroundImage: () => ({
+      backgroundImage: {
         'city-pattern': "url('/assets/home-background.svg')",
         'waved-banner': "url('/assets/menu-banner.svg')",
-      }),
+        '404-background': "url('/assets/404-background.svg')",
+      },
       screens: {
         tablet: '640px',
         laptop: '1024px',
