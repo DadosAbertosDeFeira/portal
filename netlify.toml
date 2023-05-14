@@ -15,8 +15,3 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-
-[[redirects]]
-from = "/*"
-to = "/404"
-status = 404
