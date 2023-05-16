@@ -6,6 +6,10 @@ const nextConfig = {
   swcMinify: true,
   basePath: '',
   distDir: 'out',
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
 };
 
 module.exports = () => {

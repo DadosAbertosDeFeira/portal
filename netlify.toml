@@ -4,6 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "16.19.0"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 [context.production.environment]
   SENTRY_ENVIRONMENT = "production"
