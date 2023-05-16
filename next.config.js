@@ -6,6 +6,7 @@ const nextConfig = {
   swcMinify: true,
   basePath: '',
   distDir: 'out',
+  output: 'export',
 };
 
 module.exports = () => {
