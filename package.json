@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build:ci": "yarn test --ci --collectCoverage && next build",
     "build": "next build",
+    "export": "next export",
+    "export:ci": "yarn test --ci --collectCoverage && next export",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
