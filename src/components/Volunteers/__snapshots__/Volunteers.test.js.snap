@@ -25,7 +25,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Allythy"
         class="volunteersPicture"
-        src="https://avatars.githubusercontent.com/allythy"
+        src="assets/volunteers/allythy.jpeg"
       />
       <div
         class="volunteersInfo"
@@ -66,7 +66,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Ana Paula Gomes"
         class="volunteersPicture"
-        src="https://avatars.githubusercontent.com/anapaulagomes"
+        src="assets/volunteers/anapaulagomes.jpeg"
       />
       <div
         class="volunteersInfo"
@@ -126,7 +126,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="André Costa"
         class="volunteersPicture"
-        src="https://media.licdn.com/dms/image/C4D03AQFDIUn_R4yx2Q/profile-displayphoto-shrink_400_400/0/1668127163554?e=1681344000&v=beta&t=SM5dXuDYUW-HKvk37wmbRuXbTmSKFVJ6Yo3q_-9pkhs"
+        src="assets/volunteers/andrecostaux.jpeg"
       />
       <div
         class="volunteersInfo"
@@ -167,7 +167,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Bruno Morassuti"
         class="volunteersPicture"
-        src="https://avatars.githubusercontent.com/jedibruno"
+        src="assets/volunteers/jedibruno.jpeg"
       />
       <div
         class="volunteersInfo"
@@ -227,7 +227,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Daniel Fireman"
         class="volunteersPicture"
-        src="https://avatars.githubusercontent.com/danielfireman"
+        src="assets/volunteers/danielfireman.jpeg"
       />
       <div
         class="volunteersInfo"
@@ -287,7 +287,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Eduardo Cuducos"
         class="volunteersPicture"
-        src="https://avatars.githubusercontent.com/cuducos"
+        src="assets/volunteers/cuducos.jpeg"
       />
       <div
         class="volunteersInfo"
@@ -337,7 +337,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Eduardo Daltro"
         class="volunteersPicture"
-        src="https://avatars.githubusercontent.com/u/12780445?v=4"
+        src="assets/volunteers/daltroedu.jpeg"
       />
       <div
         class="volunteersInfo"
@@ -378,7 +378,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Emerson Oliveira"
         class="volunteersPicture"
-        src="https://avatars.githubusercontent.com/emersonsdo"
+        src="assets/volunteers/emersonsdo.jpeg"
       />
       <div
         class="volunteersInfo"
@@ -429,7 +429,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Everton Alves"
         class="volunteersPicture"
-        src="https://avatars.githubusercontent.com/ellalves"
+        src="assets/volunteers/ellalves.png"
       />
       <div
         class="volunteersInfo"
@@ -470,7 +470,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Felipe Barros"
         class="volunteersPicture"
-        src="https://avatars.githubusercontent.com/felipelfb"
+        src="assets/volunteers/felipelfb.jpeg"
       />
       <div
         class="volunteersInfo"
@@ -521,7 +521,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Filipe Maia"
         class="volunteersPicture"
-        src="https://avatars.githubusercontent.com/filipebsmaia"
+        src="assets/volunteers/filipebsmaia.png"
       />
       <div
         class="volunteersInfo"
@@ -572,7 +572,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Gabriela Turquetti"
         class="volunteersPicture"
-        src="https://avatars.githubusercontent.com/turquetti"
+        src="assets/volunteers/turquetti.jpeg"
       />
       <div
         class="volunteersInfo"
@@ -642,7 +642,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Geraldo Castro"
         class="volunteersPicture"
-        src="https://pbs.twimg.com/profile_images/1554824450222088192/hz9at1ji_400x400.jpg"
+        src="assets/volunteers/exageraldo.jpg"
       />
       <div
         class="volunteersInfo"
@@ -702,7 +702,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Guilherme Wanderley"
         class="volunteersPicture"
-        src="https://avatars.githubusercontent.com/guilhermelowa"
+        src="assets/volunteers/guilhermelowa.jpeg"
       />
       <div
         class="volunteersInfo"
@@ -753,7 +753,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Luanda Dantas"
         class="volunteersPicture"
-        src="https://avatars.githubusercontent.com/luandadantas"
+        src="assets/volunteers/luandadantas.jpeg"
       />
       <div
         class="volunteersInfo"
@@ -804,7 +804,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Matheus Rocha"
         class="volunteersPicture"
-        src="https://avatars.githubusercontent.com/matheusrocha89"
+        src="assets/volunteers/matheusrocha89.jpeg"
       />
       <div
         class="volunteersInfo"
@@ -864,7 +864,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Nataly Costa"
         class="volunteersPicture"
-        src="https://avatars.githubusercontent.com/natalycosta"
+        src="assets/volunteers/natalycosta.jpeg"
       />
       <div
         class="volunteersInfo"
@@ -905,7 +905,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Nathanael Souza"
         class="volunteersPicture"
-        src="https://avatars.githubusercontent.com/u/91571451?s=400&u=df8fba5c5ee9f61fca7027db2d22011429152be2&v=4"
+        src="assets/volunteers/nathanaelss.jpeg"
       />
       <div
         class="volunteersInfo"
@@ -956,7 +956,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Rafael Gomes"
         class="volunteersPicture"
-        src="https://avatars.githubusercontent.com/gomex"
+        src="assets/volunteers/gomex.png"
       />
       <div
         class="volunteersInfo"
@@ -1016,7 +1016,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Rafael Velame"
         class="volunteersPicture"
-        src="https://media.licdn.com/dms/image/C4D03AQG8ytEVvsZ44g/profile-displayphoto-shrink_100_100/0/1519088249816?e=1681344000&v=beta&t=mzqZkJbugdXi6Su20QsyLj8O0FscPrhFvS-lOknUjYg"
+        src="assets/volunteers/rafaelvelame.jpeg"
       />
       <div
         class="volunteersInfo"
@@ -1066,7 +1066,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       <img
         alt="Vivian Macedo"
         class="volunteersPicture"
-        src="https://avatars.githubusercontent.com/u/7208924?v=4"
+        src="assets/volunteers/vivianmacedo.jpeg"
       />
       <div
         class="volunteersInfo"
