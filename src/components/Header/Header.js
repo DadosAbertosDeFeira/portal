@@ -3,8 +3,6 @@ import { BiMenu } from 'react-icons/bi';
 import Link from 'next/link';
 import MobileMenu from '../MobileMenu';
 
-import logoWithText from '../../assets/logo.svg';
-
 const DesktopHeader = () => {
   return (
     <nav className="bg-white fixed h-desktop-header top-0 z-20 xl:z-0 w-full flex-row shadow md:space-x-lg page-margin-align pr-xl hidden tablet:flex">
@@ -12,7 +10,7 @@ const DesktopHeader = () => {
         <Link href="/">
           <img
             className="h-14 w-auto"
-            src={logoWithText}
+            src="/assets/logo.svg"
             alt="Logo Dados Abertos de Feira"
           />
         </Link>
@@ -64,7 +62,7 @@ const MobileHeader = () => {
       <div className="flex-grow flex place-content-center">
         <Link href="/" className="m-auto">
           <img
-            src={logoWithText}
+            src="/assets/logo.svg"
             className="h-14 w-auto"
             alt="Logo Dados Abertos de Feira"
           />
