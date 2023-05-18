@@ -8,7 +8,14 @@ exports[`<VolunteersCard /> renders correctly with social network links 1`] = `
     <img
       alt="Scooby Doo"
       class="volunteersPicture"
-      src="https://scoobydoo.com/profile.jpeg"
+      data-nimg="1"
+      decoding="async"
+      height="70"
+      loading="lazy"
+      src="/_next/image?url=https%3A%2F%2Fscoobydoo.com%2Fprofile.jpeg&w=256&q=75"
+      srcset="/_next/image?url=https%3A%2F%2Fscoobydoo.com%2Fprofile.jpeg&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fscoobydoo.com%2Fprofile.jpeg&w=256&q=75 2x"
+      style="color: transparent;"
+      width="70"
     />
     <div
       class="volunteersInfo"
@@ -83,7 +90,14 @@ exports[`<VolunteersCard /> renders correctly without social network links 1`] =
     <img
       alt="Scooby Doo"
       class="volunteersPicture"
-      src="https://scoobydoo.com/profile.jpeg"
+      data-nimg="1"
+      decoding="async"
+      height="70"
+      loading="lazy"
+      src="/_next/image?url=https%3A%2F%2Fscoobydoo.com%2Fprofile.jpeg&w=256&q=75"
+      srcset="/_next/image?url=https%3A%2F%2Fscoobydoo.com%2Fprofile.jpeg&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fscoobydoo.com%2Fprofile.jpeg&w=256&q=75 2x"
+      style="color: transparent;"
+      width="70"
     />
     <div
       class="volunteersInfo"
