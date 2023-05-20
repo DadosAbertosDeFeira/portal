@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 
 import Link from 'next/link';
 import BodyText from '../BodyText';
@@ -16,7 +17,13 @@ export default function VolunteersCard({
 }) {
   return (
     <div className={styles.volunteers}>
-      <img src={picture} alt={name} className={styles.volunteersPicture} />
+      <Image
+        src={picture}
+        alt={name}
+        width={70}
+        height={70}
+        className={styles.volunteersPicture}
+      />
       <div className={styles.volunteersInfo}>
         <div>
           <BodyText className={styles.volunteersInfoName}>{name}</BodyText>
