@@ -68,7 +68,7 @@ const MobileHeader = () => {
           />
         </Link>
       </div>
-      <button type="button" onClick={toggleMenu}>
+      <button aria-label="Menu" type="button" onClick={toggleMenu}>
         <BiMenu size={24} />
       </button>
       <aside
