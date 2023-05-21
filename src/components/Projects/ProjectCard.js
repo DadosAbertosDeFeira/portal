@@ -36,12 +36,12 @@ const ProjectCard = ({ project }) => {
           </div>
 
           <Link
-            className={`${styles.projectLink} flex items-center`}
+            className={styles.projectLink}
             href={project.link}
             target="_blank"
             rel="noreferrer"
           >
-            <div>
+            <div className="flex items-center">
               Link
               <FiArrowUpRight className={`ml-xs ${styles.projectLinkIcon}`} />
             </div>
