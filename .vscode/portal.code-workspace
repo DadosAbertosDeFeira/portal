@@ -30,7 +30,8 @@
     ],
     "eslint.codeActionsOnSave.mode": "all",
     "eslint.run": "onSave",
-    "scss.lint.unknownAtRules": "error",
+    "scss.lint.unknownAtRules": "ignore",
+    "css.lint.unknownAtRules": "ignore",
     "editor.codeActionsOnSave": {
       "source.fixAll": true
     }

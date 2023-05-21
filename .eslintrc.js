@@ -52,6 +52,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'off', // Incorrectly report needed dependency with Next.js router
         '@next/next/no-img-element': 'off', // We currently not using next/image because it isn't supported with SSG mode
         '@typescript-eslint/comma-dangle': 'off', // Avoid conflict rule between Eslint and Prettier
+        'react/jsx-one-expression-per-line': 'off',
         '@typescript-eslint/consistent-type-imports': 'error', // Ensure `import type` is used when it's necessary
         'no-restricted-syntax': [
           'error',
@@ -65,6 +66,7 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': 'off',
         'unused-imports/no-unused-imports': 'error',
         'unused-imports/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+        'tailwindcss/no-custom-classname': 'off',
       },
     },
     // Configuration for testing
