@@ -30,7 +30,10 @@
     ],
     "eslint.codeActionsOnSave.mode": "all",
     "eslint.run": "onSave",
-    "scss.lint.unknownAtRules": "error"
+    "scss.lint.unknownAtRules": "error",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    }
   },
   "extensions": {
     "recommendations": [

@@ -23,6 +23,7 @@ module.exports = {
         'unused-imports',
         'tailwindcss',
         'simple-import-sort',
+        'jsx-a11y',
       ],
       extends: [
         'plugin:tailwindcss/recommended',
@@ -31,6 +32,7 @@ module.exports = {
         'airbnb/hooks',
         'next/core-web-vitals',
         'plugin:prettier/recommended',
+        'plugin:jsx-a11y/recommended',
       ],
       parserOptions: {
         project: './tsconfig.json',
