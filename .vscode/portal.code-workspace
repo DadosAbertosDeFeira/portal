@@ -1,0 +1,46 @@
+{
+  "folders": [
+    {
+      "path": "../",
+      "name": "portal"
+    }
+  ],
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "update with main upstream",
+        "command": "git pull https://github.com/DadosAbertosDeFeira/portal.git main",
+        "type": "shell",
+        "runOptions": {
+          "runOn": "folderOpen"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "jest.autoRun": { "watch": false },
+    "jest.jestCommandLine": "yarn test",
+    "jest.autoRevealOutput": "on-run",
+    "eslint.validate": [
+      "javascript",
+      "typescript",
+      "javascriptreact",
+      "typescriptreact"
+    ],
+    "eslint.codeActionsOnSave.mode": "all",
+    "eslint.run": "onSave",
+    "scss.lint.unknownAtRules": "error"
+  },
+  "extensions": {
+    "recommendations": [
+      "DavidAnson.vscode-markdownlint",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "bradlc.vscode-tailwindcss",
+      "christian-kohler.npm-intellisense",
+      "Orta.vscode-jest",
+      "GitHub.vscode-pull-request-github"
+    ]
+  }
+}
