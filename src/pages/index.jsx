@@ -17,9 +17,11 @@ export default function Home() {
       <section className="bg-no-repeat bg-bottom bg-cover bg-city-pattern flex flex-col tablet:flex-row">
         <div className="flex-grow flex justify-end tablet:items-start tablet:order-last">
           <Image
-            className="w-1/2 min-w-5xl tablet:w-auto"
+            className="w-1/2 min-w-5xl sm:w-[600px]"
             src={PeopleRight}
             alt="Pessoas a Direita"
+            width={600}
+            height={975}
           />
         </div>
         <div className="text-center page-margin-align desktop:w-1/2 tablet:pr-5 tablet:py-48 desktop:pt-64 desktop:text-left">
