@@ -1,3 +1,8 @@
+import MariaQuiteria from '../../public/assets/maria-quiteria.png';
+import BotDOU from '../../public/assets/bot-dou.png';
+import DefaultProject from '../../public/assets/default-project.jpeg';
+import CidadesAbertas from '../../public/assets/logo-cidades-abertas-podcast.png';
+
 export default [
   {
     name: 'Maria Quitéria',
@@ -6,7 +11,7 @@ export default [
       'Tem a missão de libertar dados do município de Feira de Santana. Responsável pela raspagem e o armazenamento.',
     link: 'https://github.com/DadosAbertosDeFeira/maria-quiteria',
     logo: {
-      path: '/assets/maria-quiteria.png',
+      path: MariaQuiteria,
       description: 'Logo do Projeto Maria Quitéria',
     },
   },
@@ -17,7 +22,7 @@ export default [
       'Já pensou se você pudesse ler uma thread no Twitter com os pontos mais importantes do Diário Oficial de Feira de Santana ao invés de ler um documento enorme? Temos um bot pra isso!',
     link: 'https://twitter.com/DiarioDeFeira',
     logo: {
-      path: '/assets/bot-dou.png',
+      path: BotDOU,
       description: 'Logo do projeto Bot do DOU',
     },
   },
@@ -28,7 +33,7 @@ export default [
       'Colocamos os dados que coletamos em pacotes, assim fica mais fácil para que pesquisadores, programadores e jornalistas acessem seu conteúdo.',
     link: 'https://github.com/DadosAbertosDeFeira/empacotador',
     logo: {
-      path: '/assets/default-project.jpeg',
+      path: DefaultProject,
       description: 'Logo do Projeto Empacotador',
     },
   },
@@ -39,7 +44,7 @@ export default [
       'A discussão sobre dados abertos e transparência dentro das cidades ainda está muito tímida. Nós queremos mudar isso.',
     link: 'https://anchor.fm/cidadesabertas/',
     logo: {
-      path: '/assets/logo-cidades-abertas-podcast.png',
+      path: CidadesAbertas,
       description: 'Logo do Podcast Cidades Abertas',
     },
   },
@@ -50,7 +55,7 @@ export default [
       'Gerencie e compartilhe publicamente o status dos seus pedidos de informação',
     link: 'https://pedidos.dadosabertosdefeira.com.br/',
     logo: {
-      path: '/assets/default-project.jpeg',
+      path: DefaultProject,
       description: 'Logo do projeto Pedidos',
     },
   },
@@ -61,7 +66,7 @@ export default [
       'Promessa é dívida. Vamos acompanhar o que foi prometido na campanha.',
     link: 'https://github.com/DadosAbertosDeFeira/prometido',
     logo: {
-      path: '/assets/default-project.jpeg',
+      path: DefaultProject,
       description: 'Logo do projeto Prometido',
     },
   },
@@ -72,7 +77,7 @@ export default [
       'Aqui você encontrará raspadores para o site do Tribunal de Contas dos Municípios da Bahia.',
     link: 'https://github.com/DadosAbertosDeFeira/tcm-ba',
     logo: {
-      path: '/assets/default-project.jpeg',
+      path: DefaultProject,
       description: 'Logo do projeto tcm-ba',
     },
   },
@@ -83,7 +88,7 @@ export default [
       'Identifique endereços, bairros e outras localizações brasileiras automaticamente em um texto.',
     link: 'https://github.com/DadosAbertosDeFeira/tomba',
     logo: {
-      path: '/assets/default-project.jpeg',
+      path: DefaultProject,
       description: 'Logo do projeto tomba',
     },
   },

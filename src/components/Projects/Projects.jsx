@@ -1,6 +1,8 @@
 import React from 'react';
+import Image from 'next/image';
 
 import projects from '../../utils/projects';
+import IconProject from '../../../public/assets/icons/icon-projects.svg';
 
 import ProjectCard from './ProjectCard';
 import styles from './Projects.module.scss';
@@ -10,9 +12,9 @@ const Projects = () => {
     <div>
       {/* Header */}
       <div className="flex flex-col items-center">
-        <img
+        <Image
           className={`${styles.icon} mb-md`}
-          src="/assets/icons/icon-projects.svg"
+          src={IconProject}
           alt="Logo da sessão de projetos"
         />
         <h2>Projetos</h2>

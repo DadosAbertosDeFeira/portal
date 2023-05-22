@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import PropTypes from 'prop-types';
 import { FiArrowUpRight } from 'react-icons/fi';
 
@@ -14,7 +15,7 @@ const ProjectCard = ({ project }) => {
     >
       {/* Logo Wrapper */}
       <div>
-        <img
+        <Image
           className={`${styles.icon} rounded-tl rounded-bl`}
           src={project.logo.path}
           alt={project.logo.description}
@@ -59,7 +60,8 @@ ProjectCard.propTypes = {
     description: PropTypes.string,
     link: PropTypes.string,
     logo: PropTypes.shape({
-      path: PropTypes.string,
+      // eslint-disable-next-line react/forbid-prop-types
+      path: PropTypes.object,
       description: PropTypes.string,
     }),
   }),

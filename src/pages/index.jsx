@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import ContactForm from '../components/ContactForm';
 import HowContribute from '../components/HowContribute';
 import SocialContactButtons from '../components/SocialContactButtons';
@@ -6,15 +8,17 @@ import Volunteers from '../components/Volunteers';
 
 import BodyText from '../components/BodyText';
 import Supporters from '../components/Supporters';
+import PeopleRight from '../../public/assets/peoples-right.svg';
+import Book from '../../public/assets/icons/book.svg';
 
 export default function Home() {
   return (
     <>
       <section className="bg-no-repeat bg-bottom bg-cover bg-city-pattern flex flex-col tablet:flex-row">
         <div className="flex-grow flex justify-end tablet:items-start tablet:order-last">
-          <img
+          <Image
             className="w-1/2 min-w-5xl tablet:w-auto"
-            src="/assets/peoples-right.svg"
+            src={PeopleRight}
             alt="Pessoas a Direita"
           />
         </div>
@@ -41,11 +45,7 @@ export default function Home() {
         id="sobre"
         className="flex flex-col place-items-center p-16 gap-7"
       >
-        <img
-          className="m-auto w-24 h-24"
-          src="/assets/icons/book.svg"
-          alt="Livro"
-        />
+        <Image className="m-auto w-24 h-24" src={Book} alt="Livro" />
         <h2>Nossa História</h2>
         <div className="flex flex-col gap-y-6 text-center font-medium">
           <BodyText>

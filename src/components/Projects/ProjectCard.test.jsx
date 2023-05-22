@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import MariaQuiteria from '../../../public/assets/maria-quiteria.png';
 
 import ProjectCard from './ProjectCard';
 
@@ -11,7 +12,7 @@ describe('<ProjectCard />', () => {
       'Tem a missão de libertar dados do município de Feira de Santana. Responsável pela raspagem e o armazenamento.',
     link: '',
     logo: {
-      path: '/assets/icons/maria-quiteria.svg',
+      path: MariaQuiteria,
       description: 'Logo do Projeto Maria Quitéria',
     },
   };
