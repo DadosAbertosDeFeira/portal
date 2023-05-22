@@ -40,3 +40,7 @@ sentry.properties
 
 # Local Netlify folder
 .netlify
+
+# Vscode config
+.vscode/**
+!.vscode/portal.code-workspace
