@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import supporters from '../../utils/supporters';
 
@@ -19,7 +20,7 @@ const Supporters = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <img
+              <Image
                 className={`${styles.logo} m-lg tablet:m-md`}
                 src={item.logo}
                 alt={item.name}
@@ -39,7 +40,7 @@ const Supporters = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <img
+              <Image
                 className={`${styles.logo} m-lg tablet:m-md`}
                 src={item.logo}
                 alt={item.name}
@@ -59,7 +60,7 @@ const Supporters = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <img
+              <Image
                 className={`${styles.logo} m-lg tablet:m-md`}
                 src={item.logo}
                 alt={item.name}
