@@ -22,6 +22,7 @@ export default function Home() {
             alt="Pessoas a Direita"
             width={600}
             height={975}
+            priority
           />
         </div>
         <div className="text-center page-margin-align desktop:w-1/2 tablet:pr-5 tablet:py-48 desktop:pt-64 desktop:text-left">
