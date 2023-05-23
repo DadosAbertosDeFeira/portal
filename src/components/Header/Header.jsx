@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { BiMenu } from 'react-icons/bi';
 import Link from 'next/link';
 import MobileMenu from '../MobileMenu';
+import Logo from '../../../public/assets/logo.svg';
 
 const DesktopHeader = () => {
   return (
     <nav className="bg-white fixed h-desktop-header top-0 z-20 xl:z-0 w-full flex-row shadow md:space-x-lg page-margin-align pr-xl hidden tablet:flex">
       <div className="my-auto mr-lg">
         <Link href="/">
-          <img
+          <Image
             className="h-14 w-auto"
-            src="/assets/logo.svg"
+            src={Logo}
             alt="Logo Dados Abertos de Feira"
           />
         </Link>
@@ -61,8 +63,8 @@ const MobileHeader = () => {
     <nav className="bg-white fixed top-0 h-mobile-header w-full z-10 flex-row px-lg shadow flex tablet:hidden">
       <div className="flex-grow flex place-content-center">
         <Link href="/" className="m-auto">
-          <img
-            src="/assets/logo.svg"
+          <Image
+            src={Logo}
             className="h-14 w-auto"
             alt="Logo Dados Abertos de Feira"
           />

@@ -1,15 +1,13 @@
-module.exports = {
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+const nextJest = require('next/jest');
+
+const createJestConfig = nextJest({ dir: './' });
+
+const customJestConfig = {
+  rootDir: './',
   setupFilesAfterEnv: [
     '<rootDir>/setupTests.js',
     '<rootDir>/setupEnvTestVars.js',
   ],
-  moduleNameMapper: {
-    '\\.(css|less|scss)$': 'identity-obj-proxy',
-  },
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
-  },
   coverageThreshold: {
     './src/': {
       lines: 90,
@@ -19,3 +17,5 @@ module.exports = {
     },
   },
 };
+
+module.exports = createJestConfig(customJestConfig);

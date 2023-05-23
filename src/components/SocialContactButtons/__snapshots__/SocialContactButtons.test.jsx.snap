@@ -13,7 +13,14 @@ exports[`<SocialContactButtons /> renders correctly all the buttons 1`] = `
     >
       <img
         alt="Twitter"
-        src="/assets/icons/twitter.svg"
+        data-nimg="1"
+        decoding="async"
+        height="40"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+        srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+        style="color: transparent;"
+        width="40"
       />
       <span
         class="text-primary-dark text-sm"
@@ -29,7 +36,14 @@ exports[`<SocialContactButtons /> renders correctly all the buttons 1`] = `
     >
       <img
         alt="Facebook"
-        src="/assets/icons/facebook.svg"
+        data-nimg="1"
+        decoding="async"
+        height="40"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+        srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+        style="color: transparent;"
+        width="40"
       />
       <span
         class="text-primary-dark text-sm"
@@ -45,7 +59,14 @@ exports[`<SocialContactButtons /> renders correctly all the buttons 1`] = `
     >
       <img
         alt="Instagram"
-        src="/assets/icons/instagram.svg"
+        data-nimg="1"
+        decoding="async"
+        height="40"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+        srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+        style="color: transparent;"
+        width="40"
       />
       <span
         class="text-primary-dark text-sm"
@@ -61,7 +82,14 @@ exports[`<SocialContactButtons /> renders correctly all the buttons 1`] = `
     >
       <img
         alt="Github"
-        src="/assets/icons/github.svg"
+        data-nimg="1"
+        decoding="async"
+        height="40"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+        srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+        style="color: transparent;"
+        width="40"
       />
       <span
         class="text-primary-dark text-sm"

@@ -1,4 +1,10 @@
 import React from 'react';
+import Image from 'next/image';
+
+import Twitter from '../../../public/assets/icons/twitter.svg';
+import Facebook from '../../../public/assets/icons/facebook.svg';
+import Instagram from '../../../public/assets/icons/instagram.svg';
+import Github from '../../../public/assets/icons/github.svg';
 
 const SocialContactButtons = () => {
   const handleClick = (event) => {
@@ -15,7 +21,7 @@ const SocialContactButtons = () => {
         data-url={process.env.NEXT_PUBLIC_TWITTER_URL}
         onClick={handleClick}
       >
-        <img src="/assets/icons/twitter.svg" alt="Twitter" />
+        <Image src={Twitter} alt="Twitter" />
         <span className="text-primary-dark text-sm">Twitter</span>
       </button>
 
@@ -26,7 +32,7 @@ const SocialContactButtons = () => {
         data-url={process.env.NEXT_PUBLIC_FACEBOOK_URL}
         onClick={handleClick}
       >
-        <img src="/assets/icons/facebook.svg" alt="Facebook" />
+        <Image src={Facebook} alt="Facebook" />
         <span className="text-primary-dark text-sm">Facebook</span>
       </button>
 
@@ -37,7 +43,7 @@ const SocialContactButtons = () => {
         data-url={process.env.NEXT_PUBLIC_INSTAGRAM_URL}
         onClick={handleClick}
       >
-        <img src="/assets/icons/instagram.svg" alt="Instagram" />
+        <Image src={Instagram} alt="Instagram" />
         <span className="text-primary-dark text-sm">Instagram</span>
       </button>
 
@@ -48,7 +54,7 @@ const SocialContactButtons = () => {
         data-url={process.env.NEXT_PUBLIC_GITHUB_URL}
         onClick={handleClick}
       >
-        <img src="/assets/icons/github.svg" alt="Github" />
+        <Image src={Github} alt="Github" />
         <span className="text-primary-dark text-sm">Github</span>
       </button>
     </div>

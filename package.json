@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build:ci": "yarn test --ci --collectCoverage && next build",
+    "build:ci": "yarn test --ci --collectCoverage && yarn export",
     "build": "next build",
+    "export": "next build && next-export-optimize-images",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -76,6 +77,7 @@
     "jest": "^26.6.3",
     "jest-dom": "^4.0.0",
     "lint-staged": ">=10",
+    "next-export-optimize-images": "^2.1.0",
     "postcss": "^8.4.21",
     "prettier": "^2.1.2",
     "pretty-quick": "^3.1.1",
