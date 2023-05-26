@@ -1,12 +1,12 @@
-const withImages = require('next-images');
-const { withSentryConfig } = require('@sentry/nextjs');
+const withImages = require("next-images");
+const { withSentryConfig } = require("@sentry/nextjs");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   swcMinify: true,
-  basePath: '',
-  distDir: 'out',
-  output: 'export',
+  basePath: "",
+  distDir: "out",
+  output: "export",
   images: {
     unoptimized: true,
   },
