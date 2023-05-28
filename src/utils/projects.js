@@ -27,17 +27,6 @@ export default [
     },
   },
   {
-    name: 'Empacotador',
-    type: ['publicação de dados'],
-    description:
-      'Colocamos os dados que coletamos em pacotes, assim fica mais fácil para que pesquisadores, programadores e jornalistas acessem seu conteúdo.',
-    link: 'https://github.com/DadosAbertosDeFeira/empacotador',
-    logo: {
-      path: DefaultProject,
-      description: 'Logo do Projeto Empacotador',
-    },
-  },
-  {
     name: 'Podcast Cidades Abertas',
     type: ['podcast'],
     description:
@@ -57,17 +46,6 @@ export default [
     logo: {
       path: DefaultProject,
       description: 'Logo do projeto Pedidos',
-    },
-  },
-  {
-    name: 'Prometido',
-    type: ['controle social'],
-    description:
-      'Promessa é dívida. Vamos acompanhar o que foi prometido na campanha.',
-    link: 'https://github.com/DadosAbertosDeFeira/prometido',
-    logo: {
-      path: DefaultProject,
-      description: 'Logo do projeto Prometido',
     },
   },
   {
