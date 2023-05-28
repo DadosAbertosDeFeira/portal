@@ -24,13 +24,14 @@ module.exports = {
           DEFAULT: '#FFCC00',
           dark: '#FF9A02',
         },
-        blueFont: {
-          DEFAULT: '#232b4e',
-          light: '#163e7a',
+        text: {
+          DEFAULT: '#163e7a',
+          dark: '#232b4e',
         },
         gray: {
           darkest: '#212429',
           dark: '#495057',
+          2: '#A8B9C8',
           DEFAULT: '#ACB5BD',
           light: '#DDE2E5',
           lightest: '#F8F9FA',

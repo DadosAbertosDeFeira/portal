@@ -2,7 +2,7 @@
   html,
   body,
   * {
-    @apply text-blueFont font-default;
+    @apply text-text-dark font-default;
     scroll-behavior: smooth;
   }
 

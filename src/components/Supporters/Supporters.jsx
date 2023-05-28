@@ -4,8 +4,6 @@ import Image from 'next/image';
 
 import supporters from '../../utils/supporters';
 
-import styles from './Supporters.module.scss';
-
 const Supporters = () => {
   const { financial, institutional, regular } = supporters;
   return (
@@ -21,7 +19,7 @@ const Supporters = () => {
               rel="noreferrer"
             >
               <Image
-                className={`${styles.logo} m-lg tablet:m-md`}
+                className="max-w-[200px] m-lg tablet:m-md"
                 src={item.logo}
                 alt={item.name}
               />
@@ -41,7 +39,7 @@ const Supporters = () => {
               rel="noreferrer"
             >
               <Image
-                className={`${styles.logo} m-lg tablet:m-md`}
+                className="max-w-[200px] m-lg tablet:m-md"
                 src={item.logo}
                 alt={item.name}
               />
@@ -61,7 +59,7 @@ const Supporters = () => {
               rel="noreferrer"
             >
               <Image
-                className={`${styles.logo} m-lg tablet:m-md`}
+                className="max-w-[200px] m-lg tablet:m-md"
                 src={item.logo}
                 alt={item.name}
               />

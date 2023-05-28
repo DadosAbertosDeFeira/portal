@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Tag.module.scss';
+import classNames from 'classnames';
 
 const Tag = ({ children, className }) => (
-  <div className={`${styles.tag} py-xs px-sm inline-block ${className}`}>
-    <p className={`${styles.text} text-xs`}>{children}</p>
+  <div
+    className={classNames(className, 'bg-[#f8f9fa] py-xs px-sm inline-block')}
+  >
+    <p className="text-[#656f78] text-xs">{children}</p>
   </div>
 );
 

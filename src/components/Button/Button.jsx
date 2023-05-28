@@ -1,42 +1,22 @@
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import styles from './styles.module.scss';
+/* eslint-disable react/prop-types */
+import React from 'react';
+import classNames from 'classnames';
 
-export default function Button({
-  className,
-  outline,
-  onClick,
-  children,
-  ...rest
-}) {
+export const Button = ({ className, children, variant, ...props }) => {
   return (
     <button
       type="button"
-      className={classnames(
-        styles.button,
-        outline ? styles.outline : styles.full,
-        className
+      {...props}
+      className={classNames(
+        className,
+        variant === 'outline' && 'border-primary-dark text-primary-dark',
+        variant === 'condensed' && 'bg-primary-dark text-white',
+        'font-semibold p-3 border rounded transition ease-in-out'
       )}
-      onClick={onClick}
-      {...rest} // eslint-disable-line react/jsx-props-no-spreading
     >
       {children}
     </button>
   );
-}
-
-Button.defaultProps = {
-  className: '',
-  outline: false,
-  onClick: () => {},
 };
 
-Button.propTypes = {
-  className: PropTypes.string,
-  outline: PropTypes.bool,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
-  onClick: PropTypes.func,
-};
+export default Button;

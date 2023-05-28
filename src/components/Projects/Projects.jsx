@@ -5,7 +5,6 @@ import projects from '../../utils/projects';
 import IconProject from '../../../public/assets/icons/icon-projects.svg';
 
 import ProjectCard from './ProjectCard';
-import styles from './Projects.module.scss';
 
 const Projects = () => {
   return (
@@ -13,7 +12,7 @@ const Projects = () => {
       {/* Header */}
       <div className="flex flex-col items-center">
         <Image
-          className={`${styles.icon} mb-md`}
+          className="w-[100px] h-[100px] mb-md"
           src={IconProject}
           alt="Logo da sessão de projetos"
         />
@@ -21,9 +20,7 @@ const Projects = () => {
       </div>
 
       {/* Content */}
-      <div
-        className={`${styles.contentWrapper} flex flex-col tablet:flex-row tablet:flex-wrap tablet:justify-center tablet:content-evenly mt-md`}
-      >
+      <div className="max-w-[1240px] flex flex-col tablet:flex-row tablet:flex-wrap tablet:justify-center tablet:content-evenly mt-md">
         {projects.map((project) => (
           <ProjectCard key={project.name} project={project} />
         ))}
