@@ -29,9 +29,8 @@ describe('Button', () => {
   });
 
   it('renders correctly with default properties', () => {
-    makeSut({});
-    const button = screen.getByRole('button');
-    expect(button).toMatchSnapshot();
+    const { asFragment } = makeSut({});
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders correctly outline button', () => {

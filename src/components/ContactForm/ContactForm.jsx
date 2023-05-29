@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { Input } from '../form/Input/Input';
 import { Textarea } from '../form/Textarea/Textarea';
 import validations from '../../utils/validations/validations';
+import { Button } from '../Button';
 
 const ContactForm = () => {
   const form = useForm({
@@ -62,9 +63,9 @@ const ContactForm = () => {
         rows={3}
         rules={{ required: 'Esse campo é obrigatório.' }}
       />
-      <button type="submit" className="button-outline">
+      <Button type="submit" variant="outline">
         Enviar
-      </button>
+      </Button>
     </form>
   );
 };

@@ -9,9 +9,9 @@ export const Button = ({ className, children, variant, ...props }) => {
       {...props}
       className={classNames(
         className,
-        variant === 'outline' && 'border-primary-dark text-primary-dark',
-        variant === 'condensed' && 'bg-primary-dark text-white',
-        'font-semibold p-3 border rounded transition ease-in-out'
+        'font-semibold p-3 rounded transition ease-in-out flex justify-center items-center',
+        variant === 'outline' && 'border border-primary-dark text-primary-dark',
+        variant === 'condensed' && 'bg-primary-dark text-white'
       )}
     >
       {children}

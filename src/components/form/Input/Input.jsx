@@ -14,7 +14,7 @@ function Input({ name, label, control, rules }) {
   return (
     <label htmlFor={name}>
       <input
-        className="w-full p-2 pl-4 bg-white rounded border text-gray-dark font-medium "
+        className="w-full p-2 pl-4 bg-white rounded border text-gray-dark font-medium border-gray-2"
         placeholder={label}
         aria-errormessage={state.error?.message}
         aria-invalid={state.invalid}

@@ -8,7 +8,7 @@ import Tag from '../Tag';
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="max-w-[500px] flex align-center tablet:flex m-md tablet:m-xl rounded shadow-[0px_6px_12px_#0000000d]">
+    <div className="max-w-[500px] flex align-center tablet:flex m-md tablet:m-xl rounded shadow-3">
       {/* Logo Wrapper */}
       <div>
         <Image

@@ -61,6 +61,7 @@ module.exports = {
       boxShadow: {
         DEFAULT: '0px 4px 30px rgba(0, 0, 0, 0.2)',
         md: '0px -4px 30px rgba(0, 0, 0, 0.2)',
+        3: '0px 6px 12px #0000000d',
       },
       height: {
         'mobile-header': '68px',
