@@ -1,15 +1,18 @@
 import React from 'react';
-
+import Image from 'next/image';
 import Link from 'next/link';
+
 import BodyText from '../BodyText';
+import PeopleContribute from '../../../public/assets/people-contribute.svg';
+
 import styles from './HowContribute.module.scss';
 
 const HowContribute = () => {
   return (
     <div className={styles.contribute}>
-      <img
+      <Image
         className={styles.contributeImage}
-        src="/assets/people-contribute.svg"
+        src={PeopleContribute}
         alt="Como contribuir"
       />
       <div className={styles.contentWrapper}>

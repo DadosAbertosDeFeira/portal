@@ -43,7 +43,14 @@ exports[`<VolunteersCard /> renders correctly with social network links 1`] = `
         >
           <img
             alt="Twitter icon"
-            src="/assets/icons/twitter.svg"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
           />
         </a>
         <a
@@ -53,7 +60,14 @@ exports[`<VolunteersCard /> renders correctly with social network links 1`] = `
         >
           <img
             alt="Linkedin icon"
-            src="/assets/icons/linkedin.svg"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
           />
         </a>
         <a
@@ -63,7 +77,14 @@ exports[`<VolunteersCard /> renders correctly with social network links 1`] = `
         >
           <img
             alt="Instagram icon"
-            src="/assets/icons/instagram.svg"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
           />
         </a>
         <a
@@ -73,7 +94,14 @@ exports[`<VolunteersCard /> renders correctly with social network links 1`] = `
         >
           <img
             alt="Github icon"
-            src="/assets/icons/github.svg"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
           />
         </a>
       </div>

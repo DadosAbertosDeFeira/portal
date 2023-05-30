@@ -4,6 +4,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import BodyText from '../BodyText';
 
+import Twitter from '../../../public/assets/icons/twitter.svg';
+import Instagram from '../../../public/assets/icons/instagram.svg';
+import LinkedIn from '../../../public/assets/icons/linkedin.svg';
+import Github from '../../../public/assets/icons/github.svg';
+
 import styles from './styles.module.scss';
 
 export default function VolunteersCard({
@@ -34,7 +39,7 @@ export default function VolunteersCard({
         <div className={styles.volunteersIconContainer}>
           {twitter && (
             <Link href={`https://www.twitter.com/${twitter}`} target="_self">
-              <img src="/assets/icons/twitter.svg" alt="Twitter icon" />
+              <Image src={Twitter} alt="Twitter icon" />
             </Link>
           )}
           {linkedin && (
@@ -43,7 +48,7 @@ export default function VolunteersCard({
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/assets/icons/linkedin.svg" alt="Linkedin icon" />
+              <Image src={LinkedIn} alt="Linkedin icon" />
             </Link>
           )}
           {instagram && (
@@ -52,7 +57,7 @@ export default function VolunteersCard({
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/assets/icons/instagram.svg" alt="Instagram icon" />
+              <Image src={Instagram} alt="Instagram icon" />
             </Link>
           )}
           {github && (
@@ -61,7 +66,7 @@ export default function VolunteersCard({
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/assets/icons/github.svg" alt="Github icon" />
+              <Image src={Github} alt="Github icon" />
             </Link>
           )}
         </div>
