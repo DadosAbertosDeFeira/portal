@@ -3,7 +3,7 @@
 exports[`<Tag /> renders correctly with className 1`] = `
 <DocumentFragment>
   <div
-    class="social bg-[#f8f9fa] py-xs px-sm inline-block"
+    class="bg-[#f8f9fa] py-xs px-sm inline-block social"
   >
     <p
       class="text-[#656f78] text-xs"

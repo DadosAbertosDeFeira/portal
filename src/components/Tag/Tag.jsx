@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 const Tag = ({ children, className }) => (
   <div
-    className={classNames(className, 'bg-[#f8f9fa] py-xs px-sm inline-block')}
+    className={classNames('bg-[#f8f9fa] py-xs px-sm inline-block', className)}
   >
     <p className="text-[#656f78] text-xs">{children}</p>
   </div>
