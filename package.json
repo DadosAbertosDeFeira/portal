@@ -78,13 +78,12 @@
     "jest-dom": "^4.0.0",
     "lint-staged": ">=10",
     "next-export-optimize-images": "^2.1.0",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.23",
+    "postcss-import": "^15.1.0",
     "prettier": "^2.1.2",
     "pretty-quick": "^3.1.1",
-    "sass": "^1.43.4",
-    "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.3.2"
   },
   "engines": {
     "node": "^16.19.0",
