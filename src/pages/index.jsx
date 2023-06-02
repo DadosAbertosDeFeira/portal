@@ -25,7 +25,7 @@ export default function Home() {
             priority
           />
         </div>
-        <div className="text-center page-margin-align desktop:w-1/2 tablet:pr-5 tablet:py-48 desktop:pt-64 desktop:text-left">
+        <div className="text-center pl-md tablet:pl-xl desktop:pl-4xl large-desktop:pl-5xl desktop:w-1/2 tablet:pr-5 tablet:py-48 desktop:pt-64 desktop:text-left">
           <h1>Mais transparência em Feira de Santana</h1>
           <BodyText className="py-5">
             Nós, cidadãos, temos o direito a informação de forma clara e

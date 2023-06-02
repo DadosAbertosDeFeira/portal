@@ -7,7 +7,7 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
   >
     <img
       alt="Livro"
-      class="image"
+      class="max-w-[100px] max-h-[100px]"
       data-nimg="1"
       decoding="async"
       height="40"
@@ -24,14 +24,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
     </h2>
   </div>
   <div
-    class="volunteersList"
+    class="flex flex-wrap justify-center mt-12 gap-4"
   >
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Allythy"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -42,32 +42,36 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Allythy
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Desenvolvedor
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://github.com/allythy"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Github icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -82,11 +86,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Ana Paula Gomes"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -97,31 +101,35 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Ana Paula Gomes
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Faz-tudo
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.twitter.com/anapaulagomess"
             target="_self"
           >
             <img
               alt="Twitter icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -133,12 +141,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://www.linkedin.com/in/anapaulagomess"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Linkedin icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -150,12 +160,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://github.com/anapaulagomes"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Github icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -170,11 +182,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="André Costa"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -185,32 +197,36 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             André Costa
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Designer
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.linkedin.com/in/andrecostaux"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Linkedin icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -225,11 +241,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Bruno Morassuti"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -240,31 +256,35 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Bruno Morassuti
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Conselheiro Jurídico
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.twitter.com/555112299jedi"
             target="_self"
           >
             <img
               alt="Twitter icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -276,12 +296,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://www.linkedin.com/in/bruno-schimitt-morassutti-7a0b5b180"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Linkedin icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -293,12 +315,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://github.com/jedibruno"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Github icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -313,11 +337,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Daniel Fireman"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -328,31 +352,35 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Daniel Fireman
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Conselheiro
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.twitter.com/daniellfireman"
             target="_self"
           >
             <img
               alt="Twitter icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -364,12 +392,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://www.linkedin.com/in/danielfireman"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Linkedin icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -381,12 +411,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://github.com/danielfireman"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Github icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -401,11 +433,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Eduardo Cuducos"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -416,31 +448,35 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Eduardo Cuducos
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Desenvolvedor
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.twitter.com/cuducos"
             target="_self"
           >
             <img
               alt="Twitter icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -452,12 +488,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://github.com/cuducos"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Github icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -472,11 +510,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Eduardo Daltro"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -487,32 +525,36 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Eduardo Daltro
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Staff
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.linkedin.com/in/daltroedu"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Linkedin icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -527,11 +569,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Emerson Oliveira"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -542,32 +584,36 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Emerson Oliveira
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Desenvolvedor
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.linkedin.com/in/emerson-oliveira-89ab859"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Linkedin icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -579,12 +625,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://github.com/emersonsdo"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Github icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -599,11 +647,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Everton Alves"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -614,32 +662,36 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Everton Alves
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Social Media
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.instagram.com/ellalves.mktd"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Instagram icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -654,11 +706,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Felipe Barros"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -669,32 +721,36 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Felipe Barros
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Analista de Dados
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.linkedin.com/in/felipe-barros-609a52141"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Linkedin icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -706,12 +762,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://github.com/felipelfb"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Github icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -726,11 +784,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Filipe Maia"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -741,32 +799,36 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Filipe Maia
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Desenvolvedor
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.linkedin.com/in/filipebsmaia"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Linkedin icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -778,12 +840,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://github.com/filipebsmaia"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Github icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -798,11 +862,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Gabriela Turquetti"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -813,31 +877,35 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Gabriela Turquetti
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Desenvolvedora
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.twitter.com/gabturquetti"
             target="_self"
           >
             <img
               alt="Twitter icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -849,12 +917,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://www.linkedin.com/in/gabriela-turquetti"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Linkedin icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -866,12 +936,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://www.instagram.com/gabrielaturquetti"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Instagram icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -883,12 +955,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://github.com/turquetti"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Github icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -903,11 +977,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Geraldo Castro"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -918,31 +992,35 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Geraldo Castro
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Desenvolvedor
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.twitter.com/exageraldo_"
             target="_self"
           >
             <img
               alt="Twitter icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -954,12 +1032,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://www.linkedin.com/in/exageraldo"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Linkedin icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -971,12 +1051,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://github.com/exageraldo"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Github icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -991,11 +1073,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Guilherme Wanderley"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -1006,32 +1088,36 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Guilherme Wanderley
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Office-boy e Analista de Dados
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.linkedin.com/in/guilherme-wanderley"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Linkedin icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -1043,12 +1129,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://github.com/guilhermelowa"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Github icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -1063,11 +1151,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Luanda Dantas"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -1078,32 +1166,36 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Luanda Dantas
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Desenvolvedora
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.linkedin.com/in/luandadantas"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Linkedin icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -1115,12 +1207,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://github.com/luandadantas"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Github icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -1135,11 +1229,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Matheus Rocha"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -1150,31 +1244,35 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Matheus Rocha
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Desenvolvedor
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.twitter.com/matheusrocha"
             target="_self"
           >
             <img
               alt="Twitter icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -1186,12 +1284,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://www.linkedin.com/in/matheus-cruz-rocha-38021525"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Linkedin icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -1203,12 +1303,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://github.com/matheusrocha89"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Github icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -1223,11 +1325,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Nataly Costa"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -1238,32 +1340,36 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Nataly Costa
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Designer
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.linkedin.com/in/natalycosta"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Linkedin icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -1278,11 +1384,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Nathanael Souza"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -1293,32 +1399,36 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Nathanael Souza
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Desenvolvedor
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.linkedin.com/in/nathanael-souza"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Linkedin icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -1330,12 +1440,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://github.com/Nathanaelss"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Github icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -1350,11 +1462,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Rafael Gomes"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -1365,31 +1477,35 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Rafael Gomes
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Desenvolvedor
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.twitter.com/gomex"
             target="_self"
           >
             <img
               alt="Twitter icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -1401,12 +1517,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://www.linkedin.com/in/rbgomes"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Linkedin icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -1418,12 +1536,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://github.com/gomex"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Github icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -1438,11 +1558,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Rafael Velame"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -1453,31 +1573,35 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Rafael Velame
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Jornalista
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.twitter.com/rafaelvelame"
             target="_self"
           >
             <img
               alt="Twitter icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -1489,12 +1613,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://www.linkedin.com/in/rafael-velame-242b98104"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Linkedin icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -1509,11 +1635,11 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       </div>
     </div>
     <div
-      class="volunteers"
+      class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
     >
       <img
         alt="Vivian Macedo"
-        class="volunteersPicture"
+        class="bg-white rounded-[50%] mr-4"
         data-nimg="1"
         decoding="async"
         height="70"
@@ -1524,32 +1650,36 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
         width="70"
       />
       <div
-        class="volunteersInfo"
+        class="flex flex-col justify-between"
       >
-        <div>
+        <div
+          class="flex flex-col"
+        >
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoName"
+            class="text-black text-sm tablet:text-base "
             data-testid=""
           >
             Vivian Macedo
           </p>
           <p
-            class="text-black text-sm tablet:text-base volunteersInfoRole"
+            class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
             data-testid=""
           >
             Analista de Dados
           </p>
         </div>
         <div
-          class="volunteersIconContainer"
+          class="flex flex-row"
         >
           <a
+            class="mr-4"
             href="https://www.linkedin.com/in/vivianmacedo"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Linkedin icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -1561,12 +1691,14 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
             />
           </a>
           <a
+            class="mr-4"
             href="https://github.com/vihvs"
             rel="noreferrer"
             target="_blank"
           >
             <img
               alt="Github icon"
+              class="h-5 w-5"
               data-nimg="1"
               decoding="async"
               height="40"

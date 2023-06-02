@@ -9,8 +9,6 @@ import Instagram from '../../../public/assets/icons/instagram.svg';
 import LinkedIn from '../../../public/assets/icons/linkedin.svg';
 import Github from '../../../public/assets/icons/github.svg';
 
-import styles from './styles.module.scss';
-
 export default function VolunteersCard({
   name,
   role,
@@ -21,52 +19,59 @@ export default function VolunteersCard({
   twitter,
 }) {
   return (
-    <div className={styles.volunteers}>
+    <div className="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow">
       <Image
         src={picture}
         alt={name}
         width={70}
         height={70}
-        className={styles.volunteersPicture}
+        className="bg-white rounded-[50%] mr-4"
       />
-      <div className={styles.volunteersInfo}>
-        <div>
-          <BodyText className={styles.volunteersInfoName}>{name}</BodyText>
-          <BodyText size="medium" className={styles.volunteersInfoRole}>
+      <div className="flex flex-col justify-between">
+        <div className="flex flex-col">
+          <BodyText className="">{name}</BodyText>
+          <BodyText size="medium" className="mt-[0.1rem] text-primary-dark">
             {role}
           </BodyText>
         </div>
-        <div className={styles.volunteersIconContainer}>
+        <div className="flex flex-row">
           {twitter && (
-            <Link href={`https://www.twitter.com/${twitter}`} target="_self">
-              <Image src={Twitter} alt="Twitter icon" />
+            <Link
+              className="mr-4"
+              href={`https://www.twitter.com/${twitter}`}
+              target="_self"
+            >
+              <Image className="h-5 w-5" src={Twitter} alt="Twitter icon" />
             </Link>
           )}
           {linkedin && (
             <Link
+              className="mr-4"
               href={`https://www.linkedin.com/in/${linkedin}`}
               target="_blank"
               rel="noreferrer"
             >
-              <Image src={LinkedIn} alt="Linkedin icon" />
+              <Image className="h-5 w-5" src={LinkedIn} alt="Linkedin icon" />
             </Link>
           )}
           {instagram && (
             <Link
+              className="mr-4"
               href={`https://www.instagram.com/${instagram}`}
               target="_blank"
               rel="noreferrer"
             >
-              <Image src={Instagram} alt="Instagram icon" />
+              <Image className="h-5 w-5" src={Instagram} alt="Instagram icon" />
             </Link>
           )}
           {github && (
             <Link
+              className="mr-4"
               href={`https://github.com/${github}`}
               target="_blank"
               rel="noreferrer"
             >
-              <Image src={Github} alt="Github icon" />
+              <Image className="h-5 w-5" src={Github} alt="Github icon" />
             </Link>
           )}
         </div>

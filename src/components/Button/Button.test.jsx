@@ -1,44 +1,41 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
-import Button from './Button';
+import { Button } from './index';
 
-describe('<Button />', () => {
-  let sharedProps;
+describe('Button', () => {
+  let user = userEvent.setup();
 
   beforeEach(() => {
-    jest.resetAllMocks();
+    user = userEvent.setup();
+  });
 
-    sharedProps = {
-      className: 'new-class',
-      outline: false,
-      onClick: jest.fn(),
-    };
+  const makeSut = ({ children = 'Click me', ...props }) => {
+    return render(<Button {...props}>{children}</Button>);
+  };
+
+  it('should call onClick when click in button', async () => {
+    const onClick = jest.fn();
+
+    makeSut({ onClick });
+
+    const button = screen.getByRole('button');
+
+    await user.click(button);
+
+    expect(onClick).toHaveBeenCalledTimes(1);
   });
 
   it('renders correctly with default properties', () => {
-    const { asFragment } = render(<Button>Click Me!</Button>);
-
+    const { asFragment } = makeSut({});
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders correctly outline button', () => {
-    const { asFragment } = render(
-      <Button {...sharedProps} outline>
-        Click Me!
-      </Button>
-    );
-
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  describe('actions', () => {
-    it('execute correct action when the user clicks', () => {
-      const { getByRole } = render(<Button {...sharedProps}>Click Me!</Button>);
-      fireEvent.click(getByRole('button'));
-
-      expect(sharedProps.onClick).toHaveBeenCalledTimes(1);
-    });
+    makeSut({ variant: 'outline' });
+    const button = screen.getByRole('button');
+    expect(button).toMatchSnapshot();
   });
 });
