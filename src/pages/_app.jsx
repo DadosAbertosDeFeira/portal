@@ -4,7 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import * as gtag from '../lib/gtag';
-import '../styles/globals.scss';
+import '../styles/globals.css';
 import Layout from '../layouts/Layout';
 
 const handleRouteChange = (url) => {

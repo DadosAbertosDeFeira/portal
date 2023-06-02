@@ -3,11 +3,11 @@
 exports[`<VolunteersCard /> renders correctly with social network links 1`] = `
 <DocumentFragment>
   <div
-    class="volunteers"
+    class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
   >
     <img
       alt="Scooby Doo"
-      class="volunteersPicture"
+      class="bg-white rounded-[50%] mr-4"
       data-nimg="1"
       decoding="async"
       height="70"
@@ -18,31 +18,35 @@ exports[`<VolunteersCard /> renders correctly with social network links 1`] = `
       width="70"
     />
     <div
-      class="volunteersInfo"
+      class="flex flex-col justify-between"
     >
-      <div>
+      <div
+        class="flex flex-col"
+      >
         <p
-          class="text-black text-sm tablet:text-base volunteersInfoName"
+          class="text-black text-sm tablet:text-base "
           data-testid=""
         >
           Scooby Doo
         </p>
         <p
-          class="text-black text-sm tablet:text-base volunteersInfoRole"
+          class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
           data-testid=""
         >
           Detective
         </p>
       </div>
       <div
-        class="volunteersIconContainer"
+        class="flex flex-row"
       >
         <a
+          class="mr-4"
           href="https://www.twitter.com/scoobydoo"
           target="_self"
         >
           <img
             alt="Twitter icon"
+            class="h-5 w-5"
             data-nimg="1"
             decoding="async"
             height="40"
@@ -54,12 +58,14 @@ exports[`<VolunteersCard /> renders correctly with social network links 1`] = `
           />
         </a>
         <a
+          class="mr-4"
           href="https://www.linkedin.com/in/scoobydoo_engineer"
           rel="noreferrer"
           target="_blank"
         >
           <img
             alt="Linkedin icon"
+            class="h-5 w-5"
             data-nimg="1"
             decoding="async"
             height="40"
@@ -71,12 +77,14 @@ exports[`<VolunteersCard /> renders correctly with social network links 1`] = `
           />
         </a>
         <a
+          class="mr-4"
           href="https://www.instagram.com/scoobydoo_detective"
           rel="noreferrer"
           target="_blank"
         >
           <img
             alt="Instagram icon"
+            class="h-5 w-5"
             data-nimg="1"
             decoding="async"
             height="40"
@@ -88,12 +96,14 @@ exports[`<VolunteersCard /> renders correctly with social network links 1`] = `
           />
         </a>
         <a
+          class="mr-4"
           href="https://github.com/scoobydoo"
           rel="noreferrer"
           target="_blank"
         >
           <img
             alt="Github icon"
+            class="h-5 w-5"
             data-nimg="1"
             decoding="async"
             height="40"
@@ -113,11 +123,11 @@ exports[`<VolunteersCard /> renders correctly with social network links 1`] = `
 exports[`<VolunteersCard /> renders correctly without social network links 1`] = `
 <DocumentFragment>
   <div
-    class="volunteers"
+    class="flex flex-row p-4 max-w-[390px] min-w-[288px] w-full rounded-[4px] border-solid border-t-[3px] border-primary-dark bg-gray-lightest shadow"
   >
     <img
       alt="Scooby Doo"
-      class="volunteersPicture"
+      class="bg-white rounded-[50%] mr-4"
       data-nimg="1"
       decoding="async"
       height="70"
@@ -128,24 +138,26 @@ exports[`<VolunteersCard /> renders correctly without social network links 1`] =
       width="70"
     />
     <div
-      class="volunteersInfo"
+      class="flex flex-col justify-between"
     >
-      <div>
+      <div
+        class="flex flex-col"
+      >
         <p
-          class="text-black text-sm tablet:text-base volunteersInfoName"
+          class="text-black text-sm tablet:text-base "
           data-testid=""
         >
           Scooby Doo
         </p>
         <p
-          class="text-black text-sm tablet:text-base volunteersInfoRole"
+          class="text-black text-sm tablet:text-base mt-[0.1rem] text-primary-dark"
           data-testid=""
         >
           Detective
         </p>
       </div>
       <div
-        class="volunteersIconContainer"
+        class="flex flex-row"
       />
     </div>
   </div>

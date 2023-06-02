@@ -6,17 +6,13 @@ import { FiArrowUpRight } from 'react-icons/fi';
 import Link from 'next/link';
 import Tag from '../Tag';
 
-import styles from './ProjectCard.module.scss';
-
 const ProjectCard = ({ project }) => {
   return (
-    <div
-      className={`${styles.card} flex align-center tablet:flex m-md tablet:m-xl rounded`}
-    >
+    <div className="max-w-[500px] flex align-center tablet:flex m-md tablet:m-xl rounded shadow-3">
       {/* Logo Wrapper */}
       <div>
         <Image
-          className={`${styles.icon} rounded-tl rounded-bl`}
+          className="max-w-[initial] h-auto rounded-tl rounded-bl"
           src={project.logo.path}
           alt={project.logo.description}
         />
@@ -27,7 +23,7 @@ const ProjectCard = ({ project }) => {
         <h3 className="mb-sm tablet:mb-md">{project.name}</h3>
         <p className="text-black text-xs flex-1">{project.description}</p>
 
-        <div className={`flex flex-row ${styles.footer}`}>
+        <div className="flex flex-row justify-between">
           <div className="hidden sm:flex">
             {project.type.map((tag) => (
               <Tag key={tag} className="mr-xs">
@@ -37,14 +33,14 @@ const ProjectCard = ({ project }) => {
           </div>
 
           <Link
-            className={styles.projectLink}
+            className="text-primary"
             href={project.link}
             target="_blank"
             rel="noreferrer"
           >
             <div className="flex items-center">
               Link
-              <FiArrowUpRight className={`ml-xs ${styles.projectLinkIcon}`} />
+              <FiArrowUpRight className="ml-xs stroke-primary" />
             </div>
           </Link>
         </div>
