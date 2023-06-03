@@ -13,7 +13,7 @@ const config = {
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"],
   testEnvironment: "jest-environment-jsdom",
-  testMatch: ["<rootDir>/src/**/*.{ts,tsx}"],
+  testMatch: ["<rootDir>/src/**/*.{js,jsx,ts,tsx}"],
   collectCoverage: true,
   coverageDirectory: "./coverage/",
   coveragePathIgnorePatterns: ["node_modules", "coverage"],
