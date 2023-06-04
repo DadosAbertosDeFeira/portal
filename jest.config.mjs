@@ -13,7 +13,7 @@ const config = {
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"],
   testEnvironment: "jest-environment-jsdom",
-  testMatch: ["<rootDir>/src/**/*.{js,jsx,ts,tsx}"],
+  testMatch: ["<rootDir>/src/**/*.test.{js,jsx,ts,tsx}"],
   collectCoverage: true,
   coverageDirectory: "./coverage/",
   coveragePathIgnorePatterns: ["node_modules", "coverage"],
@@ -37,8 +37,3 @@ const config = {
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 export default createJestConfig(config);
-
-// import type { JestConfigWithTsJest } from "ts-jest";
-// import { pathsToModuleNameMapper } from "ts-jest";
-
-// import { compilerOptions } from "./tsconfig.json";
