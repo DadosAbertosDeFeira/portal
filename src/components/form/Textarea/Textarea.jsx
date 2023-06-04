@@ -1,15 +1,15 @@
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useController } from 'react-hook-form';
+import React from "react";
+import PropTypes from "prop-types";
+import { useController } from "react-hook-form";
 
-function Textarea({ name, label, control, rules }) {
+export default function Textarea({ name, label, control, rules }) {
   const { field: input, fieldState: state } = useController({
     name,
     control,
     rules,
-    defaultValue: '',
+    defaultValue: "",
   });
 
   return (
@@ -17,7 +17,8 @@ function Textarea({ name, label, control, rules }) {
       <textarea
         className="w-full p-2 pl-4 bg-white rounded border text-gray-dark font-medium border-gray-2"
         placeholder={label}
-        aria-errormessage={state.error?.message}
+        id={name}
+        aria-errormessage={`${name}--error-message`}
         aria-invalid={state.invalid}
         aria-label={label}
         {...input}
@@ -25,6 +26,7 @@ function Textarea({ name, label, control, rules }) {
 
       {state.error && (
         <span
+          id={`${name}--error-message`}
           key={state.error}
           className="text-alert text-sm anima-input-error-message"
         >

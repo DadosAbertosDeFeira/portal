@@ -1,10 +1,10 @@
-import React from 'react';
-import Image from 'next/image';
-import PropTypes from 'prop-types';
-import { FiArrowUpRight } from 'react-icons/fi';
+import React from "react";
+import Image from "next/image";
+import PropTypes from "prop-types";
+import { FiArrowUpRight } from "react-icons/fi";
 
-import Link from 'next/link';
-import Tag from '../Tag';
+import Link from "next/link";
+import Tag from "../Tag";
 
 const ProjectCard = ({ project }) => {
   return (

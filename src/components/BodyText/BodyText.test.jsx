@@ -1,19 +1,19 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
-import { render } from '@testing-library/react';
+import React from "react";
+import { render } from "@testing-library/react";
 
-import BodyText from './BodyText';
+import BodyText from "./BodyText";
 
-describe('<BodyText />', () => {
+describe("<BodyText />", () => {
   let sharedProps;
 
   beforeEach(() => {
     sharedProps = {
-      testId: 'paragraph',
+      testId: "paragraph",
     };
   });
 
-  it('renders correctly', () => {
+  it("renders correctly", () => {
     const { asFragment } = render(
       <BodyText {...sharedProps}>Testing</BodyText>
     );
@@ -21,7 +21,7 @@ describe('<BodyText />', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('renders correctly default size and bold', () => {
+  it("renders correctly default size and bold", () => {
     const { asFragment } = render(
       <BodyText {...sharedProps} bold>
         Testing
@@ -31,7 +31,7 @@ describe('<BodyText />', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('renders correctly small', () => {
+  it("renders correctly small", () => {
     const { asFragment } = render(
       <BodyText {...sharedProps} size="small">
         Testing
@@ -41,7 +41,7 @@ describe('<BodyText />', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('renders correctly small and bold', () => {
+  it("renders correctly small and bold", () => {
     const { asFragment } = render(
       <BodyText {...sharedProps} bold size="small">
         Testing
@@ -51,7 +51,7 @@ describe('<BodyText />', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('renders correctly with html alternative attributes', () => {
+  it("renders correctly with html alternative attributes", () => {
     const { asFragment } = render(
       <BodyText {...sharedProps} tabIndex={0}>
         Testing

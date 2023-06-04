@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types';
-import Image from 'next/image';
+import PropTypes from "prop-types";
+import Image from "next/image";
 
-import Link from 'next/link';
-import BodyText from '../BodyText';
+import Link from "next/link";
+import BodyText from "../BodyText";
 
-import Twitter from '../../../public/assets/icons/twitter.svg';
-import Instagram from '../../../public/assets/icons/instagram.svg';
-import LinkedIn from '../../../public/assets/icons/linkedin.svg';
-import Github from '../../../public/assets/icons/github.svg';
+import Twitter from "../../../public/assets/icons/twitter.svg";
+import Instagram from "../../../public/assets/icons/instagram.svg";
+import LinkedIn from "../../../public/assets/icons/linkedin.svg";
+import Github from "../../../public/assets/icons/github.svg";
 
 export default function VolunteersCard({
   name,

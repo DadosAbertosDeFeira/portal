@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { BiMenu } from 'react-icons/bi';
-import Link from 'next/link';
-import MobileMenu from '../MobileMenu';
-import Logo from '../../../public/assets/logo.svg';
+import React, { useState } from "react";
+import Image from "next/image";
+import { BiMenu } from "react-icons/bi";
+import Link from "next/link";
+import MobileMenu from "../MobileMenu";
+import Logo from "../../../public/assets/logo.svg";
 
 const DesktopHeader = () => {
   return (
@@ -76,7 +76,7 @@ const MobileHeader = () => {
       <aside
         className={`fixed top-0 left-0 z-20 h-full ease-in-out transition-all duration-300
           ${
-            menuOpened ? 'visible translate-x-0' : 'invisible -translate-x-full'
+            menuOpened ? "visible translate-x-0" : "invisible -translate-x-full"
           }`}
       >
         <MobileMenu handleClose={closeMenuIfOpened} />

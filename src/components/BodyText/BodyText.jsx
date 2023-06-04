@@ -1,15 +1,15 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 const classNames = (size, bold) => {
   const classes = [];
 
-  if (size === 'small') classes.push('text-xs tablet:text-base');
-  else classes.push('text-sm tablet:text-base');
-  if (bold) classes.push('font-bold');
+  if (size === "small") classes.push("text-xs tablet:text-base");
+  else classes.push("text-sm tablet:text-base");
+  if (bold) classes.push("font-bold");
 
-  return classes.join(' ');
+  return classes.join(" ");
 };
 
 const BodyText = ({ className, children, size, bold, testId, ...props }) => (
@@ -24,7 +24,7 @@ const BodyText = ({ className, children, size, bold, testId, ...props }) => (
 
 BodyText.propTypes = {
   className: PropTypes.string,
-  size: PropTypes.oneOf(['medium', 'small']),
+  size: PropTypes.oneOf(["medium", "small"]),
   bold: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.string,
@@ -36,11 +36,11 @@ BodyText.propTypes = {
 };
 
 BodyText.defaultProps = {
-  className: '',
-  size: 'medium',
+  className: "",
+  size: "medium",
   bold: false,
-  children: '',
-  testId: '',
+  children: "",
+  testId: "",
 };
 
 export default BodyText;

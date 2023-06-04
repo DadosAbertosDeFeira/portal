@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
-import { useForm } from 'react-hook-form';
-import Textarea from './Textarea';
+import React from "react";
+import { useForm } from "react-hook-form";
+import { Textarea } from "./Textarea";
 
 export default {
-  title: 'components/Textarea',
+  title: "components/Textarea",
   component: Textarea,
   argTypes: {
     control: {
@@ -26,11 +26,11 @@ export const Invalid = (args) => {
   const form = useForm();
 
   form.setError(args.name, {
-    type: 'required',
-    message: 'Esse valor é obrigatório.',
+    type: "required",
+    message: "Esse valor é obrigatório.",
   });
 
-  form.setValue(args.name, ' ');
+  form.setValue(args.name, " ");
 
   return (
     <Textarea {...args} control={form.control} rules={{ required: true }} />
@@ -38,6 +38,6 @@ export const Invalid = (args) => {
 };
 
 Invalid.args = {
-  name: 'Email',
-  label: 'E-mail',
+  name: "Email",
+  label: "E-mail",
 };

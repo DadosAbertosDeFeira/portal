@@ -1,11 +1,11 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-import * as gtag from '../lib/gtag';
-import '../styles/globals.css';
-import Layout from '../layouts/Layout';
+import * as gtag from "../lib/gtag";
+import "../styles/globals.css";
+import Layout from "../layouts/Layout";
 
 const handleRouteChange = (url) => {
   gtag.pageview(url);
@@ -15,9 +15,9 @@ const handleRouteChange = (url) => {
 function MyApp({ Component, pageProps }) {
   const { events } = useRouter();
   useEffect(() => {
-    events.on('routeChangeComplete', handleRouteChange);
+    events.on("routeChangeComplete", handleRouteChange);
     return () => {
-      events.off('routeChangeComplete', handleRouteChange);
+      events.off("routeChangeComplete", handleRouteChange);
     };
   }, [events]);
   return (

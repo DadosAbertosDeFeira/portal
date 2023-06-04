@@ -1,9 +1,9 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
-import VolunteersCard from '../VolunteersCard';
-import volunteersList from '../../utils/volunteers';
-import HandWithHeart from '../../../public/assets/icons/hand-with-hearth.svg';
+import VolunteersCard from "../VolunteersCard";
+import volunteersList from "../../utils/volunteers";
+import HandWithHeart from "../../../public/assets/icons/hand-with-hearth.svg";
 
 const Volunteers = () => {
   return (
