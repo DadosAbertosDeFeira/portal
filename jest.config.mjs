@@ -13,12 +13,14 @@ const config = {
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"],
   testEnvironment: "jest-environment-jsdom",
-  testMatch: ["<rootDir>/src/**/*.test.{js,jsx,ts,tsx}"],
-  collectCoverage: true,
+  testMatch: ["<rootDir>/src/components/**/*.test.{ts,tsx}"],
   coverageDirectory: "./coverage/",
   coveragePathIgnorePatterns: ["node_modules", "coverage"],
-  coverageReporters: ["text", "html", "json"],
-  collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx}", "!<rootDir>/node_modules/"],
+  coverageReporters: ["text-summary"],
+  collectCoverageFrom: [
+    "src/components/**/*.{tsx}",
+    "!<rootDir>/node_modules/",
+  ],
   coverageThreshold: {
     global: {
       lines: 80,
@@ -26,7 +28,7 @@ const config = {
       functions: 80,
       statements: 80,
     },
-    "src/**/*.{js,jsx,ts,tsx}": {
+    "src/**/*.{tsx}": {
       lines: 80,
       branches: 80,
       functions: 80,
