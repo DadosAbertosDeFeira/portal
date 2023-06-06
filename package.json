@@ -11,11 +11,11 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
-    "lint": "eslint src",
+    "lint": "eslint .",
     "lint:staged": "lint-staged",
     "test:coverage": "jest --collectCoverage",
     "prepare": "husky install",
-    "format-code:all": "prettier --write ./src",
+    "format-code:all": "prettier --write .",
     "format-code:staged": "pretty-quick --staged",
     "pre-commit": "yarn format-code:staged && yarn lint:staged"
   },
