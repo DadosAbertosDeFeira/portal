@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   INITIAL_VIEWPORTS,
   MINIMAL_VIEWPORTS,
-} from '@storybook/addon-viewport';
+} from "@storybook/addon-viewport";
 
-import MobileMenu from '.';
+import MobileMenu from ".";
 
 export default {
-  title: 'Components/MobileMenu',
+  title: "Components/MobileMenu",
   component: MobileMenu,
   parameters: {
     viewport: {
@@ -15,7 +15,7 @@ export default {
         ...INITIAL_VIEWPORTS,
         ...MINIMAL_VIEWPORTS,
       },
-      defaultViewport: 'responsive',
+      defaultViewport: "responsive",
     },
   },
 };

@@ -1,8 +1,8 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
-import supporters from '../../utils/supporters';
+import supporters from "../../utils/supporters";
 
 const Supporters = () => {
   const { financial, institutional, regular } = supporters;

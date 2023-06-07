@@ -1,25 +1,25 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
-import { render } from '@testing-library/react';
+import React from "react";
+import { render } from "@testing-library/react";
 
-import SEO from './SEO';
+import SEO from "./SEO";
 
-describe('<SEO />', () => {
+describe("<SEO />", () => {
   let props;
 
   beforeEach(() => {
     props = {
-      title: 'Dados Abertos Feira',
+      title: "Dados Abertos Feira",
     };
   });
 
-  it('renders correctly with title', () => {
+  it("renders correctly with title", () => {
     const { asFragment } = render(<SEO {...props} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('renders correctly with description', () => {
+  it("renders correctly with description", () => {
     const { asFragment } = render(
       <SEO {...props} description="Dados abertos para toda população" />
     );
@@ -27,19 +27,19 @@ describe('<SEO />', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('renders correctly with image', () => {
+  it("renders correctly with image", () => {
     const { asFragment } = render(<SEO {...props} image="dados-abertos.png" />);
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('renders correctly without suffix', () => {
+  it("renders correctly without suffix", () => {
     const { asFragment } = render(<SEO {...props} shouldExcludeTitleSuffix />);
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('renders correctly without indexing the page', () => {
+  it("renders correctly without indexing the page", () => {
     const { asFragment } = render(<SEO {...props} shouldIndexPage={false} />);
 
     expect(asFragment()).toMatchSnapshot();

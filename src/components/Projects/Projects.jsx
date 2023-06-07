@@ -1,10 +1,10 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
-import projects from '../../utils/projects';
-import IconProject from '../../../public/assets/icons/icon-projects.svg';
+import projects from "../../utils/projects";
+import IconProject from "../../../public/assets/icons/icon-projects.svg";
 
-import ProjectCard from './ProjectCard';
+import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   return (
