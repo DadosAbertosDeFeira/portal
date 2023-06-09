@@ -1,15 +1,16 @@
-import Image from 'next/image';
+import Image from "next/image";
 
-import ContactForm from '../components/ContactForm';
-import HowContribute from '../components/HowContribute';
-import SocialContactButtons from '../components/SocialContactButtons';
-import Projects from '../components/Projects';
-import Volunteers from '../components/Volunteers';
+// eslint-disable-next-line import/extensions
+import { Text } from "@/components/atoms/Text";
+import ContactForm from "../components/ContactForm";
+import HowContribute from "../components/HowContribute";
+import SocialContactButtons from "../components/SocialContactButtons";
+import Projects from "../components/Projects";
+import Volunteers from "../components/Volunteers";
 
-import BodyText from '../components/BodyText';
-import Supporters from '../components/Supporters';
-import PeopleRight from '../../public/assets/peoples-right.svg';
-import Book from '../../public/assets/icons/book.svg';
+import Supporters from "../components/Supporters";
+import PeopleRight from "../../public/assets/peoples-right.svg";
+import Book from "../../public/assets/icons/book.svg";
 
 export default function Home() {
   return (
@@ -27,12 +28,12 @@ export default function Home() {
         </div>
         <div className="text-center pl-md tablet:pl-xl desktop:pl-4xl large-desktop:pl-5xl desktop:w-1/2 tablet:pr-5 tablet:py-48 desktop:pt-64 desktop:text-left">
           <h1>Mais transparência em Feira de Santana</h1>
-          <BodyText className="py-5">
+          <Text className="py-5">
             Nós, cidadãos, temos o direito a informação de forma clara e
             transparente. Precisamos saber o que acontece em nossa cidade.
             <br />
             <strong>Junte-se a nós e faça a diferença!</strong>
-          </BodyText>
+          </Text>
           <div className="flex place-content-center large-desktop:place-content-start py-5">
             <a
               className="bg-primary-dark text-white rounded p-3 px-9 font-semibold "
@@ -51,13 +52,13 @@ export default function Home() {
         <Image className="m-auto w-24 h-24" src={Book} alt="Livro" />
         <h2>Nossa História</h2>
         <div className="flex flex-col gap-y-6 text-center font-medium">
-          <BodyText>
+          <Text>
             A ideia de criar um espaço onde as pessoas possam buscar informações
             de maneira fácil sobre o município nasceu em 2019, quando a
             programadora Ana Paula Gomes tentou encontrar informações sobre
             quanto o município gastava com a merenda escolar. O interesse surgiu
             após ouvir uma denúncia feita por Rafael Velame no rádio sobre a
-            falta de merenda em algumas escolas da cidade. Ao acessar o{' '}
+            falta de merenda em algumas escolas da cidade. Ao acessar o{" "}
             <a
               className="underline"
               href="http://www.transparencia.feiradesantana.ba.gov.br/"
@@ -65,8 +66,8 @@ export default function Home() {
               rel="noreferrer"
             >
               portal da transparência de Feira de Santana
-            </a>{' '}
-            deparou-se com a dificuldade de fazer buscas na{' '}
+            </a>{" "}
+            deparou-se com a dificuldade de fazer buscas na{" "}
             <a
               className="underline"
               href="http://www.transparencia.feiradesantana.ba.gov.br/index.php?view=licitacoes"
@@ -77,8 +78,8 @@ export default function Home() {
             </a>
             . Fez alguns pedidos de informação à Prefeitura mas não foi
             respondida.
-          </BodyText>
-          <BodyText>
+          </Text>
+          <Text>
             Após a tentativa frustrada de conseguir informações da Prefeitura,
             Ana Paula foi até o site da Câmara Municipal de Feira de Santana e
             descobriu que a situação também não era boa. Informações simples,
@@ -86,14 +87,14 @@ export default function Home() {
             consegue se imaginar pagando um salário alto a um funcionário e não
             sabendo se ele compareceu ao trabalho ou se executou sua função como
             deveria?
-          </BodyText>
+          </Text>
 
-          <BodyText>
+          <Text>
             Diante da situação foram feitos novos pedidos de informação à Câmara
             - também sem respostas. Após meses de espera foi necessário acionar
             o Ministério Público da Bahia para intermediar o processo e, a
             partir daí, o projeto ganhou projeção nas mídias locais, como BATV
-            da TV Subaé,{' '}
+            da TV Subaé,{" "}
             <a
               className="underline"
               href="https://www.acordacidade.com.br/noticias/222557/programadora-encontra-dificuldades-para-obter-informacoes-sobre-a-atuacao-dos-vereadores-de-feira.html"
@@ -102,7 +103,7 @@ export default function Home() {
             >
               Acorda Cidade
             </a>
-            ,{' '}
+            ,{" "}
             <a
               className="underline"
               href="https://www.blogdovelame.com/presidente-reconhece-falta-de-transparencia-e-promete-divulgar-dados/"
@@ -111,7 +112,7 @@ export default function Home() {
             >
               Blog do Velame
             </a>
-            , além de diversas participações nos programas da{' '}
+            , além de diversas participações nos programas da{" "}
             <a
               className="underline"
               href="https://www.facebook.com/blogdovelame/videos/750921745431854/"
@@ -125,14 +126,14 @@ export default function Home() {
             colaboração com a Casa da Cidadania. A partir dessa data, a Câmara
             passou a divulgar a assiduidade dos vereadores e as atas das sessões
             da casa.
-          </BodyText>
-          <BodyText>
+          </Text>
+          <Text>
             Ainda estamos lutando para conseguir vários dados diferentes e fazer
             com que os pedidos de informação sejam propriamente respondidos pela
             Prefeitura. Entendemos que a transparência tem grande impacto em
             coibir atos de corrupção e tornar o uso do dinheiro público mais
             eficiente. Lutar pela transparência é um trabalho de todos.
-          </BodyText>
+          </Text>
         </div>
 
         <Supporters />

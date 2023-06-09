@@ -51,7 +51,16 @@ module.exports = {
         "unused-imports/no-unused-imports": "error",
         "unused-imports/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
         "tailwindcss/no-custom-classname": "off",
-        "import/extensions": ["never"],
+        "import/extensions": [
+          "error",
+          "ignorePackages",
+          {
+            js: "never",
+            jsx: "never",
+            ts: "never",
+            tsx: "never",
+          },
+        ],
       },
     },
     // Configuration for testing

@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types';
-import Image from 'next/image';
+import PropTypes from "prop-types";
+import Image from "next/image";
 
-import Link from 'next/link';
-import BodyText from '../BodyText';
+import Link from "next/link";
+import { Text } from "@/components/atoms/Text";
 
-import Twitter from '../../../public/assets/icons/twitter.svg';
-import Instagram from '../../../public/assets/icons/instagram.svg';
-import LinkedIn from '../../../public/assets/icons/linkedin.svg';
-import Github from '../../../public/assets/icons/github.svg';
+import Twitter from "../../../public/assets/icons/twitter.svg";
+import Instagram from "../../../public/assets/icons/instagram.svg";
+import LinkedIn from "../../../public/assets/icons/linkedin.svg";
+import Github from "../../../public/assets/icons/github.svg";
 
 export default function VolunteersCard({
   name,
@@ -29,10 +29,8 @@ export default function VolunteersCard({
       />
       <div className="flex flex-col justify-between">
         <div className="flex flex-col">
-          <BodyText className="">{name}</BodyText>
-          <BodyText size="medium" className="mt-[0.1rem] text-primary-dark">
-            {role}
-          </BodyText>
+          <Text className="">{name}</Text>
+          <Text className="mt-[0.1rem] text-primary-dark">{role}</Text>
         </div>
         <div className="flex flex-row">
           {twitter && (

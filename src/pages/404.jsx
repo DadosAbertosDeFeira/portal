@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
-import SEO from '../components/SEO';
-import BodyText from '../components/BodyText';
+import SEO from "../components/SEO";
+import { Text } from "@/components/atoms/Text";
 
 export default function Error404() {
   return (
@@ -18,17 +18,17 @@ export default function Error404() {
         />
         <div className="text-center flex flex-col gap-y-4 mx-12">
           <h1>Não encontramos esta página</h1>
-          <BodyText>
+          <Text>
             Aparentemente a página que você está tentando acessar não existe ou
             foi movida.
-          </BodyText>
-          <BodyText>
-            Mas não tem problema!{' '}
+          </Text>
+          <Text>
+            Mas não tem problema!{" "}
             <Link className="underline" href="/">
               Clique aqui
-            </Link>{' '}
+            </Link>{" "}
             e volte para o site!
-          </BodyText>
+          </Text>
         </div>
       </section>
     </>
