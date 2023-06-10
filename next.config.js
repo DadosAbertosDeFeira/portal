@@ -7,10 +7,6 @@ const nextConfig = {
   basePath: "",
   distDir: "out",
   output: "export",
-  // TODO: deve ser removido antes de ser mergeado na main
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
 };
 
 module.exports = () => {

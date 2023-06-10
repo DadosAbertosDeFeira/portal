@@ -1,4 +1,4 @@
-export default [
+const volunteers = [
   {
     name: "Ana Paula Gomes",
     role: "Faz-tudo",
@@ -152,6 +152,8 @@ export default [
 ].sort((person1, person2) => {
   return person1.name.localeCompare(person2.name); // Automatically alphabetize
 });
+
+export default volunteers;
 
 /* Example of Person to add in list
 {

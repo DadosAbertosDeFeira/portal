@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from 'react';
-import { MdClose, MdOpenInNew } from 'react-icons/md';
+import React, { useEffect, useRef } from "react";
+import { MdClose, MdOpenInNew } from "react-icons/md";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import Link from 'next/link';
+import Link from "next/link";
 
 /**
  * Componente do Menu Mobile
@@ -41,11 +41,11 @@ export default function MobileMenu({ handleClose }) {
         handleClose();
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('touchend', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchend", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('touchend', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchend", handleClickOutside);
     };
   }, [wrapperRef, handleClose]);
 

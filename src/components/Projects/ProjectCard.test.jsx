@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import MariaQuiteria from "../../../public/assets/maria-quiteria.png";
 
 import ProjectCard from "./ProjectCard";
@@ -18,15 +18,15 @@ describe("<ProjectCard />", () => {
   };
 
   it("renders correctly", () => {
-    const { getByText, getByAltText } = render(
-      <ProjectCard project={project} />
-    );
+    render(<ProjectCard project={project} />);
 
-    expect(getByAltText("Logo do Projeto Maria Quitéria")).toBeInTheDocument();
-    expect(getByText("Maria Quitéria")).toBeInTheDocument();
-    expect(getByText(project.description)).toBeInTheDocument();
-    expect(getByText("raspagem de dados")).toBeInTheDocument();
-    expect(getByText("busca de dados")).toBeInTheDocument();
-    expect(getByText("Link")).toBeInTheDocument();
+    expect(
+      screen.getByAltText("Logo do Projeto Maria Quitéria")
+    ).toBeInTheDocument();
+    expect(screen.getByText("Maria Quitéria")).toBeInTheDocument();
+    expect(screen.getByText(project.description)).toBeInTheDocument();
+    expect(screen.getByText("raspagem de dados")).toBeInTheDocument();
+    expect(screen.getByText("busca de dados")).toBeInTheDocument();
+    expect(screen.getByText("Link")).toBeInTheDocument();
   });
 });

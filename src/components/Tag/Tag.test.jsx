@@ -1,13 +1,15 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 import Tag from "./Tag";
 
 describe("<Tag />", () => {
   it("renders correctly", () => {
-    const { getByText } = render(<Tag>Twitter</Tag>);
+    render(<Tag>Twitter</Tag>);
 
-    expect(getByText("Twitter")).toBeInTheDocument();
+    const container = screen.getByText("Twitter");
+
+    expect(container).toBeInTheDocument();
   });
 
   it("renders correctly with className", () => {

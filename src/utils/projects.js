@@ -3,7 +3,7 @@ import BotDOU from "../../public/assets/bot-dou.png";
 import DefaultProject from "../../public/assets/default-project.jpeg";
 import CidadesAbertas from "../../public/assets/logo-cidades-abertas-podcast.png";
 
-export default [
+const projects = [
   {
     name: "Maria Quitéria",
     type: ["raspagem de dados", "busca de dados"],
@@ -82,3 +82,5 @@ export default [
   //   },
   // },
 ];
+
+export default projects;

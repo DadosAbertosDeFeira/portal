@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import SEO from "../components/SEO";
+// eslint-disable-next-line import/extensions
 import { Text } from "@/components/atoms/Text";
+import SEO from "../components/SEO";
 
 export default function Error404() {
   return (

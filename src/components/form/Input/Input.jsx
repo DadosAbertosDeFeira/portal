@@ -1,14 +1,14 @@
 /* eslint-disable react/forbid-prop-types */
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useController } from 'react-hook-form';
+import React from "react";
+import PropTypes from "prop-types";
+import { useController } from "react-hook-form";
 
-function Input({ name, label, control, rules }) {
+export default function Input({ name, label, control, rules }) {
   const { field: input, fieldState: state } = useController({
     name,
     control,
     rules,
-    defaultValue: '',
+    defaultValue: "",
   });
 
   return (

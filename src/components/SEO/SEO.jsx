@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import PropTypes from 'prop-types';
+import React from "react";
+import Head from "next/head";
+import PropTypes from "prop-types";
 
 /**
  * Componente de SEO para gerenciar o seo, titulos e metastags
@@ -35,7 +35,7 @@ export default function SEO({
   shouldIndexPage,
 }) {
   const pageTitle = `${title} ${
-    !shouldExcludeTitleSuffix ? '| Dados abertos de Feira' : ''
+    !shouldExcludeTitleSuffix ? "| Dados abertos de Feira" : ""
   }`;
   const pageImage = image
     ? `${process.env.NEXT_PUBLIC_SITE_URL}/${image}`

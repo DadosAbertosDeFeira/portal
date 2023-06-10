@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import Image from "next/image";
 
 import Link from "next/link";
+// eslint-disable-next-line import/extensions
 import { Text } from "@/components/atoms/Text";
 
 import Twitter from "../../../public/assets/icons/twitter.svg";

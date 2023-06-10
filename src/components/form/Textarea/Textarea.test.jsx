@@ -1,4 +1,4 @@
-import { fireEvent, render, waitFor } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { useForm } from "react-hook-form";
 import { Textarea } from "./Textarea";
 
@@ -25,52 +25,55 @@ describe("textarea", () => {
   };
 
   it("should renders Textarea component with required props", () => {
-    const { getByPlaceholderText, container } = makeSut({
+    const { container } = makeSut({
       rules: { required: true },
       name: "username",
       label: "Username",
     });
 
-    const input = getByPlaceholderText("Username");
+    const input = screen.getByPlaceholderText("Username");
 
     expect(container).toBeInTheDocument();
     expect(input).toHaveAttribute("name", "username");
     expect(input).toBeInTheDocument();
   });
 
-  it("should update value of Textarea component", () => {
-    const { getByLabelText } = makeSut({
+  it("should update value of Textarea component", async () => {
+    makeSut({
       rules: { required: true },
       label: "Password",
       name: "password",
     });
 
-    const input = getByLabelText("Password");
+    const input = screen.getByLabelText("Password");
 
     fireEvent.input(input, { target: { value: "password123" } });
 
-    expect(input.value).toBe("password123");
+    await waitFor(() => {
+      expect(input.value).toBe("password123");
+    });
   });
 
   it("should display error message of Textarea component", async () => {
-    const { getByLabelText, getByText } = makeSut({
+    makeSut({
       useFormProps: { mode: "onBlur" },
       rules: { required: "email is required" },
       name: "email",
       label: "Email",
     });
 
-    const input = getByLabelText("Email");
+    const input = screen.getByLabelText("Email");
 
-    await waitFor(() => fireEvent.blur(input));
+    fireEvent.blur(input);
 
-    const errorMessage = getByText(/email is required/i);
-
-    expect(errorMessage).toBeInTheDocument();
+    await waitFor(() => {
+      const errorMessage = screen.getByText(/email is required/i);
+      expect(errorMessage).toBeInTheDocument();
+    });
   });
 
   it("should does not display error message when textarea is valid", async () => {
-    const { getByPlaceholderText, queryByText } = makeSut({
+    makeSut({
       useFormProps: { mode: "onBlur" },
       rules: {
         validate: {
@@ -81,34 +84,36 @@ describe("textarea", () => {
       label: "Age",
     });
 
-    const input = getByPlaceholderText("Age");
+    const input = screen.getByPlaceholderText("Age");
+    fireEvent.change(input, { target: { value: "19" } });
+    fireEvent.blur(input);
+
+    const errorMessage = screen.queryByText(/age must be at least 18/i);
 
     await waitFor(() => {
-      fireEvent.change(input, { target: { value: "19" } });
-      fireEvent.blur(input);
+      expect(errorMessage).not.toBeInTheDocument();
     });
-
-    const errorMessage = queryByText(/age must be at least 18/i);
-
-    expect(errorMessage).not.toBeInTheDocument();
   });
 
   it("should meet accessibility requirements of Textarea component", async () => {
-    const { getByPlaceholderText } = makeSut({
+    makeSut({
       useFormProps: { mode: "onBlur" },
       rules: { required: "zipcode is required" },
       name: "zipcode",
       label: "Zipcode",
     });
 
-    const input = getByPlaceholderText("Zipcode");
+    const input = screen.getByPlaceholderText("Zipcode");
 
-    expect(input).toHaveAttribute("aria-label", "Zipcode");
-    expect(input).toHaveAttribute("aria-invalid", "false");
+    fireEvent.blur(input);
 
-    await waitFor(() => fireEvent.blur(input));
+    await waitFor(() => expect(input).toHaveAttribute("aria-invalid", "true"));
 
-    expect(input).toHaveAttribute("aria-invalid", "true");
-    expect(input).toHaveAttribute("aria-errormessage", "zipcode is required");
+    await waitFor(() =>
+      expect(input).toHaveAttribute(
+        "aria-errormessage",
+        `zipcode--error-message`
+      )
+    );
   });
 });

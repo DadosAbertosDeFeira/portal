@@ -8,7 +8,7 @@ import Netlify from "../../public/assets/netlify.svg";
 import JetBrains from "../../public/assets/jetbrains.svg";
 import MLabs from "../../public/assets/mLabs.png";
 
-export default {
+const supporters = {
   financial: [
     {
       id: "shuttleworth",
@@ -71,3 +71,5 @@ export default {
     },
   ],
 };
+
+export default supporters;

@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import VolunteersCard from ".";
 
 describe("<VolunteersCard />", () => {
@@ -15,14 +15,12 @@ describe("<VolunteersCard />", () => {
   });
 
   it("renders correctly without social network links", () => {
-    const { asFragment, queryByAltText } = render(
-      <VolunteersCard {...sharedProps} />
-    );
+    const { asFragment } = render(<VolunteersCard {...sharedProps} />);
 
-    expect(queryByAltText("Twitter icon")).not.toBeInTheDocument();
-    expect(queryByAltText("Linkedin icon")).not.toBeInTheDocument();
-    expect(queryByAltText("Instagram icon")).not.toBeInTheDocument();
-    expect(queryByAltText("Github icon")).not.toBeInTheDocument();
+    expect(screen.queryByAltText("Twitter icon")).not.toBeInTheDocument();
+    expect(screen.queryByAltText("Linkedin icon")).not.toBeInTheDocument();
+    expect(screen.queryByAltText("Instagram icon")).not.toBeInTheDocument();
+    expect(screen.queryByAltText("Github icon")).not.toBeInTheDocument();
     expect(asFragment()).toMatchSnapshot();
   });
 
@@ -34,14 +32,12 @@ describe("<VolunteersCard />", () => {
       instagram: "scoobydoo_detective",
       linkedin: "scoobydoo_engineer",
     };
-    const { asFragment, queryByAltText } = render(
-      <VolunteersCard {...props} />
-    );
+    const { asFragment } = render(<VolunteersCard {...props} />);
 
-    expect(queryByAltText("Twitter icon")).toBeInTheDocument();
-    expect(queryByAltText("Linkedin icon")).toBeInTheDocument();
-    expect(queryByAltText("Instagram icon")).toBeInTheDocument();
-    expect(queryByAltText("Github icon")).toBeInTheDocument();
+    expect(screen.getByAltText("Twitter icon")).toBeInTheDocument();
+    expect(screen.getByAltText("Linkedin icon")).toBeInTheDocument();
+    expect(screen.getByAltText("Instagram icon")).toBeInTheDocument();
+    expect(screen.getByAltText("Github icon")).toBeInTheDocument();
     expect(asFragment()).toMatchSnapshot();
   });
 });

@@ -1,13 +1,13 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 import Projects from "./Projects";
 
 describe("<Projects />", () => {
   it("renders correctly", () => {
-    const { getByText } = render(<Projects />);
+    render(<Projects />);
 
-    expect(getByText("Projetos")).toBeInTheDocument();
-    expect(getByText("Maria Quitéria")).toBeInTheDocument();
+    expect(screen.getByText("Projetos")).toBeInTheDocument();
+    expect(screen.getByText("Maria Quitéria")).toBeInTheDocument();
   });
 });
