@@ -1,11 +1,11 @@
-import type { Control, FieldValues } from "react-hook-form";
+import type { Control } from "react-hook-form";
 import { useController } from "react-hook-form";
 
 export interface InputProps {
   name: string;
   label?: string;
   defaultValue?: string;
-  control: Control<FieldValues>;
+  control: Control<any>;
   rules: Partial<{
     validate: {
       [k: string]: (v: string) => string | boolean;

@@ -1,11 +1,12 @@
+import type { ComponentPropsWithoutRef } from "react";
 import React from "react";
-import { type Control, type FieldValues, useController } from "react-hook-form";
+import { type Control, useController } from "react-hook-form";
 
-export interface TextareaProps {
+export interface TextareaProps extends ComponentPropsWithoutRef<"textarea"> {
   name: string;
   label?: string;
   defaultValue?: string;
-  control: Control<FieldValues>;
+  control: Control<any>;
   rules: Partial<{
     validate: {
       [k: string]: (v: string) => string | boolean;
@@ -20,6 +21,7 @@ export function Textarea({
   label,
   control,
   rules,
+  ...props
 }: TextareaProps) {
   const { field: input, fieldState: state } = useController({
     name,
@@ -37,6 +39,7 @@ export function Textarea({
         aria-errormessage={`${name}--error-message`}
         aria-invalid={state.invalid}
         aria-label={label}
+        {...props}
         {...input}
       />
 

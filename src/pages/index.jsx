@@ -1,8 +1,8 @@
+/* eslint-disable import/extensions */
 import Image from "next/image";
 
-// eslint-disable-next-line import/extensions
 import { Text } from "@/components/atoms/Text";
-import ContactForm from "../components/ContactForm";
+import { ContactForm } from "../components/organisms/ContactForm";
 import HowContribute from "../components/HowContribute";
 import SocialContactButtons from "../components/SocialContactButtons";
 import Projects from "../components/Projects";

@@ -1,15 +1,20 @@
-/* eslint-disable import/extensions */
+import { Button } from "atoms/Button";
+import { Input } from "atoms/Input";
+import { Textarea } from "atoms/Textarea";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-import { Button } from "../atoms/Button";
-import { Input } from "../atoms/Input";
-import { Textarea } from "../atoms/Textarea";
 
-import validations from "../../utils/validations/validations";
+import validations from "@/utils/validations/validations";
 
-const ContactForm = () => {
-  const form = useForm({
+export interface ContactFormModel {
+  name: string;
+  email: string;
+  message: string;
+}
+
+export function ContactForm() {
+  const form = useForm<ContactFormModel>({
     mode: "onSubmit",
     shouldUseNativeValidation: true,
     defaultValues: {
@@ -19,7 +24,7 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: ContactFormModel) => {
     const response = fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -69,6 +74,4 @@ const ContactForm = () => {
       </Button>
     </form>
   );
-};
-
-export default ContactForm;
+}
