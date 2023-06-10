@@ -20,6 +20,14 @@ describe("Button", () => {
     return render(<Button {...props}>{children}</Button>);
   };
 
+  it("should render children", async () => {
+    makeSut({ children: "Naruto" });
+
+    const children = screen.queryByText("Naruto");
+
+    expect(children).toBeInTheDocument();
+  });
+
   it("should call onClick when click in button", async () => {
     const onClick = jest.fn();
 

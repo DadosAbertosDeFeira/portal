@@ -10,7 +10,7 @@ export interface ButtonProps extends ComponentPropsWithRef<"button"> {
 }
 
 export const Button = forwardRef(function Button(
-  { type = "button", variant, className, ...props }: ButtonProps,
+  { type = "button", variant, className, children, ...props }: ButtonProps,
   ref: ForwardedRef<HTMLButtonElement>
 ) {
   return (
@@ -25,7 +25,7 @@ export const Button = forwardRef(function Button(
       {...props}
       ref={ref}
     >
-      Button
+      {children}
     </button>
   );
 });
