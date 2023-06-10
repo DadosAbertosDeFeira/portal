@@ -35,6 +35,7 @@ module.exports = {
         "react/jsx-props-no-spreading": "off", // _app.tsx uses spread operator and also, react-hook-form
         "react-hooks/exhaustive-deps": "off", // Incorrectly report needed dependency with Next.js router
         "react/jsx-one-expression-per-line": "off",
+        "react/button-has-type": "off",
         "@typescript-eslint/consistent-type-imports": "error", // Ensure `import type` is used when it's necessary
         "no-restricted-syntax": [
           "error",

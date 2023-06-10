@@ -5,7 +5,7 @@ exports[`Button renders correctly outline button 1`] = `
   class="font-semibold p-3 rounded transition ease-in-out flex justify-center items-center border border-primary-dark text-primary-dark"
   type="button"
 >
-  Click me
+  Button
 </button>
 `;
 
@@ -15,7 +15,7 @@ exports[`Button renders correctly with default properties 1`] = `
     class="font-semibold p-3 rounded transition ease-in-out flex justify-center items-center"
     type="button"
   >
-    Click me
+    Button
   </button>
 </DocumentFragment>
 `;
