@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Header from '../components/Header';
-import SEO from '../components/SEO';
+import React from "react";
+import PropTypes from "prop-types";
+import Header from "../components/Header";
+import SEO from "../components/SEO";
 
 export default function Layout({ children }) {
   return (

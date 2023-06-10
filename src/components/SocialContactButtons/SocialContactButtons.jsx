@@ -1,15 +1,15 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
-import Twitter from '../../../public/assets/icons/twitter.svg';
-import Facebook from '../../../public/assets/icons/facebook.svg';
-import Instagram from '../../../public/assets/icons/instagram.svg';
-import Github from '../../../public/assets/icons/github.svg';
+import Twitter from "../../../public/assets/icons/twitter.svg";
+import Facebook from "../../../public/assets/icons/facebook.svg";
+import Instagram from "../../../public/assets/icons/instagram.svg";
+import Github from "../../../public/assets/icons/github.svg";
 
 const SocialContactButtons = () => {
   const handleClick = (event) => {
     const { url } = event.currentTarget.dataset;
-    window.open(url, '_blank').focus();
+    window.open(url, "_blank").focus();
   };
 
   return (

@@ -1,15 +1,15 @@
-import Image from 'next/image';
+import Image from "next/image";
 
-import ContactForm from '../components/ContactForm';
-import HowContribute from '../components/HowContribute';
-import SocialContactButtons from '../components/SocialContactButtons';
-import Projects from '../components/Projects';
-import Volunteers from '../components/Volunteers';
+import ContactForm from "../components/ContactForm";
+import HowContribute from "../components/HowContribute";
+import SocialContactButtons from "../components/SocialContactButtons";
+import Projects from "../components/Projects";
+import Volunteers from "../components/Volunteers";
 
-import BodyText from '../components/BodyText';
-import Supporters from '../components/Supporters';
-import PeopleRight from '../../public/assets/peoples-right.svg';
-import Book from '../../public/assets/icons/book.svg';
+import BodyText from "../components/BodyText";
+import Supporters from "../components/Supporters";
+import PeopleRight from "../../public/assets/peoples-right.svg";
+import Book from "../../public/assets/icons/book.svg";
 
 export default function Home() {
   return (
@@ -57,7 +57,7 @@ export default function Home() {
             programadora Ana Paula Gomes tentou encontrar informações sobre
             quanto o município gastava com a merenda escolar. O interesse surgiu
             após ouvir uma denúncia feita por Rafael Velame no rádio sobre a
-            falta de merenda em algumas escolas da cidade. Ao acessar o{' '}
+            falta de merenda em algumas escolas da cidade. Ao acessar o{" "}
             <a
               className="underline"
               href="http://www.transparencia.feiradesantana.ba.gov.br/"
@@ -65,8 +65,8 @@ export default function Home() {
               rel="noreferrer"
             >
               portal da transparência de Feira de Santana
-            </a>{' '}
-            deparou-se com a dificuldade de fazer buscas na{' '}
+            </a>{" "}
+            deparou-se com a dificuldade de fazer buscas na{" "}
             <a
               className="underline"
               href="http://www.transparencia.feiradesantana.ba.gov.br/index.php?view=licitacoes"
@@ -93,7 +93,7 @@ export default function Home() {
             - também sem respostas. Após meses de espera foi necessário acionar
             o Ministério Público da Bahia para intermediar o processo e, a
             partir daí, o projeto ganhou projeção nas mídias locais, como BATV
-            da TV Subaé,{' '}
+            da TV Subaé,{" "}
             <a
               className="underline"
               href="https://www.acordacidade.com.br/noticias/222557/programadora-encontra-dificuldades-para-obter-informacoes-sobre-a-atuacao-dos-vereadores-de-feira.html"
@@ -102,7 +102,7 @@ export default function Home() {
             >
               Acorda Cidade
             </a>
-            ,{' '}
+            ,{" "}
             <a
               className="underline"
               href="https://www.blogdovelame.com/presidente-reconhece-falta-de-transparencia-e-promete-divulgar-dados/"
@@ -111,7 +111,7 @@ export default function Home() {
             >
               Blog do Velame
             </a>
-            , além de diversas participações nos programas da{' '}
+            , além de diversas participações nos programas da{" "}
             <a
               className="underline"
               href="https://www.facebook.com/blogdovelame/videos/750921745431854/"

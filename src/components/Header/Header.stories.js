@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 import {
   INITIAL_VIEWPORTS,
   MINIMAL_VIEWPORTS,
-} from '@storybook/addon-viewport';
+} from "@storybook/addon-viewport";
 
-import Header from '.';
+import Header from ".";
 
 export default {
-  title: 'Components/Header',
+  title: "Components/Header",
   component: Header,
   parameters: {
     viewport: {
@@ -15,7 +15,7 @@ export default {
         ...INITIAL_VIEWPORTS,
         ...MINIMAL_VIEWPORTS,
       },
-      defaultViewport: 'responsive',
+      defaultViewport: "responsive",
     },
     docs: {
       inlineStories: false,
