@@ -3,7 +3,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "atoms/*": ["src/components/atoms/*"]
+      "atoms/*": ["src/components/atoms/*"],
+      "molecules/*": ["src/components/molecules/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

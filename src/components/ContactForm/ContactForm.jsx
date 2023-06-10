@@ -3,8 +3,8 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { Button } from "../atoms/Button";
-import { Input } from "../atoms/Input";
-import { Textarea } from "../atoms/Textarea";
+import { Input } from "../molecules/Input";
+import { Textarea } from "../molecules/Textarea";
 
 import validations from "../../utils/validations/validations";
 
