@@ -9,8 +9,8 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 /** @type {import('jest').Config} */
 const config = {
+  rootDir: ".",
   // Add more setup options before each test is run
-  // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   setupFilesAfterEnv: [
     "@testing-library/jest-dom/extend-expect",
     "./setup-jest.ts",
@@ -20,10 +20,7 @@ const config = {
   coverageDirectory: "./coverage/",
   coveragePathIgnorePatterns: ["node_modules", "coverage"],
   coverageReporters: ["text-summary"],
-  collectCoverageFrom: [
-    "src/components/**/*.{tsx}",
-    "!<rootDir>/node_modules/",
-  ],
+  collectCoverageFrom: ["src/components/**/*.tsx", "!<rootDir>/node_modules/"],
   coverageThreshold: {
     global: {
       lines: 80,
@@ -31,7 +28,7 @@ const config = {
       functions: 80,
       statements: 80,
     },
-    "src/**/*.{tsx}": {
+    "src/**/*.tsx": {
       lines: 80,
       branches: 80,
       functions: 80,
