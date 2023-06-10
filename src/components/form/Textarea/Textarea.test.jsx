@@ -1,13 +1,13 @@
-import { fireEvent, render, waitFor } from '@testing-library/react';
-import { useForm } from 'react-hook-form';
-import { Textarea } from './Textarea';
+import { fireEvent, render, waitFor } from "@testing-library/react";
+import { useForm } from "react-hook-form";
+import { Textarea } from "./Textarea";
 
-describe('textarea', () => {
+describe("textarea", () => {
   const makeSut = ({
     useFormProps,
     rules,
-    name = 'textarea',
-    label = 'textarea',
+    name = "textarea",
+    label = "textarea",
   }) => {
     const App = () => {
       const form = useForm(useFormProps);
@@ -24,43 +24,43 @@ describe('textarea', () => {
     return render(<App />);
   };
 
-  it('should renders Textarea component with required props', () => {
+  it("should renders Textarea component with required props", () => {
     const { getByPlaceholderText, container } = makeSut({
       rules: { required: true },
-      name: 'username',
-      label: 'Username',
+      name: "username",
+      label: "Username",
     });
 
-    const input = getByPlaceholderText('Username');
+    const input = getByPlaceholderText("Username");
 
     expect(container).toBeInTheDocument();
-    expect(input).toHaveAttribute('name', 'username');
+    expect(input).toHaveAttribute("name", "username");
     expect(input).toBeInTheDocument();
   });
 
-  it('should update value of Textarea component', () => {
+  it("should update value of Textarea component", () => {
     const { getByLabelText } = makeSut({
       rules: { required: true },
-      label: 'Password',
-      name: 'password',
+      label: "Password",
+      name: "password",
     });
 
-    const input = getByLabelText('Password');
+    const input = getByLabelText("Password");
 
-    fireEvent.input(input, { target: { value: 'password123' } });
+    fireEvent.input(input, { target: { value: "password123" } });
 
-    expect(input.value).toBe('password123');
+    expect(input.value).toBe("password123");
   });
 
-  it('should display error message of Textarea component', async () => {
+  it("should display error message of Textarea component", async () => {
     const { getByLabelText, getByText } = makeSut({
-      useFormProps: { mode: 'onBlur' },
-      rules: { required: 'email is required' },
-      name: 'email',
-      label: 'Email',
+      useFormProps: { mode: "onBlur" },
+      rules: { required: "email is required" },
+      name: "email",
+      label: "Email",
     });
 
-    const input = getByLabelText('Email');
+    const input = getByLabelText("Email");
 
     await waitFor(() => fireEvent.blur(input));
 
@@ -69,22 +69,22 @@ describe('textarea', () => {
     expect(errorMessage).toBeInTheDocument();
   });
 
-  it('should does not display error message when textarea is valid', async () => {
+  it("should does not display error message when textarea is valid", async () => {
     const { getByPlaceholderText, queryByText } = makeSut({
-      useFormProps: { mode: 'onBlur' },
+      useFormProps: { mode: "onBlur" },
       rules: {
         validate: {
-          min: (v) => parseInt(v, 10) >= 18 || 'age must be at least 18',
+          min: (v) => parseInt(v, 10) >= 18 || "age must be at least 18",
         },
       },
-      name: 'age',
-      label: 'Age',
+      name: "age",
+      label: "Age",
     });
 
-    const input = getByPlaceholderText('Age');
+    const input = getByPlaceholderText("Age");
 
     await waitFor(() => {
-      fireEvent.change(input, { target: { value: '19' } });
+      fireEvent.change(input, { target: { value: "19" } });
       fireEvent.blur(input);
     });
 
@@ -93,22 +93,22 @@ describe('textarea', () => {
     expect(errorMessage).not.toBeInTheDocument();
   });
 
-  it('should meet accessibility requirements of Textarea component', async () => {
+  it("should meet accessibility requirements of Textarea component", async () => {
     const { getByPlaceholderText } = makeSut({
-      useFormProps: { mode: 'onBlur' },
-      rules: { required: 'zipcode is required' },
-      name: 'zipcode',
-      label: 'Zipcode',
+      useFormProps: { mode: "onBlur" },
+      rules: { required: "zipcode is required" },
+      name: "zipcode",
+      label: "Zipcode",
     });
 
-    const input = getByPlaceholderText('Zipcode');
+    const input = getByPlaceholderText("Zipcode");
 
-    expect(input).toHaveAttribute('aria-label', 'Zipcode');
-    expect(input).toHaveAttribute('aria-invalid', 'false');
+    expect(input).toHaveAttribute("aria-label", "Zipcode");
+    expect(input).toHaveAttribute("aria-invalid", "false");
 
     await waitFor(() => fireEvent.blur(input));
 
-    expect(input).toHaveAttribute('aria-invalid', 'true');
-    expect(input).toHaveAttribute('aria-errormessage', 'zipcode is required');
+    expect(input).toHaveAttribute("aria-invalid", "true");
+    expect(input).toHaveAttribute("aria-errormessage", "zipcode is required");
   });
 });

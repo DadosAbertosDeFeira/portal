@@ -1,1 +1,1 @@
-export { default } from './HowContribute';
+export { default } from "./HowContribute";

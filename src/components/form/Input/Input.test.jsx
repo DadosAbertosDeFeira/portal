@@ -1,13 +1,13 @@
-import { fireEvent, render, waitFor } from '@testing-library/react';
-import { useForm } from 'react-hook-form';
-import { Input } from './Input';
+import { fireEvent, render, waitFor } from "@testing-library/react";
+import { useForm } from "react-hook-form";
+import { Input } from "./Input";
 
-describe('input', () => {
+describe("input", () => {
   const makeSut = ({
     useFormProps,
     rules,
-    name = 'input',
-    label = 'input',
+    name = "input",
+    label = "input",
   }) => {
     const App = () => {
       const form = useForm(useFormProps);
@@ -19,42 +19,42 @@ describe('input', () => {
     return render(<App />);
   };
 
-  it('should renders Input component with required props', () => {
+  it("should renders Input component with required props", () => {
     const { getByPlaceholderText, container } = makeSut({
-      name: 'username',
-      label: 'Username',
+      name: "username",
+      label: "Username",
     });
 
-    const input = getByPlaceholderText('Username');
+    const input = getByPlaceholderText("Username");
 
     expect(container).toBeInTheDocument();
-    expect(input).toHaveAttribute('name', 'username');
+    expect(input).toHaveAttribute("name", "username");
     expect(input).toBeInTheDocument();
   });
 
-  it('should update value of Input component', () => {
+  it("should update value of Input component", () => {
     const { getByLabelText } = makeSut({
-      name: 'password',
-      label: 'Password',
+      name: "password",
+      label: "Password",
       rules: { required: true },
     });
 
-    const input = getByLabelText('Password');
+    const input = getByLabelText("Password");
 
-    fireEvent.input(input, { target: { value: 'password123' } });
+    fireEvent.input(input, { target: { value: "password123" } });
 
-    expect(input.value).toBe('password123');
+    expect(input.value).toBe("password123");
   });
 
-  it('should display error message of Input component', async () => {
+  it("should display error message of Input component", async () => {
     const { getByLabelText, getByText } = makeSut({
-      name: 'email',
-      label: 'Email',
-      rules: { required: 'email is required' },
-      useFormProps: { mode: 'onBlur' },
+      name: "email",
+      label: "Email",
+      rules: { required: "email is required" },
+      useFormProps: { mode: "onBlur" },
     });
 
-    const input = getByLabelText('Email');
+    const input = getByLabelText("Email");
 
     await waitFor(() => fireEvent.blur(input));
 
@@ -63,21 +63,21 @@ describe('input', () => {
     expect(errorMessage).toBeInTheDocument();
   });
 
-  it('should does not display error message when input is valid', async () => {
+  it("should does not display error message when input is valid", async () => {
     const { getByPlaceholderText, queryByText } = makeSut({
-      name: 'age',
-      label: 'Age',
+      name: "age",
+      label: "Age",
       rules: {
         validate: {
-          min: (v) => parseInt(v, 10) >= 18 || 'age must be at least 18',
+          min: (v) => parseInt(v, 10) >= 18 || "age must be at least 18",
         },
       },
     });
 
-    const input = getByPlaceholderText('Age');
+    const input = getByPlaceholderText("Age");
 
     await waitFor(() => {
-      fireEvent.change(input, { target: { value: '19' } });
+      fireEvent.change(input, { target: { value: "19" } });
       fireEvent.blur(input);
     });
 
@@ -86,22 +86,22 @@ describe('input', () => {
     expect(errorMessage).not.toBeInTheDocument();
   });
 
-  it('should meet accessibility requirements of Input component', async () => {
+  it("should meet accessibility requirements of Input component", async () => {
     const { getByPlaceholderText } = makeSut({
-      name: 'zipcode',
-      label: 'Zipcode',
-      rules: { required: 'zipcode is required' },
-      useFormProps: { mode: 'onBlur' },
+      name: "zipcode",
+      label: "Zipcode",
+      rules: { required: "zipcode is required" },
+      useFormProps: { mode: "onBlur" },
     });
 
-    const input = getByPlaceholderText('Zipcode');
+    const input = getByPlaceholderText("Zipcode");
 
-    expect(input).toHaveAttribute('aria-label', 'Zipcode');
-    expect(input).toHaveAttribute('aria-invalid', 'false');
+    expect(input).toHaveAttribute("aria-label", "Zipcode");
+    expect(input).toHaveAttribute("aria-invalid", "false");
 
     await waitFor(() => fireEvent.blur(input));
 
-    expect(input).toHaveAttribute('aria-invalid', 'true');
-    expect(input).toHaveAttribute('aria-errormessage', 'zipcode is required');
+    expect(input).toHaveAttribute("aria-invalid", "true");
+    expect(input).toHaveAttribute("aria-errormessage", "zipcode is required");
   });
 });
