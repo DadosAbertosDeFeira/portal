@@ -1,0 +1,10 @@
+out
+node_modules
+coverage
+.next
+.github
+yarn.lock
+.git
+.husky
+.vscode
+.swc

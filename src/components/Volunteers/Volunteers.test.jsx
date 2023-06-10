@@ -1,13 +1,15 @@
-import React from 'react';
-import { render } from '@testing-library/react';
+import React from "react";
+import { render, screen } from "@testing-library/react";
 
-import Volunteers from './Volunteers';
+import Volunteers from "./Volunteers";
 
-describe('<Volunteers />', () => {
-  it('renders correctly the component', () => {
-    const { asFragment, getByText } = render(<Volunteers />);
+describe("<Volunteers />", () => {
+  it("renders correctly the component", () => {
+    const { asFragment } = render(<Volunteers />);
 
-    expect(getByText('Voluntários')).toBeInTheDocument();
+    const container = screen.getByText("Voluntários");
+    expect(container).toBeInTheDocument();
+
     expect(asFragment()).toMatchSnapshot();
   });
 });

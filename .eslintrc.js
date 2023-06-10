@@ -6,7 +6,7 @@ module.exports = {
     "plugin:prettier/recommended",
   ],
   overrides: [
-    // Configuration for TypeScript files
+    // Configuration for Javascript/TypeScript files
     {
       files: ["**/*.ts", "**/*.tsx"],
       plugins: [
@@ -43,6 +43,7 @@ module.exports = {
           "WithStatement",
         ], // Overrides Airbnb configuration and enable no-restricted-syntax
         "import/prefer-default-export": "off", // Named export is easier to refactor automatically
+        "import/no-default-export": "error",
         "simple-import-sort/imports": "error", // Import configuration for `eslint-plugin-simple-import-sort`
         "simple-import-sort/exports": "error", // Export configuration for `eslint-plugin-simple-import-sort`
         "@typescript-eslint/no-unused-vars": "off",

@@ -1,34 +1,33 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { GA_TRACKING_ID } from '../lib/gtag';
+import { Html, Head, Main, NextScript } from "next/document";
+import { GA_TRACKING_ID } from "../lib/gtag";
 
-export default class MyDocument extends Document {
-  render() {
-    return (
-      <Html lang="pt">
-        <Head>
-          <meta charSet="utf-8" />
-          <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+function MyDocument() {
+  return (
+    <Html lang="pt">
+      <Head>
+        <meta charSet="utf-8" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossOrigin="true"
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
-            rel="stylesheet"
-          />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        />
 
-          {/* Google Analytics */}
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          />
-          <script
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{
-              __html: `
+        {/* Google Analytics */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+        />
+        <script
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{
+            __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -36,14 +35,14 @@ export default class MyDocument extends Document {
               page_path: window.location.pathname,
             });
           `,
-            }}
-          />
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
+          }}
+        />
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  );
 }
+export default MyDocument;

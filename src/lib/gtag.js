@@ -20,7 +20,7 @@ export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
  * ```
  */
 export const pageview = (url) => {
-  window.gtag('config', GA_TRACKING_ID, {
+  window.gtag("config", GA_TRACKING_ID, {
     page_path: url,
   });
 };
@@ -52,7 +52,7 @@ export const pageview = (url) => {
  * ```
  */
 export const event = (action, label, ...rest) => {
-  window.gtag('event', action, {
+  window.gtag("event", action, {
     event_name: action,
     event_label: label,
     ...rest,

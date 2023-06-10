@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
-import SEO from '../components/SEO';
-import BodyText from '../components/BodyText';
+import SEO from "../components/SEO";
+import BodyText from "../components/BodyText";
 
 export default function Error404() {
   return (
@@ -23,10 +23,10 @@ export default function Error404() {
             foi movida.
           </BodyText>
           <BodyText>
-            Mas não tem problema!{' '}
+            Mas não tem problema!{" "}
             <Link className="underline" href="/">
               Clique aqui
-            </Link>{' '}
+            </Link>{" "}
             e volte para o site!
           </BodyText>
         </div>
