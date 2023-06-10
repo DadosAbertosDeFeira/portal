@@ -1,11 +1,11 @@
 import React from "react";
-import { type Control, type FieldValues, useController } from "react-hook-form";
+import { type Control, useController } from "react-hook-form";
 
 export interface TextareaProps {
   name: string;
   label?: string;
   defaultValue?: string;
-  control: Control<FieldValues>;
+  control: Control<any>;
   rules: Partial<{
     validate: {
       [k: string]: (v: string) => string | boolean;
