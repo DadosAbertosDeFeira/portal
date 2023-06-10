@@ -4,6 +4,7 @@
     "paths": {
       "@/*": ["src/*"],
       "atoms/*": ["src/components/atoms/*"],
+      "molecules/*": ["src/components/molecules/*"],
       "organisms/*": ["src/components/organisms/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
