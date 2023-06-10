@@ -1,11 +1,12 @@
-/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable import/extensions */
 import React from "react";
-import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
-import { Input } from "../form/Input/Input";
-import { Textarea } from "../form/Textarea/Textarea";
+import { toast } from "react-toastify";
+import { Button } from "../atoms/Button";
+import { Input } from "../atoms/Input";
+import { Textarea } from "../atoms/Textarea";
+
 import validations from "../../utils/validations/validations";
-import { Button } from "../Button";
 
 const ContactForm = () => {
   const form = useForm({
@@ -40,7 +41,7 @@ const ContactForm = () => {
 
   return (
     <form
-      className="flex flex-col w-full gap-y-4"
+      className="flex w-full flex-col gap-y-4"
       onSubmit={form.handleSubmit(onSubmit)}
     >
       <h1 className="text-2xl">Fale conosco</h1>

@@ -1,14 +1,17 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import type { UseFormProps } from "react-hook-form";
 import { useForm } from "react-hook-form";
+
+import type { TextareaProps } from "./Textarea";
 import { Textarea } from "./Textarea";
 
 describe("textarea", () => {
   const makeSut = ({
     useFormProps,
-    rules,
+    rules = {},
     name = "textarea",
     label = "textarea",
-  }) => {
+  }: Partial<TextareaProps & { useFormProps: UseFormProps }>) => {
     const App = () => {
       const form = useForm(useFormProps);
       return (
@@ -45,7 +48,7 @@ describe("textarea", () => {
       name: "password",
     });
 
-    const input = screen.getByLabelText("Password");
+    const input = screen.getByLabelText<HTMLTextAreaElement>("Password");
 
     fireEvent.input(input, { target: { value: "password123" } });
 

@@ -1,14 +1,17 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import type { UseFormProps } from "react-hook-form";
 import { useForm } from "react-hook-form";
+
+import type { InputProps } from "./Input";
 import { Input } from "./Input";
 
 describe("input", () => {
   const makeSut = ({
     useFormProps,
-    rules,
+    rules = {},
     name = "input",
     label = "input",
-  }) => {
+  }: Partial<InputProps & { useFormProps: UseFormProps }>) => {
     const App = () => {
       const form = useForm(useFormProps);
       return (
@@ -39,7 +42,7 @@ describe("input", () => {
       rules: { required: true },
     });
 
-    const input = screen.getByLabelText("Password");
+    const input = screen.getByLabelText<HTMLInputElement>("Password");
 
     fireEvent.input(input, { target: { value: "password123" } });
 
