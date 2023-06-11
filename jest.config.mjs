@@ -9,10 +9,12 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 /** @type {import('jest').Config} */
 const config = {
-  // Add more setup options before each test is run
-  // setupFilesAfterEnv: ['<rootDir>/jest.setup.js']
   rootDir: ".",
-  setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"],
+  // Add more setup options before each test is run
+  setupFilesAfterEnv: [
+    "@testing-library/jest-dom/extend-expect",
+    "./setup-jest.ts",
+  ],
   testEnvironment: "jest-environment-jsdom",
   testMatch: ["<rootDir>/src/components/**/*.test.{ts,tsx}"],
   coverageDirectory: "./coverage/",

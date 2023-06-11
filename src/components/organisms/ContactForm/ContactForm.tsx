@@ -1,5 +1,5 @@
-import { Button } from "atoms/Button";
 import { Input } from "molecules/Input";
+import { StyledButton } from "molecules/StyledButton";
 import { Textarea } from "molecules/Textarea";
 import React from "react";
 import { useForm } from "react-hook-form";
@@ -69,9 +69,9 @@ export function ContactForm() {
         rows={3}
         rules={{ required: "Esse campo é obrigatório." }}
       />
-      <Button type="submit" variant="outline">
+      <StyledButton type="submit" variant="outline">
         Enviar
-      </Button>
+      </StyledButton>
     </form>
   );
 }
