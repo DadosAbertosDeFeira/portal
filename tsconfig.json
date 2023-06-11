@@ -2,9 +2,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
       "atoms/*": ["src/components/atoms/*"],
-      "molecules/*": ["src/components/molecules/*"]
+      "molecules/*": ["src/components/molecules/*"],
+      "organisms/*": ["src/components/organisms/*"],
+      "models/*": ["src/utils/models/*"],
+      "public/*": ["public"],
+      "@/*": ["src/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
