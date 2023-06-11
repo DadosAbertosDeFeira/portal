@@ -1,22 +1,27 @@
 /* eslint-disable import/extensions */
 import Image from "next/image";
+import type { ReactElement } from "react";
 
 import { Text } from "@/components/atoms/Text";
-import { ContactForm } from "../components/organisms/ContactForm";
-import HowContribute from "../components/HowContribute";
-import SocialContactButtons from "../components/SocialContactButtons";
-import Projects from "../components/Projects";
-import Volunteers from "../components/Volunteers";
+import { HeaderLayout } from "@/layouts/HeaderLayout";
+import { SeoLayout } from "@/layouts/SeoLayout";
 
-import Supporters from "../components/Supporters";
-import PeopleRight from "../../public/assets/peoples-right.svg";
 import Book from "../../public/assets/icons/book.svg";
+import PeopleRight from "../../public/assets/peoples-right.svg";
+import HowContribute from "../components/HowContribute";
+import { ContactForm } from "../components/organisms/ContactForm";
+import Projects from "../components/Projects";
+import SocialContactButtons from "../components/SocialContactButtons";
+import Supporters from "../components/Supporters";
+import Volunteers from "../components/Volunteers";
+import type { NextPageWithLayout } from "./_app";
 
-export default function Home() {
+// eslint-disable-next-line import/no-default-export
+const Home: NextPageWithLayout = () => {
   return (
     <>
-      <section className="bg-no-repeat bg-bottom bg-cover bg-city-pattern flex flex-col tablet:flex-row">
-        <div className="flex-grow flex justify-end tablet:items-start tablet:order-last">
+      <section className="flex flex-col bg-city-pattern bg-cover bg-bottom bg-no-repeat tablet:flex-row">
+        <div className="flex grow justify-end tablet:order-last tablet:items-start">
           <Image
             className="w-1/2 min-w-5xl sm:w-[600px]"
             src={PeopleRight}
@@ -26,7 +31,7 @@ export default function Home() {
             priority
           />
         </div>
-        <div className="text-center pl-md tablet:pl-xl desktop:pl-4xl large-desktop:pl-5xl desktop:w-1/2 tablet:pr-5 tablet:py-48 desktop:pt-64 desktop:text-left">
+        <div className="pl-md text-center tablet:py-48 tablet:pl-xl tablet:pr-5 desktop:w-1/2 desktop:pl-4xl desktop:pt-64 desktop:text-left large-desktop:pl-5xl">
           <h1>Mais transparência em Feira de Santana</h1>
           <Text className="py-5">
             Nós, cidadãos, temos o direito a informação de forma clara e
@@ -34,9 +39,9 @@ export default function Home() {
             <br />
             <strong>Junte-se a nós e faça a diferença!</strong>
           </Text>
-          <div className="flex place-content-center large-desktop:place-content-start py-5">
+          <div className="flex place-content-center py-5 large-desktop:place-content-start">
             <a
-              className="bg-primary-dark text-white rounded p-3 px-9 font-semibold "
+              className="rounded bg-primary-dark p-3 px-9 font-semibold text-white "
               href="https://mq.dadosabertosdefeira.com.br/painel/"
             >
               Consultar a base de dados
@@ -47,9 +52,9 @@ export default function Home() {
 
       <section
         id="sobre"
-        className="flex flex-col place-items-center p-16 gap-7"
+        className="flex flex-col place-items-center gap-7 p-16"
       >
-        <Image className="m-auto w-24 h-24" src={Book} alt="Livro" />
+        <Image className="m-auto h-24 w-24" src={Book} alt="Livro" />
         <h2>Nossa História</h2>
         <div className="flex flex-col gap-y-6 text-center font-medium">
           <Text>
@@ -139,35 +144,35 @@ export default function Home() {
         <Supporters />
       </section>
 
-      <section id="voluntarios" className="bg-white p-32 xl:py-16 xl:px-4">
+      <section id="voluntarios" className="bg-white p-32 xl:px-4 xl:py-16">
         <Volunteers />
       </section>
 
       <section
         id="projetos"
-        className="tablet:space-x-md pt-2xl tablet:p-2xl flex justify-center"
+        className="flex justify-center pt-2xl tablet:space-x-md tablet:p-2xl"
       >
         <Projects />
       </section>
 
-      <section id="colabore" className="py-2xl px-lg tablet:px-2xl">
+      <section id="colabore" className="px-lg py-2xl tablet:px-2xl">
         <HowContribute />
       </section>
 
       <section id="contato" className="border-t-2 pt-2xl tablet:space-x-md">
         <div className="flex flex-col justify-center tablet:flex-row">
-          <div className="text-center tablet:max-w-1/2 tablet:m-md tablet:text-left">
+          <div className="tablet:max-w-1/2 text-center tablet:m-md tablet:text-left">
             <h2>Contato</h2>
-            <div className="flex flex-col desktop:flex-row my-lg w-full space-y-md desktop:space-y-0">
+            <div className="my-lg flex w-full flex-col space-y-md desktop:flex-row desktop:space-y-0">
               <iframe
                 title="Feira de Santana"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124770.06894749572!2d-39.00227599729459!3d-12.243901565793168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71439dbd0766da9%3A0xed4d58d8df9d5ffe!2sFeira%20de%20Santana%20-%20Maria%20Quit%C3%A9ria%2C%20Feira%20de%20Santana%20-%20BA!5e0!3m2!1spt-BR!2sbr!4v1624460355068!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="212px"
-                allowFullScreen=""
+                allowFullScreen
                 loading="lazy"
               />
-              <div className="flex flex-col mx-xl text-xs sm:text-base">
+              <div className="mx-xl flex flex-col text-xs sm:text-base">
                 <h3>Feira de Santana</h3>
                 <a href="mailto:dadosabertosdefeira+site@gmail.com">
                   contato@dadosabertosdefeira.com.br
@@ -176,14 +181,31 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center tablet:m-md tablet:w-80 tablet:items-start mx-4">
+          <div className="mx-4 flex flex-col items-center tablet:m-md tablet:w-80 tablet:items-start">
             <ContactForm />
           </div>
         </div>
-        <div className="text-center m-xl">
+        <div className="m-xl text-center">
           <span>© 2021 Todos os Direitos Reservados</span>
         </div>
       </section>
     </>
   );
-}
+};
+
+Home.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <HeaderLayout>
+      <SeoLayout
+        title="Dados Abertos de Feira"
+        image="assets/dadosabertosdefeira.png"
+        suffix
+      >
+        {page}
+      </SeoLayout>
+    </HeaderLayout>
+  );
+};
+
+// eslint-disable-next-line import/no-default-export
+export default Home;
