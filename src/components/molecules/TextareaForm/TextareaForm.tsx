@@ -1,7 +1,9 @@
+import { Text } from "atoms/Text";
+import { Textarea } from "atoms/Textarea";
 import React from "react";
 import { type Control, useController } from "react-hook-form";
 
-export interface TextareaProps {
+export interface TextareaFormProps {
   name: string;
   label?: string;
   defaultValue?: string;
@@ -14,13 +16,13 @@ export interface TextareaProps {
   }>;
 }
 
-export function Textarea({
+export function TextareaForm({
   name,
   defaultValue = "",
   label,
   control,
   rules,
-}: TextareaProps) {
+}: TextareaFormProps) {
   const { field: input, fieldState: state } = useController({
     name,
     control,
@@ -30,8 +32,7 @@ export function Textarea({
 
   return (
     <label htmlFor={name}>
-      <textarea
-        className="w-full rounded border border-gray-2 bg-white p-2 pl-4 font-medium text-gray-dark"
+      <Textarea
         placeholder={label}
         id={name}
         aria-errormessage={`${name}--error-message`}
@@ -41,13 +42,13 @@ export function Textarea({
       />
 
       {state.error && (
-        <span
+        <Text
           id={`${name}--error-message`}
           key={state.error.message}
-          className="anima-input-error-message text-sm text-alert"
+          className="anima-input-error-message inline text-sm text-alert"
         >
           {state.error.message}
-        </span>
+        </Text>
       )}
     </label>
   );

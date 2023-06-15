@@ -2,9 +2,9 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-import { Button } from "../atoms/Button";
-import { Input } from "../molecules/Input";
-import { Textarea } from "../molecules/Textarea";
+import { StyledButton } from "../molecules/StyledButton";
+import { InputForm } from "../molecules/InputForm";
+import { TextareaForm } from "../molecules/TextareaForm";
 
 import validations from "../../utils/validations/validations";
 
@@ -45,28 +45,28 @@ const ContactForm = () => {
       onSubmit={form.handleSubmit(onSubmit)}
     >
       <h1 className="text-2xl">Fale conosco</h1>
-      <Input
+      <InputForm
         name="name"
         label="Nome"
         control={form.control}
         rules={{ required: "Esse campo é obrigatório." }}
       />
-      <Input
+      <InputForm
         name="email"
         label="Email"
         control={form.control}
         rules={{ validate: validations.get("email") }}
       />
-      <Textarea
+      <TextareaForm
         name="message"
         label="Mensagem"
         control={form.control}
         rows={3}
         rules={{ required: "Esse campo é obrigatório." }}
       />
-      <Button type="submit" variant="outline">
+      <StyledButton type="submit" variant="outline">
         Enviar
-      </Button>
+      </StyledButton>
     </form>
   );
 };
