@@ -1,11 +1,10 @@
-import { Input } from "molecules/Input";
+import { InputForm } from "molecules/InputForm";
 import { StyledButton } from "molecules/StyledButton";
-import { Textarea } from "molecules/Textarea";
+import { TextareaForm } from "molecules/TextareaForm";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-
-import validations from "@/utils/validations/validations";
+import { validations } from "utils/validations";
 
 export interface ContactFormModel {
   name: string;
@@ -50,19 +49,19 @@ export function ContactForm() {
       onSubmit={form.handleSubmit(onSubmit)}
     >
       <h1 className="text-2xl">Fale conosco</h1>
-      <Input
+      <InputForm
         name="name"
         label="Nome"
         control={form.control}
         rules={{ required: "Esse campo é obrigatório." }}
       />
-      <Input
+      <InputForm
         name="email"
         label="Email"
         control={form.control}
         rules={{ validate: validations.get("email") }}
       />
-      <Textarea
+      <TextareaForm
         name="message"
         label="Mensagem"
         control={form.control}
