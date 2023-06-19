@@ -1,7 +1,9 @@
+import { Input } from "atoms/Input";
+import { Text } from "atoms/Text";
 import type { Control } from "react-hook-form";
 import { useController } from "react-hook-form";
 
-export interface InputProps {
+export interface InputFormProps {
   name: string;
   label?: string;
   defaultValue?: string;
@@ -14,14 +16,14 @@ export interface InputProps {
   }>;
 }
 
-export function Input({
+export function InputForm({
   name,
   control,
   label,
   rules,
   defaultValue = "",
   ...props
-}: InputProps) {
+}: InputFormProps) {
   const { field: input, fieldState: state } = useController({
     name,
     control,
@@ -31,7 +33,7 @@ export function Input({
 
   return (
     <label htmlFor={name}>
-      <input
+      <Input
         className="w-full rounded border border-gray-2 bg-white p-2 pl-4 font-medium text-gray-dark"
         placeholder={label}
         aria-errormessage={state.error?.message}
@@ -43,13 +45,13 @@ export function Input({
       />
 
       {state.error && (
-        <span
+        <Text
           key={state.error.message}
           id={`${name}-input--error-message`}
-          className="anima-input-error-message text-sm text-alert"
+          className="anima-input-error-message inline text-sm text-alert"
         >
           {state.error.message}
-        </span>
+        </Text>
       )}
     </label>
   );
