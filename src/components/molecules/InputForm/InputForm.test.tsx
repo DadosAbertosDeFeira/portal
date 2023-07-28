@@ -1,18 +1,21 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import type { UseFormProps } from "react-hook-form";
 import { useForm } from "react-hook-form";
-import { Textarea } from "./Textarea";
 
-describe("textarea", () => {
+import type { InputFormProps } from "./InputForm";
+import { InputForm } from "./InputForm";
+
+describe("input", () => {
   const makeSut = ({
     useFormProps,
-    rules,
-    name = "textarea",
-    label = "textarea",
-  }) => {
+    rules = {},
+    name = "input",
+    label = "input",
+  }: Partial<InputFormProps & { useFormProps: UseFormProps }>) => {
     const App = () => {
       const form = useForm(useFormProps);
       return (
-        <Textarea
+        <InputForm
           name={name}
           label={label}
           control={form.control}
@@ -24,9 +27,8 @@ describe("textarea", () => {
     return render(<App />);
   };
 
-  it("should renders Textarea component with required props", () => {
+  it("should renders Input component with required props", () => {
     const { container } = makeSut({
-      rules: { required: true },
       name: "username",
       label: "Username",
     });
@@ -38,14 +40,14 @@ describe("textarea", () => {
     expect(input).toBeInTheDocument();
   });
 
-  it("should update value of Textarea component", async () => {
+  it("should update value of Input component", async () => {
     makeSut({
-      rules: { required: true },
-      label: "Password",
       name: "password",
+      label: "Password",
+      rules: { required: true },
     });
 
-    const input = screen.getByLabelText("Password");
+    const input = screen.getByLabelText<HTMLInputElement>("Password");
 
     fireEvent.input(input, { target: { value: "password123" } });
 
@@ -54,16 +56,15 @@ describe("textarea", () => {
     });
   });
 
-  it("should display error message of Textarea component", async () => {
+  it("should display error message of Input component", async () => {
     makeSut({
-      useFormProps: { mode: "onBlur" },
-      rules: { required: "email is required" },
       name: "email",
       label: "Email",
+      rules: { required: "email is required" },
+      useFormProps: { mode: "onBlur" },
     });
 
     const input = screen.getByLabelText("Email");
-
     fireEvent.blur(input);
 
     await waitFor(() => {
@@ -72,19 +73,19 @@ describe("textarea", () => {
     });
   });
 
-  it("should does not display error message when textarea is valid", async () => {
+  it("should does not display error message when input is valid", async () => {
     makeSut({
-      useFormProps: { mode: "onBlur" },
+      name: "age",
+      label: "Age",
       rules: {
         validate: {
           min: (v) => parseInt(v, 10) >= 18 || "age must be at least 18",
         },
       },
-      name: "age",
-      label: "Age",
     });
 
     const input = screen.getByPlaceholderText("Age");
+
     fireEvent.change(input, { target: { value: "19" } });
     fireEvent.blur(input);
 
@@ -95,25 +96,26 @@ describe("textarea", () => {
     });
   });
 
-  it("should meet accessibility requirements of Textarea component", async () => {
+  it("should meet accessibility requirements of Input component", async () => {
     makeSut({
-      useFormProps: { mode: "onBlur" },
-      rules: { required: "zipcode is required" },
       name: "zipcode",
       label: "Zipcode",
+      rules: { required: "zipcode is required" },
+      useFormProps: { mode: "onBlur" },
     });
 
     const input = screen.getByPlaceholderText("Zipcode");
 
+    expect(input).toHaveAttribute("aria-label", "Zipcode");
+    expect(input).toHaveAttribute("aria-invalid", "false");
+
     fireEvent.blur(input);
 
-    await waitFor(() => expect(input).toHaveAttribute("aria-invalid", "true"));
-
-    await waitFor(() =>
-      expect(input).toHaveAttribute(
-        "aria-errormessage",
-        `zipcode--error-message`
-      )
-    );
+    await waitFor(() => {
+      expect(input).toHaveAttribute("aria-invalid", "true");
+    });
+    await waitFor(() => {
+      expect(input).toHaveAttribute("aria-errormessage", "zipcode is required");
+    });
   });
 });

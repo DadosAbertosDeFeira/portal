@@ -1,12 +1,12 @@
-/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable import/extensions */
 import React from "react";
-import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
-import { Input } from "../form/Input/Input";
-import { Textarea } from "../form/Textarea/Textarea";
+import { toast } from "react-toastify";
+import { StyledButton } from "../molecules/StyledButton";
+import { InputForm } from "../molecules/InputForm";
+import { TextareaForm } from "../molecules/TextareaForm";
+
 import validations from "../../utils/validations/validations";
-// eslint-disable-next-line import/extensions
-import { Button } from "../atoms/Button";
 
 const ContactForm = () => {
   const form = useForm({
@@ -41,32 +41,32 @@ const ContactForm = () => {
 
   return (
     <form
-      className="flex flex-col w-full gap-y-4"
+      className="flex w-full flex-col gap-y-4"
       onSubmit={form.handleSubmit(onSubmit)}
     >
       <h1 className="text-2xl">Fale conosco</h1>
-      <Input
+      <InputForm
         name="name"
         label="Nome"
         control={form.control}
         rules={{ required: "Esse campo é obrigatório." }}
       />
-      <Input
+      <InputForm
         name="email"
         label="Email"
         control={form.control}
         rules={{ validate: validations.get("email") }}
       />
-      <Textarea
+      <TextareaForm
         name="message"
         label="Mensagem"
         control={form.control}
         rows={3}
         rules={{ required: "Esse campo é obrigatório." }}
       />
-      <Button type="submit" variant="outline">
+      <StyledButton type="submit" variant="outline">
         Enviar
-      </Button>
+      </StyledButton>
     </form>
   );
 };
