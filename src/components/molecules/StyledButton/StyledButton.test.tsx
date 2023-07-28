@@ -1,9 +1,10 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import React from "react";
 
-import { Button } from "./index";
+import type { StyledButtonProps } from "./StyledButton";
+import { StyledButton } from "./StyledButton";
 
 describe("Button", () => {
   let user = userEvent.setup();
@@ -12,9 +13,20 @@ describe("Button", () => {
     user = userEvent.setup();
   });
 
-  const makeSut = ({ children = "Click me", ...props }) => {
-    return render(<Button {...props}>{children}</Button>);
+  const makeSut = ({
+    children = "Click me",
+    ...props
+  }: Partial<StyledButtonProps>) => {
+    return render(<StyledButton {...props}>{children}</StyledButton>);
   };
+
+  it("should render children", async () => {
+    makeSut({ children: "Naruto" });
+
+    const children = screen.queryByText("Naruto");
+
+    expect(children).toBeInTheDocument();
+  });
 
   it("should call onClick when click in button", async () => {
     const onClick = jest.fn();
