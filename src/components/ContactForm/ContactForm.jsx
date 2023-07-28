@@ -5,7 +5,8 @@ import { useForm } from "react-hook-form";
 import { Input } from "../form/Input/Input";
 import { Textarea } from "../form/Textarea/Textarea";
 import validations from "../../utils/validations/validations";
-import { Button } from "../Button";
+// eslint-disable-next-line import/extensions
+import { Button } from "../atoms/Button";
 
 const ContactForm = () => {
   const form = useForm({
