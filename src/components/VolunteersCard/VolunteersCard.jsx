@@ -2,7 +2,8 @@ import PropTypes from "prop-types";
 import Image from "next/image";
 
 import Link from "next/link";
-import BodyText from "../BodyText";
+// eslint-disable-next-line import/extensions
+import { Text } from "@/components/atoms/Text";
 
 import Twitter from "../../../public/assets/icons/twitter.svg";
 import Instagram from "../../../public/assets/icons/instagram.svg";
@@ -29,10 +30,8 @@ export default function VolunteersCard({
       />
       <div className="flex flex-col justify-between">
         <div className="flex flex-col">
-          <BodyText className="">{name}</BodyText>
-          <BodyText size="medium" className="mt-[0.1rem] text-primary-dark">
-            {role}
-          </BodyText>
+          <Text className="">{name}</Text>
+          <Text className="mt-[0.1rem] text-primary-dark">{role}</Text>
         </div>
         <div className="flex flex-row">
           {twitter && (

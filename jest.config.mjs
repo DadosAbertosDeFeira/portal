@@ -20,7 +20,7 @@ const config = {
   coverageDirectory: "./coverage/",
   coveragePathIgnorePatterns: ["node_modules", "coverage"],
   coverageReporters: ["text-summary"],
-  collectCoverageFrom: ["src/components/**/*.tsx", "!<rootDir>/node_modules/"],
+  collectCoverageFrom: ["src/**/*.tsx", "!<rootDir>/node_modules/"],
   coverageThreshold: {
     global: {
       lines: 80,
