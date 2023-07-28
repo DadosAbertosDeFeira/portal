@@ -1,9 +1,10 @@
 import { Text } from "atoms/Text";
+import type { TextareaProps } from "atoms/Textarea";
 import { Textarea } from "atoms/Textarea";
 import React from "react";
 import { type Control, useController } from "react-hook-form";
 
-export interface TextareaFormProps {
+export type TextareaFormProps = TextareaProps & {
   name: string;
   label?: string;
   defaultValue?: string;
@@ -14,7 +15,7 @@ export interface TextareaFormProps {
     };
     required: boolean | string;
   }>;
-}
+};
 
 export function TextareaForm({
   name,
@@ -22,6 +23,7 @@ export function TextareaForm({
   label,
   control,
   rules,
+  ...props
 }: TextareaFormProps) {
   const { field: input, fieldState: state } = useController({
     name,
@@ -38,6 +40,7 @@ export function TextareaForm({
         aria-errormessage={`${name}--error-message`}
         aria-invalid={state.invalid}
         aria-label={label}
+        {...props}
         {...input}
       />
 

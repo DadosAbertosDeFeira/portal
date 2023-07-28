@@ -1,15 +1,18 @@
-/* eslint-disable import/extensions */
-import React from "react";
+import { InputForm } from "molecules/InputForm";
+import { StyledButton } from "molecules/StyledButton";
+import { TextareaForm } from "molecules/TextareaForm";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-import { StyledButton } from "../molecules/StyledButton";
-import { InputForm } from "../molecules/InputForm";
-import { TextareaForm } from "../molecules/TextareaForm";
+import { validations } from "utils/validations";
 
-import validations from "../../utils/validations/validations";
+export interface ContactFormModel {
+  name: string;
+  email: string;
+  message: string;
+}
 
-const ContactForm = () => {
-  const form = useForm({
+export function ContactForm() {
+  const form = useForm<ContactFormModel>({
     mode: "onSubmit",
     shouldUseNativeValidation: true,
     defaultValues: {
@@ -19,7 +22,7 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: ContactFormModel) => {
     const response = fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -69,6 +72,4 @@ const ContactForm = () => {
       </StyledButton>
     </form>
   );
-};
-
-export default ContactForm;
+}
