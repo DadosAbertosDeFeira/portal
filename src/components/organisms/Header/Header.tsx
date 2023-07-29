@@ -30,7 +30,8 @@ export function Header(props: HeaderProps) {
 
   useOnClickOutside(drawerRef, (event) => {
     const target = event.target as HTMLElement;
-    const sandwich = sandwichRef.current as HTMLElement;
+    const sandwich = sandwichRef.current;
+    if (sandwich === null) return;
 
     if (!sandwich.contains(target)) setOpen(false);
   });
