@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 import { FiArrowUpRight } from "react-icons/fi";
 
 import Link from "next/link";
-import Tag from "../Tag";
+// eslint-disable-next-line import/extensions
+import { Tag } from "../atoms/Tag";
 
 const ProjectCard = ({ project }) => {
   return (
