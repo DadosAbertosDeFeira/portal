@@ -1,22 +1,24 @@
-import React from "react";
+import { Box } from "atoms/Box";
+import { Headline } from "atoms/Headline";
 import Image from "next/image";
 import Link from "next/link";
+import PeopleContribute from "public/assets/people-contribute.svg";
+import React from "react";
 
-// Por algum motivo está reclamando, e só consegui resolver migrando esse arquivo para .tsx
-// eslint-disable-next-line import/extensions
 import { Text } from "@/components/atoms/Text";
-import PeopleContribute from "../../../public/assets/people-contribute.svg";
 
-const HowContribute = () => {
+export const HowContribute = () => {
   return (
-    <div className="flex justify-center flex-col items-center lg:flex-row lg:items-start">
+    <Box className="flex flex-col items-center justify-center lg:flex-row lg:items-start">
       <Image
-        className="h-[30rem] w-auto max-w-[90vw] ml-[10vw]"
+        className="ml-[10vw] h-[30rem] w-auto max-w-[90vw]"
         src={PeopleContribute}
         alt="Como contribuir"
       />
-      <div className="flex justify-around flex-col items-center lg:items-start">
-        <h2 className="mt-16">Seja um Voluntário</h2>
+      <Box className="flex flex-col items-center justify-around lg:items-start">
+        <Headline as="h2" className="mt-16">
+          Seja um Voluntário
+        </Headline>
         <Text className="mt-16">
           Seja para investigar uma obra, criar gráficos ou programas para raspar
           os dados: precisamos de pessoas que estejam dispostas a doar um pouco
@@ -35,7 +37,9 @@ const HowContribute = () => {
           .
         </Text>
 
-        <h2 className="mt-16">Doe para o Projeto</h2>
+        <Headline as="h2" className="mt-16">
+          Doe para o Projeto
+        </Headline>
         <Text className="mt-16">
           Dependemos de doações para manter os servidores do projeto rodando e
           os dados disponíveis para que todos os cidadãos tenham acesso fácil à
@@ -49,7 +53,9 @@ const HowContribute = () => {
           .
         </Text>
 
-        <h2 className="mt-16">Contribua com código</h2>
+        <Headline as="h2" className="mt-16">
+          Contribua com código
+        </Headline>
         <Text className="mt-16">
           Você é uma pessoa programadora ou analista de dados e quer ajudar a
           construir essa iniciativa? Então dá uma olhada em nossos repositórios
@@ -64,9 +70,7 @@ const HowContribute = () => {
           </Link>
           . Temos desde análise de dados e APIs a frontend e NLP.
         </Text>
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };
-
-export default HowContribute;

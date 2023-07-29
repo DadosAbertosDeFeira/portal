@@ -6,7 +6,7 @@
       "molecules/*": ["src/components/molecules/*"],
       "organisms/*": ["src/components/organisms/*"],
       "models/*": ["src/utils/models/*"],
-      "public/*": ["public"],
+      "public/*": ["public/*"],
       "utils/*": ["src/utils/validations/*"],
       "@/*": ["src/*"]
     },
