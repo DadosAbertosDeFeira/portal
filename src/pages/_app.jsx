@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import * as gtag from "../lib/gtag";
 import "../styles/globals.css";
+// eslint-disable-next-line import/extensions
 import Layout from "../layouts/Layout";
 
 const handleRouteChange = (url) => {

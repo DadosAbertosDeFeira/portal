@@ -1,9 +1,14 @@
+import { Header } from "organisms/Header";
+import type { ReactNode } from "react";
 import React from "react";
-import PropTypes from "prop-types";
-import Header from "../components/Header";
+
 import SEO from "../components/SEO";
 
-export default function Layout({ children }) {
+export interface LayoutProps {
+  children: ReactNode;
+}
+// eslint-disable-next-line import/no-default-export
+export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <Header />
@@ -16,11 +21,3 @@ export default function Layout({ children }) {
     </>
   );
 }
-
-Layout.propTypes = {
-  children: PropTypes.element,
-};
-
-Layout.defaultProps = {
-  children: null,
-};
