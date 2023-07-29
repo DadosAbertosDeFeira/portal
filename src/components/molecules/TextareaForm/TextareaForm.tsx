@@ -4,7 +4,7 @@ import { Textarea } from "atoms/Textarea";
 import React from "react";
 import { type Control, useController } from "react-hook-form";
 
-export type TextareaFormProps = {
+export type TextareaFormProps = TextareaProps & {
   name: string;
   label?: string;
   defaultValue?: string;
@@ -15,7 +15,7 @@ export type TextareaFormProps = {
     };
     required: boolean | string;
   }>;
-} & TextareaProps;
+};
 
 export function TextareaForm({
   name,
