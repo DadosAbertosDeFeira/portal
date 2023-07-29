@@ -1,4 +1,5 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Head, Html, Main, NextScript } from "next/document";
+
 import { GA_TRACKING_ID } from "../lib/gtag";
 
 function MyDocument() {
@@ -12,7 +13,7 @@ function MyDocument() {
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
-          crossOrigin="true"
+          crossOrigin=""
         />
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
@@ -45,4 +46,5 @@ function MyDocument() {
     </Html>
   );
 }
+// eslint-disable-next-line import/no-default-export
 export default MyDocument;
