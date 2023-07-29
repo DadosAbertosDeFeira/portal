@@ -19,7 +19,7 @@ const config = {
   testMatch: ["<rootDir>/src/components/**/*.test.{ts,tsx}"],
   coverageDirectory: "./coverage/",
   coveragePathIgnorePatterns: ["node_modules", "coverage"],
-  coverageReporters: ["text-summary"],
+  coverageReporters: ["text-summary", "html", "json"],
   collectCoverageFrom: ["src/**/*.tsx", "!<rootDir>/node_modules/"],
   coverageThreshold: {
     global: {
