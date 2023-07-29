@@ -23,23 +23,35 @@ export function ContactForm() {
   });
 
   const onSubmit = async (data: ContactFormModel) => {
-    const response = fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams({
-        "form-name": "contact",
-        ...data,
-      }).toString(),
-    }).then((r) => {
-      form.reset();
-      return r;
-    });
+    const toastId = toast.loading("Enviando mensagem");
 
-    await toast.promise(response, {
-      pending: "Enviando mensagem",
-      error: "Ocorreu um erro ao enviar sua mensagem",
-      success: "Sua mensagem foi enviada com sucesso",
-    });
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          "form-name": "contact",
+          ...data,
+        }).toString(),
+      });
+      if (response.status !== 200) throw new Error();
+
+      toast.update(toastId, {
+        render: "Sua mensagem foi enviada com sucesso",
+        type: "success",
+        isLoading: false,
+        autoClose: 5000,
+      });
+
+      form.reset();
+    } catch (e) {
+      toast.update(toastId, {
+        render: "Ocorreu um erro ao enviar sua mensagem",
+        type: "error",
+        isLoading: false,
+        autoClose: 5000,
+      });
+    }
   };
 
   return (
