@@ -14,4 +14,9 @@ describe("SandwichMenu", () => {
   it("renders correctly", () => {
     makeSut({});
   });
+
+  // eslint-disable-next-line jest/expect-expect
+  it("renders open correclty", () => {
+    makeSut({ isOpen: true });
+  });
 });
