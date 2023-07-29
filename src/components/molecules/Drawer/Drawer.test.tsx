@@ -11,4 +11,9 @@ describe("Drawer", () => {
   it("renders correctly", () => {
     makeSut({});
   });
+
+  // eslint-disable-next-line jest/expect-expect
+  it("renders open correctly", () => {
+    makeSut({ isOpen: true });
+  });
 });

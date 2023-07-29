@@ -1,5 +1,6 @@
 /* eslint-disable import/extensions */
 import Image from "next/image";
+import { ContactForm } from "organisms/ContactForm";
 import type { ReactElement } from "react";
 
 import { Text } from "@/components/atoms/Text";
@@ -9,7 +10,6 @@ import { SeoLayout } from "@/layouts/SeoLayout";
 import Book from "../../public/assets/icons/book.svg";
 import PeopleRight from "../../public/assets/peoples-right.svg";
 import HowContribute from "../components/HowContribute";
-import { ContactForm } from "../components/organisms/ContactForm";
 import Projects from "../components/Projects";
 import SocialContactButtons from "../components/SocialContactButtons";
 import Supporters from "../components/Supporters";
