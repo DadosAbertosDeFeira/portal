@@ -1,9 +1,9 @@
+import { validations } from "@utils/validations";
 import { InputForm } from "molecules/InputForm";
 import { StyledButton } from "molecules/StyledButton";
 import { TextareaForm } from "molecules/TextareaForm";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-import { validations } from "utils/validations";
 
 export interface ContactFormModel {
   name: string;
