@@ -9,6 +9,7 @@ import { Image } from "atoms/Image";
 import { Link } from "atoms/Link";
 import { ContactForm } from "organisms/ContactForm";
 import { HowContribute } from "organisms/HowContribute";
+import { SocialContactSection } from "organisms/SocialContactSection";
 import { SupporterShowcase } from "organisms/SupporterShowcase";
 import { VolunteerShowcase } from "organisms/VolunteerShowcase";
 import type { ReactElement } from "react";
@@ -18,7 +19,6 @@ import { HeaderLayout } from "@/layouts/HeaderLayout";
 import { SeoLayout } from "@/layouts/SeoLayout";
 
 import Projects from "../components/Projects";
-import SocialContactButtons from "../components/SocialContactButtons";
 import type { NextPageWithLayout } from "./_app";
 
 // eslint-disable-next-line import/no-default-export
@@ -203,7 +203,7 @@ const Home: NextPageWithLayout = () => {
                 <Link href="mailto:dadosabertosdefeira+site@gmail.com">
                   contato@dadosabertosdefeira.com.br
                 </Link>
-                <SocialContactButtons />
+                <SocialContactSection />
               </Box>
             </Box>
           </Box>

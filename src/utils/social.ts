@@ -1,3 +1,4 @@
+import Facebook from "@assets/icons/facebook.svg";
 import Github from "@assets/icons/github.svg";
 import Instagram from "@assets/icons/instagram.svg";
 import LinkedIn from "@assets/icons/linkedin.svg";
@@ -8,6 +9,7 @@ export const SocialMediaIcons = {
   instagram: Instagram,
   linkedin: LinkedIn,
   twitter: Twitter,
+  facebook: Facebook,
 };
 
 export type SocialMediaType = keyof typeof SocialMediaIcons;
