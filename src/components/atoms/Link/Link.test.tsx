@@ -7,8 +7,9 @@ describe("Link", () => {
     return render(<Link href={href} {...props} />);
   };
 
-  // eslint-disable-next-line jest/expect-expect
   it("renders correctly", () => {
-    makeSut({});
+    const { asFragment } = makeSut({});
+
+    expect(asFragment).toMatchSnapshot();
   });
 });

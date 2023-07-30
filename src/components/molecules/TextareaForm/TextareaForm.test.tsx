@@ -27,6 +27,12 @@ describe("textarea", () => {
     return render(<App />);
   };
 
+  it("renders correctly", () => {
+    const { asFragment } = makeSut({});
+
+    expect(asFragment).toMatchSnapshot();
+  });
+
   it("should renders Textarea component with required props", () => {
     const { container } = makeSut({
       rules: { required: true },

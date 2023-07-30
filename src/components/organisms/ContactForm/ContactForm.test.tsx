@@ -25,12 +25,12 @@ describe("ContactForm", () => {
     return render(<ContactForm {...props} />);
   };
 
-  // eslint-disable-next-line jest/expect-expect
   it("renders correctly", () => {
-    makeSut({});
+    const { asFragment } = makeSut({});
+
+    expect(asFragment).toMatchSnapshot();
   });
 
-  // eslint-disable-next-line jest/expect-expect
   it("should submit form", async () => {
     const mockForm = {
       "form-name": "contact",

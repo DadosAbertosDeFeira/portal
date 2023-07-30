@@ -1,20 +1,21 @@
 import { render } from "@testing-library/react";
 
-import ImageMock from "@/../public/assets/logo.svg";
-
 import { Image, type ImageProps } from "./Image";
 
 describe("Image", () => {
   const makeSut = ({
     alt = "Imagem de teste",
-    src = ImageMock,
+    src = "https://image.domain.png",
     ...props
   }: Partial<ImageProps>) => {
-    return render(<Image alt={alt} src={src} {...props} />);
+    return render(
+      <Image alt={alt} src={src} width={200} height={200} {...props} />
+    );
   };
 
-  // eslint-disable-next-line jest/expect-expect
   it("renders correctly", () => {
-    makeSut({});
+    const { asFragment } = makeSut({});
+
+    expect(asFragment).toMatchSnapshot();
   });
 });

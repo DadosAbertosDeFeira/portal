@@ -7,8 +7,15 @@ describe("Headline", () => {
     return render(<Headline {...props} />);
   };
 
-  // eslint-disable-next-line jest/expect-expect
   it("renders correctly", () => {
-    makeSut({});
+    const { asFragment } = makeSut({});
+
+    expect(asFragment).toMatchSnapshot();
+  });
+
+  it("renders h1 correctly", () => {
+    const { asFragment } = makeSut({ as: "h1" });
+
+    expect(asFragment).toMatchSnapshot();
   });
 });

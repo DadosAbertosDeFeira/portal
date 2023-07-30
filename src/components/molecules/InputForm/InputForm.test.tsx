@@ -27,6 +27,12 @@ describe("input", () => {
     return render(<App />);
   };
 
+  it("renders correctly", () => {
+    const { asFragment } = makeSut({});
+
+    expect(asFragment).toMatchSnapshot();
+  });
+
   it("should renders Input component with required props", () => {
     const { container } = makeSut({
       name: "username",

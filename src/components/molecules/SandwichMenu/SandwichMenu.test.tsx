@@ -10,13 +10,15 @@ describe("SandwichMenu", () => {
     return render(<SandwichMenu isOpen={isOpen} {...props} />);
   };
 
-  // eslint-disable-next-line jest/expect-expect
   it("renders correctly", () => {
-    makeSut({});
+    const { asFragment } = makeSut({});
+
+    expect(asFragment).toMatchSnapshot();
   });
 
-  // eslint-disable-next-line jest/expect-expect
-  it("renders open correclty", () => {
-    makeSut({ isOpen: true });
+  it("should render open correctly", () => {
+    const { asFragment } = makeSut({ isOpen: true });
+
+    expect(asFragment).toMatchSnapshot();
   });
 });

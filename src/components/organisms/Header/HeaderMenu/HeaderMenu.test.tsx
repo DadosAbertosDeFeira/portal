@@ -10,8 +10,9 @@ describe("HeaderMenu", () => {
     return render(<HeaderMenu closeMenu={closeMenu} {...props} />);
   };
 
-  // eslint-disable-next-line jest/expect-expect
   it("renders correctly", () => {
-    makeSut({});
+    const { asFragment } = makeSut({});
+
+    expect(asFragment).toMatchSnapshot();
   });
 });

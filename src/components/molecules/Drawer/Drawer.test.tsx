@@ -9,11 +9,15 @@ describe("Drawer", () => {
 
   // eslint-disable-next-line jest/expect-expect
   it("renders correctly", () => {
-    makeSut({});
+    const { asFragment } = makeSut({});
+
+    expect(asFragment).toMatchSnapshot();
   });
 
   // eslint-disable-next-line jest/expect-expect
   it("renders open correctly", () => {
-    makeSut({ isOpen: true });
+    const { asFragment } = makeSut({ isOpen: true });
+
+    expect(asFragment).toMatchSnapshot();
   });
 });

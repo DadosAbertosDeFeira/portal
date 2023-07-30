@@ -1,9 +1,7 @@
-"use client";
-
 import type { BoxProps } from "atoms/Box";
 import { Box } from "atoms/Box";
+import { Logo } from "atoms/Logo";
 import { Drawer } from "molecules/Drawer";
-import { Logo } from "molecules/Logo";
 import { SandwichMenu } from "molecules/SandwichMenu";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";

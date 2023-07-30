@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Drawer renders correctly 1`] = `[Function]`;
+
+exports[`Drawer renders open correctly 1`] = `[Function]`;

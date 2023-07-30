@@ -57,6 +57,7 @@
     "react-toastify": "^8.0.2"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-links": "^6.5.16",

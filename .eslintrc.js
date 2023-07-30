@@ -68,6 +68,10 @@ module.exports = {
       env: {
         jest: true,
       },
+      rules: {
+        "@next/next/no-img-element": "off",
+        "jsx-a11y/alt-text": "off",
+      },
     },
     // Configuration for Storybook
     {

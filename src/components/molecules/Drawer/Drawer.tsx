@@ -30,6 +30,7 @@ export const Drawer = forwardRef<HTMLDivElement, DrawerProps>(function Drawer(
         directions[direction][isOpen ? "open" : "closed"],
         "z-50 border-red fixed w-[70vw] max-w-[325px] min-w-[280px] inset-y-0 bg-white transition-all duration-300 ease-in-out shadow-3"
       )}
+      role="navigation"
       ref={ref}
       {...props}
     >
