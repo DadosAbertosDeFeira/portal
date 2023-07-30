@@ -18,7 +18,7 @@ import { Text } from "@/components/atoms/Text";
 import { HeaderLayout } from "@/layouts/HeaderLayout";
 import { SeoLayout } from "@/layouts/SeoLayout";
 
-import Projects from "../components/Projects";
+import Projects from "../components/organisms/Projects";
 import type { NextPageWithLayout } from "./_app";
 
 // eslint-disable-next-line import/no-default-export

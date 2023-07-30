@@ -1,9 +1,21 @@
-import MariaQuiteria from "../../public/assets/maria-quiteria.png";
-import BotDOU from "../../public/assets/bot-dou.png";
-import DefaultProject from "../../public/assets/default-project.jpeg";
-import CidadesAbertas from "../../public/assets/logo-cidades-abertas-podcast.png";
+import BotDOU from "@assets/bot-dou.png";
+import DefaultProject from "@assets/default-project.jpeg";
+import CidadesAbertas from "@assets/logo-cidades-abertas-podcast.png";
+import MariaQuiteria from "@assets/maria-quiteria.png";
+import type { StaticImageData } from "next/image";
 
-const projects = [
+export type Project = {
+  name: string;
+  type: string[];
+  description: string;
+  link: string;
+  logo: {
+    path: string | StaticImageData;
+    description: string;
+  };
+};
+
+export const projects: Project[] = [
   {
     name: "Maria Quitéria",
     type: ["raspagem de dados", "busca de dados"],
@@ -82,5 +94,3 @@ const projects = [
   //   },
   // },
 ];
-
-export default projects;
