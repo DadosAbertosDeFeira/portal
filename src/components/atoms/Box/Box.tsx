@@ -1,15 +1,14 @@
-import type { ComponentPropsWithRef, ForwardedRef } from "react";
-import { forwardRef } from "react";
+import type { ComponentPropsWithRef, ForwardedRef, ReactHTML } from "react";
+import { createElement, forwardRef } from "react";
 
-export interface BoxProps extends ComponentPropsWithRef<"div"> {}
+export type BoxProps = ComponentPropsWithRef<"div"> & {
+  as?: keyof ReactHTML;
+  ref: ForwardedRef<HTMLDivElement | null>;
+};
 
 export const Box = forwardRef(function Box(
-  { children, ...props }: BoxProps,
+  { as = "div", children, ...props }: BoxProps,
   ref: ForwardedRef<HTMLDivElement>
 ) {
-  return (
-    <div {...props} ref={ref}>
-      {children}
-    </div>
-  );
+  return createElement(as, { ...props, ref }, children);
 });

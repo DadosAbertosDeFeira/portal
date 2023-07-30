@@ -14,7 +14,7 @@ export type SupporterShowcaseItem = {
   link: string;
 };
 
-export type SupporterShowcaseProps = BoxProps & {
+export type SupporterShowcaseProps = Omit<BoxProps, "ref"> & {
   items: SupporterShowcaseItem[];
   title: string;
 };

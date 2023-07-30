@@ -7,21 +7,19 @@ import { Headline } from "atoms/Headline";
 import { Image } from "atoms/Image";
 import { Text } from "atoms/Text";
 import { SocialMediaCard } from "molecules/SocialMediaCard";
-import React, { useMemo } from "react";
+import React from "react";
 
-export type VolunteerShowcaseProps = BoxProps & {
+export type VolunteerShowcaseProps = Omit<BoxProps, "ref"> & {
   volunteers: Volunteer[];
 };
 
 export function VolunteerShowcase({
-  volunteers = [],
+  volunteers,
   ...props
 }: VolunteerShowcaseProps) {
-  const sortedVolunteers = useMemo(() => {
-    return volunteers.sort((person1, person2) => {
-      return person1.name.localeCompare(person2.name);
-    });
-  }, [volunteers]);
+  const sortedVolunteers = volunteers.sort((person1, person2) => {
+    return person1.name.localeCompare(person2.name);
+  });
 
   return (
     <Box className="text-sm" {...props}>
@@ -55,7 +53,6 @@ export function VolunteerShowcase({
               </div>
               <div className="flex flex-row items-center gap-x-1">
                 {Object.entries(medias).map(([key, value]) => {
-                  if (value === undefined) return null;
                   return (
                     <SocialMediaCard
                       key={key}

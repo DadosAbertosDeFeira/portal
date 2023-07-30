@@ -15,18 +15,29 @@ jest.mock("atoms/Image", () => ({
 }));
 
 describe("VolunteerShowcase", () => {
-  const volunteerMock: Volunteer = {
-    name: "name",
-    role: "role",
-    picture: faker.image.avatarGitHub(),
-    github: "github",
-    linkedin: "linkedin",
-    twitter: "twitter",
-    instagram: "instagram",
-  };
+  const volunteersMock: Volunteer[] = [
+    {
+      name: "name",
+      role: "role",
+      picture: faker.image.avatarGitHub(),
+      github: "github",
+      linkedin: "linkedin",
+      twitter: "twitter",
+      instagram: "instagram",
+    },
+    {
+      name: "name2",
+      role: "role2",
+      picture: faker.image.avatarGitHub(),
+      github: "github",
+      linkedin: "linkedin",
+      twitter: "twitter",
+      instagram: "instagram",
+    },
+  ];
 
   const makeSut = ({
-    volunteers = [volunteerMock],
+    volunteers = volunteersMock,
     ...props
   }: Partial<VolunteerShowcaseProps>) => {
     return render(<VolunteerShowcase volunteers={volunteers} {...props} />);
