@@ -1,4 +1,14 @@
-const volunteers = [
+export type Volunteer = {
+  name: string;
+  role: string;
+  picture: string;
+  github?: string;
+  linkedin?: string;
+  twitter?: string;
+  instagram?: string;
+};
+
+export const volunteers: Volunteer[] = [
   {
     name: "Ana Paula Gomes",
     role: "Faz-tudo",
@@ -149,11 +159,7 @@ const volunteers = [
     picture: "/assets/volunteers/andrecostaux.jpeg",
     linkedin: "andrecostaux",
   },
-].sort((person1, person2) => {
-  return person1.name.localeCompare(person2.name); // Automatically alphabetize
-});
-
-export default volunteers;
+];
 
 /* Example of Person to add in list
 {

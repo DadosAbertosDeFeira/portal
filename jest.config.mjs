@@ -15,6 +15,11 @@ const config = {
     "@testing-library/jest-dom/extend-expect",
     "./setup-jest.ts",
   ],
+  moduleNameMapper: {
+    "atoms/(.*)": "<rootDir>/src/components/atoms/$1",
+    "molecules/(.*)": "<rootDir>/src/components/molecules/$1",
+    "organisms/(.*)": "<rootDir>/src/components/organisms/$1",
+  },
   testEnvironment: "jest-environment-jsdom",
   testMatch: ["<rootDir>/src/components/**/*.test.{ts,tsx}"],
   coverageDirectory: "./coverage/",

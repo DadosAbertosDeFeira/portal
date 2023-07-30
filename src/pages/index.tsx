@@ -1,20 +1,21 @@
 /* eslint-disable import/extensions */
+import Book from "@assets/icons/book.svg";
+import PeopleRight from "@assets/peoples-right.svg";
 import { supporters } from "@utils/supporters";
+import { volunteers } from "@utils/volunteers";
 import Image from "next/image";
 import { ContactForm } from "organisms/ContactForm";
 import { HowContribute } from "organisms/HowContribute";
 import { SupporterShowcase } from "organisms/SupporterShowcase";
+import { VolunteerShowcase } from "organisms/VolunteerShowcase";
 import type { ReactElement } from "react";
 
 import { Text } from "@/components/atoms/Text";
 import { HeaderLayout } from "@/layouts/HeaderLayout";
 import { SeoLayout } from "@/layouts/SeoLayout";
 
-import Book from "../../public/assets/icons/book.svg";
-import PeopleRight from "../../public/assets/peoples-right.svg";
 import Projects from "../components/Projects";
 import SocialContactButtons from "../components/SocialContactButtons";
-import Volunteers from "../components/Volunteers";
 import type { NextPageWithLayout } from "./_app";
 
 // eslint-disable-next-line import/no-default-export
@@ -154,7 +155,7 @@ const Home: NextPageWithLayout = () => {
       </section>
 
       <section id="voluntarios" className="bg-white p-32 xl:px-4 xl:py-16">
-        <Volunteers />
+        <VolunteerShowcase volunteers={volunteers} />
       </section>
 
       <section
