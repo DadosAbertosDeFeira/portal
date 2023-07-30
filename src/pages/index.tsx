@@ -1,7 +1,9 @@
 /* eslint-disable import/extensions */
+import { supporters } from "@utils/supporters";
 import Image from "next/image";
 import { ContactForm } from "organisms/ContactForm";
 import { HowContribute } from "organisms/HowContribute";
+import { SupporterShowcase } from "organisms/SupporterShowcase";
 import type { ReactElement } from "react";
 
 import { Text } from "@/components/atoms/Text";
@@ -12,7 +14,6 @@ import Book from "../../public/assets/icons/book.svg";
 import PeopleRight from "../../public/assets/peoples-right.svg";
 import Projects from "../components/Projects";
 import SocialContactButtons from "../components/SocialContactButtons";
-import Supporters from "../components/Supporters";
 import Volunteers from "../components/Volunteers";
 import type { NextPageWithLayout } from "./_app";
 
@@ -141,7 +142,15 @@ const Home: NextPageWithLayout = () => {
           </Text>
         </div>
 
-        <Supporters />
+        <SupporterShowcase
+          items={supporters.financial}
+          title="Financiamento e Prêmios"
+        />
+        <SupporterShowcase
+          items={supporters.institutional}
+          title="Apoio Institucional"
+        />
+        <SupporterShowcase items={supporters.regular} title="Apoio" />
       </section>
 
       <section id="voluntarios" className="bg-white p-32 xl:px-4 xl:py-16">

@@ -5,9 +5,10 @@
       "atoms/*": ["src/components/atoms/*"],
       "molecules/*": ["src/components/molecules/*"],
       "organisms/*": ["src/components/organisms/*"],
-      "models/*": ["src/utils/models/*"],
-      "public/*": ["public/*"],
-      "utils/*": ["src/utils/validations/*"],
+      "@models/*": ["src/utils/models/*"],
+      "@public/*": ["public/*"],
+      "@assets/*": ["public/assets/*"],
+      "@utils/*": ["src/utils/*"],
       "@/*": ["src/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
