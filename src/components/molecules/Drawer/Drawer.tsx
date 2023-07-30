@@ -3,10 +3,10 @@ import { Box } from "atoms/Box";
 import classNames from "classnames";
 import React, { forwardRef } from "react";
 
-export interface DrawerProps extends BoxProps {
+export type DrawerProps = BoxProps & {
   isOpen: boolean;
   direction?: "left" | "right";
-}
+};
 
 export const Drawer = forwardRef<HTMLDivElement, DrawerProps>(function Drawer(
   { isOpen, direction = "left", children, ...props },
@@ -31,8 +31,8 @@ export const Drawer = forwardRef<HTMLDivElement, DrawerProps>(function Drawer(
         "z-50 border-red fixed w-[70vw] max-w-[325px] min-w-[280px] inset-y-0 bg-white transition-all duration-300 ease-in-out shadow-3"
       )}
       role="navigation"
-      ref={ref}
       {...props}
+      ref={ref}
     >
       {children}
     </Box>
