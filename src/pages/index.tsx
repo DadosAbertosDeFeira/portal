@@ -9,6 +9,7 @@ import { Image } from "atoms/Image";
 import { Link } from "atoms/Link";
 import { ContactForm } from "organisms/ContactForm";
 import { HowContribute } from "organisms/HowContribute";
+import { Projects } from "organisms/Projects";
 import { SocialContactSection } from "organisms/SocialContactSection";
 import { SupporterShowcase } from "organisms/SupporterShowcase";
 import { VolunteerShowcase } from "organisms/VolunteerShowcase";
@@ -18,7 +19,6 @@ import { Text } from "@/components/atoms/Text";
 import { HeaderLayout } from "@/layouts/HeaderLayout";
 import { SeoLayout } from "@/layouts/SeoLayout";
 
-import Projects from "../components/organisms/Projects";
 import type { NextPageWithLayout } from "./_app";
 
 // eslint-disable-next-line import/no-default-export
