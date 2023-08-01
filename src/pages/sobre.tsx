@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { Box } from "atoms/Box";
+import { Input } from "atoms/Input";
 import type { ReactElement } from "react";
 
 import { HeaderLayout } from "@/layouts/HeaderLayout";
@@ -10,9 +11,9 @@ const About: NextPageWithLayout = () => {
   return (
     <>
       <h1>Página sobre Dados Abertos de Feira</h1>
-      <Link href="/">
-        <h2>Voltar para Home</h2>
-      </Link>
+      <h2>Voltar para Home</h2>
+      <Box className="mt-[340px]">input:</Box>
+      <Input label="hehe" id="input" variant="filled" hideLabel />
     </>
   );
 };

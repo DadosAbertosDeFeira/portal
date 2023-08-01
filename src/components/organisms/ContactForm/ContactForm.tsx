@@ -1,8 +1,9 @@
 import { validations } from "@utils/validations";
 import { Button } from "atoms/Button";
-import { InputForm } from "molecules/InputForm";
-import { TextareaForm } from "molecules/TextareaForm";
-import { useForm } from "react-hook-form";
+import { Input } from "atoms/Input";
+import { Textarea } from "atoms/Textarea";
+import type { SubmitHandler } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
 export interface ContactFormModel {
@@ -22,7 +23,7 @@ export function ContactForm() {
     },
   });
 
-  const onSubmit = async (data: ContactFormModel) => {
+  const onSubmit: SubmitHandler<ContactFormModel> = async (data) => {
     const toastId = toast.loading("Enviando mensagem");
 
     try {
@@ -60,25 +61,52 @@ export function ContactForm() {
       onSubmit={form.handleSubmit(onSubmit)}
     >
       <h1 className="text-2xl">Fale conosco</h1>
-      <InputForm
+      <Controller
         name="name"
-        label="Nome"
         control={form.control}
-        rules={{ required: "Esse campo é obrigatório." }}
+        rules={{ required: "Esse campo é obrigatório" }}
+        render={({ field, fieldState: { error } }) => (
+          <Input
+            errorText={error?.message}
+            label="Nome"
+            variant="outline"
+            hideLabel
+            filled
+            {...field}
+          />
+        )}
       />
-      <InputForm
+
+      <Controller
         name="email"
-        label="Email"
         control={form.control}
         rules={{ validate: validations.get("email") }}
+        render={({ field, fieldState: { error } }) => (
+          <Input
+            errorText={error?.message}
+            label="Email"
+            variant="outline"
+            hideLabel
+            filled
+            {...field}
+          />
+        )}
       />
-      <TextareaForm
-        name="message"
-        label="Mensagem"
+
+      <Controller
+        name="email"
         control={form.control}
-        rows={3}
-        rules={{ required: "Esse campo é obrigatório." }}
+        rules={{ required: "Esse campo é obrigátorio" }}
+        render={({ field, fieldState: { error } }) => (
+          <Textarea
+            errorText={error?.message}
+            label="Mensagem"
+            hideLabel
+            {...field}
+          />
+        )}
       />
+
       <Button type="submit" variant="outline">
         Enviar
       </Button>
