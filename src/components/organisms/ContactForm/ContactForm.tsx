@@ -1,6 +1,6 @@
 import { validations } from "@utils/validations";
+import { Button } from "atoms/Button";
 import { InputForm } from "molecules/InputForm";
-import { StyledButton } from "molecules/StyledButton";
 import { TextareaForm } from "molecules/TextareaForm";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
@@ -79,9 +79,9 @@ export function ContactForm() {
         rows={3}
         rules={{ required: "Esse campo é obrigatório." }}
       />
-      <StyledButton type="submit" variant="outline">
+      <Button type="submit" variant="outline">
         Enviar
-      </StyledButton>
+      </Button>
     </form>
   );
 }
