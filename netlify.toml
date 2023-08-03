@@ -1,5 +1,5 @@
 [build]
-  command = "yarn build:ci"
+  command = "pnpm build:ci"
   publish = "out"
 
 [build.environment]
