@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build:ci": "yarn test --ci --collectCoverage && yarn export",
+    "build:ci": "pnpm test --ci --collectCoverage && pnpm export",
     "build": "next build",
     "export": "next build && next-export-optimize-images",
     "start": "next start",
@@ -17,12 +17,12 @@
     "prepare": "husky install",
     "format-code:all": "prettier --write ./src",
     "format-code:staged": "pretty-quick --staged",
-    "pre-commit": "yarn format-code:staged && yarn lint:staged"
+    "pre-commit": "pnpm format-code:staged && pnpm lint:staged"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn pre-commit",
-      "pre-push": "yarn test"
+      "pre-commit": "pnpm pre-commit",
+      "pre-push": "pnpm test"
     }
   },
   "lint-staged": {
@@ -38,7 +38,7 @@
     "@storybook/addon-viewport": "^6.5.16",
     "@testing-library/user-event": "^14.4.3",
     "classnames": "^2.2.6",
-    "next": "^13.2.3",
+    "next": "^13.4.12",
     "next-images": "^1.7.0",
     "prop-types": "^15.7.2",
     "react": "^18.2.0",
@@ -98,7 +98,6 @@
     "typescript": "5.1.6"
   },
   "engines": {
-    "node": "^16.19.0",
-    "yarn": "^1.22.10"
+    "node": "^16.19.0"
   }
 }

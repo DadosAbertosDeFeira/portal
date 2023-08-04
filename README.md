@@ -14,12 +14,12 @@ ao nosso [Código de Conduta](CODE_OF_CONDUCT.md).
 
 ### Configurando seu ambiente
 
-Você precisará do [Yarn Classic](https://classic.yarnpkg.com/lang/en/) para rodar o projeto.
+Você precisará do [PNPM](https://pnpm.io/installation) para rodar o projeto.
 
 #### Instale as dependências e prepare os serviços
 
 ```bash
-yarn
+pnpm
 ```
 
 Após a instalação das dependências crie os arquivos com as variáveis de ambiente de acordo com os arquivos de exemplo do projeto:
@@ -33,14 +33,14 @@ Após a instalação das dependências crie os arquivos com as variáveis de amb
 Rode o servidor com:
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 ### Acessando a versão de produção
 
 ```bash
-yarn build
-yarn start
+pnpm build
+pnpm start
 ```
 
 ### Node
@@ -67,19 +67,19 @@ A versão de produção do node.js pode ser configurada através da variável de
 ### Rodando lint
 
 ```bash
-yarn lint
+pnpm lint
 ```
 
 ### Rodando os testes
 
 ```bash
-yarn test
+pnpm test
 ```
 
 Se deseja rodar com coverage:
 
 ```bash
-yarn test:coverage
+pnpm test:coverage
 ```
 
 ### Storybook
@@ -87,7 +87,7 @@ yarn test:coverage
 O [Storybook](https://storybook.js.org/) é uma ferramenta que permite documentar interfaces, por enquanto, todo nosso styleguide e tarefas de front em geral poderão ser visualizadas com a ferramenta.
 
 ```bash
-yarn storybook
+pnpm storybook
 ```
 
 Inicia um servidor na porta `6006`, navegue até `http://localhost:6006` para visualizar os componentes da interface.
