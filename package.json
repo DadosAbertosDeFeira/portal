@@ -34,7 +34,7 @@
   "dependencies": {
     "@netlify/next": "^1.4.4",
     "@netlify/plugin-nextjs": "^4.31.0",
-    "@sentry/nextjs": "^7.61.0",
+    "@sentry/nextjs": "^7.58.0",
     "@storybook/addon-viewport": "^6.5.16",
     "@testing-library/user-event": "^14.4.3",
     "classnames": "^2.2.6",
