@@ -41,3 +41,6 @@ sentry.properties
 
 # Local Netlify folder
 .netlify
+
+# Storybook
+storybook-static
