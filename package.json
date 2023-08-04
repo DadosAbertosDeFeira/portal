@@ -34,10 +34,10 @@
   "dependencies": {
     "@netlify/next": "^1.4.4",
     "@netlify/plugin-nextjs": "^4.31.0",
-    "@sentry/nextjs": "^7.61.0",
+    "@sentry/nextjs": "^7.58.0",
     "@testing-library/user-event": "^14.4.3",
     "classnames": "^2.2.6",
-    "next": "^13.4.0",
+    "next": "^13.4.10",
     "next-export-optimize-images": "^3.1.0",
     "next-images": "^1.7.0",
     "prop-types": "^15.7.2",
