@@ -34,7 +34,7 @@
   "dependencies": {
     "@netlify/next": "^1.4.4",
     "@netlify/plugin-nextjs": "^4.31.0",
-    "@sentry/nextjs": "^6.12.0",
+    "@sentry/nextjs": "^7.61.0",
     "@storybook/addon-viewport": "^6.5.16",
     "@testing-library/user-event": "^14.4.3",
     "classnames": "^2.2.6",
@@ -71,7 +71,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-storybook": "^0.6.11",
+    "eslint-plugin-storybook": "^0.6.13",
     "husky": ">=6",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
@@ -83,7 +83,8 @@
     "prettier": "^2.1.2",
     "pretty-quick": "^3.1.1",
     "style-loader": "^2.0.0",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.3.2",
+    "typescript": "5.1.6"
   },
   "engines": {
     "node": "^16.19.0",
