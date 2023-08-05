@@ -48,7 +48,9 @@ function SelectComponent<T>(
         apply({ rects, elements, availableHeight }) {
           Object.assign(elements.floating.style, {
             maxHeight: `${availableHeight}px`,
+            maxWidth: `${rects.reference.width}px`,
             minWidth: `${rects.reference.width}px`,
+            width: `${rects.reference.width}px`,
           });
         },
         padding: 10,
@@ -83,7 +85,6 @@ function SelectComponent<T>(
     <>
       {input}
       {root.current && createPortal(list, root.current)}
-      {list}
     </>
   );
 }

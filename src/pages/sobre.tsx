@@ -1,8 +1,11 @@
 import { volunteers } from "@utils/volunteers";
 import { Box } from "atoms/Box";
 import { Input } from "atoms/Input";
+import { Menu } from "atoms/Menu";
+import { MenuItem } from "atoms/MenuItem";
 import { Select } from "atoms/Select/Select";
 import { type ReactElement, useState } from "react";
+import { BiHome } from "react-icons/bi";
 import { MdSearch } from "react-icons/md";
 
 import { HeaderLayout } from "@/layouts/HeaderLayout";
@@ -18,31 +21,40 @@ const About: NextPageWithLayout = () => {
       <h1>Página sobre Dados Abertos de Feira</h1>
       <h2>Voltar para Home</h2>
       <Box className="mt-[340px]">input:</Box>
-      <Select
-        items={volunteers}
-        inputValue={value}
-        itemToString={(volunter) => volunter?.name ?? ""}
-        onInputChange={(v) => setValue(v)}
-        renderInput={(props, labelProps) => (
-          <Input
-            variant="outline"
-            suffix={<MdSearch />}
-            name="Select"
-            label="Selecione"
-            containerProps={labelProps}
-            {...props}
-          />
-        )}
-        renderList={(props) => (
-          <ul {...props} className="box-shadow-3 max-h-7 overflow-y-scroll" />
-        )}
-      >
-        {({ getItemProps, key, label }) => (
-          <Box as="li" key={key} {...getItemProps()}>
-            {label}
-          </Box>
-        )}
-      </Select>
+      <Box className="p-10">
+        <Select
+          items={volunteers}
+          inputValue={value}
+          itemToString={(volunter) => volunter?.name ?? ""}
+          onInputChange={(v) => setValue(v)}
+          renderInput={(props, labelProps) => (
+            <Input
+              variant="outline"
+              suffix={<MdSearch />}
+              name="Select"
+              label="Selecione"
+              containerProps={labelProps}
+              {...props}
+            />
+          )}
+          renderList={(props) => (
+            <Menu
+              header={
+                <MenuItem className="bg-gray-300" as="div" prefix={<BiHome />}>
+                  oi
+                </MenuItem>
+              }
+              {...props}
+            />
+          )}
+        >
+          {({ getItemProps, key, label }) => (
+            <MenuItem as="li" key={key} {...getItemProps()}>
+              {label}
+            </MenuItem>
+          )}
+        </Select>
+      </Box>
     </>
   );
 };

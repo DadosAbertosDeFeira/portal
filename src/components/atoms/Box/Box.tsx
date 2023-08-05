@@ -3,12 +3,12 @@ import { createElement, forwardRef } from "react";
 
 export type BoxProps = ComponentPropsWithRef<"div"> & {
   as?: keyof ReactHTML;
-  ref: ForwardedRef<HTMLDivElement | null>;
+  ref?: ForwardedRef<HTMLDivElement | null>;
 };
 
-export const Box = forwardRef(function Box(
-  { as = "div", children, ...props }: BoxProps,
-  ref: ForwardedRef<HTMLDivElement>
+export const Box = forwardRef<HTMLDivElement, BoxProps>(function Box(
+  { as = "div", children, ...props },
+  ref
 ) {
   return createElement(as, { ...props, ref }, children);
 });
