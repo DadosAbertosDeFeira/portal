@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select renders object items correctly 1`] = `[Function]`;
+
+exports[`Select renders string items correctly 1`] = `[Function]`;

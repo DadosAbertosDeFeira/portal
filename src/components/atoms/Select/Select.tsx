@@ -27,24 +27,22 @@ function SelectComponent<T>(
 
   const { getInputProps, getLabelProps, getMenuProps, getItemProps, isOpen } =
     useCombobox({
-      onSelectedItemChange({ selectedItem = null }) {
-        if (onSelectedChange) onSelectedChange(selectedItem);
-      },
+      inputValue,
+      itemToString,
+      items,
       onInputValueChange({ inputValue = "" }) {
         if (onInputChange) onInputChange(inputValue);
       },
       onIsOpenChange({ isOpen = false }) {
         if (onMenuChange) onMenuChange(isOpen);
       },
-      itemToString,
+      onSelectedItemChange({ selectedItem = null }) {
+        if (onSelectedChange) onSelectedChange(selectedItem);
+      },
       selectedItem,
-      inputValue,
-      items,
     });
 
   const { refs, floatingStyles } = useFloating({
-    open: isOpen,
-    whileElementsMounted: autoUpdate,
     middleware: [
       size({
         apply({ rects, elements, availableHeight }) {
@@ -56,6 +54,8 @@ function SelectComponent<T>(
         padding: 10,
       }),
     ],
+    open: isOpen,
+    whileElementsMounted: autoUpdate,
   });
 
   const input = renderInput(

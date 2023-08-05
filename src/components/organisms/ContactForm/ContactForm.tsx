@@ -38,19 +38,19 @@ export function ContactForm() {
       if (response.status !== 200) throw new Error();
 
       toast.update(toastId, {
+        autoClose: 5000,
+        isLoading: false,
         render: "Sua mensagem foi enviada com sucesso",
         type: "success",
-        isLoading: false,
-        autoClose: 5000,
       });
 
       form.reset();
     } catch (e) {
       toast.update(toastId, {
+        autoClose: 5000,
+        isLoading: false,
         render: "Ocorreu um erro ao enviar sua mensagem",
         type: "error",
-        isLoading: false,
-        autoClose: 5000,
       });
     }
   };

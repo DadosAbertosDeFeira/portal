@@ -11,64 +11,64 @@ import TramasDemocraticas from "@assets/tramas-democraticas.png";
 const financial = [
   {
     id: "shuttleworth",
-    name: "Shuttleworth Foundation",
     image: ShuttleWorth,
     link: "https://shuttleworthfoundation.org/",
+    name: "Shuttleworth Foundation",
   },
   {
     id: "goethe",
-    name: "Goethe Institut",
     image: TramasDemocraticas,
     link: "https://www.goethe.de/ins/br/pt/kul/sup/trd/edi.html",
+    name: "Goethe Institut",
   },
 ];
 
 const institutional = [
   {
     id: "okbr",
-    name: "Open Knowledge Brasil",
     image: Okbr,
     link: "https://ok.org.br/",
+    name: "Open Knowledge Brasil",
   },
   {
     id: "pgcc",
-    name: "Programa de Pós-Graduação em Ciência de computação da UEFS",
     image: PgccUefs,
     link: "https://pgcc.uefs.br/",
+    name: "Programa de Pós-Graduação em Ciência de computação da UEFS",
   },
 ];
 
 const regular = [
   {
+    className: "absamimage",
     id: "absam",
-    name: "Absam",
     image: Absam,
     link: "https://absam.io/",
-    className: "absamimage",
+    name: "Absam",
   },
   {
     id: "1password",
-    name: "1Password",
     image: OnePassword,
     link: "https://github.com/1Password/1password-teams-open-source",
+    name: "1Password",
   },
   {
     id: "netlify",
-    name: "Netlify",
     image: Netlify,
     link: "https://www.netlify.com/open-source/",
+    name: "Netlify",
   },
   {
     id: "jetbrains",
-    name: "Jetbrains",
     image: JetBrains,
     link: "https://www.jetbrains.com/?from=DadosAbertosDeFeira",
+    name: "Jetbrains",
   },
   {
     id: "mLabs",
-    name: "mLabs",
     image: MLabs,
     link: "https://www.mlabs.com.br/",
+    name: "mLabs",
   },
 ];
 

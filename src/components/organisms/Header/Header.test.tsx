@@ -23,10 +23,10 @@ describe("Header", () => {
 
   it("should render desktop menu correctly", () => {
     window.matchMedia = jest.fn().mockImplementation(() => ({
+      addEventListener: jest.fn((_, handler) => handler({ matches: true })),
       matches: true,
       media: "",
       onchange: null,
-      addEventListener: jest.fn((_, handler) => handler({ matches: true })),
       removeEventListener: jest.fn(),
     }));
 

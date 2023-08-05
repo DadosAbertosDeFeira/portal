@@ -55,6 +55,11 @@ module.exports = {
         "unused-imports/no-unused-imports": "error",
         "unused-imports/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
         "tailwindcss/no-custom-classname": "off",
+        "sort-keys": [
+          "error",
+          "asc",
+          { caseSensitive: true, natural: false, minKeys: 4 },
+        ],
       },
     },
     // Configuration for testing

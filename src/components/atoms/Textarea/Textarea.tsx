@@ -40,7 +40,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
       }
 
       return null;
-    }, [helperText, errorText]);
+    }, [helperText, errorText, name]);
 
     return (
       <label

@@ -5,10 +5,10 @@ import { IconButton } from "atoms/IconButton";
 import React from "react";
 
 const medias = {
-  twitter: process.env.NEXT_PUBLIC_TWITTER_URL ?? "",
   facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL ?? "",
-  instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? "",
   github: process.env.NEXT_PUBLIC_GITHUB_URL ?? "",
+  instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? "",
+  twitter: process.env.NEXT_PUBLIC_TWITTER_URL ?? "",
 };
 
 export function SocialContactSection() {

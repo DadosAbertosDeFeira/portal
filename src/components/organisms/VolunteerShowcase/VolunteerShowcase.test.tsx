@@ -17,22 +17,22 @@ jest.mock("atoms/Image", () => ({
 describe("VolunteerShowcase", () => {
   const volunteersMock: Volunteer[] = [
     {
-      name: "name",
-      role: "role",
-      picture: faker.image.avatarGitHub(),
       github: "github",
-      linkedin: "linkedin",
-      twitter: "twitter",
       instagram: "instagram",
+      linkedin: "linkedin",
+      name: "name",
+      picture: faker.image.avatarGitHub(),
+      role: "role",
+      twitter: "twitter",
     },
     {
-      name: "name2",
-      role: "role2",
-      picture: faker.image.avatarGitHub(),
       github: "github",
-      linkedin: "linkedin",
-      twitter: "twitter",
       instagram: "instagram",
+      linkedin: "linkedin",
+      name: "name2",
+      picture: faker.image.avatarGitHub(),
+      role: "role2",
+      twitter: "twitter",
     },
   ];
 

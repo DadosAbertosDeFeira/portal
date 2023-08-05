@@ -45,8 +45,8 @@ describe("Select", () => {
 
   it("renders object items correctly", () => {
     const { asFragment } = makeSut({
-      items: itemsObjectMock,
       itemToString: (v) => v?.name ?? "",
+      items: itemsObjectMock,
     });
 
     expect(asFragment).toMatchSnapshot();
