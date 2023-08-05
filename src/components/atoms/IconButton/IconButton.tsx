@@ -1,47 +1,68 @@
-import { Button, type ButtonProps } from "atoms/Button";
-import { Image } from "atoms/Image";
-import { Link, type LinkProps } from "atoms/Link";
-import { Text } from "atoms/Text";
-import type { StaticImageData } from "next/image";
-import type { ForwardedRef } from "react";
+import type { BoxProps } from "atoms/Box";
+import { Box } from "atoms/Box";
+import { Button, type ButtonProps, buttonVariants } from "atoms/Button";
+import { Link } from "atoms/Link";
+import type { TextProps } from "atoms/Text";
+import type { ForwardedRef, ReactElement, Ref } from "react";
 import { forwardRef } from "react";
+import type { IconBaseProps } from "react-icons";
+import { twMerge } from "tailwind-merge";
 
-type IconButtonAsLink = Omit<LinkProps, "as"> & {
-  as: "link";
+export type IconButtonProps = Omit<ButtonProps, "ref" | "prefix"> & {
+  ref?: ForwardedRef<HTMLButtonElement | null>;
+  icon: ReactElement<IconBaseProps>;
+  prefix?: ReactElement<TextProps>;
+  suffix?: ReactElement<TextProps>;
+  href?: string;
+  containerProps?: BoxProps;
 };
 
-type IconButtonAsButton = Omit<ButtonProps, "as"> & {
-  as?: "button";
-};
-
-export type IconButtonProps = (IconButtonAsLink | IconButtonAsButton) & {
-  icon: string | StaticImageData;
-  label: string;
-};
-
-type HTMLButtonOrLinkElement = HTMLButtonElement | HTMLLinkElement;
-
-export const IconButton = forwardRef<HTMLButtonOrLinkElement, IconButtonProps>(
-  function IconButton(props: IconButtonProps, ref) {
-    const { icon, label } = props;
-
+export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
+  function IconButton(
+    {
+      prefix,
+      suffix,
+      className,
+      variant = "default",
+      icon,
+      href,
+      containerProps,
+      ...props
+    },
+    ref
+  ) {
     const children = (
-      <>
-        <Image src={icon} alt={label} />
-        <Text className="text-sm text-primary-dark">{label}</Text>
-      </>
+      <Box
+        {...containerProps}
+        className={twMerge(
+          "flex flex-row items-center justify-between gap-2",
+          containerProps?.className
+        )}
+      >
+        {prefix}
+        {icon}
+        {suffix}
+      </Box>
     );
 
-    if (props.as === "link") {
+    if (typeof href === "string") {
       return (
-        <Link {...props} ref={ref as ForwardedRef<HTMLAnchorElement>}>
+        <Link
+          className={twMerge(
+            "font-semibold p-3 rounded transition ease-in-out flex justify-center items-center w-min",
+            className,
+            buttonVariants[variant]
+          )}
+          href={href}
+          ref={ref as Ref<HTMLAnchorElement>}
+        >
           {children}
         </Link>
       );
     }
 
     return (
-      <Button {...props} ref={ref as ForwardedRef<HTMLButtonElement>}>
+      <Button variant={variant} {...props} ref={ref}>
         {children}
       </Button>
     );

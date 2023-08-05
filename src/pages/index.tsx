@@ -1,235 +1,75 @@
-/* eslint-disable import/extensions */
-import Book from "@assets/icons/book.svg";
-import PeopleRight from "@assets/peoples-right.svg";
-import { supporters } from "@utils/supporters";
-import { volunteers } from "@utils/volunteers";
-import { Box } from "atoms/Box";
-import { Headline } from "atoms/Headline";
-import { Image } from "atoms/Image";
-import { Link } from "atoms/Link";
-import { ContactForm } from "organisms/ContactForm";
-import { HowContribute } from "organisms/HowContribute";
-import { Projects } from "organisms/Projects";
-import { SocialContactSection } from "organisms/SocialContactSection";
-import { SupporterShowcase } from "organisms/SupporterShowcase";
-import { VolunteerShowcase } from "organisms/VolunteerShowcase";
 import type { ReactElement } from "react";
 
-import { Text } from "@/components/atoms/Text";
-import { HeaderLayout } from "@/layouts/HeaderLayout";
 import { SeoLayout } from "@/layouts/SeoLayout";
 
 import type { NextPageWithLayout } from "./_app";
 
-// eslint-disable-next-line import/no-default-export
 const Home: NextPageWithLayout = () => {
   return (
-    <>
-      <Box
-        as="section"
-        className="flex flex-col bg-city-pattern bg-cover bg-bottom bg-no-repeat tablet:flex-row"
-      >
-        <Box className="flex grow justify-end tablet:order-last tablet:items-start">
-          <Image
-            className="w-1/2 min-w-5xl sm:w-[600px]"
-            src={PeopleRight}
-            alt="Pessoas a Direita"
-            width={600}
-            height={975}
-            priority
-          />
-        </Box>
-        <Box className="pl-md text-center tablet:py-48 tablet:pl-xl tablet:pr-5 desktop:w-1/2 desktop:pl-4xl desktop:pt-64 desktop:text-left large-desktop:pl-5xl">
-          <Headline as="h1">Mais transparência em Feira de Santana</Headline>
-          <Text className="py-5">
-            Nós, cidadãos, temos o direito a informação de forma clara e
-            transparente. Precisamos saber o que acontece em nossa cidade.
-            <Box as="br" />
-            <Box as="strong">Junte-se a nós e faça a diferença!</Box>
-          </Text>
-          <Box className="flex place-content-center py-5 large-desktop:place-content-start">
-            <Link
-              className="rounded bg-primary-dark p-3 px-9 font-semibold text-white "
-              href="https://mq.dadosabertosdefeira.com.br/painel/"
-            >
-              Consultar a base de dados
-            </Link>
-          </Box>
-        </Box>
-      </Box>
-
-      <Box
-        as="section"
-        id="sobre"
-        className="flex flex-col place-items-center gap-7 p-16"
-      >
-        <Image className="m-auto h-24 w-24" src={Book} alt="Livro" />
-        <Headline as="h2">Nossa História</Headline>
-        <Box className="flex flex-col gap-y-6 text-center font-medium">
-          <Text>
-            A ideia de criar um espaço onde as pessoas possam buscar informações
-            de maneira fácil sobre o município nasceu em 2019, quando a
-            programadora Ana Paula Gomes tentou encontrar informações sobre
-            quanto o município gastava com a merenda escolar. O interesse surgiu
-            após ouvir uma denúncia feita por Rafael Velame no rádio sobre a
-            falta de merenda em algumas escolas da cidade. Ao acessar o{" "}
-            <Link
-              className="underline"
-              href="http://www.transparencia.feiradesantana.ba.gov.br/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              portal da transparência de Feira de Santana
-            </Link>{" "}
-            deparou-se com a dificuldade de fazer buscas na{" "}
-            <Link
-              className="underline"
-              href="http://www.transparencia.feiradesantana.ba.gov.br/index.php?view=licitacoes"
-              target="_blank"
-              rel="noreferrer"
-            >
-              página de licitações
-            </Link>
-            . Fez alguns pedidos de informação à Prefeitura mas não foi
-            respondida.
-          </Text>
-          <Text>
-            Após a tentativa frustrada de conseguir informações da Prefeitura,
-            Ana Paula foi até o site da Câmara Municipal de Feira de Santana e
-            descobriu que a situação também não era boa. Informações simples,
-            como a assiduidade dos vereadores, não estavam disponíveis. Você
-            consegue se imaginar pagando um salário alto a um funcionário e não
-            sabendo se ele compareceu ao trabalho ou se executou sua função como
-            deveria?
-          </Text>
-
-          <Text>
-            Diante da situação foram feitos novos pedidos de informação à Câmara
-            - também sem respostas. Após meses de espera foi necessário acionar
-            o Ministério Público da Bahia para intermediar o processo e, a
-            partir daí, o projeto ganhou projeção nas mídias locais, como BATV
-            da TV Subaé,{" "}
-            <Link
-              className="underline"
-              href="https://www.acordacidade.com.br/noticias/222557/programadora-encontra-dificuldades-para-obter-informacoes-sobre-a-atuacao-dos-vereadores-de-feira.html"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Acorda Cidade
-            </Link>
-            ,{" "}
-            <Link
-              className="underline"
-              href="https://www.blogdovelame.com/presidente-reconhece-falta-de-transparencia-e-promete-divulgar-dados/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Blog do Velame
-            </Link>
-            , além de diversas participações nos programas da{" "}
-            <Link
-              className="underline"
-              href="https://www.facebook.com/blogdovelame/videos/750921745431854/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Rádio Globo Feira e Jovem Pan
-            </Link>
-            . Com a repercussão, o presidente da Câmara Municipal, José
-            Carneiro, nos convidou para uma visita, marcando o início de uma
-            colaboração com a Casa da Cidadania. A partir dessa data, a Câmara
-            passou a divulgar a assiduidade dos vereadores e as atas das sessões
-            da casa.
-          </Text>
-          <Text>
-            Ainda estamos lutando para conseguir vários dados diferentes e fazer
-            com que os pedidos de informação sejam propriamente respondidos pela
-            Prefeitura. Entendemos que a transparência tem grande impacto em
-            coibir atos de corrupção e tornar o uso do dinheiro público mais
-            eficiente. Lutar pela transparência é um trabalho de todos.
-          </Text>
-        </Box>
-
-        <SupporterShowcase
-          items={supporters.financial}
-          title="Financiamento e Prêmios"
-        />
-        <SupporterShowcase
-          items={supporters.institutional}
-          title="Apoio Institucional"
-        />
-        <SupporterShowcase items={supporters.regular} title="Apoio" />
-      </Box>
-
-      <Box
-        as="section"
-        id="voluntarios"
-        className="bg-white p-32 xl:px-4 xl:py-16"
-      >
-        <VolunteerShowcase volunteers={volunteers} />
-      </Box>
-
-      <Box
-        as="section"
-        id="projetos"
-        className="flex justify-center pt-2xl tablet:space-x-md tablet:p-2xl"
-      >
-        <Projects />
-      </Box>
-
-      <Box as="section" id="colabore" className="px-lg py-2xl tablet:px-2xl">
-        <HowContribute />
-      </Box>
-
-      <Box
-        as="section"
-        id="contato"
-        className="border-t-2 pt-2xl tablet:space-x-md"
-      >
-        <Box className="flex flex-col justify-center tablet:flex-row">
-          <Box className="tablet:max-w-1/2 text-center tablet:m-md tablet:text-left">
-            <Headline as="h2">Contato</Headline>
-            <Box className="my-lg flex w-full flex-col space-y-md desktop:flex-row desktop:space-y-0">
-              <iframe
-                title="Feira de Santana"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124770.06894749572!2d-39.00227599729459!3d-12.243901565793168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71439dbd0766da9%3A0xed4d58d8df9d5ffe!2sFeira%20de%20Santana%20-%20Maria%20Quit%C3%A9ria%2C%20Feira%20de%20Santana%20-%20BA!5e0!3m2!1spt-BR!2sbr!4v1624460355068!5m2!1spt-BR!2sbr"
-                width="100%"
-                height="212px"
-                allowFullScreen
-                loading="lazy"
-              />
-              <Box className="mx-xl flex flex-col text-xs sm:text-base">
-                <Headline as="h2">Feira de Santana</Headline>
-                <Link href="mailto:dadosabertosdefeira+site@gmail.com">
-                  contato@dadosabertosdefeira.com.br
-                </Link>
-                <SocialContactSection />
-              </Box>
-            </Box>
-          </Box>
-          <Box className="mx-4 flex flex-col items-center tablet:m-md tablet:w-80 tablet:items-start">
-            <ContactForm />
-          </Box>
-        </Box>
-        <Box className="m-xl text-center">
-          <Text>© 2021 Todos os Direitos Reservados</Text>
-        </Box>
-      </Box>
-    </>
+    <div>
+      <header>
+        <nav>
+          <ul>
+            <li>Logo</li>
+            <li>Sobre nós</li>
+            <li>Participa cidadão</li>
+            <li>Blog</li>
+            <li>Análises</li>
+            <li>Ative Alertas</li>
+            <li>Amigos de Feira</li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section>
+          <h1>Transparência nas informações de Feira de Santana</h1>
+          <form>
+            <select />
+            <input />
+            <p />
+          </form>
+        </section>
+        <section>
+          <h1>O que acontece no meu bairro?</h1>
+          <div>
+            <ul>
+              <li>35º. BI</li>
+              <li>Aeroporto</li>
+              <li>Asa Branca</li>
+              <li>Aviário</li>
+              <li>Baraúnas</li>
+              <li>Brasília</li>
+              <li>Calumbi</li>
+              <li>Campo do Gado Novo</li>
+              <li>Campo Limpo</li>
+            </ul>
+            <button>ver mais...</button>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>@2020 Dados abertos de Feira. Todos os direitos reservados</p>
+        <nav>
+          <ul>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>Facebook</li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
   );
 };
 
 Home.getLayout = function getLayout(page: ReactElement) {
   return (
-    <HeaderLayout>
-      <SeoLayout
-        title="Dados Abertos de Feira"
-        image="assets/dadosabertosdefeira.png"
-        suffix
-      >
-        {page}
-      </SeoLayout>
-    </HeaderLayout>
+    <SeoLayout
+      title="Dados Abertos de Feira"
+      image="assets/dadosabertosdefeira.png"
+      suffix
+    >
+      {page}
+    </SeoLayout>
   );
 };
 
