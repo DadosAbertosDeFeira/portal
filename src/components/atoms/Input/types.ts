@@ -1,4 +1,4 @@
-import type { ComponentPropsWithoutRef, ComponentPropsWithRef } from "react";
+import type { ComponentPropsWithRef } from "react";
 
 export type InputVariants = "outline" | "default";
 
@@ -10,7 +10,7 @@ export type InputProps = Omit<ComponentPropsWithRef<"input">, "prefix"> & {
   prefix?: React.ReactElement;
   errorText?: string;
   variant?: InputVariants;
-  containerProps?: ComponentPropsWithoutRef<"label">;
+  containerProps?: ComponentPropsWithRef<"label">;
   helperText?: string;
   filled?: boolean;
 };

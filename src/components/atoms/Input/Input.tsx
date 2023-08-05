@@ -16,6 +16,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   {
     name,
     suffix,
+    id,
     prefix,
     label,
     hideLabel = false,
@@ -63,7 +64,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
     }
 
     return null;
-  }, [helperText, errorText]);
+  }, [helperText, errorText, name]);
 
   return (
     <label
@@ -72,7 +73,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
         "flex cursor-pointer flex-col flex-nowrap",
         containerProps?.className
       )}
-      htmlFor={name}
+      htmlFor={id}
     >
       <span className={hideLabel ? "sr-only" : ""}>{label}</span>
       <Box className="flex flex-col flex-nowrap gap-y-1">
@@ -85,10 +86,10 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
           onFocus={handleFocus}
           onBlur={handleblur}
         >
-          {suffix}
+          {prefix}
           <input
             className={twMerge("grow outline-none", className)}
-            id={name}
+            id={id}
             name={name}
             aria-errormessage={`input-${name}--error-message`}
             aria-describedby={`input-${name}--describedby`}
@@ -96,7 +97,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
             {...props}
             ref={ref}
           />
-          {prefix}
+          {suffix}
         </Box>
         {handleBottomText}
       </Box>

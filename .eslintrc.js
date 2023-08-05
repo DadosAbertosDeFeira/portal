@@ -34,10 +34,11 @@ module.exports = {
         "react/destructuring-assignment": "off", // Vscode doesn't support automatically destructuring, it's a pain to add a new variable
         "react/require-default-props": "off", // Allow non-defined react props as undefined
         "react/jsx-props-no-spreading": "off", // _app.tsx uses spread operator and also, react-hook-form
-        "react-hooks/exhaustive-deps": "off", // Incorrectly report needed dependency with Next.js router
+        "react-hooks/exhaustive-deps": "error", // Incorrectly report needed dependency with Next.js router
         "react/jsx-one-expression-per-line": "off",
         "react/button-has-type": "off",
         "@typescript-eslint/consistent-type-imports": "error", // Ensure `import type` is used when it's necessary
+        "@typescript-eslint/no-shadow": "off",
         "no-restricted-syntax": [
           "error",
           "ForInStatement",
@@ -72,6 +73,7 @@ module.exports = {
       rules: {
         "@next/next/no-img-element": "off",
         "jsx-a11y/alt-text": "off",
+        "jsx-a11y/label-has-associated-control": "off",
       },
     },
     // Configuration for Storybook
