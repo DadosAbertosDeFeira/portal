@@ -32,11 +32,12 @@
     ]
   },
   "dependencies": {
+    "@floating-ui/react": "^0.25.0",
     "@netlify/next": "^1.4.4",
     "@netlify/plugin-nextjs": "^4.31.0",
     "@sentry/nextjs": "^7.58.0",
-    "@testing-library/user-event": "^14.4.3",
     "classnames": "^2.2.6",
+    "downshift": "^8.1.0",
     "next": "^13.4.12",
     "next-export-optimize-images": "^3.1.0",
     "next-images": "^1.7.0",
@@ -46,9 +47,11 @@
     "react-hook-form": "^7.45.2",
     "react-icons": "^4.2.0",
     "react-spring": "^8.0.27",
-    "react-toastify": "^8.0.2"
+    "react-toastify": "^8.0.2",
+    "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
     "@storybook/addon-essentials": "7.2.1",
     "@storybook/addon-interactions": "7.2.1",
     "@storybook/addon-links": "7.2.1",
@@ -59,8 +62,12 @@
     "@storybook/react": "7.2.1",
     "@storybook/testing-library": "0.2.0",
     "@testing-library/dom": "^9.3.1",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.5.3",
+    "@types/react": "^18.2.18",
+    "@types/testing-library__jest-dom": "^5.14.9",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "autoprefixer": "^10.4.14",
@@ -70,7 +77,7 @@
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-config-next": "^13.2.3",
     "eslint-config-prettier": "^8.9.0",
-    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-import": "2.26.0",
     "eslint-plugin-jest": "^27.2.3",
     "eslint-plugin-jest-dom": "^5.0.1",
     "eslint-plugin-jest-formatting": "^3.1.0",
@@ -85,7 +92,8 @@
     "eslint-plugin-unused-imports": "^3.0.0",
     "husky": ">=6",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^26.6.3",
+    "jest": "^29.6.2",
+    "jest-environment-jsdom": "^29.6.2",
     "lint-staged": "^13.2.3",
     "postcss": "^8.4.23",
     "postcss-import": "^15.1.0",
@@ -98,5 +106,8 @@
   },
   "engines": {
     "node": "^16.19.0"
+  },
+  "overrides": {
+    "@testing-library/dom": "^9.0.1"
   }
 }

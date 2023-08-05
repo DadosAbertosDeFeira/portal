@@ -33,7 +33,6 @@ yarn-error.log*
 # vercel
 .vercel
 
-.vscode
 sentry.properties
 
 #eslint cache
@@ -44,3 +43,6 @@ sentry.properties
 
 # Storybook
 storybook-static
+
+# Vscode config
+.vscode/**

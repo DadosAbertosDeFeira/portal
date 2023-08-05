@@ -1,5 +1,5 @@
-const { withSentryConfig } = require('@sentry/nextjs');
-const withExportImages = require('next-export-optimize-images');
+const { withSentryConfig } = require("@sentry/nextjs");
+const withExportImages = require("next-export-optimize-images");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -17,7 +17,7 @@ module.exports = () => {
 
   return plugins.reduce(
     (acc, next) => {
-      if (next.name === 'withSentryConfig') {
+      if (next.name === "withSentryConfig") {
         return next(acc, { silent: true });
       }
       return next(acc);

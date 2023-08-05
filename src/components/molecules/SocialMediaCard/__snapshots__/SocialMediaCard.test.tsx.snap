@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialMediaCard should render github card correctly 1`] = `[Function]`;
+
+exports[`SocialMediaCard should render instagram card correctly 1`] = `[Function]`;
+
+exports[`SocialMediaCard should render linkedin card correctly 1`] = `[Function]`;
+
+exports[`SocialMediaCard should render twitter card correctly 1`] = `[Function]`;

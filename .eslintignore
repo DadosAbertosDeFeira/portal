@@ -1,2 +1,8 @@
-*.stories.*
-**/stories/**/*
+out
+node_modules
+coverage
+.next
+.git
+.husky
+.vscode
+.swc
