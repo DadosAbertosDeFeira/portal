@@ -13,7 +13,7 @@ const variants: Record<TextVariants, string> = {
 };
 
 export interface TextProps extends React.HTMLProps<HTMLElement> {
-  variant: "h1" | "h2" | "h3" | "p" | "span";
+  variant?: "h1" | "h2" | "h3" | "p" | "span";
 }
 
 export const Text = forwardRef<HTMLElement, TextProps>(function Text(

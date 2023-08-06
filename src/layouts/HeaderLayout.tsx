@@ -1,4 +1,5 @@
 import { anchors } from "@utils/anchors";
+import { Footer } from "organisms/Footer";
 import { Header } from "organisms/Header";
 import type { ReactNode } from "react";
 import React from "react";
@@ -12,6 +13,7 @@ export function HeaderLayout({ children }: LayoutProps) {
     <>
       <Header anchors={anchors} />
       {children}
+      <Footer />
     </>
   );
 }
