@@ -14,12 +14,12 @@ export const Drawer = forwardRef<HTMLDivElement, DrawerProps>(function Drawer(
 ) {
   const directions = {
     left: {
-      closed: "left-[-70vw]",
+      closed: "left-[-100vw]",
       open: "left-0",
     },
 
     right: {
-      closed: "right-[-70vw]",
+      closed: "right-[-100vw]",
       open: "right-0",
     },
   };

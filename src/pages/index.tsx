@@ -1,28 +1,19 @@
+import { Text } from "atoms/Text";
 import type { ReactElement } from "react";
 
+import { HeaderLayout } from "@/layouts/HeaderLayout";
 import { SeoLayout } from "@/layouts/SeoLayout";
 
 import type { NextPageWithLayout } from "./_app";
 
 const Home: NextPageWithLayout = () => {
   return (
-    <div>
-      <header>
-        <nav>
-          <ul>
-            <li>Logo</li>
-            <li>Sobre nós</li>
-            <li>Participa cidadão</li>
-            <li>Blog</li>
-            <li>Análises</li>
-            <li>Ative Alertas</li>
-            <li>Amigos de Feira</li>
-          </ul>
-        </nav>
-      </header>
+    <div className="bg-peoples-right">
       <main>
         <section>
-          <h1>Transparência nas informações de Feira de Santana</h1>
+          <Text variant="h1">
+            Transparência nas informações de Feira de Santana
+          </Text>
           <form>
             <select />
             <input />
@@ -63,13 +54,15 @@ const Home: NextPageWithLayout = () => {
 
 Home.getLayout = function getLayout(page: ReactElement) {
   return (
-    <SeoLayout
-      title="Dados Abertos de Feira"
-      image="assets/dadosabertosdefeira.png"
-      suffix
-    >
-      {page}
-    </SeoLayout>
+    <HeaderLayout>
+      <SeoLayout
+        title="Dados Abertos de Feira"
+        image="assets/dadosabertosdefeira.png"
+        suffix
+      >
+        {page}
+      </SeoLayout>
+    </HeaderLayout>
   );
 };
 

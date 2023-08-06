@@ -36,7 +36,7 @@
     "@netlify/next": "^1.4.4",
     "@netlify/plugin-nextjs": "^4.31.0",
     "@sentry/nextjs": "^7.61.1",
-    "classnames": "^2.2.6",
+    "classnames": "^2.3.2",
     "downshift": "^8.1.0",
     "next": "^13.4.12",
     "next-export-optimize-images": "^3.1.0",

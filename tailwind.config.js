@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         default: ["Montserrat", "Roboto", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
       fontSize: {
         xs: ["12px", "16px"],
@@ -87,6 +89,7 @@ module.exports = {
         "city-pattern": "url('/assets/home-background.svg')",
         "waved-banner": "url('/assets/menu-banner.svg')",
         "404-background": "url('/assets/404-background.svg')",
+        "peoples-right": "url('/assets/peoples-right.svg')",
       },
       screens: {
         tablet: "640px",

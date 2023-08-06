@@ -1,3 +1,4 @@
+import { anchors } from "@utils/anchors";
 import { Header } from "organisms/Header";
 import type { ReactNode } from "react";
 import React from "react";
@@ -9,7 +10,7 @@ export interface LayoutProps {
 export function HeaderLayout({ children }: LayoutProps) {
   return (
     <>
-      <Header />
+      <Header anchors={anchors} />
       {children}
     </>
   );

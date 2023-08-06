@@ -62,7 +62,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
     }
 
     return (
-      <Button variant={variant} {...props} ref={ref}>
+      <Button variant={variant} className={className} {...props} ref={ref}>
         {children}
       </Button>
     );

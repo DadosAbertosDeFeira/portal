@@ -18,8 +18,8 @@ dependencies:
     specifier: ^7.61.1
     version: 7.61.1(next@13.4.12)(react@18.2.0)(webpack@5.88.2)
   classnames:
-    specifier: ^2.2.6
-    version: 2.2.6
+    specifier: ^2.3.2
+    version: 2.3.2
   downshift:
     specifier: ^8.1.0
     version: 8.1.0(react@18.2.0)
@@ -6361,8 +6361,8 @@ packages:
     resolution: {integrity: sha512-0TNiGstbQmCFwt4akjjBg5pLRTSyj/PkWQ1ZoO2zntmg9yLqSRxwEa4iCfQLGjqhiqBfOJa7W/E8wfGrTDmlZQ==}
     dev: true
 
-  /classnames@2.2.6:
-    resolution: {integrity: sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==}
+  /classnames@2.3.2:
+    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
     dev: false
 
   /clean-css@5.3.2:

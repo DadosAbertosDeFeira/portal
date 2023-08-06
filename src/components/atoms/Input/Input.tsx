@@ -79,7 +79,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
       <Box className="flex flex-col flex-nowrap gap-y-1">
         <Box
           className={twMerge(
-            "flex w-full flex-row flex-nowrap items-center gap-2 p-2 pl-4 border-2 border-transparent",
+            "flex w-full flex-row flex-nowrap items-center gap-2 p-2 border-2 border-transparent",
             variants[variant],
             variant === "outline" && hasFocus && "border-primary"
           )}
@@ -88,7 +88,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
         >
           {prefix}
           <input
-            className={twMerge("grow outline-none", className)}
+            className={twMerge("grow outline-none w-full", className)}
             id={id}
             name={name}
             aria-errormessage={`input-${name}--error-message`}
