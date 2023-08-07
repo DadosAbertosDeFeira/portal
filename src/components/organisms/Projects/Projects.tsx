@@ -1,77 +1,59 @@
 import IconProject from "@assets/icons/icon-projects.svg";
-import { projects } from "@utils/projects";
 import { Box } from "atoms/Box";
-import { Headline } from "atoms/Headline";
+import { Image } from "atoms/Image";
 import { Link } from "atoms/Link";
-import { Tag } from "atoms/Tag";
 import { Text } from "atoms/Text";
-import Image from "next/image";
+import { TitleSection } from "molecules/TitleSection";
 import React from "react";
-import { FiArrowUpRight } from "react-icons/fi";
+import { BiLinkExternal } from "react-icons/bi";
 
-export const Projects = () => {
+import type { ProjectsProps } from "./types";
+
+export const Projects = ({ projects = [] }: ProjectsProps) => {
   return (
-    <Box>
-      {/* Header */}
-      <Box className="flex flex-col items-center">
-        <Image
-          className="mb-md h-[100px] w-[100px]"
-          src={IconProject}
-          alt="Logo da sessão de projetos"
-        />
-        <Headline as="h2">Projetos</Headline>
-      </Box>
-
-      {/* Content */}
-      <Box className="mt-md flex max-w-[1240px] flex-col tablet:flex-row tablet:flex-wrap tablet:content-evenly tablet:justify-center">
-        {projects.map((project) => (
-          <Box
-            key={project.name}
-            className="align-center m-md flex max-w-[500px] rounded shadow-3 tablet:m-xl tablet:flex"
-          >
-            {/* Logo Wrapper */}
-            <Box>
-              <Image
-                className="h-auto max-w-[initial] rounded-l"
-                src={project.logo.path}
-                alt={project.logo.description}
-              />
-            </Box>
-
-            {/* Content */}
-            <Box className="flex flex-col px-sm pb-xs tablet:px-sm tablet:pb-xs tablet:pt-sm">
-              <Headline as="h3" className="mb-sm tablet:mb-md">
-                {project.name}
-              </Headline>
-              <Text className="flex-1 text-xs text-black">
-                {project.description}
+    <TitleSection
+      title="Projetos"
+      src={IconProject}
+      alt=""
+      as="ul"
+      className="grid auto-rows-auto grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] items-center justify-items-center gap-8 p-5 tablet:grid-cols-[repeat(auto-fill,_minmax(450px,_1fr))]"
+    >
+      {projects.map(({ name, description, link, type, logo }) => (
+        <li className="h-full w-full" key={name}>
+          <section className="relative flex h-full w-full flex-row gap-2 overflow-hidden rounded shadow-3">
+            <Image
+              className="hidden object-cover tablet:block"
+              src={logo.path}
+              alt={logo.description}
+            />
+            <Box className="mt-2 flex h-full flex-col gap-2 p-2">
+              <Text variant="h1" className="text-base">
+                {name}
               </Text>
-
-              <Box className="flex flex-row justify-between">
-                <Box className="hidden sm:flex">
-                  {project.type.map((tag) => (
-                    <Tag key={tag} className="mr-xs">
-                      {tag}
-                    </Tag>
-                  ))}
-                </Box>
-
-                <Link
-                  className="text-primary"
-                  href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Box className="flex items-center">
-                    Link
-                    <FiArrowUpRight className="ml-xs stroke-primary" />
-                  </Box>
-                </Link>
-              </Box>
+              <Text className="overflow-hidden text-sm leading-tight">
+                {description}
+              </Text>
+              <ul className="mb-2 flex grow flex-row flex-wrap items-end gap-1 text-xs">
+                {type.map((item) => (
+                  <li
+                    className="shrink rounded bg-gray-50 p-1 capitalize text-gray-700"
+                    key={item}
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href={link}
+                className="absolute right-1 top-1 flex flex-row flex-nowrap items-center gap-1 text-sm"
+              >
+                Link
+                <BiLinkExternal fill="#3793df" />
+              </Link>
             </Box>
-          </Box>
-        ))}
-      </Box>
-    </Box>
+          </section>
+        </li>
+      ))}
+    </TitleSection>
   );
 };
