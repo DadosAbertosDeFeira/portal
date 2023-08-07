@@ -4,5 +4,8 @@
   * {
     @apply text-text-dark font-default;
     scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 }
