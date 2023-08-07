@@ -17,12 +17,12 @@ const ListItem = ({ ...props }: BoxProps) => (
 export function HeaderDesktop({ ...props }: HeaderDesktopProps) {
   return (
     <header
-      className="flex h-20 flex-row flex-nowrap items-center gap-16 px-[5vw] py-3 shadow-3"
+      className="flex h-20 flex-row flex-nowrap items-center gap-16 bg-white px-[5vw] py-3 shadow-3 tablet:px-[8vw]"
       {...props}
     >
       <Logo className="min-w-[120px]" width={120} height={120} />
       <nav className="grow">
-        <ul className="flex h-full flex-row flex-nowrap gap-8 text-center text-sm font-semibold">
+        <ul className="flex h-full flex-row flex-nowrap gap-8 text-center text-sm font-semibold tablet:gap-14">
           <ListItem>
             <Link href="/sobre">Sobre nós</Link>
           </ListItem>
@@ -37,14 +37,6 @@ export function HeaderDesktop({ ...props }: HeaderDesktopProps) {
           </ListItem>
           <ListItem>
             <Link href="/alertas">Ative Alertas</Link>
-          </ListItem>
-          <ListItem className="flex grow justify-end">
-            <Link
-              className="rounded-full bg-primary p-3 px-5 text-white"
-              href="/amigos"
-            >
-              Amigos de Feira
-            </Link>
           </ListItem>
         </ul>
       </nav>

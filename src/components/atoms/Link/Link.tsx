@@ -2,7 +2,7 @@ import type { ButtonVariants } from "atoms/Button";
 import { buttonVariants } from "atoms/Button";
 import NextLink from "next/link";
 import type { ComponentPropsWithRef } from "react";
-import { forwardRef, useMemo } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 export type LinkProps = ComponentPropsWithRef<typeof NextLink> & {
@@ -13,11 +13,16 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   { children, variant = "default", className, href, ...props },
   ref
 ) {
-  const isExternalURL = useMemo(() => {
+  const [isExternalURL, setExternalURL] = useState(false);
+
+  useEffect(() => {
     try {
-      return new URL(href as string).origin !== window.location.origin;
+      const url = new URL(href as string);
+      if (window) {
+        setExternalURL(url.origin !== window.location.origin);
+      }
     } catch (e) {
-      return false;
+      setExternalURL(false);
     }
   }, [href]);
 

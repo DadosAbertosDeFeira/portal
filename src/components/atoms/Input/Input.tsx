@@ -8,6 +8,7 @@ import type { InputProps, InputVariants } from "./types";
 
 const variants: Record<InputVariants, string> = {
   default: "outline-none",
+  shadowed: "shadow-md rounded bg-white",
   outline:
     "rounded border border-gray-2 bg-white font-medium text-gray-dark focus:border-primary-dark transition-all",
 };
@@ -88,7 +89,10 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
         >
           {prefix}
           <input
-            className={twMerge("grow outline-none w-full", className)}
+            className={twMerge(
+              "grow outline-none w-full placeholder:text-sm",
+              className
+            )}
             id={id}
             name={name}
             aria-errormessage={`input-${name}--error-message`}

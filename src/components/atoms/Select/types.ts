@@ -3,6 +3,7 @@ import type { ForwardedRef, ReactElement } from "react";
 export type SelectChildrenProps = {
   label: string;
   key: string;
+  focused: boolean;
   getItemProps: () => Record<string, unknown>;
 };
 

@@ -49,8 +49,8 @@ export const ArrowSelect = forwardRef<HTMLInputElement, ArrowSelectProps>(
         )}
         renderList={(props) => <Menu {...props} />}
       >
-        {({ getItemProps, key, label }) => (
-          <MenuItem key={key} {...getItemProps()}>
+        {({ getItemProps, key, label, focused }) => (
+          <MenuItem focused={focused} key={key} {...getItemProps()}>
             {label}
           </MenuItem>
         )}

@@ -1,8 +1,8 @@
 import { Input } from "atoms/Input";
-import type { MouseEventHandler } from "react";
 import { type FormEventHandler, forwardRef, useRef } from "react";
 import { BiSearch } from "react-icons/bi";
 import { RiCloseFill } from "react-icons/ri";
+import { twMerge } from "tailwind-merge";
 
 import type { SearchBarProps } from "./types";
 
@@ -23,18 +23,13 @@ export const SearchBar = forwardRef<HTMLInputElement, SearchBarProps>(
       form?.current?.requestSubmit();
     };
 
-    const handleClear: MouseEventHandler<SVGElement> = (event) => {
-      event.preventDefault();
-      if (onClear) onClear();
-    };
-
     return (
-      <form className={className} ref={form} onSubmit={handleSubmit}>
+      <form ref={form} className="w-full" onSubmit={handleSubmit}>
         <Input
           ref={ref}
           name={name}
           {...props}
-          className="w-full"
+          className={twMerge("w-full", className)}
           type="text"
           prefix={
             <BiSearch
@@ -45,12 +40,14 @@ export const SearchBar = forwardRef<HTMLInputElement, SearchBarProps>(
             />
           }
           suffix={
-            <RiCloseFill
-              className="min-w-[25px]"
-              onClick={handleClear}
-              fill="#0063B5"
-              size={25}
-            />
+            onClear && (
+              <RiCloseFill
+                className="min-w-[25px]"
+                onClick={onClear}
+                fill="#0063B5"
+                size={25}
+              />
+            )
           }
         />
       </form>

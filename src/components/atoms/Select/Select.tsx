@@ -32,6 +32,7 @@ function SelectComponent<T>(
     getItemProps,
     isOpen,
     openMenu,
+    highlightedIndex,
     closeMenu,
   } = useCombobox({
     inputValue,
@@ -78,16 +79,21 @@ function SelectComponent<T>(
   const listItems = useMemo(() => {
     return items.map((item, index) => {
       return children({
+        focused: highlightedIndex === index,
         getItemProps: () => getItemProps({ item, index }),
-        label: itemToString(item),
         key: itemToString(item),
+        label: itemToString(item),
       });
     });
-  }, [children, items, itemToString, getItemProps]);
+  }, [children, items, itemToString, getItemProps, highlightedIndex]);
 
   const list = renderList({
     ...getMenuProps({ ref: refs.setFloating }),
-    style: { ...floatingStyles, display: isOpen ? "block" : "none" },
+    style: {
+      ...floatingStyles,
+      display: isOpen ? "block" : "none",
+      zIndex: "999999",
+    },
     children: listItems,
   });
 

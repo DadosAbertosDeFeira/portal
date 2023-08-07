@@ -1,6 +1,6 @@
 import type { ComponentPropsWithRef } from "react";
 
-export type InputVariants = "outline" | "default";
+export type InputVariants = "outline" | "default" | "shadowed";
 
 export type InputProps = Omit<ComponentPropsWithRef<"input">, "prefix"> & {
   name: string;
