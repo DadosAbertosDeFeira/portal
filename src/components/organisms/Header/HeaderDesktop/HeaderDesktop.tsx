@@ -27,7 +27,7 @@ export function HeaderDesktop({ ...props }: HeaderDesktopProps) {
             <Link href="/sobre">Sobre nós</Link>
           </ListItem>
           <ListItem>
-            <Link href="/sobre">Participa Cidadão</Link>
+            <Link href="/contribua">Como Contribuir</Link>
           </ListItem>
           <ListItem>
             <Link href="https://dadosabertosdefeira.medium.com/">Blog</Link>
