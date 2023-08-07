@@ -6,10 +6,11 @@ export type SelectChildrenProps = {
   getItemProps: () => Record<string, unknown>;
 };
 
-export type SelectRenderInput = (
-  props: Record<string, unknown>,
-  containerProps: Record<string, unknown>
-) => ReactElement;
+export type SelectStateProps = {
+  isOpen: boolean;
+  openMenu: () => void;
+  closeMenu: () => void;
+};
 
 export type SelectRenderList = (
   props: Record<string, unknown>
@@ -19,7 +20,12 @@ export type SelectProps<T> = {
   ref?: ForwardedRef<HTMLInputElement | null>;
   items: T[];
   itemToString?: T extends string ? undefined : (value: T | null) => string;
-  renderInput: SelectRenderInput;
+  renderInput: (
+    props: Record<string, unknown> & {
+      containerProps: Record<string, unknown>;
+    },
+    state: SelectStateProps
+  ) => ReactElement;
   renderList: SelectRenderList;
   children: (props: SelectChildrenProps) => ReactElement;
   selectedItem?: T;

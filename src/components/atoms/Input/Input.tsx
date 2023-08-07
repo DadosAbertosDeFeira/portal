@@ -70,7 +70,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
     <label
       {...containerProps}
       className={twMerge(
-        "flex cursor-pointer flex-col flex-nowrap",
+        "flex cursor-pointer flex-col flex-nowrap bg-white",
         containerProps?.className
       )}
       htmlFor={id}

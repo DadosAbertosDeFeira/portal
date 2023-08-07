@@ -25,22 +25,29 @@ function SelectComponent<T>(
 ) {
   const root = useRootDocument();
 
-  const { getInputProps, getLabelProps, getMenuProps, getItemProps, isOpen } =
-    useCombobox({
-      inputValue,
-      itemToString,
-      items,
-      onInputValueChange({ inputValue = "" }) {
-        if (onInputChange) onInputChange(inputValue);
-      },
-      onIsOpenChange({ isOpen = false }) {
-        if (onMenuChange) onMenuChange(isOpen);
-      },
-      onSelectedItemChange({ selectedItem = null }) {
-        if (onSelectedChange) onSelectedChange(selectedItem);
-      },
-      selectedItem,
-    });
+  const {
+    getInputProps,
+    getLabelProps,
+    getMenuProps,
+    getItemProps,
+    isOpen,
+    openMenu,
+    closeMenu,
+  } = useCombobox({
+    inputValue,
+    itemToString,
+    items,
+    onInputValueChange({ inputValue = "" }) {
+      if (onInputChange) onInputChange(inputValue);
+    },
+    onIsOpenChange({ isOpen = false }) {
+      if (onMenuChange) onMenuChange(isOpen);
+    },
+    onSelectedItemChange({ selectedItem = null }) {
+      if (onSelectedChange) onSelectedChange(selectedItem);
+    },
+    selectedItem,
+  });
 
   const { refs, floatingStyles } = useFloating({
     middleware: [
@@ -61,8 +68,11 @@ function SelectComponent<T>(
   });
 
   const input = renderInput(
-    getInputProps({ ref }),
-    getLabelProps({ ref: refs.setReference })
+    {
+      ...getInputProps({ ref }),
+      containerProps: getLabelProps({ ref: refs.setReference }),
+    },
+    { isOpen, openMenu, closeMenu }
   );
 
   const listItems = useMemo(() => {
