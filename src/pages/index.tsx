@@ -1,4 +1,6 @@
-import { Text } from "atoms/Text";
+import { useRouter } from "next/router";
+import type { SearchDocumentFormHandler } from "organisms/SearchDocumentsForm";
+import { SearchDocumentsForm } from "organisms/SearchDocumentsForm";
 import type { ReactElement } from "react";
 
 import { HeaderLayout } from "@/layouts/HeaderLayout";
@@ -7,19 +9,21 @@ import { SeoLayout } from "@/layouts/SeoLayout";
 import type { NextPageWithLayout } from "./_app";
 
 const Home: NextPageWithLayout = () => {
+  const router = useRouter();
+
+  const handleSubmit: SearchDocumentFormHandler = (data) => {
+    router.push({ pathname: "busca", query: data });
+  };
+
   return (
-    <div className="bg-peoples-right">
+    <div className="">
       <main>
-        <section>
-          <Text variant="h1">
-            Transparência nas informações de Feira de Santana
-          </Text>
-          <form>
-            <select />
-            <input />
-            <p />
-          </form>
-        </section>
+        <SearchDocumentsForm
+          categories={["abc", "cde", "fge"]}
+          title="Transparência nas informações de Feira de Santana"
+          suggestions={["abc", "cde", "fge"]}
+          onSubmit={handleSubmit}
+        />
         <section>
           <h1>O que acontece no meu bairro?</h1>
           <div>
@@ -38,16 +42,6 @@ const Home: NextPageWithLayout = () => {
           </div>
         </section>
       </main>
-      <footer>
-        <p>@2020 Dados abertos de Feira. Todos os direitos reservados</p>
-        <nav>
-          <ul>
-            <li>Twitter</li>
-            <li>Instagram</li>
-            <li>Facebook</li>
-          </ul>
-        </nav>
-      </footer>
     </div>
   );
 };

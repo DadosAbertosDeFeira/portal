@@ -2,6 +2,7 @@ import type { SocialMediaType } from "@utils/social";
 import { lookupSocialMediaIcon } from "@utils/social";
 import { Box } from "atoms/Box";
 import { IconButton } from "atoms/IconButton";
+import { Text } from "atoms/Text";
 import React from "react";
 
 const medias = {
@@ -22,10 +23,9 @@ export function SocialContactSection() {
           <IconButton
             key={key}
             className="pa-md flex h-xl w-4xl items-center justify-center space-x-sm rounded bg-blue-100 px-sm capitalize"
-            as="link"
             href={value}
             icon={lookupSocialMediaIcon(key as SocialMediaType)}
-            label={key}
+            suffix={<Text>{key}</Text>}
           />
         );
       })}

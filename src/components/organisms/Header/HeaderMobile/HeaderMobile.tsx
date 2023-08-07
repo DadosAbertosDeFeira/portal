@@ -1,4 +1,3 @@
-import type { AnchorsType } from "@utils/anchors";
 import { Box } from "atoms/Box";
 import { IconButton } from "atoms/IconButton";
 import { Link } from "atoms/Link";
@@ -12,9 +11,7 @@ import { twMerge } from "tailwind-merge";
 
 import { useOnClickOutside } from "@/hooks/useOnClickOutside";
 
-export type HeaderMobileProps = {
-  anchors: AnchorsType;
-};
+import type { HeaderMobileProps } from "./types";
 
 export function HeaderMobile({ anchors }: HeaderMobileProps) {
   const [isMenuOpen, setMenuOpen] = useState(false);
