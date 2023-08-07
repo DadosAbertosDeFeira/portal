@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`SandwichMenu renders correctly 1`] = `[Function]`;
-
-exports[`SandwichMenu should render open correctly 1`] = `[Function]`;
