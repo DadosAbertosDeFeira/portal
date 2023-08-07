@@ -1,6 +1,7 @@
 import { validations } from "@utils/validations";
 import { Button } from "atoms/Button";
 import { Input } from "atoms/Input";
+import { Text } from "atoms/Text";
 import { Textarea } from "atoms/Textarea";
 import type { SubmitHandler } from "react-hook-form";
 import { Controller, useForm } from "react-hook-form";
@@ -60,7 +61,7 @@ export function ContactForm() {
       className="flex w-full flex-col gap-y-4"
       onSubmit={form.handleSubmit(onSubmit)}
     >
-      <h1 className="text-2xl">Fale conosco</h1>
+      <Text variant="h1">Fale conosco</Text>
       <Controller
         name="name"
         control={form.control}
