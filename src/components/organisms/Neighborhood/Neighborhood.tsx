@@ -14,7 +14,7 @@ export function Neighborhood({ items, ...props }: NeighborhoodProps) {
     <section className="p-3" {...props}>
       <header className="my-5 flex flex-col items-center justify-center tablet:flex-row">
         <Text
-          as="h1"
+          variant="h2"
           className="m-auto text-center text-lg font-bold tablet:text-xl"
         >
           O que acontece no meu bairro?

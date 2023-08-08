@@ -1,3 +1,4 @@
+import { Button } from "atoms/Button";
 import { Input } from "atoms/Input";
 import { ArrowSelect } from "molecules/ArrowSelect";
 import React, { useRef } from "react";
@@ -6,18 +7,22 @@ import { Controller, useForm } from "react-hook-form";
 import { BiSearch } from "react-icons/bi";
 import { twMerge } from "tailwind-merge";
 
+import { useMediaQuery } from "@/hooks/useMediaQuery";
+
 import type { FilterSearchForm } from "./types";
 import { type FilterSearchProps } from "./types";
 
 export function FilterSearch({
   onSubmit,
   formOptions,
-  categoryItems = [],
   className,
+  categoryItems = [],
   ...props
 }: FilterSearchProps) {
   const ref = useRef<HTMLFormElement>(null);
   const form = useForm<FilterSearchForm>(formOptions);
+
+  const matches = useMediaQuery("(min-width: 800px)");
 
   const handleSubmit: SubmitHandler<FilterSearchForm> = (...params) => {
     if (onSubmit) onSubmit(...params);
@@ -28,52 +33,48 @@ export function FilterSearch({
       ref={ref}
       {...props}
       className={twMerge(
-        "flex flex-col flex-nowrap gap-3 tablet:flex-wrap",
+        "flex flex-row items-center flex-nowrap gap-3 bg-white p-2",
         className
       )}
       onSubmit={form.handleSubmit(handleSubmit)}
     >
-      <Controller
-        name="category"
-        defaultValue=""
-        control={form.control}
-        render={({ field }) => (
-          <ArrowSelect
-            containerProps={{ className: "grow" }}
-            className="p-1"
-            variant="shadowed"
-            items={categoryItems}
-            onSelectedChange={(selectedItem) => field.onChange(selectedItem)}
-            label="Selecione Seção"
-            hideLabel
-            {...field}
-          />
-        )}
-      />
+      {matches && (
+        <Controller
+          name="category"
+          defaultValue=""
+          control={form.control}
+          render={({ field }) => (
+            <ArrowSelect
+              containerProps={{ className: "grow" }}
+              className="p-1"
+              items={categoryItems}
+              onSelectedChange={(selectedItem) => field.onChange(selectedItem)}
+              label="Selecione Seção"
+              hideLabel
+              {...field}
+            />
+          )}
+        />
+      )}
       <Controller
         name="search"
         defaultValue=""
         control={form.control}
         rules={{ required: "Não é possível pesquisar com esse campo vazio." }}
-        render={({ field, fieldState }) => (
+        render={({ field }) => (
           <Input
             containerProps={{ className: "grow" }}
             className="p-1"
-            variant="shadowed"
             label="Digite sua busca aqui"
             hideLabel
-            suffix={
-              <BiSearch
-                onClick={() => ref?.current?.requestSubmit()}
-                size={24}
-                fill="#0063B5"
-              />
-            }
-            errorText={fieldState.error?.message}
+            prefix={<BiSearch fill="#3793DF" size={24} />}
             {...field}
           />
         )}
       />
+      <Button type="submit" variant="condensed">
+        Pesquisar
+      </Button>
     </form>
   );
 }

@@ -1,6 +1,3 @@
-import PeopleRight from "@assets/peoples-right.svg";
-import { Box } from "atoms/Box";
-import { Image } from "atoms/Image";
 import { useRouter } from "next/router";
 import { FilterSearch } from "organisms/FilterSearch";
 import { Neighborhood } from "organisms/Neighborhood";
@@ -46,32 +43,19 @@ const Home: NextPageWithLayout = () => {
   ];
 
   return (
-    <main>
-      <Box className="relative">
-        <Image
-          className="absolute -top-10 right-0 -z-10 w-[135px] tablet:w-[37.5vw] desktop:w-[300px]"
-          alt=""
-          src={PeopleRight}
-        />
-        <SearchDocuments
-          className="pt-40 "
-          onSubmit={handleSubmit}
-          searchSuggestions={["Transparência em Catuti"]}
-          searchForm={
-            <FilterSearch
-              className="min-[900px]:flex-row min-[900px]:flex-nowrap min-[900px]:bg-white"
-              categoryItems={categoryItems}
-              formOptions={{
-                mode: "onSubmit",
-                defaultValues: {
-                  category: categoryItems[0],
-                },
-              }}
-            />
-          }
-        />
-      </Box>
-      <Neighborhood items={neighborhood} />
+    <main className="bg-city-pattern bg-contain bg-no-repeat">
+      <SearchDocuments
+        className="p-2 py-20 tablet:pl-14 laptop:max-w-[60vw]"
+        searchSuggestions={["Transparência em Feira de Santana"]}
+        searchForm={
+          <FilterSearch
+            categoryItems={categoryItems}
+            formOptions={{ mode: "onSubmit" }}
+            onSubmit={handleSubmit}
+          />
+        }
+      />
+      <Neighborhood className="py-20" items={neighborhood} />
     </main>
   );
 };

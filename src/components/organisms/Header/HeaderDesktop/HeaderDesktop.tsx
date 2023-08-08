@@ -32,12 +32,6 @@ export function HeaderDesktop({ ...props }: HeaderDesktopProps) {
           <ListItem>
             <Link href="https://dadosabertosdefeira.medium.com/">Blog</Link>
           </ListItem>
-          <ListItem>
-            <Link href="/analises">Análises</Link>
-          </ListItem>
-          <ListItem>
-            <Link href="/alertas">Ative Alertas</Link>
-          </ListItem>
         </ul>
       </nav>
     </header>
