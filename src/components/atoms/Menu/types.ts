@@ -1,8 +1,6 @@
-import type { BoxProps } from "atoms/Box";
-import type { ForwardedRef, ReactElement } from "react";
+import type { ComponentPropsWithRef, ReactElement } from "react";
 
-export type MenuProps = BoxProps & {
-  ref?: ForwardedRef<HTMLDivElement | null>;
+export type MenuProps = ComponentPropsWithRef<"div"> & {
   header?: ReactElement;
   footer?: ReactElement;
   hideList?: boolean;

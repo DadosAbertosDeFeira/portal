@@ -1,4 +1,3 @@
-import { Box } from "atoms/Box";
 import { Text } from "atoms/Text";
 import { forwardRef, useMemo } from "react";
 import { twMerge } from "tailwind-merge";
@@ -52,7 +51,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         htmlFor={name}
       >
         <span className={hideLabel ? "sr-only" : ""}>{label}</span>
-        <Box className="flex flex-col flex-nowrap gap-y-1">
+        <div className="flex flex-col flex-nowrap gap-y-1">
           <textarea
             className={twMerge(
               "w-full rounded border border-gray-2 bg-white p-2 pl-4 font-medium text-gray-dark",
@@ -67,7 +66,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
             ref={ref}
           />
           {handleBottomText}
-        </Box>
+        </div>
       </label>
     );
   }

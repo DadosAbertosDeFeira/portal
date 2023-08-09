@@ -1,5 +1,4 @@
 import PeopleContribute from "@assets/people-contribute.svg";
-import { Box } from "atoms/Box";
 import { Image } from "atoms/Image";
 import type { LinkProps } from "atoms/Link";
 import { Link } from "atoms/Link";
@@ -37,9 +36,9 @@ const Anchor = ({ children, className, ...props }: LinkProps) => (
 
 export function Contribute() {
   return (
-    <Box className="mt-10 grid justify-items-center gap-5 p-3 tablet:grid-cols-2">
+    <div className="mt-10 grid justify-items-center gap-5 p-3 tablet:grid-cols-2">
       <Image className="w-[50vw] max-w-[500px]" src={PeopleContribute} alt="" />
-      <Box className="mx-[5vw] flex grow basis-[45%] flex-col flex-nowrap gap-y-10">
+      <div className="mx-[5vw] flex grow basis-[45%] flex-col flex-nowrap gap-y-10">
         <section className=" text-justify">
           <Text className="mb-10" variant="h1">
             Seja um Voluntário
@@ -85,7 +84,7 @@ export function Contribute() {
             . Temos desde análise de dados e APIs a frontend e NLP.
           </Paragraph>
         </section>
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 }

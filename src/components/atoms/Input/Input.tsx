@@ -1,4 +1,3 @@
-import { Box } from "atoms/Box";
 import { Text } from "atoms/Text";
 import type { FocusEventHandler } from "react";
 import { forwardRef, useMemo, useState } from "react";
@@ -77,8 +76,8 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
       htmlFor={id}
     >
       <span className={hideLabel ? "sr-only" : ""}>{label}</span>
-      <Box className="flex flex-col flex-nowrap gap-y-1">
-        <Box
+      <div className="flex flex-col flex-nowrap gap-y-1">
+        <div
           className={twMerge(
             "flex w-full flex-row flex-nowrap items-center gap-2 p-2 border-2 border-transparent",
             variants[variant],
@@ -102,9 +101,9 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
             ref={ref}
           />
           {suffix}
-        </Box>
+        </div>
         {handleBottomText}
-      </Box>
+      </div>
     </label>
   );
 });

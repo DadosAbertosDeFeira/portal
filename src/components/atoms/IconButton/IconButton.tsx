@@ -1,20 +1,24 @@
-import type { BoxProps } from "atoms/Box";
-import { Box } from "atoms/Box";
-import { Button, type ButtonProps, buttonVariants } from "atoms/Button";
+import type { ButtonProps } from "atoms/Button";
+import { Button, buttonVariants } from "atoms/Button";
 import { Link } from "atoms/Link";
 import type { TextProps } from "atoms/Text";
-import type { ForwardedRef, ReactElement, Ref } from "react";
+import type {
+  ComponentPropsWithRef,
+  ForwardedRef,
+  ReactElement,
+  Ref,
+} from "react";
 import { forwardRef } from "react";
 import type { IconBaseProps } from "react-icons";
 import { twMerge } from "tailwind-merge";
 
-export type IconButtonProps = Omit<ButtonProps, "ref" | "prefix"> & {
+export type IconButtonProps = ButtonProps & {
   ref?: ForwardedRef<HTMLButtonElement | null>;
   icon: ReactElement<IconBaseProps>;
   prefix?: ReactElement<TextProps>;
   suffix?: ReactElement<TextProps>;
   href?: string;
-  containerProps?: BoxProps;
+  containerProps?: ComponentPropsWithRef<"div">;
 };
 
 export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
@@ -32,7 +36,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
     ref
   ) {
     const children = (
-      <Box
+      <div
         {...containerProps}
         className={twMerge(
           "flex flex-row items-center justify-between gap-2",
@@ -42,7 +46,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         {prefix}
         {icon}
         {suffix}
-      </Box>
+      </div>
     );
 
     if (typeof href === "string") {

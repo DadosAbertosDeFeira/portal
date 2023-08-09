@@ -1,4 +1,3 @@
-import { Box } from "atoms/Box";
 import { forwardRef } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -9,22 +8,21 @@ export const Menu = forwardRef<HTMLDivElement, MenuProps>(function Menu(
   ref
 ) {
   return (
-    <Box
+    <div
       className="flex flex-col flex-nowrap rounded-sm border bg-white shadow-3"
       {...props}
       ref={ref}
     >
       {header}
-      <Box
+      <ul
         className={twMerge(
           "flex flex-col flex-nowrap",
           hideList && "h-0 max-h-0 overflow-hidden"
         )}
-        as="ul"
       >
         {children}
-      </Box>
+      </ul>
       {footer}
-    </Box>
+    </div>
   );
 });

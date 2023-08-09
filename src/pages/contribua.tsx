@@ -1,4 +1,3 @@
-import { Box } from "atoms/Box";
 import { Contact } from "organisms/Contact";
 import type { ContactSocialMedia } from "organisms/Contact/types";
 import { Contribute } from "organisms/Contribute/Contribute";
@@ -41,7 +40,7 @@ const Contribua: NextPageWithLayout = () => {
   return (
     <main className="my-10">
       <Contribute />
-      <Box className="my-20 h-1 w-full bg-gray-2" />
+      <div className="my-20 h-1 w-full bg-gray-2" />
       <Contact socialMedias={socialMedias} />
     </main>
   );

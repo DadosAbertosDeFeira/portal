@@ -1,5 +1,3 @@
-import { Box } from "atoms/Box";
-import { Headline } from "atoms/Headline";
 import Image from "next/image";
 import Link from "next/link";
 import PeopleContribute from "public/assets/people-contribute.svg";
@@ -9,16 +7,16 @@ import { Text } from "@/components/atoms/Text";
 
 export const HowContribute = () => {
   return (
-    <Box className="flex flex-col items-center justify-center lg:flex-row lg:items-start">
+    <div className="flex flex-col items-center justify-center lg:flex-row lg:items-start">
       <Image
         className="ml-[10vw] h-[30rem] w-auto max-w-[90vw]"
         src={PeopleContribute}
         alt="Como contribuir"
       />
-      <Box className="flex flex-col items-center justify-around lg:items-start">
-        <Headline as="h2" className="mt-16">
+      <div className="flex flex-col items-center justify-around lg:items-start">
+        <Text variant="h2" className="mt-16">
           Seja um Voluntário
-        </Headline>
+        </Text>
         <Text className="mt-16">
           Seja para investigar uma obra, criar gráficos ou programas para raspar
           os dados: precisamos de pessoas que estejam dispostas a doar um pouco
@@ -37,9 +35,9 @@ export const HowContribute = () => {
           .
         </Text>
 
-        <Headline as="h2" className="mt-16">
+        <Text variant="h2" className="mt-16">
           Doe para o Projeto
-        </Headline>
+        </Text>
         <Text className="mt-16">
           Dependemos de doações para manter os servidores do projeto rodando e
           os dados disponíveis para que todos os cidadãos tenham acesso fácil à
@@ -53,9 +51,9 @@ export const HowContribute = () => {
           .
         </Text>
 
-        <Headline as="h2" className="mt-16">
+        <Text variant="h2" className="mt-16">
           Contribua com código
-        </Headline>
+        </Text>
         <Text className="mt-16">
           Você é uma pessoa programadora ou analista de dados e quer ajudar a
           construir essa iniciativa? Então dá uma olhada em nossos repositórios
@@ -70,7 +68,7 @@ export const HowContribute = () => {
           </Link>
           . Temos desde análise de dados e APIs a frontend e NLP.
         </Text>
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 };

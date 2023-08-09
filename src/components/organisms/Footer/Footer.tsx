@@ -18,7 +18,7 @@ export function Footer({ ...props }: FooterProps) {
         <ul className="flex flex-row flex-nowrap gap-5">
           <li>
             <Link href="https://twitter.com/DadosDeFeira">
-              <Text className="sr-only" as="span">
+              <Text className="sr-only" variant="span">
                 Twitter
               </Text>
               <FiTwitter size={25} />
@@ -26,7 +26,7 @@ export function Footer({ ...props }: FooterProps) {
           </li>
           <li>
             <Link href="https://www.instagram.com/dadosabertosdefeira/">
-              <Text className="sr-only" as="span">
+              <Text className="sr-only" variant="span">
                 Instagram{" "}
               </Text>
               <FiInstagram size={25} />

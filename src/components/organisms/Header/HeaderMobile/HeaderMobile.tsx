@@ -1,4 +1,3 @@
-import { Box } from "atoms/Box";
 import { IconButton } from "atoms/IconButton";
 import { Link } from "atoms/Link";
 import { Logo } from "atoms/Logo";
@@ -37,7 +36,7 @@ export function HeaderMobile({ anchors }: HeaderMobileProps) {
   return (
     <header className="flex h-16 items-center  bg-white p-3">
       {isSearchOpen ? (
-        <Box className="flex h-full w-full items-center justify-between gap-1">
+        <div className="flex h-full w-full items-center justify-between gap-1">
           <Logo small className="min-w-[50px]" width={80} height={80} />
           <SearchBar
             ref={searchRef}
@@ -47,9 +46,9 @@ export function HeaderMobile({ anchors }: HeaderMobileProps) {
             onBlur={() => setSearchOpen(false)}
             name="search"
           />
-        </Box>
+        </div>
       ) : (
-        <Box className="flex h-full w-full items-center justify-between">
+        <div className="flex h-full w-full items-center justify-between">
           <IconButton
             ref={sandwichRef}
             onClick={() => setMenuOpen((isOpen) => !isOpen)}
@@ -83,7 +82,7 @@ export function HeaderMobile({ anchors }: HeaderMobileProps) {
               </ul>
             </nav>
           </Drawer>
-        </Box>
+        </div>
       )}
     </header>
   );

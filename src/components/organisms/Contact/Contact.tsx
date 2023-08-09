@@ -1,4 +1,3 @@
-import { Box } from "atoms/Box";
 import type { LinkProps } from "atoms/Link";
 import { Link } from "atoms/Link";
 import { Text } from "atoms/Text";
@@ -14,7 +13,7 @@ const Tag = ({ children, icon, ...props }: LinkProps & { icon: IconType }) => (
     {...props}
   >
     {icon({ fill: "#0063B5", size: 22 })}
-    <Text className="text-xs text-primary-dark" as="span">
+    <Text className="text-xs text-primary-dark" variant="span">
       {children}
     </Text>
   </Link>
@@ -22,7 +21,7 @@ const Tag = ({ children, icon, ...props }: LinkProps & { icon: IconType }) => (
 
 export function Contact({ socialMedias }: ContactProps) {
   return (
-    <Box className="mx-auto grid max-w-[350px] grid-cols-1 gap-3 p-2 tablet:max-w-[960px] tablet:grid-cols-2 tablet:gap-10 laptop:grid-cols-3">
+    <div className="mx-auto grid max-w-[350px] grid-cols-1 gap-3 p-2 tablet:max-w-[960px] tablet:grid-cols-2 tablet:gap-10 laptop:grid-cols-3">
       <section className="flex flex-col gap-3">
         <Text variant="h1">Contato</Text>
         <iframe
@@ -55,9 +54,9 @@ export function Contact({ socialMedias }: ContactProps) {
           ))}
         </ul>
       </section>
-      <Box className="tablet:col-start-2 tablet:col-end-3 tablet:row-start-1 tablet:row-end-3 laptop:col-start-3 laptop:col-end-4">
+      <div className="tablet:col-start-2 tablet:col-end-3 tablet:row-start-1 tablet:row-end-3 laptop:col-start-3 laptop:col-end-4">
         <ContactForm />
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 }

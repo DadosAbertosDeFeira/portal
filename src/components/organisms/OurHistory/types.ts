@@ -1,3 +1,3 @@
-import type { BoxProps } from "atoms/Box";
+import type { ComponentPropsWithRef } from "react";
 
-export type OurHistoryProps = BoxProps & {};
+export type OurHistoryProps = ComponentPropsWithRef<"div"> & {};

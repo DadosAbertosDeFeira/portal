@@ -6,8 +6,8 @@ export type TextVariants = "h1" | "h2" | "h3" | "p" | "span";
 
 const variants: Record<TextVariants, string> = {
   h1: "font-montserrat text-dark text-lg font-extrabold",
-  h2: "",
-  h3: "",
+  h2: "font-montserrat text-dark text-lg font-extrabold",
+  h3: "font-montserrat text-dark text-lg font-extrabold",
   p: "font-roboto leading-10",
   span: "font-roboto",
 };

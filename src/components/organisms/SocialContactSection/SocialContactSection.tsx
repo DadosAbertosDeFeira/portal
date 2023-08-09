@@ -1,6 +1,5 @@
 import type { SocialMediaType } from "@utils/social";
 import { lookupSocialMediaIcon } from "@utils/social";
-import { Box } from "atoms/Box";
 import { IconButton } from "atoms/IconButton";
 import { Text } from "atoms/Text";
 import React from "react";
@@ -14,10 +13,7 @@ const medias = {
 
 export function SocialContactSection() {
   return (
-    <Box
-      as="section"
-      className="mt-md grid auto-cols-auto grid-flow-col grid-cols-2 grid-rows-2 gap-md self-center tablet:self-start"
-    >
+    <section className="mt-md grid auto-cols-auto grid-flow-col grid-cols-2 grid-rows-2 gap-md self-center tablet:self-start">
       {Object.entries(medias).map(([key, value]) => {
         return (
           <IconButton
@@ -29,6 +25,6 @@ export function SocialContactSection() {
           />
         );
       })}
-    </Box>
+    </section>
   );
 }

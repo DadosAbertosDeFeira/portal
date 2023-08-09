@@ -1,7 +1,6 @@
-import type { BoxProps } from "atoms/Box";
-import type { ReactElement } from "react";
+import type { ComponentPropsWithRef, ReactElement } from "react";
 
-export type MenuItemProps = Omit<BoxProps, "prefix"> & {
+export type MenuItemProps = Omit<ComponentPropsWithRef<"li">, "prefix"> & {
   prefix?: ReactElement;
   suffix?: ReactElement;
   focused?: boolean;

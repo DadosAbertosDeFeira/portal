@@ -1,17 +1,12 @@
-import type { BoxProps } from "atoms/Box";
-import { Box } from "atoms/Box";
 import { Link } from "atoms/Link";
 import { Logo } from "atoms/Logo";
+import type { ComponentPropsWithoutRef } from "react";
 import React from "react";
 
 export type HeaderDesktopProps = {};
 
-const ListItem = ({ ...props }: BoxProps) => (
-  <Box
-    as="li"
-    className="flex flex-row items-center justify-center"
-    {...props}
-  />
+const ListItem = ({ ...props }: ComponentPropsWithoutRef<"li">) => (
+  <li className="flex flex-row items-center justify-center" {...props} />
 );
 
 export function HeaderDesktop({ ...props }: HeaderDesktopProps) {

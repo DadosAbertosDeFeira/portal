@@ -1,6 +1,6 @@
 import type { Volunteer } from "@utils/volunteers";
-import type { BoxProps } from "atoms/Box";
+import type { ComponentPropsWithRef } from "react";
 
-export type VolunteersProps = BoxProps & {
+export type VolunteersProps = ComponentPropsWithRef<"div"> & {
   volunteers: Volunteer[];
 };

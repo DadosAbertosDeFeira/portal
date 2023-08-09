@@ -1,4 +1,4 @@
-import type { BoxProps } from "atoms/Box";
+import type { ComponentPropsWithoutRef } from "react";
 
 type TitleSectionImgProps =
   | {
@@ -10,7 +10,7 @@ type TitleSectionImgProps =
       alt?: never;
     };
 
-export type TitleSectionProps = Omit<BoxProps, "ref"> &
+export type TitleSectionProps = ComponentPropsWithoutRef<"div"> &
   TitleSectionImgProps & {
     title: string;
   };

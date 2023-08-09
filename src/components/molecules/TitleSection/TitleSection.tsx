@@ -1,4 +1,3 @@
-import { Box } from "atoms/Box";
 import { Image } from "atoms/Image";
 import { Text } from "atoms/Text";
 import React from "react";
@@ -20,7 +19,7 @@ export function TitleSection({
         </Text>
         {src && <Image className="order-0" src={src} alt={alt} />}
       </header>
-      <Box {...props}>{children}</Box>
+      <div {...props}>{children}</div>
     </section>
   );
 }

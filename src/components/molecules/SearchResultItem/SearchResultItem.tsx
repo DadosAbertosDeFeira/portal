@@ -24,7 +24,7 @@ export function SearchResultItem({
           {urlPaths}
         </Link>
         <Text
-          as="h1"
+          variant="h2"
           className="font-roboto text-[18px] font-medium text-primary-dark"
         >
           {title}

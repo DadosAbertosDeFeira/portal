@@ -1,5 +1,4 @@
 import Book from "@assets/icons/book.svg";
-import { Box } from "atoms/Box";
 import type { LinkProps } from "atoms/Link";
 import { Link } from "atoms/Link";
 import type { TextProps } from "atoms/Text";
@@ -40,7 +39,7 @@ const Anchor = ({ children, className, ...props }: LinkProps) => (
 
 export function OurHistory(props: OurHistoryProps) {
   return (
-    <Box {...props}>
+    <div {...props}>
       <TitleSection
         className="flex flex-col gap-5"
         src={Book}
@@ -102,6 +101,6 @@ export function OurHistory(props: OurHistoryProps) {
           eficiente. Lutar pela transparência é um trabalho de todos.
         </Paragraph>
       </TitleSection>
-    </Box>
+    </div>
   );
 }
