@@ -16,7 +16,7 @@ export const Projects = ({ projects = [] }: ProjectsProps) => {
           <li className="h-full w-full" key={name}>
             <section className="relative flex h-full w-full flex-row gap-2 overflow-hidden rounded shadow-3">
               <Image
-                className="hidden object-cover tablet:block"
+                className="hidden h-[140px] max-h-[140px] w-[140px] max-w-[140px] object-cover tablet:block"
                 src={logo.path}
                 alt={logo.description}
               />
