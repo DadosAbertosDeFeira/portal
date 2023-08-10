@@ -4,24 +4,12 @@ export const anchors = {
     label: "Sobre nós",
   },
   alerts: {
-    href: "/alertas",
-    label: "Ative Alertas",
-  },
-  analysis: {
-    href: "/analises",
-    label: "Análises",
+    href: "/contribua",
+    label: "Contribua",
   },
   blog: {
     href: "https://dadosabertosdefeira.medium.com/",
     label: "Blog",
-  },
-  friends: {
-    href: "/amigos",
-    label: "Amigos de Feira",
-  },
-  joinUs: {
-    href: "/partipa",
-    label: "Participa cidadão",
   },
 };
 

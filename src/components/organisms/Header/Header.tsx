@@ -13,6 +13,6 @@ export type HeaderProps = {
 export function Header({ anchors }: HeaderProps) {
   const matches = useMediaQuery("(min-width: 900px)");
 
-  if (matches) return <HeaderDesktop />;
+  if (matches) return <HeaderDesktop anchors={anchors} />;
   return <HeaderMobile anchors={anchors} />;
 }
