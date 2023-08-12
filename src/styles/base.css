@@ -2,10 +2,28 @@
   html,
   body,
   * {
-    @apply text-text-dark font-default;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    @apply scroll-smooth box-border m-0 p-0 font-common;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-blue-900;
+  }
+
+  p,
+  span {
+    @apply font-common text-blue-900;
+  }
+
+  a {
+    @apply cursor-pointer;
+  }
+
+  button:disabled {
+    @apply cursor-not-allowed;
   }
 }
