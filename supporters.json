@@ -2,62 +2,62 @@
   "financial": [
     {
       "id": "shuttleworth",
-      "name": "Shuttleworth Foundation",
-      "logo": "ShuttleWorth",
-      "link": "https: //shuttleworthfoundation.org/"
+      "img": "https://alvarogfn.github.io/portal/assets/supporters/shuttleworth-funded.jpeg",
+      "link": "https://shuttleworthfoundation.org/",
+      "name": "Shuttleworth Foundation"
     },
     {
       "id": "goethe",
-      "name": "Goethe Institut",
-      "logo": "TramasDemocraticas",
-      "link": "https: //www.goethe.de/ins/br/pt/kul/sup/trd/edi.html"
+      "img": "https://alvarogfn.github.io/portal/assets/supporters/tramas-democraticas.png",
+      "link": "https://www.goethe.de/ins/br/pt/kul/sup/trd/edi.html",
+      "name": "Goethe Institut"
     }
   ],
   "institutional": [
     {
       "id": "okbr",
-      "name": "Open Knowledge Brasil",
-      "logo": "Okbr",
-      "link": "https: //ok.org.br/"
+      "img": "https://alvarogfn.github.io/portal/assets/supporters/okbr-logo.png",
+      "link": "https://ok.org.br/",
+      "name": "Open Knowledge Brasil"
     },
     {
       "id": "pgcc",
-      "name": "Programa de Pós-Graduação em Ciência de computação da UEFS",
-      "logo": "PgccUefs",
-      "link": "https: //pgcc.uefs.br/"
+      "img": "https://alvarogfn.github.io/portal/assets/supporters/pgcc-uefs.jpeg",
+      "link": "https://pgcc.uefs.br/",
+      "name": "Programa de Pós-Graduação em Ciência de computação da UEFS"
     }
   ],
   "regular": [
     {
+      "className": "absamLogo",
       "id": "absam",
-      "name": "Absam",
-      "logo": "Absam",
-      "link": "https: //absam.io/",
-      "className": "absamLogo"
+      "img": "https://alvarogfn.github.io/portal/assets/supporters/absam",
+      "link": "https://absam.io/",
+      "name": "Absam"
     },
     {
       "id": "1password",
-      "name": "1Password",
-      "logo": "OnePassword",
-      "link": "https: //github.com/1Password/1password-teams-open-source"
+      "img": "https://alvarogfn.github.io/portal/assets/supporters/1password.svg",
+      "link": "https://github.com/1Password/1password-teams-open-source",
+      "name": "1Password"
     },
     {
       "id": "netlify",
-      "name": "Netlify",
-      "logo": "Netlify",
-      "link": "https: //www.netlify.com/open-source/"
+      "img": "https://alvarogfn.github.io/portal/assets/supporters/netlify.svg",
+      "link": "https://www.netlify.com/open-source/",
+      "name": "Netlify"
     },
     {
       "id": "jetbrains",
-      "name": "Jetbrains",
-      "logo": "JetBrains",
-      "link": "https: //www.jetbrains.com/?from=DadosAbertosDeFeira"
+      "img": "https://alvarogfn.github.io/portal/assets/supporters/jetbrains.svg",
+      "link": "https://www.jetbrains.com/?from=DadosAbertosDeFeira",
+      "name": "Jetbrains"
     },
     {
       "id": "mLabs",
-      "name": "mLabs",
-      "logo": "MLabs",
-      "link": "https: //www.mlabs.com.br/"
+      "img": "https://alvarogfn.github.io/portal/assets/supporters/mLabs.png",
+      "link": "https://www.mlabs.com.br/",
+      "name": "mLabs"
     }
   ]
 }
