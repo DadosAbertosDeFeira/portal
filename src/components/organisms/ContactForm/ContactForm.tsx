@@ -1,7 +1,6 @@
 import { validations } from "@utils/validations";
 import { Button } from "atoms/Button";
 import { Input } from "atoms/Input";
-import { Text } from "atoms/Text";
 import { Textarea } from "atoms/Textarea";
 import type { SubmitHandler } from "react-hook-form";
 import { Controller, useForm } from "react-hook-form";
@@ -61,7 +60,7 @@ export function ContactForm() {
       className="flex w-full flex-col gap-y-4"
       onSubmit={form.handleSubmit(onSubmit)}
     >
-      <Text variant="h1">Fale conosco</Text>
+      <h2>Fale conosco</h2>
       <Controller
         name="name"
         control={form.control}
@@ -70,6 +69,7 @@ export function ContactForm() {
           <Input
             errorText={error?.message}
             label="Nome"
+            id="name"
             variant="outline"
             hideLabel
             filled
@@ -86,6 +86,7 @@ export function ContactForm() {
           <Input
             errorText={error?.message}
             label="Email"
+            id="email"
             variant="outline"
             hideLabel
             filled
@@ -100,7 +101,9 @@ export function ContactForm() {
         rules={{ required: "Esse campo é obrigátorio" }}
         render={({ field, fieldState: { error } }) => (
           <Textarea
+            variant="outline"
             errorText={error?.message}
+            id="message"
             label="Mensagem"
             hideLabel
             {...field}
