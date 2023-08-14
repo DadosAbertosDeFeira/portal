@@ -11,7 +11,11 @@
   h4,
   h5,
   h6 {
-    @apply font-heading text-blue-900;
+    @apply font-heading text-blue-900 font-bold;
+  }
+
+  h2 {
+    @apply text-2xl;
   }
 
   p,
@@ -20,7 +24,7 @@
   }
 
   a {
-    @apply cursor-pointer;
+    @apply cursor-pointer text-blue-900;
   }
 
   button:disabled {
