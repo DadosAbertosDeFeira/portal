@@ -1,3 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Logo renders correctly 1`] = `[Function]`;
+
+exports[`Logo renders with sizes correctly 1`] = `[Function]`;
+
+exports[`Logo should render small version correctly 1`] = `[Function]`;

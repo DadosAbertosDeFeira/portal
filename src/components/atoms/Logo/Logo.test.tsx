@@ -12,4 +12,16 @@ describe("Logo", () => {
 
     expect(asFragment).toMatchSnapshot();
   });
+
+  it("renders with sizes correctly", () => {
+    const { asFragment } = makeSut({ width: 40, height: 40 });
+
+    expect(asFragment).toMatchSnapshot();
+  });
+
+  it("should render small version correctly", () => {
+    const { asFragment } = makeSut({ small: true });
+
+    expect(asFragment).toMatchSnapshot();
+  });
 });
