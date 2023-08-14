@@ -1,60 +1,67 @@
+import type {
+  SearchBarSelectItem,
+  SearchBarSubmitHandler,
+} from "molecules/SearchBar";
+import { SearchBar } from "molecules/SearchBar";
 import { useRouter } from "next/router";
-import { FilterSearch } from "organisms/FilterSearch";
 import { Neighborhood } from "organisms/Neighborhood";
-import { SearchDocuments } from "organisms/SearchDocuments";
 import type { ReactElement } from "react";
-import type { SubmitHandler } from "react-hook-form";
 
 import { HeaderLayout } from "@/layouts/HeaderLayout";
 import { SeoLayout } from "@/layouts/SeoLayout";
 
 import type { NextPageWithLayout } from "./_app";
 
+const searchBarItems: SearchBarSelectItem[] = [
+  { value: "Vereadores - Agendas", id: 1 },
+  { value: "Vereadores - Atas", id: 2 },
+  { value: "Vereadores - Contratos", id: 3 },
+  { value: "Vereadores - Despesas", id: 4 },
+  { value: "Vereadores - Licitações", id: 5 },
+  { value: "Vereadores - Listas de Presença", id: 6 },
+  { value: "Vereadores - Receitas", id: 7 },
+  { value: "Diários Oficiais", id: 8 },
+  { value: "Prefeitura - Licitações", id: 9 },
+  { value: "TCM-BA - Documentos", id: 10 },
+];
+
+const neighborhood = [
+  "35º. BI",
+  "Aeroporto",
+  "Asa Branca",
+  "Aviário",
+  "Baraúnas",
+  "Brasília",
+  "Calumbi",
+  "Campo do Gado Novo",
+  "Campo Limpo",
+];
+
 const Home: NextPageWithLayout = () => {
   const router = useRouter();
 
-  const handleSubmit: SubmitHandler<any> = (data) => {
-    router.push({ pathname: "busca", query: data });
+  const handleSubmit: SearchBarSubmitHandler = async ({
+    inputValue,
+    selectValue,
+  }) => {
+    await router.push({
+      pathname: "busca",
+      query: { databaseId: selectValue.id, search: inputValue },
+    });
   };
-
-  const neighborhood = [
-    "35º. BI",
-    "Aeroporto",
-    "Asa Branca",
-    "Aviário",
-    "Baraúnas",
-    "Brasília",
-    "Calumbi",
-    "Campo do Gado Novo",
-    "Campo Limpo",
-  ];
-
-  const categoryItems = [
-    "Vereadores - Agendas",
-    "Vereadores - Atas",
-    "Vereadores - Contratos",
-    "Vereadores - Despesas",
-    "Vereadores - Licitações",
-    "Vereadores - Listas de Presença",
-    "Vereadores - Receitas",
-    "Diários Oficiais",
-    "Prefeitura - Licitações",
-    "TCM-BA - Documentos",
-  ];
 
   return (
     <main className="bg-city-pattern bg-contain bg-no-repeat">
-      <SearchDocuments
-        className="p-2 py-20 tablet:pl-14 laptop:max-w-[60vw]"
-        searchSuggestions={["Transparência em Feira de Santana"]}
-        searchForm={
-          <FilterSearch
-            categoryItems={categoryItems}
-            formOptions={{ mode: "onSubmit" }}
-            onSubmit={handleSubmit}
-          />
-        }
-      />
+      <div className="lg:py-18 mx-3 md:ml-14 md:max-w-[80vw] md:py-16 lg:w-[65vw] lg:max-w-[800px]">
+        <h1 className="py-10 text-center text-3xl font-black md:text-left md:text-[40px] md:leading-[1.25em] lg:pb-8 lg:text-[50px] lg:leading-[68.2px]">
+          Transparência nas Informações de Feira de Santana
+        </h1>
+        <SearchBar
+          className="bg-white"
+          items={searchBarItems}
+          onSubmit={handleSubmit}
+        />
+      </div>
       <Neighborhood className="py-20" items={neighborhood} />
     </main>
   );

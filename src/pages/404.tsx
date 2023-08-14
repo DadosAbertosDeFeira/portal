@@ -1,9 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
+import { Image } from "atoms/Image";
+import { Link } from "atoms/Link";
 import type { ReactElement } from "react";
 
-// eslint-disable-next-line import/extensions
-import { Text } from "@/components/atoms/Text";
 import { HeaderLayout } from "@/layouts/HeaderLayout";
 import { SeoLayout } from "@/layouts/SeoLayout";
 
@@ -21,17 +19,17 @@ const Error404: NextPageWithLayout = () => {
       />
       <div className="mx-12 flex flex-col gap-y-4 text-center">
         <h1>Não encontramos esta página</h1>
-        <Text>
+        <p>
           Aparentemente a página que você está tentando acessar não existe ou
           foi movida.
-        </Text>
-        <Text>
+        </p>
+        <p>
           Mas não tem problema!{" "}
           <Link className="underline" href="/">
             Clique aqui
           </Link>{" "}
           e volte para o site!
-        </Text>
+        </p>
       </div>
     </section>
   );

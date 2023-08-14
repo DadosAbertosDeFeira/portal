@@ -39,8 +39,9 @@ const Contribua: NextPageWithLayout = () => {
 
   return (
     <main className="my-10">
+      <h1 className="sr-only">Contribua com o Projeto</h1>
       <Contribute />
-      <div className="my-20 h-1 w-full bg-gray-2" />
+      <div className="my-20 h-1 w-full bg-gray-300" />
       <Contact socialMedias={socialMedias} />
     </main>
   );
