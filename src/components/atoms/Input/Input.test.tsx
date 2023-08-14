@@ -9,9 +9,10 @@ describe("Input", () => {
   const makeSut = ({
     label = "label",
     name = "name",
+    id = "input",
     ...props
   }: Partial<InputProps>) => {
-    return render(<Input name={name} label={label} {...props} />);
+    return render(<Input id={id} name={name} label={label} {...props} />);
   };
 
   it("renders correctly", () => {
@@ -38,5 +39,21 @@ describe("Input", () => {
     const helperText = screen.queryByText("this is an input");
 
     expect(helperText).toBeInTheDocument();
+  });
+
+  it("should render suffix", () => {
+    makeSut({ suffix: <p>suffix</p> });
+
+    const suffix = screen.queryByText("suffix");
+
+    expect(suffix).toBeInTheDocument();
+  });
+
+  it("should render prefix", () => {
+    makeSut({ prefix: <p>prefix</p> });
+
+    const prefix = screen.queryByText("prefix");
+
+    expect(prefix).toBeInTheDocument();
   });
 });

@@ -1,15 +1,13 @@
-import { Text } from "atoms/Text";
-import type { FocusEventHandler } from "react";
-import { forwardRef, useMemo, useState } from "react";
+import { forwardRef, useMemo } from "react";
 import { twMerge } from "tailwind-merge";
 
 import type { InputProps, InputVariants } from "./types";
 
-const variants: Record<InputVariants, string> = {
+export const inputVariants: Record<InputVariants, string> = {
   default: "outline-none",
-  shadowed: "shadow-md rounded bg-white",
+  shadowed: "shadow-lg rounded bg-white",
   outline:
-    "rounded border border-gray-2 bg-white font-medium text-gray-dark focus:border-primary-dark transition-all",
+    "rounded border border-gray-2 bg-white font-normal text-gray-900 focus:border-blue-500 transition-all",
 };
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
@@ -24,86 +22,85 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
     errorText,
     helperText,
     className,
-    onFocus,
-    onBlur,
-    containerProps,
     filled = true,
+    containerProps = {},
+    labelProps = {},
     ...props
   },
   ref
 ) {
-  const [hasFocus, setFocus] = useState(false);
-
-  const handleFocus: FocusEventHandler<HTMLInputElement> = (event) => {
-    setFocus(true);
-    if (onFocus) onFocus(event);
-  };
-
-  const handleblur: FocusEventHandler<HTMLInputElement> = (event) => {
-    setFocus(false);
-    if (onBlur) onBlur(event);
-  };
-
   const handleBottomText = useMemo(() => {
     if (errorText) {
       return (
-        <Text
-          id={`input-${name}--error-message`}
-          className="text-sm text-alert"
+        <p
+          id={`input-${id}--error-message`}
+          className="absolute inset-x-2 bottom-0 text-sm text-red-500"
         >
           {errorText}
-        </Text>
+        </p>
       );
     }
     if (helperText) {
       return (
-        <Text id={`input-${name}--describedby`} className="text-sm">
+        <p
+          id={`input-${id}--describedby`}
+          className="absolute inset-x-2 bottom-0 text-sm text-gray-500"
+        >
           {helperText}
-        </Text>
+        </p>
       );
     }
 
     return null;
-  }, [helperText, errorText, name]);
+  }, [helperText, errorText, id]);
 
   return (
-    <label
+    <div
       {...containerProps}
       className={twMerge(
-        "flex cursor-pointer flex-col flex-nowrap bg-white",
-        containerProps?.className
+        "relative",
+        !!handleBottomText && "pb-6",
+        containerProps.className
       )}
-      htmlFor={id}
     >
-      <span className={hideLabel ? "sr-only" : ""}>{label}</span>
-      <div className="flex flex-col flex-nowrap gap-y-1">
-        <div
-          className={twMerge(
-            "flex w-full flex-row flex-nowrap items-center gap-2 p-2 border-2 border-transparent",
-            variants[variant],
-            variant === "outline" && hasFocus && "border-primary"
+      <label
+        {...labelProps}
+        className={twMerge(labelProps.className, hideLabel ? "sr-only" : "")}
+        htmlFor={id}
+      >
+        {label}
+      </label>
+      <div>
+        <div className="relative">
+          {prefix && (
+            <div className="absolute inset-y-0 left-1 flex w-9 items-center justify-center overflow-hidden p-1">
+              {prefix}
+            </div>
           )}
-          onFocus={handleFocus}
-          onBlur={handleblur}
-        >
-          {prefix}
           <input
             className={twMerge(
-              "grow outline-none w-full placeholder:text-sm",
+              "bg-white p-3 placeholder:text-sm w-full h-full outline-none",
+              !!prefix && "pl-10",
+              !!suffix && "pr-10",
+              inputVariants[variant],
+              !!errorText && "border-red-600",
               className
             )}
             id={id}
-            name={name}
             aria-errormessage={`input-${name}--error-message`}
             aria-describedby={`input-${name}--describedby`}
             placeholder={filled ? label : ""}
             {...props}
             ref={ref}
           />
-          {suffix}
+          {suffix && (
+            <div className="absolute inset-y-0 right-1 flex w-9 items-center justify-center overflow-hidden p-1">
+              {suffix}
+            </div>
+          )}
         </div>
-        {handleBottomText}
       </div>
-    </label>
+      {handleBottomText}
+    </div>
   );
 });
