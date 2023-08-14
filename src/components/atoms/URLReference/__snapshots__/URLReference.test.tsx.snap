@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`URLReference should URL without path correctly 1`] = `[Function]`;
+
+exports[`URLReference should renders correctly 1`] = `[Function]`;
