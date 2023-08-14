@@ -1,6 +1,6 @@
 import { Link } from "atoms/Link";
-import { Text } from "atoms/Text";
-import React, { useMemo } from "react";
+import { URLReference } from "atoms/URLReference";
+import React from "react";
 
 import type { SearchResultItemProps } from "./types";
 
@@ -11,30 +11,21 @@ export function SearchResultItem({
   date,
   ...props
 }: SearchResultItemProps) {
-  const urlPaths = useMemo(() => {
-    const { origin, pathname } = new URL(url);
-    const paths = pathname.replaceAll("/", " > ");
-    return `${origin}${paths}`;
-  }, [url]);
-
   return (
     <section className="flex flex-col gap-2" {...props}>
       <header>
-        <Link className="text-[#3793DF]" href={url}>
-          {urlPaths}
+        <Link className="group" href={url}>
+          <URLReference url={url} />
+          <h2 className="text-sm font-bold text-blue-500 group-hover:underline md:text-base">
+            {title}
+          </h2>
         </Link>
-        <Text
-          variant="h2"
-          className="font-roboto text-[18px] font-medium text-primary-dark"
-        >
-          {title}
-        </Text>
       </header>
-      <Text className="leading-1 text-[14px] font-light text-[#444545]">
+      <p className="leading-1 text-xs font-light text-gray-700 md:text-sm">
         {description}
-      </Text>
+      </p>
       <footer>
-        <Text className="text-xs tablet:text-base">{date}</Text>
+        <p className="text-xs text-gray-600 md:text-sm">{date}</p>
       </footer>
     </section>
   );
