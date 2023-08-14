@@ -12,4 +12,16 @@ describe("Menu", () => {
 
     expect(asFragment).toMatchSnapshot();
   });
+
+  it("should render header correctly", () => {
+    const { asFragment } = makeSut({ header: <p>Header</p> });
+
+    expect(asFragment).toMatchSnapshot();
+  });
+
+  it("should render footer correctly", () => {
+    const { asFragment } = makeSut({ footer: <p>Footer</p> });
+
+    expect(asFragment).toMatchSnapshot();
+  });
 });
