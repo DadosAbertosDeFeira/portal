@@ -1,14 +1,20 @@
+import type { StaticImageData } from "next/image";
 import ImageNext from "next/image";
-import type { ComponentPropsWithRef, ForwardedRef } from "react";
+import type { ComponentPropsWithRef } from "react";
 import { forwardRef } from "react";
 
 export type ImageProps = ComponentPropsWithRef<typeof ImageNext> & {
-  ref: ForwardedRef<HTMLImageElement | null>;
+  alt: string;
+  src: string | StaticImageData;
 };
 
 export const Image = forwardRef<HTMLImageElement, ImageProps>(function Image(
-  { ...props },
+  { src, ...props },
   ref
 ) {
-  return <ImageNext {...props} ref={ref} />;
+  if (typeof src === "string") {
+    return <ImageNext width={50} height={50} src={src} {...props} ref={ref} />;
+  }
+
+  return <ImageNext src={src} {...props} ref={ref} />;
 });
