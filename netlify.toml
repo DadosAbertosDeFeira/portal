@@ -1,18 +1,18 @@
 [build]
-  command = "pnpm build"
-  publish = "out"
+command = "pnpm build:ci"
+publish = "out"
 
 [build.environment]
-  NODE_VERSION = "16.19.0"
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+NODE_VERSION = "18.17.1"
+NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 [context.production.environment]
-  SENTRY_ENVIRONMENT = "production"
-  NEXT_PUBLIC_SENTRY_ENVIRONMENT = "production"
+SENTRY_ENVIRONMENT = "production"
+NEXT_PUBLIC_SENTRY_ENVIRONMENT = "production"
 
 [context.deploy-preview.environment]
-  SENTRY_ENVIRONMENT = "deploy-preview"
-  NEXT_PUBLIC_SENTRY_ENVIRONMENT = "deploy-preview"
+SENTRY_ENVIRONMENT = "deploy-preview"
+NEXT_PUBLIC_SENTRY_ENVIRONMENT = "deploy-preview"
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
+package = "@netlify/plugin-nextjs"
