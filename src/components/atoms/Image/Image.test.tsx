@@ -2,6 +2,10 @@ import { render } from "@testing-library/react";
 
 import { Image, type ImageProps } from "./Image";
 
+jest.mock("next/image", () => ({ src, ...props }: ImageProps) => (
+  <img src={src as string} {...props} />
+));
+
 describe("Image", () => {
   const makeSut = ({
     alt = "Imagem de teste",

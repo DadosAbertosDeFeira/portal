@@ -1,9 +1,10 @@
 import type { StaticImageData } from "next/image";
 import ImageNext from "next/image";
-import type { ComponentPropsWithRef } from "react";
+import type { ComponentPropsWithRef, ForwardedRef } from "react";
 import { forwardRef } from "react";
 
 export type ImageProps = ComponentPropsWithRef<typeof ImageNext> & {
+  ref?: ForwardedRef<HTMLImageElement>;
   alt: string;
   src: string | StaticImageData;
 };

@@ -1,6 +1,11 @@
 import { render } from "@testing-library/react";
+import type { ImageProps } from "atoms/Image";
 
 import { Supporters, type SupportersProps } from ".";
+
+jest.mock("next/image", () => ({ src, ...props }: ImageProps) => (
+  <img src={src as string} {...props} />
+));
 
 describe("Supporters", () => {
   const supportersMock = [

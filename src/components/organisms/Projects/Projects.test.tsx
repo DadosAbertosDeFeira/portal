@@ -1,8 +1,13 @@
 import { render } from "@testing-library/react";
 import type { Project } from "@utils/projects";
+import type { ImageProps } from "atoms/Image";
 
 import { Projects } from "./Projects";
 import type { ProjectsProps } from "./types";
+
+jest.mock("next/image", () => ({ src, ...props }: ImageProps) => (
+  <img src={src as string} {...props} />
+));
 
 describe("Projects", () => {
   const projectsMock: Project[] = [
