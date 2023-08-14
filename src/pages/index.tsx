@@ -1,10 +1,10 @@
+import { useRouter } from "next/router";
+import { Neighborhood } from "organisms/Neighborhood";
 import type {
   SearchBarSelectItem,
   SearchBarSubmitHandler,
-} from "molecules/SearchBar";
-import { SearchBar } from "molecules/SearchBar";
-import { useRouter } from "next/router";
-import { Neighborhood } from "organisms/Neighborhood";
+} from "organisms/SearchBar";
+import { SearchBar } from "organisms/SearchBar";
 import type { ReactElement } from "react";
 
 import { HeaderLayout } from "@/layouts/HeaderLayout";

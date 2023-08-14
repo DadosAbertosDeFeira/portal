@@ -1,8 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { Link } from "atoms/Link";
-import type { SearchBarSelectItem } from "molecules/SearchBar";
-import { SearchBar } from "molecules/SearchBar";
 import { SearchResultItem } from "molecules/SearchResultItem";
+import type { SearchBarSelectItem } from "organisms/SearchBar";
+import { SearchBar } from "organisms/SearchBar";
 import type { ReactElement } from "react";
 
 import { HeaderLayout } from "@/layouts/HeaderLayout";
