@@ -1,4 +1,3 @@
-import { anchors } from "@utils/anchors";
 import { Footer } from "organisms/Footer";
 import { Header } from "organisms/Header";
 import type { ReactNode } from "react";
@@ -10,10 +9,10 @@ export interface LayoutProps {
 // eslint-disable-next-line import/no-default-export
 export function HeaderLayout({ children }: LayoutProps) {
   return (
-    <>
-      <Header anchors={anchors} />
-      {children}
+    <div className="flex max-h-[100%] min-h-[100vh] flex-col">
+      <Header />
+      <div className="grow">{children}</div>
       <Footer />
-    </>
+    </div>
   );
 }
