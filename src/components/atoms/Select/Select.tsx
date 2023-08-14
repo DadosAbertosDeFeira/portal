@@ -1,10 +1,15 @@
-import { autoUpdate, size, useFloating } from "@floating-ui/react";
+import {
+  autoUpdate,
+  size,
+  useFloating,
+  useMergeRefs,
+} from "@floating-ui/react";
+import { Input } from "atoms/Input";
+import { Menu } from "atoms/Menu";
 import { useCombobox } from "downshift";
 import type { ForwardedRef, ReactNode } from "react";
 import { forwardRef, useMemo } from "react";
 import { createPortal } from "react-dom";
-
-import { useRootDocument } from "@/hooks/useRootDocument";
 
 import type { SelectProps } from "./types";
 
@@ -13,8 +18,10 @@ function SelectComponent<T>(
     selectedItem,
     inputValue,
     items,
-    renderInput,
-    renderList,
+    renderInput = ({ getInputProps, getLabelProps }) => (
+      <Input {...getInputProps()} labelProps={getLabelProps()} />
+    ),
+    renderList = (props) => <Menu {...props} />,
     onInputChange,
     onSelectedChange,
     itemToString = (v) => String(v),
@@ -23,28 +30,26 @@ function SelectComponent<T>(
   }: SelectProps<T>,
   ref: ForwardedRef<HTMLInputElement>
 ) {
-  const root = useRootDocument();
-
   const {
     getInputProps,
+    getToggleButtonProps,
     getLabelProps,
     getMenuProps,
     getItemProps,
     isOpen,
-    openMenu,
     highlightedIndex,
-    closeMenu,
   } = useCombobox({
     inputValue,
     itemToString,
     items,
-    onInputValueChange({ inputValue = "" }) {
+    onInputValueChange({ inputValue }) {
       if (onInputChange) onInputChange(inputValue);
     },
+    /* istanbul ignore next */
     onIsOpenChange({ isOpen = false }) {
       if (onMenuChange) onMenuChange(isOpen);
     },
-    onSelectedItemChange({ selectedItem = null }) {
+    onSelectedItemChange({ selectedItem }) {
       if (onSelectedChange) onSelectedChange(selectedItem);
     },
     selectedItem,
@@ -68,12 +73,15 @@ function SelectComponent<T>(
     whileElementsMounted: autoUpdate,
   });
 
+  const inputRef = useMergeRefs([ref, refs.setReference]);
+
   const input = renderInput(
     {
-      ...getInputProps({ ref }),
-      containerProps: getLabelProps({ ref: refs.setReference }),
+      getInputProps: () => getInputProps({ ref: inputRef }),
+      getLabelProps,
+      getToggleButtonProps,
     },
-    { isOpen, openMenu, closeMenu }
+    { isOpen }
   );
 
   const listItems = useMemo(() => {
@@ -81,7 +89,7 @@ function SelectComponent<T>(
       return children({
         focused: highlightedIndex === index,
         getItemProps: () => getItemProps({ item, index }),
-        key: itemToString(item),
+        key: `${itemToString(item)}-${index}`,
         label: itemToString(item),
       });
     });
@@ -100,7 +108,7 @@ function SelectComponent<T>(
   return (
     <>
       {input}
-      {root.current && createPortal(list, root.current)}
+      {createPortal(list, document.body)}
     </>
   );
 }

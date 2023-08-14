@@ -20,18 +20,20 @@ export type SelectRenderList = (
 export type SelectProps<T> = {
   ref?: ForwardedRef<HTMLInputElement | null>;
   items: T[];
-  itemToString?: T extends string ? undefined : (value: T | null) => string;
-  renderInput: (
-    props: Record<string, unknown> & {
-      containerProps: Record<string, unknown>;
+  itemToString?: (value: T | null) => string;
+  renderInput?: (
+    params: {
+      getInputProps: () => Record<string, unknown>;
+      getLabelProps: () => Record<string, unknown>;
+      getToggleButtonProps: () => Record<string, unknown>;
     },
-    state: SelectStateProps
+    state: { isOpen: boolean }
   ) => ReactElement;
-  renderList: SelectRenderList;
+  renderList?: SelectRenderList;
   children: (props: SelectChildrenProps) => ReactElement;
-  selectedItem?: T;
+  selectedItem?: T | null;
   inputValue?: string;
-  onInputChange?: (value: string) => void;
-  onSelectedChange?: (value: T | null) => void;
+  onInputChange?: (value: string | undefined) => void;
+  onSelectedChange?: (value: undefined | T | null) => void;
   onMenuChange?: (isMenuOpen: boolean) => void;
 };
