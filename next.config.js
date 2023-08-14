@@ -4,12 +4,12 @@ const withExportImages = require("next-export-optimize-images");
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   swcMinify: true,
-  basePath: '',
+  basePath: "",
   sentry: {
     hideSourceMaps: true,
   },
-  distDir: 'out',
-  output: 'export',
+  distDir: "out",
+  output: "export",
 };
 
 module.exports = () => {
