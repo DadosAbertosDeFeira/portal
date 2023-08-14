@@ -32,7 +32,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
       {...props}
       className={(twMerge(buttonVariants[variant]), className)}
       target={isExternalURL ? "_blank" : undefined}
-      rel={isExternalURL ? "noreferrer" : undefined}
+      rel={isExternalURL ? "noopener noreferrer" : undefined}
       ref={ref}
     >
       {children}
