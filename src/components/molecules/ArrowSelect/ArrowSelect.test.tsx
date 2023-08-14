@@ -1,5 +1,5 @@
-import { faker } from "@faker-js/faker";
-import { render } from "@testing-library/react";
+/* eslint-disable testing-library/no-wait-for-empty-callback */
+import { render, waitFor } from "@testing-library/react";
 import dynamic from "next/dynamic";
 
 import { type ArrowSelectProps } from ".";
@@ -21,8 +21,10 @@ describe("ArrowSelect", () => {
     return render(<ArrowSelect items={items} {...props} />);
   }
 
-  it("renders correctly", () => {
+  it("renders correctly", async () => {
     const { asFragment } = makeSut({});
+
+    await waitFor(async () => {});
 
     expect(asFragment).toMatchSnapshot();
   });
