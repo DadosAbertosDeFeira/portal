@@ -10,7 +10,7 @@
     "export": "next build && next-export-optimize-images",
     "format-code:all": "prettier --write ./src",
     "format-code:staged": "pretty-quick --staged",
-    "lint": "eslint src",
+    "lint": "eslint .",
     "lint:staged": "lint-staged",
     "pre-commit": "pnpm format-code:staged && pnpm lint:staged",
     "prepare": "husky install",
