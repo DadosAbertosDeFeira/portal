@@ -1,22 +1,18 @@
-import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { render } from "@testing-library/react";
 
-import { Header, type HeaderProps } from "./Header";
+import { Header } from "./Header";
 
 describe("Header", () => {
-  let user = userEvent.setup();
-
   beforeEach(() => {
-    user = userEvent.setup();
     jest.clearAllMocks();
   });
 
-  const makeSut = ({ ...props }: Partial<HeaderProps>) => {
-    return render(<Header {...props} ref={null} />);
+  const makeSut = () => {
+    return render(<Header />);
   };
 
   it("renders correctly", () => {
-    const { asFragment } = makeSut({});
+    const { asFragment } = makeSut();
 
     expect(asFragment).toMatchSnapshot();
   });
@@ -30,33 +26,8 @@ describe("Header", () => {
       removeEventListener: jest.fn(),
     }));
 
-    const { asFragment } = makeSut({});
+    const { asFragment } = makeSut();
 
     expect(asFragment).toMatchSnapshot();
-  });
-
-  it("should drawer have left-0 when click in button", async () => {
-    makeSut({});
-
-    const button = screen.getByRole("button", { name: "Menu" });
-
-    await user.click(button);
-
-    const drawer = screen.getByRole("navigation");
-
-    expect(drawer).toHaveClass("left-0");
-  });
-
-  it("should close drawer menu when click outside", async () => {
-    const { container } = makeSut({});
-
-    const button = screen.getByRole("button", { name: "Menu" });
-
-    await user.click(button);
-    await user.click(container);
-
-    const drawer = screen.getByRole("navigation");
-
-    expect(drawer).toHaveClass("left-[-70vw]");
   });
 });

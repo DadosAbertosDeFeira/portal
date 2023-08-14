@@ -1,5 +1,5 @@
-import type { AnchorsType } from "@utils/anchors";
+import type { HeaderMenuItem } from "../types";
 
 export type HeaderDesktopProps = {
-  anchors: AnchorsType;
+  anchors: HeaderMenuItem[];
 };
