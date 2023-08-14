@@ -1,4 +1,4 @@
-import { Text } from "atoms/Text";
+import { inputVariants } from "atoms/Input";
 import { forwardRef, useMemo } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -8,13 +8,16 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   function Textarea(
     {
       name,
+      id,
       label,
       hideLabel = false,
+      variant = "default",
       errorText,
       helperText,
       className,
-      containerProps,
       filled = true,
+      containerProps = {},
+      labelProps = {},
       ...props
     },
     ref
@@ -22,52 +25,65 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
     const handleBottomText = useMemo(() => {
       if (errorText) {
         return (
-          <Text
-            id={`input-${name}--error-message`}
-            className="text-sm text-alert"
+          <p
+            id={`input-${id}--error-message`}
+            className="absolute inset-x-2 bottom-0 text-sm text-red-500"
           >
             {errorText}
-          </Text>
+          </p>
         );
       }
       if (helperText) {
         return (
-          <Text id={`input-${name}--describedby`} className="text-sm">
+          <p
+            id={`input-${id}--describedby`}
+            className="absolute inset-x-2 bottom-0 text-sm text-gray-500"
+          >
             {helperText}
-          </Text>
+          </p>
         );
       }
 
       return null;
-    }, [helperText, errorText, name]);
+    }, [helperText, errorText, id]);
 
     return (
-      <label
+      <div
         {...containerProps}
         className={twMerge(
-          "flex cursor-pointer flex-col flex-nowrap",
-          containerProps?.className
+          "relative",
+          !!handleBottomText && "pb-6",
+          containerProps.className
         )}
-        htmlFor={name}
       >
-        <span className={hideLabel ? "sr-only" : ""}>{label}</span>
-        <div className="flex flex-col flex-nowrap gap-y-1">
-          <textarea
-            className={twMerge(
-              "w-full rounded border border-gray-2 bg-white p-2 pl-4 font-medium text-gray-dark",
-              className
-            )}
-            id={name}
-            name={name}
-            aria-errormessage={`textarea-${name}--error-message`}
-            aria-describedby={`textarea-${name}--describedby`}
-            placeholder={filled ? label : ""}
-            {...props}
-            ref={ref}
-          />
-          {handleBottomText}
+        <label
+          {...labelProps}
+          className={twMerge(labelProps.className, hideLabel ? "sr-only" : "")}
+          htmlFor={id}
+        >
+          {label}
+        </label>
+        <div>
+          <div className="relative">
+            <textarea
+              className={twMerge(
+                "bg-white p-3 placeholder:text-sm rounded-sm w-full h-full outline-none",
+                inputVariants[variant],
+                !!errorText && "border-red-600",
+                className
+              )}
+              id={id}
+              name={name}
+              aria-errormessage={`input-${name}--error-message`}
+              aria-describedby={`input-${name}--describedby`}
+              placeholder={filled ? label : ""}
+              {...props}
+              ref={ref}
+            />
+          </div>
         </div>
-      </label>
+        {handleBottomText}
+      </div>
     );
   }
 );

@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Textarea renders correctly 1`] = `[Function]`;
+
+exports[`Textarea should render error variant correctly 1`] = `[Function]`;
