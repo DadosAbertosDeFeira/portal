@@ -12,4 +12,10 @@ describe("MenuItem", () => {
 
     expect(asFragment).toMatchSnapshot();
   });
+
+  it("should render focused correctly", () => {
+    const { asFragment } = makeSut({ focused: true });
+
+    expect(asFragment).toMatchSnapshot();
+  });
 });

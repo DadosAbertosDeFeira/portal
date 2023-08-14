@@ -11,15 +11,16 @@ export const MenuItem = forwardRef<HTMLLIElement, MenuItemProps>(
     return (
       <li
         className={twMerge(
-          "flex flex-row flex-nowrap gap-2 items-center justify-between p-3 cursor-pointer hover:bg-primary-light",
-          focused && "outline outline-1 outline-primary",
+          "flex flex-row flex-nowrap gap-2 items-center justify-between p-3 cursor-pointer hover:bg-gray-100",
+          focused &&
+            "[&:not(&:hover)]:outline [&:not(&:hover)]:outline-1 [&:not(&:hover)]:outline-blue-400",
           className
         )}
         {...props}
         ref={ref}
       >
         {prefix}
-        <li className="grow">{children}</li>
+        <div className="grow">{children}</div>
         {suffix}
       </li>
     );

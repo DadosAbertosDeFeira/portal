@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MenuItem renders correctly 1`] = `[Function]`;
+
+exports[`MenuItem should render focused correctly 1`] = `[Function]`;
