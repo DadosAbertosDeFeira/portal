@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ArrowSelect renders correctly 1`] = `[Function]`;
+
+exports[`ArrowSelect should renders correctly with objects 1`] = `[Function]`;

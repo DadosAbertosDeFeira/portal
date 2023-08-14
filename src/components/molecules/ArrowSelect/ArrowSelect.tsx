@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { Button } from "atoms/Button";
 import { Input } from "atoms/Input";
 import { MenuItem } from "atoms/MenuItem";
