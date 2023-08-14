@@ -1,56 +1,81 @@
+import { Button } from "atoms/Button";
 import { Input } from "atoms/Input";
-import { type FormEventHandler, forwardRef, useRef } from "react";
+import type { ArrowSelectProps } from "molecules/ArrowSelect";
+import dynamic from "next/dynamic";
+import type { FormEventHandler } from "react";
+import { useState } from "react";
 import { BiSearch } from "react-icons/bi";
-import { RiCloseFill } from "react-icons/ri";
 import { twMerge } from "tailwind-merge";
 
-import type { SearchBarProps } from "./types";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
-export const SearchBar = forwardRef<HTMLInputElement, SearchBarProps>(
-  function SearchBar({ name, onSubmit, className, onClear, ...props }, ref) {
-    const form = useRef<HTMLFormElement | null>(null);
+import type { SearchBarProps, SearchBarSelectItem } from "./types";
 
-    const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
-      event.preventDefault();
-      const form = event.target as HTMLFormElement;
-      const formData = new FormData(form);
-      const value = formData.get(name) as string;
-
-      if (onSubmit) onSubmit(value ?? "");
-    };
-
-    const handleSearch = () => {
-      form?.current?.requestSubmit();
-    };
-
-    return (
-      <form ref={form} className="w-full" onSubmit={handleSubmit}>
-        <Input
-          ref={ref}
-          name={name}
-          {...props}
-          className={twMerge("w-full", className)}
-          type="text"
-          prefix={
-            <BiSearch
-              className="min-w-[25px]"
-              fill="#0063B5"
-              onClick={handleSearch}
-              size={25}
-            />
-          }
-          suffix={
-            onClear && (
-              <RiCloseFill
-                className="min-w-[25px]"
-                onClick={onClear}
-                fill="#0063B5"
-                size={25}
-              />
-            )
-          }
-        />
-      </form>
-    );
-  }
+const ArrowSelect = dynamic<ArrowSelectProps<SearchBarSelectItem>>(
+  () => import("molecules/ArrowSelect").then((module) => module.ArrowSelect),
+  { ssr: false }
 );
+
+export function SearchBar({
+  className,
+  items,
+  onSubmit,
+  ...props
+}: SearchBarProps) {
+  const [selectInputValue, setSelectInputValue] = useState<string | undefined>(
+    ""
+  );
+
+  const [selectedValue, setSelectedValue] = useState<
+    SearchBarSelectItem | undefined | null
+  >(null);
+
+  const [inputValue, setInputValue] = useState<string>("");
+
+  const matches = useMediaQuery("(min-width: 576px)");
+
+  const handleSubmit: FormEventHandler = (event) => {
+    event.preventDefault();
+
+    if (!selectedValue || !inputValue) return;
+
+    if (onSubmit) onSubmit({ selectValue: selectedValue, inputValue });
+  };
+
+  return (
+    <form
+      {...props}
+      className={twMerge(
+        className,
+        "flex flex-col flex-nowrap p-2 gap-2 sm:flex-row"
+      )}
+    >
+      <ArrowSelect
+        itemToString={(item) => item?.value ?? ""}
+        inputValue={selectInputValue}
+        onInputChange={(value) => setSelectInputValue(value)}
+        onSelectedChange={(value) => setSelectedValue(value)}
+        selectedItem={selectedValue}
+        items={items}
+      />
+      <Input
+        label="Pesquisa"
+        name="search"
+        value={inputValue}
+        onChange={({ target: { value } }) => setInputValue(value)}
+        placeholder="Digite sua pesquisa"
+        containerProps={{ className: "w-full" }}
+        prefix={!matches && <BiSearch fill="blue" />}
+        hideLabel
+      />
+      <Button
+        type="submit"
+        className="w-full px-5 sm:max-w-[100px]"
+        variant="condensed"
+        onClick={handleSubmit}
+      >
+        Pesquisar
+      </Button>
+    </form>
+  );
+}
