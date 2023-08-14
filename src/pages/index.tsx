@@ -57,7 +57,7 @@ const Home: NextPageWithLayout = () => {
           Transparência nas Informações de Feira de Santana
         </h1>
         <SearchBar
-          className="bg-white"
+          className="bg-white shadow-lg"
           items={searchBarItems}
           onSubmit={handleSubmit}
         />
