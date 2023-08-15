@@ -2,13 +2,13 @@
   "financial": [
     {
       "id": "shuttleworth",
-      "img": "https://alvarogfn.github.io/portal/assets/supporters/shuttleworth-funded.jpeg",
+      "img": "https://DadosAbertosDeFeira.github.io/portal/assets/supporters/shuttleworth-funded.jpeg",
       "link": "https://shuttleworthfoundation.org/",
       "name": "Shuttleworth Foundation"
     },
     {
       "id": "goethe",
-      "img": "https://alvarogfn.github.io/portal/assets/supporters/tramas-democraticas.png",
+      "img": "https://DadosAbertosDeFeira.github.io/portal/assets/supporters/tramas-democraticas.png",
       "link": "https://www.goethe.de/ins/br/pt/kul/sup/trd/edi.html",
       "name": "Goethe Institut"
     }
@@ -16,13 +16,13 @@
   "institutional": [
     {
       "id": "okbr",
-      "img": "https://alvarogfn.github.io/portal/assets/supporters/okbr-logo.png",
+      "img": "https://DadosAbertosDeFeira.github.io/portal/assets/supporters/okbr-logo.png",
       "link": "https://ok.org.br/",
       "name": "Open Knowledge Brasil"
     },
     {
       "id": "pgcc",
-      "img": "https://alvarogfn.github.io/portal/assets/supporters/pgcc-uefs.jpeg",
+      "img": "https://DadosAbertosDeFeira.github.io/portal/assets/supporters/pgcc-uefs.jpeg",
       "link": "https://pgcc.uefs.br/",
       "name": "Programa de Pós-Graduação em Ciência de computação da UEFS"
     }
@@ -31,31 +31,31 @@
     {
       "className": "absamLogo",
       "id": "absam",
-      "img": "https://alvarogfn.github.io/portal/assets/supporters/absam.webp",
+      "img": "https://DadosAbertosDeFeira.github.io/portal/assets/supporters/absam.webp",
       "link": "https://absam.io/",
       "name": "Absam"
     },
     {
       "id": "1password",
-      "img": "https://alvarogfn.github.io/portal/assets/supporters/1password.svg",
+      "img": "https://DadosAbertosDeFeira.github.io/portal/assets/supporters/1password.svg",
       "link": "https://github.com/1Password/1password-teams-open-source",
       "name": "1Password"
     },
     {
       "id": "netlify",
-      "img": "https://alvarogfn.github.io/portal/assets/supporters/netlify.svg",
+      "img": "https://DadosAbertosDeFeira.github.io/portal/assets/supporters/netlify.svg",
       "link": "https://www.netlify.com/open-source/",
       "name": "Netlify"
     },
     {
       "id": "jetbrains",
-      "img": "https://alvarogfn.github.io/portal/assets/supporters/jetbrains.svg",
+      "img": "https://DadosAbertosDeFeira.github.io/portal/assets/supporters/jetbrains.svg",
       "link": "https://www.jetbrains.com/?from=DadosAbertosDeFeira",
       "name": "Jetbrains"
     },
     {
       "id": "mLabs",
-      "img": "https://alvarogfn.github.io/portal/assets/supporters/mLabs.png",
+      "img": "https://DadosAbertosDeFeira.github.io/portal/assets/supporters/mLabs.png",
       "link": "https://www.mlabs.com.br/",
       "name": "mLabs"
     }

@@ -5,7 +5,7 @@
     "description": "Tem a missão de libertar dados do município de Feira de Santana. Responsável pela raspagem e o armazenamento.",
     "link": "https://github.com/DadosAbertosDeFeira/maria-quiteria",
     "img": {
-      "src": "https://alvarogfn.github.io/portal/assets/projects/maria-quiteria.png",
+      "src": "https://DadosAbertosDeFeira.github.io/portal/assets/projects/maria-quiteria.png",
       "alt": "Logo do Projeto Maria Quitéria"
     }
   },
@@ -15,7 +15,7 @@
     "description": "Já pensou se você pudesse ler uma thread no Twitter com os pontos mais importantes do Diário Oficial de Feira de Santana ao invés de ler um documento enorme? Temos um bot pra isso!",
     "link": "https://twitter.com/DiarioDeFeira",
     "img": {
-      "src": "https://alvarogfn.github.io/portal/assets/projects/bot-dou.png",
+      "src": "https://DadosAbertosDeFeira.github.io/portal/assets/projects/bot-dou.png",
       "alt": "Logo do projeto Bot do DOU"
     }
   },
@@ -25,7 +25,7 @@
     "description": "A discussão sobre dados abertos e transparência dentro das cidades ainda está muito tímida. Nós queremos mudar isso.",
     "link": "https://anchor.fm/cidadesabertas/",
     "img": {
-      "src": "https://alvarogfn.github.io/portal/assets/projects/logo-cidades-abertas-podcast.png",
+      "src": "https://DadosAbertosDeFeira.github.io/portal/assets/projects/logo-cidades-abertas-podcast.png",
       "alt": "Logo do Podcast Cidades Abertas"
     }
   },
