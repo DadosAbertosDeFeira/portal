@@ -49,7 +49,12 @@ const Contribua: NextPageWithLayout = () => {
 
 Contribua.getLayout = function getLayout(page) {
   return (
-    <SeoLayout title="Contribua" image="assets/dadosabertosdefeira.png" suffix>
+    <SeoLayout
+      title="Contribua"
+      image="assets/dadosabertosdefeira.png"
+      description="Precisamos de você para criar o futuro onde Feira de Santana é uma cidade mais transparente, contribua com o nosso projeto!"
+      suffix
+    >
       <HeaderLayout>{page}</HeaderLayout>
     </SeoLayout>
   );

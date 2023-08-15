@@ -34,7 +34,12 @@ const About: NextPageWithLayout = () => {
 
 About.getLayout = function getLayout(page: ReactElement) {
   return (
-    <SeoLayout title="Sobre" image="assets/dadosabertosdefeira.png" suffix>
+    <SeoLayout
+      title="Quem somos"
+      image="assets/dadosabertosdefeira.png"
+      description="Somos uma iniciativa que visa disponibilizar dados públicos da cidade de Feira de Santana, na Bahia, de forma aberta, transparente e acessível."
+      suffix
+    >
       <HeaderLayout>{page}</HeaderLayout>
     </SeoLayout>
   );
