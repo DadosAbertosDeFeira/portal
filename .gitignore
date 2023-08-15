@@ -1,0 +1,7 @@
+.swc
+.vscode
+out
+node_modules
+.eslintcache
+.husky
+.next
