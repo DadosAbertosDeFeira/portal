@@ -1,0 +1,7 @@
+# Block all crawlers for /busca
+User-agent: *
+Disallow: /busca
+
+# Allow all crawlers
+User-agent: *
+Allow: /
