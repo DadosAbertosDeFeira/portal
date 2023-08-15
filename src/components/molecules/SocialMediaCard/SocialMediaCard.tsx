@@ -2,7 +2,6 @@ import type { SocialMediaType } from "@utils/social";
 import { handleSocialMediaLink, lookupSocialMediaIcon } from "@utils/social";
 import { Image } from "atoms/Image";
 import { Link } from "atoms/Link";
-import classNames from "classnames";
 import type { ComponentPropsWithoutRef } from "react";
 import React from "react";
 
@@ -18,7 +17,7 @@ export function SocialMediaCard({
   ...props
 }: SocialMediaCardProps) {
   return (
-    <div className={classNames(className, "mr-4")} {...props}>
+    <div className={className} {...props}>
       <Link
         href={handleSocialMediaLink(type, user)}
         target="_blank"

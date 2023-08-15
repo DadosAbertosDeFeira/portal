@@ -19,13 +19,13 @@ export const Projects = ({ projects }: ProjectsProps) => {
         {projects.map(({ name, description, link, type, logo }) => (
           <li className="h-full w-full" key={name}>
             <Link className="h-full w-full" href={link}>
-              <section className="relative flex h-full w-full flex-row gap-2 overflow-hidden rounded shadow-lg">
+              <section className="relative flex h-full w-full flex-row items-center gap-2 overflow-hidden rounded shadow-lg">
                 <Image
-                  className="hidden h-[140px] max-h-[140px] min-h-[140px] w-[140px] min-w-[140px] max-w-[140px] object-cover md:block"
+                  className="hidden aspect-square h-full w-auto object-cover md:block"
                   src={logo.path}
                   alt={logo.description}
                 />
-                <div className="mt-2 flex h-full flex-col gap-2 p-2">
+                <div className="mt-2 flex h-full grow flex-col gap-2 p-2">
                   <h3 className="pr-12 text-base">{name}</h3>
                   <p className="overflow-hidden text-xs leading-tight">
                     {description}

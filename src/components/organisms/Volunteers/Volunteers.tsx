@@ -33,14 +33,15 @@ export function Volunteers({ volunteers }: VolunteersProps) {
               <p className="text-md truncate leading-tight text-blue-500">
                 {role}
               </p>
-              <ul className="flex flex-row items-center gap-x-1">
+              <ul className="flex flex-row items-center gap-x-4">
                 {Object.entries(medias).map(([key, value]) => {
                   return (
-                    <SocialMediaCard
-                      key={key}
-                      type={key as SocialMediaType}
-                      user={value}
-                    />
+                    <li key={key}>
+                      <SocialMediaCard
+                        type={key as SocialMediaType}
+                        user={value}
+                      />
+                    </li>
                   );
                 })}
               </ul>

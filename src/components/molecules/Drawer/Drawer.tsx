@@ -27,7 +27,7 @@ export const Drawer = forwardRef<HTMLDivElement, DrawerProps>(function Drawer(
     <div
       className={classNames(
         directions[direction][isOpen ? "open" : "closed"],
-        "z-50 border-red fixed w-[70vw] max-w-[325px] min-w-[280px] inset-y-0 bg-white transition-all duration-300 ease-in-out shadow-3"
+        "z-50 border-red fixed w-[70vw] max-w-[325px] sm:min-w-[280px] inset-y-0 bg-white transition-all duration-300 ease-in-out shadow-3"
       )}
       data-testid="drawer"
       {...props}
