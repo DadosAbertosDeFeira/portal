@@ -5,3 +5,5 @@ Disallow: /busca
 # Allow all crawlers
 User-agent: *
 Allow: /
+
+Sitemap: https://dadosabertosdefeira.com.br/sitemap.xml
