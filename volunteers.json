@@ -3,150 +3,192 @@
     "name": "Ana Paula Gomes",
     "role": "Faz-tudo",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/anapaulagomes.jpeg",
-    "github": "anapaulagomes",
-    "linkedin": "anapaulagomess",
-    "twitter": "anapaulagomess"
+    "medias": {
+      "github": "https://github.com/anapaulagomes",
+      "linkedin": "https://www.linkedin.com/in/anapaulagomess",
+      "twitter": "https://twitter.com/anapaulagomess"
+    }
   },
   {
     "name": "Filipe Maia",
     "role": "Desenvolvedor",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/filipebsmaia.png",
-    "github": "filipebsmaia",
-    "linkedin": "filipebsmaia"
+    "medias": {
+      "github": "https://github.com/filipebsmaia",
+      "linkedin": "https://www.linkedin.com/in/filipebsmaia"
+    }
   },
   {
     "name": "Matheus Rocha",
     "role": "Desenvolvedor",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/matheusrocha89.jpeg",
-    "github": "matheusrocha89",
-    "linkedin": "matheus-cruz-rocha-38021525",
-    "twitter": "matheusrocha"
+    "medias": {
+      "github": "https://github.com/matheusrocha89",
+      "linkedin": "https://www.linkedin.com/in/matheus-cruz-rocha-38021525",
+      "twitter": "https://twitter.com/matheusrocha"
+    }
   },
   {
     "name": "Emerson Oliveira",
     "role": "Desenvolvedor",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/emersonsdo.jpeg",
-    "github": "emersonsdo",
-    "linkedin": "emerson-oliveira-89ab859"
+    "medias": {
+      "github": "https://github.com/emersonsdo",
+      "linkedin": "https://www.linkedin.com/in/emerson-oliveira-89ab859"
+    }
   },
   {
     "name": "Vivian Macedo",
     "role": "Analista de Dados",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/vivianmacedo.jpeg",
-    "github": "vihvs",
-    "linkedin": "vivianmacedo"
+    "medias": {
+      "github": "https://github.com/vihvs",
+      "linkedin": "https://www.linkedin.com/in/vivianmacedo"
+    }
   },
   {
     "name": "Rafael Gomes",
     "role": "Desenvolvedor",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/gomex.png",
-    "github": "gomex",
-    "linkedin": "rbgomes",
-    "twitter": "gomex"
+    "medias": {
+      "github": "https://github.com/gomex",
+      "linkedin": "https://www.linkedin.com/in/rbgomes",
+      "twitter": "https://twitter.com/gomex"
+    }
   },
   {
     "name": "Rafael Velame",
     "role": "Jornalista",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/rafaelvelame.jpeg",
-    "twitter": "rafaelvelame",
-    "linkedin": "rafael-velame-242b98104"
+    "medias": {
+      "twitter": "https://twitter.com/rafaelvelame",
+      "linkedin": "https://www.linkedin.com/in/rafael-velame-242b98104"
+    }
   },
   {
     "name": "Bruno Morassuti",
     "role": "Conselheiro Jurídico",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/jedibruno.jpeg",
-    "github": "jedibruno",
-    "twitter": "555112299jedi",
-    "linkedin": "bruno-schimitt-morassutti-7a0b5b180"
+    "medias": {
+      "github": "https://github.com/jedibruno",
+      "twitter": "https://twitter.com/555112299jedi",
+      "linkedin": "https://www.linkedin.com/in/bruno-schimitt-morassutti-7a0b5b180"
+    }
   },
   {
     "name": "Nataly Costa",
     "role": "Designer",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/natalycosta.jpeg",
-    "linkedin": "natalycosta"
+    "medias": {
+      "linkedin": "https://www.linkedin.com/in/natalycosta"
+    }
   },
   {
     "name": "Eduardo Cuducos",
     "role": "Desenvolvedor",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/cuducos.jpeg",
-    "github": "cuducos",
-    "twitter": "cuducos"
+    "medias": {
+      "github": "https://github.com/cuducos",
+      "twitter": "https://twitter.com/cuducos"
+    }
   },
   {
     "name": "Daniel Fireman",
     "role": "Conselheiro",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/danielfireman.jpeg",
-    "github": "danielfireman",
-    "linkedin": "danielfireman",
-    "twitter": "daniellfireman"
+    "medias": {
+      "github": "https://github.com/danielfireman",
+      "linkedin": "https://www.linkedin.com/in/danielfireman",
+      "twitter": "https://twitter.com/daniellfireman"
+    }
   },
   {
     "name": "Everton Alves",
     "role": "Social Media",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/ellalves.png",
-    "instagram": "ellalves.mktd"
+    "medias": {
+      "instagram": "https://www.instagram.com/ellalves.mktd"
+    }
   },
   {
     "name": "Guilherme Wanderley",
     "role": "Office-boy e Analista de Dados",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/guilhermelowa.jpeg",
-    "github": "guilhermelowa",
-    "linkedin": "guilherme-wanderley"
+    "medias": {
+      "github": "https://github.com/guilhermelowa",
+      "linkedin": "https://www.linkedin.com/in/guilherme-wanderley"
+    }
   },
   {
     "name": "Luanda Dantas",
     "role": "Desenvolvedora",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/luandadantas.jpeg",
-    "github": "luandadantas",
-    "linkedin": "luandadantas"
+    "medias": {
+      "github": "https://github.com/luandadantas",
+      "linkedin": "https://www.linkedin.com/in/luandadantas"
+    }
   },
   {
     "name": "Geraldo Castro",
     "role": "Desenvolvedor",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/exageraldo.jpg",
-    "github": "exageraldo",
-    "linkedin": "exageraldo",
-    "twitter": "exageraldo_"
+    "medias": {
+      "github": "https://github.com/exageraldo",
+      "linkedin": "https://www.linkedin.com/in/exageraldo",
+      "twitter": "https://twitter.com/exageraldo_"
+    }
   },
   {
     "name": "Felipe Barros",
     "role": "Analista de Dados",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/felipelfb.jpeg",
-    "github": "felipelfb",
-    "linkedin": "felipe-barros-609a52141"
+    "medias": {
+      "github": "https://github.com/felipelfb",
+      "linkedin": "https://www.linkedin.com/in/felipe-barros-609a52141"
+    }
   },
   {
     "name": "Gabriela Turquetti",
     "role": "Desenvolvedora",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/turquetti.jpeg",
-    "github": "turquetti",
-    "linkedin": "gabriela-turquetti",
-    "instagram": "gabrielaturquetti",
-    "twitter": "gabturquetti"
+    "medias": {
+      "github": "https://github.com/turquetti",
+      "linkedin": "https://www.linkedin.com/in/gabriela-turquetti",
+      "instagram": "https://www.instagram.com/gabrielaturquetti",
+      "twitter": "https://twitter.com/gabturquetti"
+    }
   },
   {
     "name": "Nathanael Souza",
     "role": "Desenvolvedor",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/nathanaelss.jpeg",
-    "github": "Nathanaelss",
-    "linkedin": "nathanael-souza"
+    "medias": {
+      "github": "https://github.com/Nathanaelss",
+      "linkedin": "https://www.linkedin.com/in/nathanael-souza"
+    }
   },
   {
     "name": "Allythy",
     "role": "Desenvolvedor",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/allythy.jpeg",
-    "github": "allythy"
+    "medias": {
+      "github": "https://github.com/allythy"
+    }
   },
   {
     "name": "Eduardo Daltro",
     "role": "Staff",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/daltroedu.jpeg",
-    "linkedin": "daltroedu"
+    "medias": {
+      "linkedin": "https://www.linkedin.com/in/daltroedu"
+    }
   },
   {
     "name": "André Costa",
     "role": "Designer",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/andrecostaux.jpeg",
-    "linkedin": "andrecostaux"
+    "medias": {
+      "linkedin": "https://www.linkedin.com/in/andrecostaux"
+    }
   }
 ]
