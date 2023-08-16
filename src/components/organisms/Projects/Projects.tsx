@@ -1,3 +1,4 @@
+import DefaultProject from "@assets/default-project.jpeg";
 import IconProject from "@assets/icons/icon-projects.svg";
 import { Image } from "atoms/Image";
 import { Link } from "atoms/Link";
@@ -16,14 +17,14 @@ export const Projects = ({ projects }: ProjectsProps) => {
       alt=""
     >
       <ul className="grid auto-rows-auto grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] items-center justify-items-center gap-8 md:grid-cols-[repeat(auto-fill,_minmax(450px,_1fr))]">
-        {projects.map(({ name, description, link, type, logo }) => (
+        {projects.map(({ name, description, link, type, img }) => (
           <li className="h-full w-full" key={name}>
             <Link className="h-full w-full" href={link}>
               <section className="relative flex h-full w-full flex-row items-center gap-2 overflow-hidden rounded shadow-lg">
                 <Image
                   className="hidden aspect-square h-full w-auto object-cover md:block"
-                  src={logo.path}
-                  alt={logo.description}
+                  src={img.src ?? DefaultProject}
+                  alt={img.alt}
                 />
                 <div className="mt-2 flex h-full grow flex-col gap-2 p-2">
                   <h3 className="pr-12 text-base">{name}</h3>

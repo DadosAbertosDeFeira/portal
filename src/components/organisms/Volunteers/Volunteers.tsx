@@ -1,7 +1,7 @@
 import Hand from "@assets/icons/hand-with-hearth.svg";
 import type { SocialMediaType } from "@utils/social";
 import { Image } from "atoms/Image";
-import { SocialMediaCard } from "molecules/SocialMediaCard";
+import { SocialLink } from "atoms/SocialLink/SocialLink";
 import { TitleSection } from "molecules/TitleSection";
 import React from "react";
 
@@ -33,18 +33,23 @@ export function Volunteers({ volunteers }: VolunteersProps) {
               <p className="text-md truncate leading-tight text-blue-500">
                 {role}
               </p>
-              <ul className="flex flex-row items-center gap-x-4">
-                {Object.entries(medias).map(([key, value]) => {
-                  return (
-                    <li key={key}>
-                      <SocialMediaCard
-                        type={key as SocialMediaType}
-                        user={value}
-                      />
-                    </li>
-                  );
-                })}
-              </ul>
+              <nav>
+                <ul className="flex flex-row items-center gap-x-4">
+                  {Object.entries(medias).map(([key, value]) => {
+                    return (
+                      <li key={key}>
+                        <SocialLink
+                          width={20}
+                          height={20}
+                          fill="#0063B5"
+                          type={key as SocialMediaType}
+                          user={value}
+                        />
+                      </li>
+                    );
+                  })}
+                </ul>
+              </nav>
             </div>
           </li>
         ))}

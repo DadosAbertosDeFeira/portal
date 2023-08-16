@@ -14,11 +14,11 @@ describe("Projects", () => {
     {
       description:
         "Tem a missão de libertar dados do município de Feira de Santana. Responsável pela raspagem e o armazenamento.",
-      link: "https://github.com/DadosAbertosDeFeira/maria-quiteria",
-      logo: {
-        path: "https://test.com/image.png",
-        description: "Logo do Projeto Maria Quitéria",
+      img: {
+        src: "https://test.com/image.png",
+        alt: "Logo do Projeto Maria Quitéria",
       },
+      link: "https://github.com/DadosAbertosDeFeira/maria-quiteria",
       name: "Maria Quitéria",
       type: ["raspagem de dados", "busca de dados"],
     },
