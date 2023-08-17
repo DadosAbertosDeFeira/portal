@@ -2,6 +2,7 @@ const { withSentryConfig } = require("@sentry/nextjs");
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
+  analyzerMode: "static",
 });
 
 /** @type {import('next').NextConfig} */
