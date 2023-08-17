@@ -8,9 +8,11 @@ NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 [context.production.environment]
 SENTRY_ENVIRONMENT = "production"
+ANALYZE = "true"
 
 [context.deploy-preview.environment]
 SENTRY_ENVIRONMENT = "deploy-preview"
+ANALYZE = "true"
 
 [[plugins]]
 package = "@netlify/plugin-nextjs"
