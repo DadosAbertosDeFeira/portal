@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        heading: ["var(--font-montserrat)"],
-        common: ["var(--font-roboto)"],
+        heading: ["var(--font-montserrat)", "sans-serif"],
+        common: ["var(--font-roboto)", "sans-serif"],
       },
       colors: {
         gray: {

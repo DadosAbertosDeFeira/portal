@@ -19,7 +19,8 @@
   }
 
   p,
-  span {
+  span,
+  a {
     @apply font-common text-blue-900;
   }
 
