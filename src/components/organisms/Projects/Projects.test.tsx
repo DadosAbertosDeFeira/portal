@@ -30,7 +30,7 @@ describe("Projects", () => {
         alt: "Logo do Projeto Maria Quitéria",
       },
       link: "https://github.com/DadosAbertosDeFeira/maria-quiteria",
-      name: "Maria Quitéria",
+      name: "Maria Quitéria 2",
       type: ["raspagem de dados", "busca de dados"],
     },
     {
@@ -41,7 +41,7 @@ describe("Projects", () => {
         alt: "Logo do Projeto Maria Quitéria",
       },
       link: "https://github.com/DadosAbertosDeFeira/maria-quiteria",
-      name: "Maria Quitéria",
+      name: "Maria Quitéria 3",
       type: ["raspagem de dados", "busca de dados"],
     },
   ];
