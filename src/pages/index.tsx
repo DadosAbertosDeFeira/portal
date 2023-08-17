@@ -1,4 +1,7 @@
+import { Link } from "atoms/Link";
+import { Modal } from "atoms/Modal";
 import { useRouter } from "next/router";
+import { DidNotFound } from "organisms/DidNotFound/DidNotFound";
 import { Neighborhood } from "organisms/Neighborhood";
 import type {
   SearchBarSelectItem,
@@ -61,6 +64,20 @@ const Home: NextPageWithLayout = () => {
           items={searchBarItems}
           onSubmit={handleSubmit}
         />
+        <Link
+          href={{ query: "nao-encontrei-o-que-queria" }}
+          variant="default"
+          className="my-3 block font-bold hover:underline"
+        >
+          Não encontrou o que procura?
+        </Link>
+        <Modal
+          handleClose={() => router.push("/")}
+          isOpen={router.query["nao-encontrei-o-que-queria"] === ""}
+          className="flex"
+        >
+          <DidNotFound className="grow overflow-y-scroll" />
+        </Modal>
       </div>
       <Neighborhood className="py-20" items={neighborhood} />
     </main>
