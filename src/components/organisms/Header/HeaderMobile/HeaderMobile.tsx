@@ -32,6 +32,7 @@ export function HeaderMobile({ anchors }: HeaderMobileProps) {
         <Button
           onClick={() => setMenuOpen((isOpen) => !isOpen)}
           data-testid="drawer-open-button"
+          aria-label="Abra o menu"
           ref={sandwichRef}
         >
           <BiMenu

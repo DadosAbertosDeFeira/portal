@@ -51,7 +51,7 @@ export function ArrowSelectComponent<T>(
           placeholder="Selecione a base de dados"
           containerProps={{ className: "w-full md:max-w-[225px]" }}
           suffix={
-            <Button {...getToggleButtonProps()}>
+            <Button aria-label="Abrir Select" {...getToggleButtonProps()}>
               {isOpen ? <FiArrowDown /> : <FiArrowUp />}
             </Button>
           }
