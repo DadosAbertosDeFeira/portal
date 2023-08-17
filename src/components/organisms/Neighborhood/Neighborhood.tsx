@@ -18,7 +18,8 @@ export function Neighborhood({ items, ...props }: NeighborhoodProps) {
         <Image
           className="mx-auto max-w-[280px] lg:max-w-[500px]"
           src={PeopleContribute}
-          alt=""
+          loading="lazy"
+          alt="Uma mulher"
         />
         <div className="md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-2">
           <h3 className="text-md text-gray-2 py-4 text-center font-semibold">
