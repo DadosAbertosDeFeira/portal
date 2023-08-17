@@ -9,6 +9,7 @@ import type {
 } from "organisms/SearchBar";
 import { SearchBar } from "organisms/SearchBar";
 import type { ReactElement } from "react";
+import { FiAlertCircle } from "react-icons/fi";
 
 import { HeaderLayout } from "@/layouts/HeaderLayout";
 import { SeoLayout } from "@/layouts/SeoLayout";
@@ -67,9 +68,9 @@ const Home: NextPageWithLayout = () => {
         <Link
           href={{ query: "nao-encontrei-o-que-queria" }}
           variant="default"
-          className="my-3 block font-bold hover:underline"
+          className="my-4 flex flex-row items-center justify-start gap-x-2 text-xs hover:underline"
         >
-          Não encontrou o que procura?
+          <FiAlertCircle /> Não encontrou o que procura?
         </Link>
         <Modal
           handleClose={() => router.push("/")}

@@ -28,10 +28,7 @@ export function Neighborhood({ items, ...props }: NeighborhoodProps) {
           <ul className="grid auto-rows-[42px] grid-cols-[repeat(auto-fill,_minmax(220px,_1fr))] gap-3">
             {items.map((item) => (
               <li className="h-full w-full" key={item}>
-                <Button
-                  className="h-full w-full bg-blue-700"
-                  variant="condensed"
-                >
+                <Button className="h-full w-full" variant="condensed">
                   {item}
                 </Button>
               </li>

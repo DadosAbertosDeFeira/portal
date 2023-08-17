@@ -36,13 +36,14 @@ export function Volunteers({ volunteers }: VolunteersProps) {
                 {role}
               </p>
               <nav>
-                <ul className="flex flex-row items-center gap-x-4">
+                <ul className="flex flex-row items-center gap-x-2">
                   {Object.entries(medias).map(([type, href]) => {
                     return (
                       <li key={type}>
                         <Link href={href}>
                           <SocialMediaIcon
-                            className="fill-blue-500"
+                            size={20}
+                            className="fill-blue-700"
                             type={type as SocialMediasType}
                           />
                         </Link>

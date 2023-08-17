@@ -4,10 +4,10 @@ import { twMerge } from "tailwind-merge";
 import type { ButtonProps, ButtonVariants } from "./types";
 
 export const buttonVariants: Record<ButtonVariants, string> = {
-  condensed: "bg-blue-500 text-white",
-  "condensed-rounded": "bg-blue-500 text-white rounded-full",
-  default: "text-blue-500 active:bg-blue-100/10",
-  outline: "border border-blue-500 text-blue-500",
+  condensed: "bg-blue-700 text-white",
+  "condensed-rounded": "bg-blue-700 text-white rounded-full",
+  default: "text-blue-700 active:bg-blue-100/10",
+  outline: "border border-blue-700 text-blue-700",
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(

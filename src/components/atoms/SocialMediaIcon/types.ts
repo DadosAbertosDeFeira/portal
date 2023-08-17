@@ -1,6 +1,6 @@
 import type { SocialMediaType } from "@utils/social";
-import type { ComponentPropsWithRef } from "react";
+import type { IconBaseProps } from "react-icons";
 
-export type SocialMediaIconProps = ComponentPropsWithRef<"svg"> & {
+export type SocialMediaIconProps = IconBaseProps & {
   type: SocialMediaType;
 };

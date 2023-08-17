@@ -5,6 +5,9 @@ import { createPortal } from "react-dom";
 import { RiCloseFill } from "react-icons/ri";
 import { twMerge } from "tailwind-merge";
 
+import { montserrat } from "@/assets/fonts/Montserrat";
+import { roboto } from "@/assets/fonts/Roboto";
+
 import type { ModalProps } from "./types";
 
 const showScrollBar = () => {
@@ -40,7 +43,7 @@ export function Modal({
       onClick={handleClose}
       role="presentation"
       data-testid="modal-layer"
-      className="absolute inset-0 z-10 flex items-center justify-center bg-black/70 transition-all"
+      className={`${roboto.className} ${montserrat.className} absolute inset-0 z-10 flex items-center justify-center bg-black/70 transition-all`}
     >
       <div
         onClick={(e) => e.stopPropagation()}
@@ -48,8 +51,12 @@ export function Modal({
         data-testid="modal"
         className="relative flex max-h-[80vh] max-w-[90vw] rounded-md bg-white shadow-md"
       >
-        <Button onClick={handleClose} className="absolute right-1 top-1 p-2">
-          <RiCloseFill />
+        <Button
+          aria-label="Fechar"
+          onClick={handleClose}
+          className="absolute right-1 top-1 p-2"
+        >
+          <RiCloseFill fill="#0063B5" size={30} />
         </Button>
         <div {...props} className={twMerge("grow overflow-hidden", className)}>
           {children}

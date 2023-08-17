@@ -11,6 +11,9 @@ import type { ForwardedRef, ReactNode } from "react";
 import { forwardRef, useMemo } from "react";
 import { createPortal } from "react-dom";
 
+import { montserrat } from "@/assets/fonts/Montserrat";
+import { roboto } from "@/assets/fonts/Roboto";
+
 import type { SelectProps } from "./types";
 
 function SelectComponent<T>(
@@ -108,7 +111,12 @@ function SelectComponent<T>(
   return (
     <>
       {input}
-      {createPortal(list, document.body)}
+      {createPortal(
+        <div className={`${roboto.className} ${montserrat.className}`}>
+          {list}
+        </div>,
+        document.body
+      )}
     </>
   );
 }

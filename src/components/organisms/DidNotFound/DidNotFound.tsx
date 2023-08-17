@@ -24,7 +24,7 @@ export function DidNotFound({ className, ...props }: DidNotFoundProps) {
       )}
       {...props}
     >
-      <h2 className="my-3">Não encontrou o que queria?</h2>
+      <h2 className="my-3 text-left">Não encontrou o que queria?</h2>
       <p>
         Se você quer acompanhar a administração pública e ter acesso às
         informações registradas, pode fazer um pedido de informação. Esse
