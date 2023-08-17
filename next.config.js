@@ -1,5 +1,4 @@
 const { withSentryConfig } = require("@sentry/nextjs");
-const withExportImages = require("next-export-optimize-images");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -8,12 +7,13 @@ const nextConfig = {
   sentry: {
     hideSourceMaps: true,
   },
+  images: { unoptimized: true },
   distDir: "out",
   output: "export",
 };
 
 module.exports = () => {
-  const plugins = [withSentryConfig, withExportImages];
+  const plugins = [withSentryConfig];
 
   return plugins.reduce(
     (acc, next) => {
