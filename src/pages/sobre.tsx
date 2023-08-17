@@ -1,5 +1,4 @@
 import type { Project } from "@utils/projects";
-import type { Volunteer } from "@utils/volunteers";
 import { OurHistory } from "organisms/OurHistory";
 import { Projects } from "organisms/Projects";
 import type { SupportersModel } from "organisms/Supporters";
@@ -10,11 +9,12 @@ import { type ReactElement } from "react";
 import { useFetch } from "@/hooks/useFetch";
 import { HeaderLayout } from "@/layouts/HeaderLayout";
 import { SeoLayout } from "@/layouts/SeoLayout";
+import type { VolunteerModel } from "@/models/VolunteerModel";
 
 import type { NextPageWithLayout } from "./_app";
 
 const About: NextPageWithLayout = () => {
-  const { data: volunteers } = useFetch<Volunteer[]>(
+  const { data: volunteers } = useFetch<VolunteerModel[]>(
     "https://dadosabertosdefeira.github.io/portal/volunteers.json"
   );
 
