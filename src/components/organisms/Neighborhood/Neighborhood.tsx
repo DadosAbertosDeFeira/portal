@@ -29,7 +29,7 @@ export function Neighborhood({ items, ...props }: NeighborhoodProps) {
             {items.map((item) => (
               <li className="h-full w-full" key={item}>
                 <Button
-                  className="h-full w-full bg-[#3793DF]"
+                  className="h-full w-full bg-blue-700"
                   variant="condensed"
                 >
                   {item}
