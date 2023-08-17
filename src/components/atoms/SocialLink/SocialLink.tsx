@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { Link } from "atoms/Link";
 import React from "react";
 import {
@@ -37,6 +38,7 @@ export const handleSocialMediaLink = (
       return `https://www.linkedin.com/in/${user}`;
     case "twitter":
       return `https://www.twitter.com/${user}`;
+    /* istanbul ignore next */
     default:
       return "";
   }

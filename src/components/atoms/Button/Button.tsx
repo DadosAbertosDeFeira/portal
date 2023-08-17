@@ -6,7 +6,7 @@ import type { ButtonProps, ButtonVariants } from "./types";
 export const buttonVariants: Record<ButtonVariants, string> = {
   condensed: "bg-blue-500 text-white",
   "condensed-rounded": "bg-blue-500 text-white rounded-full",
-  default: "text-blue-500",
+  default: "text-blue-500 active:bg-blue-100/10",
   outline: "border border-blue-500 text-blue-500",
 };
 
