@@ -1,18 +1,22 @@
 import { render } from "@testing-library/react";
-import type { Volunteer } from "@utils/volunteers";
+
+import type { VolunteerModel } from "@/models/VolunteerModel";
 
 import { Volunteers, type VolunteersProps } from ".";
 
 describe("Volunteers", () => {
-  const volunteersMock: Volunteer[] = [
+  const volunteersMock: VolunteerModel[] = [
     {
-      github: "alvarogfn",
-      instagram: "alvarogfn",
-      linkedin: "alvarogfn",
-      name: "Alvaro Guimarães",
-      picture: "/assets/volunteers/anapaulagomes.jpeg",
+      medias: {
+        facebook: "https://www.facebook.com",
+        github: "https://github.com",
+        instagram: "https://www.instagram.com/",
+        linkedin: "https://www.linkedin.com/in",
+        twitter: "https://twitter.com",
+      },
+      name: "Nome",
+      picture: "https://picture.com/image.png",
       role: "Desenvolvedor",
-      twitter: "alvarogfn",
     },
   ];
 

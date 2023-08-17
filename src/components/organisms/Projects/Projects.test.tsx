@@ -22,6 +22,17 @@ describe("Projects", () => {
       name: "Maria Quitéria",
       type: ["raspagem de dados", "busca de dados"],
     },
+    {
+      description:
+        "Tem a missão de libertar dados do município de Feira de Santana. Responsável pela raspagem e o armazenamento.",
+      img: {
+        src: null,
+        alt: "Logo do Projeto Maria Quitéria",
+      },
+      link: "https://github.com/DadosAbertosDeFeira/maria-quiteria",
+      name: "Maria Quitéria",
+      type: ["raspagem de dados", "busca de dados"],
+    },
   ];
 
   const makeSut = ({ projects = projectsMock }: Partial<ProjectsProps>) => {

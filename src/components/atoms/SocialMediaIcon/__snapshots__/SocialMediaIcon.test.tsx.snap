@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialMediaIcon should render facebook type correctly 1`] = `[Function]`;
+
+exports[`SocialMediaIcon should render github type correctly 1`] = `[Function]`;
+
+exports[`SocialMediaIcon should render instagram type correctly 1`] = `[Function]`;
+
+exports[`SocialMediaIcon should render twitter type correctly 1`] = `[Function]`;

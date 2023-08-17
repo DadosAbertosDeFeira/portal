@@ -1,6 +1,7 @@
-import type { Volunteer } from "@utils/volunteers";
 import type { ComponentPropsWithRef } from "react";
 
+import type { VolunteerModel } from "@/models/VolunteerModel";
+
 export type VolunteersProps = ComponentPropsWithRef<"div"> & {
-  volunteers: Volunteer[];
+  volunteers: VolunteerModel[];
 };
