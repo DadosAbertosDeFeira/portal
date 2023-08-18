@@ -5,6 +5,9 @@ import dynamic from "next/dynamic";
 
 import { type ArrowSelectProps } from ".";
 
+const div = document.createElement("div");
+div.id = "app";
+
 const ArrowSelect = dynamic<ArrowSelectProps<any>>(
   () => import("molecules/ArrowSelect").then((module) => module.ArrowSelect),
   { ssr: false }
@@ -20,7 +23,9 @@ describe("ArrowSelect", () => {
   }));
 
   function makeSut<T>({ items = [], ...props }: Partial<ArrowSelectProps<T>>) {
-    return render(<ArrowSelect items={items} {...props} />);
+    return render(<ArrowSelect items={items} {...props} />, {
+      container: document.body.appendChild(div),
+    });
   }
 
   it("renders correctly", async () => {

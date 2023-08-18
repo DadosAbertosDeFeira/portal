@@ -5,6 +5,9 @@ import userEvent from "@testing-library/user-event";
 import type { SearchBarSelectItem } from ".";
 import { SearchBar, type SearchBarProps } from ".";
 
+const div = document.createElement("div");
+div.id = "app";
+
 describe("SearchBar", () => {
   const itemsMock: SearchBarSelectItem[] = [
     { value: "Vereadores - Agendas", id: 1 },
@@ -30,7 +33,9 @@ describe("SearchBar", () => {
     items = itemsMock,
     ...props
   }: Partial<SearchBarProps>) => {
-    return render(<SearchBar items={items} onSubmit={onSubmit} {...props} />);
+    return render(<SearchBar items={items} onSubmit={onSubmit} {...props} />, {
+      container: document.body.appendChild(div),
+    });
   };
 
   it("renders correctly", async () => {

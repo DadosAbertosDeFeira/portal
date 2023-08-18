@@ -3,10 +3,15 @@ import userEvent from "@testing-library/user-event";
 
 import { Modal, type ModalProps } from ".";
 
+const div = document.createElement("div");
+div.id = "app";
+
 describe("Modal", () => {
   const user = userEvent.setup();
   const makeSut = ({ isOpen = true, ...props }: Partial<ModalProps>) => {
-    return render(<Modal isOpen={isOpen} {...props} />);
+    return render(<Modal isOpen={isOpen} {...props} />, {
+      container: document.body.appendChild(div),
+    });
   };
 
   it("expect modal to be open", () => {

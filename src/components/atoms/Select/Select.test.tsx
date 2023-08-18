@@ -6,6 +6,9 @@ import dynamic from "next/dynamic";
 
 import { type SelectProps } from ".";
 
+const div = document.createElement("div");
+div.id = "app";
+
 const Select = dynamic<SelectProps<any>>(
   () => import("atoms/Select").then((module) => module.Select),
   { ssr: false }
@@ -48,7 +51,8 @@ describe("Select", () => {
             {label}
           </li>
         )}
-      </Select>
+      </Select>,
+      { container: document.body.appendChild(div) }
     );
   }
 

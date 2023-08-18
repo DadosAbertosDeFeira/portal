@@ -5,9 +5,6 @@ import { createPortal } from "react-dom";
 import { RiCloseFill } from "react-icons/ri";
 import { twMerge } from "tailwind-merge";
 
-import { montserrat } from "@/assets/fonts/Montserrat";
-import { roboto } from "@/assets/fonts/Roboto";
-
 import type { ModalProps } from "./types";
 
 const showScrollBar = () => {
@@ -36,14 +33,14 @@ export function Modal({
   }, [isOpen]);
 
   if (!isOpen) return null;
-  if (!document.body) return null;
+  if (!document) return null;
 
   return createPortal(
     <div
       onClick={handleClose}
       role="presentation"
       data-testid="modal-layer"
-      className={`${roboto.className} ${montserrat.className} absolute inset-0 z-10 flex items-center justify-center bg-black/70 transition-all`}
+      className="absolute inset-0 z-10 flex items-center justify-center bg-black/70 transition-all"
     >
       <div
         onClick={(e) => e.stopPropagation()}
@@ -63,6 +60,6 @@ export function Modal({
         </div>
       </div>
     </div>,
-    document.body
+    document.getElementById("app") as HTMLElement
   );
 }
