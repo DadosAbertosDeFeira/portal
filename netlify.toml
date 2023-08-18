@@ -16,3 +16,18 @@ ANALYZE = "true"
 
 [[plugins]]
 package = "@netlify/plugin-nextjs"
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  [[plugins.inputs.audits]]
+    path = "404.html"
+
+  [[plugins.inputs.audits]]
+    path = "contribua.html"
+
+  [[plugins.inputs.audits]]
+    path = "sobre.html"
+  
+  [[plugins.inputs.audits]]
+    path = "busca.html"
