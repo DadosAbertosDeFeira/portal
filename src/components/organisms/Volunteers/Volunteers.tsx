@@ -1,4 +1,4 @@
-import Hand from "@assets/icons/hand-with-hearth.svg";
+import Hand from "@assets/hand-with-hearth.svg";
 import { Image } from "atoms/Image";
 import { Link } from "atoms/Link";
 import { SocialMediaIcon } from "atoms/SocialMediaIcon";

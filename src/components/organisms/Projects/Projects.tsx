@@ -1,5 +1,5 @@
 import DefaultProject from "@assets/default-project.jpeg";
-import IconProject from "@assets/icons/icon-projects.svg";
+import IconProject from "@assets/icon-projects.svg";
 import { Image } from "atoms/Image";
 import { Link } from "atoms/Link";
 import { TitleSection } from "molecules/TitleSection";

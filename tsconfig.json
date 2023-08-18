@@ -2,36 +2,16 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "atoms/*": [
-        "src/components/atoms/*"
-      ],
-      "molecules/*": [
-        "src/components/molecules/*"
-      ],
-      "organisms/*": [
-        "src/components/organisms/*"
-      ],
-      "@models/*": [
-        "src/utils/models/*"
-      ],
-      "@public/*": [
-        "public/*"
-      ],
-      "@assets/*": [
-        "public/assets/*"
-      ],
-      "@utils/*": [
-        "src/utils/*"
-      ],
-      "@/*": [
-        "src/*"
-      ]
+      "atoms/*": ["src/components/atoms/*"],
+      "molecules/*": ["src/components/molecules/*"],
+      "organisms/*": ["src/components/organisms/*"],
+      "@models/*": ["src/utils/models/*"],
+      "@public/*": ["public/*"],
+      "@assets/*": ["src/assets/images/*"],
+      "@utils/*": ["src/utils/*"],
+      "@/*": ["src/*"]
     },
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -45,17 +25,7 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "types": [
-    "node",
-    "jest",
-    "@testing-library/jest-dom"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "types": ["node", "jest", "@testing-library/jest-dom"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

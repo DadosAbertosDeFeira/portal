@@ -1,4 +1,4 @@
-import Book from "@assets/icons/book.svg";
+import Book from "@assets/book.svg";
 import { Link } from "atoms/Link";
 import { TitleSection } from "molecules/TitleSection";
 import React from "react";
