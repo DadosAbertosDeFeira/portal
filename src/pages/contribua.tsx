@@ -51,7 +51,7 @@ Contribua.getLayout = function getLayout(page) {
   return (
     <SeoLayout
       title="Contribua"
-      image="assets/dadosabertosdefeira.png"
+      image="https://dadosabertosdefeira.github.io/portal/assets/dadosabertosdefeira.png"
       description="Precisamos de você para criar o futuro onde Feira de Santana é uma cidade mais transparente, contribua com o nosso projeto!"
       suffix
     >

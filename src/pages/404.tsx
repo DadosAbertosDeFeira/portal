@@ -40,7 +40,8 @@ Error404.getLayout = function getLayout(page: ReactElement) {
     <HeaderLayout>
       <SeoLayout
         title="Página não encontrada"
-        image="assets/dadosabertosdefeira.png"
+        image="https://dadosabertosdefeira.github.io/portal/assets/dadosabertosdefeira.png"
+        description="Não foi possível encontrar a pagina que você estava procurando."
         suffix
       >
         {page}

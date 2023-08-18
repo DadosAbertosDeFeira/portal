@@ -90,8 +90,8 @@ Home.getLayout = function getLayout(page: ReactElement) {
     <HeaderLayout>
       <SeoLayout
         title="Transparência em Feira de Santana"
-        image="assets/dadosabertosdefeira.png"
-        description="Somos uma iniciativa que visa disponibilizar dados públicos da cidade de Feira de Santana, na Bahia, de forma aberta, transparente e acessível."
+        image="https://dadosabertosdefeira.github.io/portal/assets/dadosabertosdefeira.png"
+        description="Faça uma busca nas bases de dados de Feira de Santana na Bahia, de forma aberta, transparente e acessível."
         suffix
       >
         {page}

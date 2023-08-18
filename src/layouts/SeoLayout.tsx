@@ -24,9 +24,6 @@ export function SeoLayout({
   const titleWithSuffix = `${title} | Dados abertos de Feira`;
   const computedTitle = suffix ? titleWithSuffix : title;
 
-  const hostedImage = `${process.env.NEXT_PUBLIC_SITE_URL}/${image}`;
-  const computedImage = image ? hostedImage : undefined;
-
   return (
     <>
       <Head>
@@ -46,8 +43,8 @@ export function SeoLayout({
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content={computedTitle} />
-        <meta property="og:image" content={computedImage} />
-        <meta property="og:image:secure_url" content={computedImage} />
+        <meta property="og:image" content={image} />
+        <meta property="og:image:secure_url" content={image} />
         <meta property="og:image:alt" content="Thumbnail" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
@@ -57,8 +54,8 @@ export function SeoLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@DadosDeFeira" />
         <meta name="twitter:creator" content="@DadosDeFeira" />
-        <meta name="twitter:image" content={computedImage} />
-        <meta name="twitter:image:src" content={computedImage} />
+        <meta name="twitter:image" content={image} />
+        <meta name="twitter:image:src" content={image} />
         <meta name="twitter:image:alt" content="Thumbnail" />
         <meta name="twitter:image:width" content="1200" />
         <meta name="twitter:image:height" content="620" />

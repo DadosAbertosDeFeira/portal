@@ -91,7 +91,11 @@ const Search: NextPageWithLayout = () => {
 Search.getLayout = function getLayout(page: ReactElement) {
   return (
     <HeaderLayout>
-      <SeoLayout title="Busca" image="assets/dadosabertosdefeira.png" suffix>
+      <SeoLayout
+        title="Busca"
+        image="https://dadosabertosdefeira.github.io/portal/assets/dadosabertosdefeira.png"
+        suffix
+      >
         {page}
       </SeoLayout>
     </HeaderLayout>

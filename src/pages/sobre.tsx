@@ -41,7 +41,7 @@ About.getLayout = function getLayout(page: ReactElement) {
   return (
     <SeoLayout
       title="Quem somos"
-      image="assets/dadosabertosdefeira.png"
+      image="https://dadosabertosdefeira.github.io/portal/assets/dadosabertosdefeira.png"
       description="Somos uma iniciativa que visa disponibilizar dados públicos da cidade de Feira de Santana, na Bahia, de forma aberta, transparente e acessível."
       suffix
     >
