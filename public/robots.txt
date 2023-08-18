@@ -1,9 +1,10 @@
 # Block all crawlers for /busca
-User-agent: *
-Disallow: /busca
-
 # Allow all crawlers
 User-agent: *
 Allow: /
+
+User-agent: *
+Disallow: /busca.html
+Disallow: /404.html
 
 Sitemap: https://dadosabertosdefeira.com.br/sitemap.xml

@@ -7,7 +7,6 @@ export type SeoLayoutProps = {
   description?: string;
   children: ReactNode;
   suffix?: boolean;
-  indexPage?: boolean;
   image: string;
 };
 
@@ -19,7 +18,6 @@ export function SeoLayout({
   image,
   children,
   suffix = false,
-  indexPage = true,
 }: SeoLayoutProps) {
   const titleWithSuffix = `${title} | Dados abertos de Feira`;
   const computedTitle = suffix ? titleWithSuffix : title;
@@ -29,7 +27,6 @@ export function SeoLayout({
       <Head>
         <title>{computedTitle}</title>
         {description && <meta name="description" content={description} />}
-        {!indexPage && <meta name="robots" content="noindex,nofollow" />}
         <meta httpEquiv="x-ua-compatible" content="IE=edge,chrome=1" />
         <meta name="MobileOptimized" content="320" />
         <meta name="HandheldFriendly" content="True" />
