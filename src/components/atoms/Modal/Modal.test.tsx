@@ -8,6 +8,7 @@ div.id = "app";
 
 describe("Modal", () => {
   const user = userEvent.setup();
+
   const makeSut = ({ isOpen = true, ...props }: Partial<ModalProps>) => {
     return render(<Modal isOpen={isOpen} {...props} />, {
       container: document.body.appendChild(div),

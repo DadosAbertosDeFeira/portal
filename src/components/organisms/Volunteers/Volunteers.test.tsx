@@ -1,8 +1,13 @@
 import { render } from "@testing-library/react";
+import type { ImageProps } from "atoms/Image";
 
 import type { VolunteerModel } from "@/models/VolunteerModel";
 
 import { Volunteers, type VolunteersProps } from ".";
+
+jest.mock("next/image", () => ({ src, ...props }: ImageProps) => (
+  <img src={src as string} {...props} />
+));
 
 describe("Volunteers", () => {
   const volunteersMock: VolunteerModel[] = [
