@@ -9,6 +9,7 @@ export function Contribute() {
         className="w-[50vw] max-w-[500px]"
         src={PeopleContribute}
         alt="Uma mulher"
+        loading="lazy"
       />
       <div className="mx-[5vw] flex grow basis-[45%] flex-col flex-nowrap gap-y-10 hyphens-auto break-words text-justify leading-6">
         <section>
@@ -24,7 +25,7 @@ export function Contribute() {
               className="text-blue-500"
               href="https://forms.gle/w7P3BZAqEQJeN88eA"
             >
-              aqui
+              aqui no formulário
             </Link>
             .
           </p>

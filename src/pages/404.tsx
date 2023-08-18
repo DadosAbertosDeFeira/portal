@@ -16,6 +16,7 @@ const Error404: NextPageWithLayout = () => {
         alt="Mulher com lupa na mão"
         width={400}
         height={400}
+        loading="lazy"
       />
       <div className="mx-12 flex flex-col gap-y-4 text-center">
         <h1>Não encontramos esta página</h1>
@@ -26,9 +27,8 @@ const Error404: NextPageWithLayout = () => {
         <p>
           Mas não tem problema!{" "}
           <Link className="underline" href="/">
-            Clique aqui
-          </Link>{" "}
-          e volte para o site!
+            Clique aqui e volte para a home do site!
+          </Link>
         </p>
       </div>
     </section>

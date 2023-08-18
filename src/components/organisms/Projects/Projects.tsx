@@ -34,16 +34,16 @@ export const Projects = ({ projects }: ProjectsProps) => {
                   <ul className="mb-2 flex grow flex-row flex-wrap items-end gap-1 text-xs">
                     {type.map((item) => (
                       <li
-                        className="shrink rounded bg-gray-50 p-1 capitalize text-gray-400"
+                        className="shrink rounded bg-gray-50 p-1 capitalize text-gray-700"
                         key={item}
                       >
                         {item}
                       </li>
                     ))}
                   </ul>
-                  <p className="absolute right-1 top-1 flex flex-row flex-nowrap items-center gap-1 text-sm text-blue-400">
+                  <p className="absolute right-1 top-1 flex flex-row flex-nowrap items-center gap-1 text-sm text-blue-600">
                     Link
-                    <BiLinkExternal fill="#3793df" />
+                    <BiLinkExternal className="fill-blue-600" />
                   </p>
                 </div>
               </section>

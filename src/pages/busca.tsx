@@ -94,6 +94,7 @@ Search.getLayout = function getLayout(page: ReactElement) {
       <SeoLayout
         title="Busca"
         image="https://dadosabertosdefeira.github.io/portal/assets/dadosabertosdefeira.png"
+        description="Listagem de resultados o item buscado na nossa base de dados."
         suffix
       >
         {page}
