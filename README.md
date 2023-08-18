@@ -9,10 +9,12 @@
     "name": "Nome do voluntário",
     "role": "Função do voluntário",
     "picture": "https://DadosAbertosDeFeira.github.io/portal/assets/volunteers/*",
-    "github": "Link para rede social | null",
-    "linkedin": "Link para rede social | null",
-    "twitter": "Link para rede social | null",
-    "instagram": "Link para rede social | null"
+    "medias": {
+      "github": "Link para rede social | null",
+      "linkedin": "Link para rede social | null",
+      "twitter": "Link para rede social | null",
+      "instagram": "Link para rede social | null"
+    },
   },
 ```
 
