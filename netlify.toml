@@ -21,6 +21,9 @@ package = "@netlify/plugin-nextjs"
   package = "@netlify/plugin-lighthouse"
 
   [[plugins.inputs.audits]]
+    path = "index.html"
+
+  [[plugins.inputs.audits]]
     path = "404.html"
 
   [[plugins.inputs.audits]]
