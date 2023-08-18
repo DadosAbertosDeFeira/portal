@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 
-import { Button, type ButtonProps } from "./Button";
+import { Button, type ButtonProps } from ".";
 
 describe("Button", () => {
   const makeSut = ({ ...props }: Partial<ButtonProps>) => {
