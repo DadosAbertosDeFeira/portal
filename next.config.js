@@ -12,7 +12,15 @@ const nextConfig = {
   sentry: {
     hideSourceMaps: true,
   },
-  images: { unoptimized: true },
+  images: {
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
   distDir: "out",
   output: "export",
 };
