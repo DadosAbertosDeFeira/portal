@@ -31,14 +31,6 @@ export default function Home() {
             <br />
             <strong>Junte-se a nós e faça a diferença!</strong>
           </BodyText>
-          <div className="flex place-content-center large-desktop:place-content-start py-5">
-            <a
-              className="bg-primary-dark text-white rounded p-3 px-9 font-semibold "
-              href="https://mq.dadosabertosdefeira.com.br/painel/"
-            >
-              Consultar a base de dados
-            </a>
-          </div>
         </div>
       </section>
 
