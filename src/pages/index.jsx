@@ -1,8 +1,6 @@
 import Image from 'next/image';
 
 import ContactForm from '../components/ContactForm';
-import HowContribute from '../components/HowContribute';
-import SocialContactButtons from '../components/SocialContactButtons';
 import Projects from '../components/Projects';
 import Volunteers from '../components/Volunteers';
 
@@ -124,7 +122,8 @@ export default function Home() {
             Carneiro, nos convidou para uma visita, marcando o início de uma
             colaboração com a Casa da Cidadania. A partir dessa data, a Câmara
             passou a divulgar a assiduidade dos vereadores e as atas das sessões
-            da casa.
+            da casa e, mais tarde, disponibilizar acesso a seus dados
+            programaticamente.
           </BodyText>
           <BodyText>
             Ainda estamos lutando para conseguir vários dados diferentes e fazer
@@ -132,6 +131,16 @@ export default function Home() {
             Prefeitura. Entendemos que a transparência tem grande impacto em
             coibir atos de corrupção e tornar o uso do dinheiro público mais
             eficiente. Lutar pela transparência é um trabalho de todos.
+          </BodyText>
+          <BodyText>
+            Diversos pedidos de informação e denúncias do descumprimento da Lei
+            de Acesso à Informação foram feitos. Entendemos que a transparência
+            tem grande impacto em coibir atos de corrupção e tornar o uso do
+            dinheiro público mais eficiente e que lutar pela transparência é um
+            trabalho de todos.
+          </BodyText>
+          <BodyText>
+            Em setembro de 2023 o projeto encerrou suas atividades.
           </BodyText>
         </div>
 
@@ -149,10 +158,6 @@ export default function Home() {
         <Projects />
       </section>
 
-      <section id="colabore" className="py-2xl px-lg tablet:px-2xl">
-        <HowContribute />
-      </section>
-
       <section id="contato" className="border-t-2 pt-2xl tablet:space-x-md">
         <div className="flex flex-col justify-center tablet:flex-row">
           <div className="text-center tablet:max-w-1/2 tablet:m-md tablet:text-left">
@@ -166,12 +171,8 @@ export default function Home() {
                 allowFullScreen=""
                 loading="lazy"
               />
-              <div className="flex flex-col mx-xl text-xs sm:text-base">
+              <div className="flex flex-col mx-xl text-xs sm:text-base min-w-5xl">
                 <h3>Feira de Santana</h3>
-                <a href="mailto:dadosabertosdefeira+site@gmail.com">
-                  contato@dadosabertosdefeira.com.br
-                </a>
-                <SocialContactButtons />
               </div>
             </div>
           </div>
