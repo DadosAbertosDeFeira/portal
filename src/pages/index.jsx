@@ -29,7 +29,9 @@ export default function Home() {
             Nós, cidadãos, temos o direito a informação de forma clara e
             transparente. Precisamos saber o que acontece em nossa cidade.
             <br />
-            <strong>Junte-se a nós e faça a diferença!</strong>
+            <strong>
+              Em setembro de 2023 o projeto encerrou suas atividades.
+            </strong>
           </BodyText>
         </div>
       </section>
@@ -132,7 +134,9 @@ export default function Home() {
             trabalho de todos.
           </BodyText>
           <BodyText>
-            Em setembro de 2023 o projeto encerrou suas atividades.
+            <strong>
+              Em setembro de 2023 o projeto encerrou suas atividades.
+            </strong>
           </BodyText>
         </div>
 
