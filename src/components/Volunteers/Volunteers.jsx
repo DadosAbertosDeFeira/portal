@@ -14,7 +14,10 @@ const Volunteers = () => {
           src={HandWithHeart}
           alt="Livro"
         />
-        <h2 className="m-lg tablet:m-xl">Voluntários</h2>
+        <div className="m-lg text-center">
+          <h2 className="tablet:m-xl">Voluntários</h2>
+          <h3 className="tablet:m-xl font-semi">Quem fez acontecer</h3>
+        </div>
       </div>
       <div className="flex flex-wrap justify-center mt-12 gap-4">
         {volunteersList.map((volunteer) => (

@@ -17,11 +17,20 @@ exports[`<Volunteers /> renders correctly the component 1`] = `
       style="color: transparent;"
       width="40"
     />
-    <h2
-      class="m-lg tablet:m-xl"
+    <div
+      class="m-lg text-center"
     >
-      Voluntários
-    </h2>
+      <h2
+        class="tablet:m-xl"
+      >
+        Voluntários
+      </h2>
+      <h3
+        class="tablet:m-xl font-semi"
+      >
+        Quem fez acontecer
+      </h3>
+    </div>
   </div>
   <div
     class="flex flex-wrap justify-center mt-12 gap-4"

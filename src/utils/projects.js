@@ -42,7 +42,7 @@ export default [
     type: ['pedidos de informação'],
     description:
       'Gerencie e compartilhe publicamente o status dos seus pedidos de informação',
-    link: 'https://pedidos.dadosabertosdefeira.com.br/',
+    link: 'https://github.com/DadosAbertosDeFeira/laia',
     logo: {
       path: DefaultProject,
       description: 'Logo do projeto Pedidos',
